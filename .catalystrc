@@ -1,0 +1,30 @@
+{
+  "defaults": {
+    "project": 1,
+    "env": 1
+  },
+  "actives": {
+    "project": 1,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 1,
+      "id": "15205000000147040",
+      "name": "waterheater1",
+      "domain": {
+        "id": "10082405428",
+        "name": "waterheater1-808166282.development"
+      },
+      "timezone": "Asia/Kolkata",
+      "env": [
+        {
+          "idx": 1,
+          "id": "808166282",
+          "name": "Development",
+          "type": 3
+        }
+      ]
+    }
+  ]
+}

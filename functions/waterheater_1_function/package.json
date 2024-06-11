@@ -1,0 +1,9 @@
+{
+	"name": "waterheater_1_function",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "logesh.mg@traqmetrix.com",
+	"dependencies": {
+		"zcatalyst-sdk-node": "latest"
+	}
+}
