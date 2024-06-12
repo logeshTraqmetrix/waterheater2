@@ -8,7 +8,7 @@ app.use(express.json());
 
 const customerTableId = "15205000000147094";
 const technicianTableId = "15205000000147860";
-const feedbackTable = "15205000000152609";
+const feedbackTableId = "15205000000152609";
 const problemsTableId = "15205000000153333";
 const logTableId = "15205000000154082";
 const ticketTableId = "15205000000154811";
@@ -104,6 +104,39 @@ app.post('/addcustomer',async (req,res)=>{
 		console.log("Error While posting customer : "+error);
 	}
 })
+
+//Put api for update customer
+app.put('/updatecustomer',(req,res)=>{
+	try {
+		let updatedRowData = req.body.data;
+		let catalystApp = catalyst.initialize(req);
+		let datastore = catalystApp.datastore(); 
+		let table = datastore.table(customerTableId); 
+		let rowPromise = table.updateRow(updatedRowData);
+		rowPromise.then((row) => { console.log(row);
+			res.json(row);
+		 });	
+	} catch (error) {
+		console.log("Error on Updating customer : "+ error);
+	}
+})
+
+//delete api for remove customer
+app.delete('/deletecustomer',(req,res)=>{
+	try {
+		let {ROWID} = req.body.data;
+		let catalystApp = catalyst.initialize(req);
+		let datastore = catalystApp.datastore(); 
+		let table = datastore.table(customerTableId); 
+		let rowPromise = table.deleteRow(ROWID); 
+		rowPromise.then((row) => {
+		console.log(row); 
+		res.json(row);
+		});
+	} catch (error) {
+		console.error("Error while deleting customer : "+error);
+	}
+})
 //-----------------------------------------------------------------------------//
 
 //-----------------------------------------------------------------------------//
@@ -160,6 +193,39 @@ app.post('/addtechnician',async (req,res)=>{
 			console.log("Error While posting customer : "+error);
 		}
 	})
+
+//Put api for update technician
+app.put('/updatetechnician',(req,res)=>{
+	try {
+		let updatedRowData = req.body.data;
+		let catalystApp = catalyst.initialize(req);
+		let datastore = catalystApp.datastore(); 
+		let table = datastore.table(technicianTableId); 
+		let rowPromise = table.updateRow(updatedRowData);
+		rowPromise.then((row) => { console.log(row);
+			res.json(row);
+		 });	
+	} catch (error) {
+		console.log("Error on Updating technician : "+ error);
+	}
+})
+
+//delete api for remove technician
+app.delete('/deletetechnician',(req,res)=>{
+	try {
+		let {ROWID} = req.body.data;
+		let catalystApp = catalyst.initialize(req);
+		let datastore = catalystApp.datastore(); 
+		let table = datastore.table(technicianTableId); 
+		let rowPromise = table.deleteRow(ROWID); 
+		rowPromise.then((row) => {
+		console.log(row); 
+		res.json(row);
+	});
+	} catch (error) {
+		console.error("Error while deleting technician : "+error);
+	}
+})
 //-----------------------------------------------------------------------------//
 
 //-----------------------------------------------------------------------------//
@@ -217,6 +283,23 @@ app.post('/addfeedback',async (req,res)=>{
 			console.log("Error While posting customer : "+error);
 		}
 	})
+
+//delete api for remove feedback
+app.delete('/deletefeedback',(req,res)=>{
+	try {
+		let {ROWID} = req.body.data;
+		let catalystApp = catalyst.initialize(req);
+		let datastore = catalystApp.datastore(); 
+		let table = datastore.table(feedbackTableId); 
+		let rowPromise = table.deleteRow(ROWID); 
+		rowPromise.then((row) => {
+		console.log(row); 
+		res.json(row);
+	});
+	} catch (error) {
+		console.error("Error while deleting feedback : "+error);
+	}
+})
 //-----------------------------------------------------------------------------//
 
 //-----------------------------------------------------------------------------//
@@ -269,9 +352,42 @@ app.post('/addproblem',async (req,res)=>{
 		}); 
 	
 		}catch(error){
-			console.log("Error While posting customer : "+error);
+			console.log("Error While posting problem : "+error);
 		}
 	})
+
+//Put api for update peoblem
+app.put('/updateproblem',(req,res)=>{
+	try {
+		let updatedRowData = req.body.data;
+		let catalystApp = catalyst.initialize(req);
+		let datastore = catalystApp.datastore(); 
+		let table = datastore.table(problemsTableId); 
+		let rowPromise = table.updateRow(updatedRowData);
+		rowPromise.then((row) => { console.log(row);
+			res.json(row);
+		 });	
+	} catch (error) {
+		console.log("Error on Updating problem : "+ error);
+	}
+})
+
+//delete api for remove problem
+app.delete('/deleteproblem',(req,res)=>{
+	try {
+		let {ROWID} = req.body.data;
+		let catalystApp = catalyst.initialize(req);
+		let datastore = catalystApp.datastore(); 
+		let table = datastore.table(problemsTableId); 
+		let rowPromise = table.deleteRow(ROWID); 
+		rowPromise.then((row) => {
+		console.log(row); 
+		res.json(row);
+	});
+	} catch (error) {
+		console.error("Error while deleting problem statement : "+error);
+	}
+})
 //-----------------------------------------------------------------------------//
 
 
@@ -383,6 +499,39 @@ app.post('/addticket',async (req,res)=>{
 			console.log("Error While posting customer : "+error);
 		}
 	})
+
+//Put api for update ticket
+app.put('/updateticket',(req,res)=>{
+	try {
+		let updatedRowData = req.body.data;
+		let catalystApp = catalyst.initialize(req);
+		let datastore = catalystApp.datastore(); 
+		let table = datastore.table(ticketTableId); 
+		let rowPromise = table.updateRow(updatedRowData);
+		rowPromise.then((row) => { console.log(row);
+			res.json(row);
+		 });	
+	} catch (error) {
+		console.log("Error on Updating ticket details : "+ error);
+	}
+})
+
+//delete api for remove ticket
+app.delete('/deleteticket',(req,res)=>{
+	try {
+		let {ROWID} = req.body.data;
+		let catalystApp = catalyst.initialize(req);
+		let datastore = catalystApp.datastore(); 
+		let table = datastore.table(ticketTableId); 
+		let rowPromise = table.deleteRow(ROWID); 
+		rowPromise.then((row) => {
+		console.log(row); 
+		res.json(row);
+	});
+	} catch (error) {
+		console.error("Error while deleting ticket : "+error);
+	}
+})
 //-----------------------------------------------------------------------------//
 
 //-----------------------------------------------------------------------------//
@@ -438,6 +587,39 @@ app.post('/addprodcut',async (req,res)=>{
 			console.log("Error While posting customer : "+error);
 		}
 	})
+
+//Put api for update product
+app.put('/updateproduct',(req,res)=>{
+	try {
+		let updatedRowData = req.body.data;
+		let catalystApp = catalyst.initialize(req);
+		let datastore = catalystApp.datastore(); 
+		let table = datastore.table(productTableId); 
+		let rowPromise = table.updateRow(updatedRowData);
+		rowPromise.then((row) => { console.log(row);
+			res.json(row);
+		 });	
+	} catch (error) {
+		console.log("Error on Updating product : "+ error);
+	}
+})
+
+//delete api for remove product
+app.delete('/deleteproduct',(req,res)=>{
+	try {
+		let {ROWID} = req.body.data;
+		let catalystApp = catalyst.initialize(req);
+		let datastore = catalystApp.datastore(); 
+		let table = datastore.table(productTableId); 
+		let rowPromise = table.deleteRow(ROWID); 
+		rowPromise.then((row) => {
+		console.log(row); 
+		res.json(row);
+	});
+	} catch (error) {
+		console.error("Error while deleting product : "+error);
+	}
+})
 //-----------------------------------------------------------------------------//
 
 //-----------------------------------------------------------------------------//
@@ -493,6 +675,39 @@ app.post('/addinvoice',async (req,res)=>{
 			console.log("Error While posting customer : "+error);
 		}
 	})
+
+//Put api for update invoice
+app.put('/updateinvoice',(req,res)=>{
+	try {
+		let updatedRowData = req.body.data;
+		let catalystApp = catalyst.initialize(req);
+		let datastore = catalystApp.datastore(); 
+		let table = datastore.table(invoiceTableId); 
+		let rowPromise = table.updateRow(updatedRowData);
+		rowPromise.then((row) => { console.log(row);
+			res.json(row);
+		 });	
+	} catch (error) {
+		console.log("Error on Updating invoice : "+ error);
+	}
+})
+
+//delete api for remove invoice
+app.delete('/deleteinvoice',(req,res)=>{
+	try {
+		let {ROWID} = req.body.data;
+		let catalystApp = catalyst.initialize(req);
+		let datastore = catalystApp.datastore(); 
+		let table = datastore.table(invoiceTableId); 
+		let rowPromise = table.deleteRow(ROWID); 
+		rowPromise.then((row) => {
+		console.log(row); 
+		res.json(row);
+	});
+	} catch (error) {
+		console.error("Error while deleting invoice : "+error);
+	}
+})
 //-----------------------------------------------------------------------------//
 
 //-----------------------------------------------------------------------------//
@@ -548,6 +763,23 @@ app.post('/addspares',async (req,res)=>{
 			console.log("Error While posting customer : "+error);
 		}
 	})
+
+//delete api for remove spares
+app.delete('/deletespare',(req,res)=>{
+	try {
+		let {ROWID} = req.body.data;
+		let catalystApp = catalyst.initialize(req);
+		let datastore = catalystApp.datastore(); 
+		let table = datastore.table(sparesTableId); 
+		let rowPromise = table.deleteRow(ROWID); 
+		rowPromise.then((row) => {
+		console.log(row); 
+		res.json(row);
+	});
+	} catch (error) {
+		console.error("Error while deleting spares : " + error);
+	}
+})
 //-----------------------------------------------------------------------------//
 
 //-----------------------------------------------------------------------------//
