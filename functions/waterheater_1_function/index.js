@@ -6,30 +6,32 @@ const app = express();
 
 app.use(express.json());
 
-const customerTableId = 15205000000147094;
-const technicianTableId = 15205000000147860;
-const feedbackTableId = 15205000000152609;
-const problemsTableId = 15205000000153333;
-const logTableId = 15205000000154082;
-const ticketTableId = 15205000000154811;
-const productTableId=15205000000155535;
-const invoiceTableId = 15205000000156259;
-const sparesTableId = 15205000000156983;
-const scrapTableId = 15205000000157707;
-const lisOfSparesTableId = 15205000000158431;
+const customerTableId = "15205000000147094";
+const technicianTableId = "15205000000147860";
+const feedbackTable = "15205000000152609";
+const problemsTableId = "15205000000153333";
+const logTableId = "15205000000154082";
+const ticketTableId = "15205000000154811";
+const productTableId="15205000000155535";
+const invoiceTableId = "15205000000156259";
+const sparesTableId = "15205000000156983";
+const scrapTableId = "15205000000157707";
+const lisOfSparesTableId = "15205000000158431";
 
 // Define the getMyPagedRows function outside the route handler
 async function getMyPagedRows(dataStore, tableId, hasNext = true, nextToken = undefined, allData = []) {
 	if (!hasNext) {
 	   return allData;
 	}
+	
+	// console.log("table Id : "+tableId);
  
 	try {
 	   const response = await dataStore.table(tableId).getPagedRows({
 		  nextToken,
 		  maxRows: 100
 	   });
- 
+	//    console.log("error or not")
 	   const { data, next_token, more_records } = response;
 	   console.log('rows:', data);
 	   allData = allData.concat(data);
@@ -41,7 +43,7 @@ async function getMyPagedRows(dataStore, tableId, hasNext = true, nextToken = un
 		  return allData;
 	   }
 	} catch (err) {
-	   console.log(err.toString());
+	   console.log("Error : "+err.toString());
 	   throw err;
 	}
  }
@@ -180,12 +182,14 @@ app.get('/getfeedback/:rowId',async (req,res)=>{
 //Get feedbacks details
 app.get('/getfeedbacks',async (req,res)=>{
 	try{
+		console.log("inside");
 		const catalystApp = catalyst.initialize(req);
 		let dataStore = catalystApp.datastore();
 	
+		// console.log("get data");
 	// Fetch all rows using the getMyPagedRows function
-	const allRows = await getMyPagedRows(dataStore, feedbackTableId);
-	
+	const allRows = await getMyPagedRows(dataStore,feedbackTableId);
+	// console.log("after get records");
 	res.json(allRows);
 	} catch (err) {
 	res.status(500).send(err.toString());
@@ -248,7 +252,7 @@ app.get('/getproblems',async (req,res)=>{
 	})
 	
 //Post problem record
-app.post('/addfeedback',async (req,res)=>{
+app.post('/addproblem',async (req,res)=>{
 		try{
 		let rowData = req.body.data;
 		const catalystApp = catalyst.initialize(req);
@@ -344,7 +348,7 @@ app.get('/getticket/:rowId',async (req,res)=>{
 
 
 //Get ticket records
-app.get('/gettickets',async (req,res)=>{
+app.get('/getalltickets',async (req,res)=>{
 	try{
 		const catalystApp = catalyst.initialize(req);
 		let dataStore = catalystApp.datastore();
