@@ -1,14 +1,15 @@
 import './App.css';
-import InvoiceForm from './components/InvoiceForm';
-// import InvoiceSubForm from './components/InvoiceSubForm.jsx';
-// import TicketCreation from './components/TicketCreation.jsx';
-// import ScrapInwardForm from './components/ScrapInwardForm';
-// import FeedbackForm from './components/FeedbackForm';
-// import ProblemStatement from './components/ProblemStatement';
-// import ProductMaster from './components/ProductMaster';
-// import SparePartsAndStocks from './components/SparePartsAndStocks';
-// import CustomerDetail from './components/CustomerDetail';
-// import TechnicianDetail from './components/TechnicianDetail';
+import ViewCustomerDetails from './components/Views/ViewCustomerDetails';
+// import InvoiceForm from './components/Forms/InvoiceForm';
+// import InvoiceSubForm from './components/Forms/InvoiceSubForm.jsx';
+// import TicketCreation from './components/Forms/TicketCreation.jsx';
+// import ScrapInwardForm from './components/Forms/ScrapInwardForm';
+// import FeedbackForm from './components/Forms/FeedbackForm';
+// import ProblemStatement from './components/Forms/ProblemStatement';
+// import ProductMaster from './components/Forms/ProductMaster';
+// import SparePartsAndStocks from './components/Forms/SparePartsAndStocks';
+// import CustomerDetail from './components/Forms/CustomerDetail';
+// import TechnicianDetail from './components/Forms/TechnicianDetail';
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
     // <ScrapInwardForm />
     // <InvoiceSubForm />
     // <TicketCreation />
-    <InvoiceForm />
+    // <InvoiceForm />
+    <ViewCustomerDetails />
   );
 }
 

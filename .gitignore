@@ -1,4 +1,4 @@
-/build
+/.build
 
 /react-app/node_modules
 /functions/waterheater_1_function/node_modules
