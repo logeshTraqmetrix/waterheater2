@@ -275,3 +275,307 @@ Response Headers: {"server":"ZGS","date":"Wed, 12 Jun 2024 04:41:36 GMT","conten
 [info] [2024-06-12T04:41:36.970Z] : 
 [info] [2024-06-12T04:41:36.971Z] : i Client[react-app]: Plugin : "zcatalyst-cli-plugin-react" is used for client serve
 [info] [2024-06-12T04:41:36.971Z] : 
+[debug] [2024-06-12T04:52:27.177Z] : 
+[debug] [2024-06-12T04:52:27.179Z] : ----------------------------------------------------------------------
+[debug] [2024-06-12T04:52:27.179Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-06-12T04:52:27.179Z] : CLI Version:  1.17.5
+[debug] [2024-06-12T04:52:27.179Z] : Platform:     win32
+[debug] [2024-06-12T04:52:27.180Z] : Node Version: v20.14.0
+[debug] [2024-06-12T04:52:27.180Z] : Time:         Wed Jun 12 2024 10:22:27 GMT+0530 (India Standard Time)
+[debug] [2024-06-12T04:52:27.180Z] : ----------------------------------------------------------------------
+[debug] [2024-06-12T04:52:27.180Z] : 
+[debug] [2024-06-12T04:52:27.825Z] : > authorizing via signed-in user option
+[debug] [2024-06-12T04:52:27.826Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute"]
+[debug] [2024-06-12T04:52:27.838Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-06-12T04:52:30.463Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 12 Jun 2024 04:52:33 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["46512fd555=00fd3a8cbff58bc9307e4ac5869875ce; Path=/","ZD_CSRF_TOKEN=a8b4103c-fe6a-412c-897e-fef044b2876c;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=a8b4103c-fe6a-412c-897e-fef044b2876c;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-12T04:52:30.466Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-06-12T04:52:31.110Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 12 Jun 2024 04:52:34 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=765811dc-5488-464a-b014-59b682e9720a;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=765811dc-5488-464a-b014-59b682e9720a;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-12T04:52:31.279Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-06-12T04:52:31.856Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 12 Jun 2024 04:52:35 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=5af68097-a44a-4edf-a5e6-a63430f5aa84;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=5af68097-a44a-4edf-a5e6-a63430f5aa84;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-12T04:52:31.858Z] : unknown eol undefined hence skipping check
+[info] [2024-06-12T04:52:34.525Z] : [react-plugin]: Starting the development server...
+
+[info] [2024-06-12T04:52:34.527Z] : 
+[info] [2024-06-12T04:52:34.528Z] : i Client[react-app]: Plugin : "zcatalyst-cli-plugin-react" is used for client serve
+[info] [2024-06-12T04:52:34.529Z] : 
+[info] [2024-06-12T04:52:35.929Z] : 
+[info] [2024-06-12T04:52:35.929Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-06-12T04:52:35.930Z] : i waterheater_1_function: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-06-12T04:52:35.931Z] : 
+[info] [2024-06-12T04:52:35.932Z] : 
+[info] [2024-06-12T04:52:35.932Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2024-06-12T04:52:35.933Z] : i client[react-app]: http://localhost:3000/app/
+[info] [2024-06-12T04:52:35.933Z] : 
+[info] [2024-06-12T04:52:49.710Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-12T04:52:49.719Z] : [react-plugin]: [eslint] 
+src\components\InvoiceForm.jsx
+  Line 1:17:    'useEffect' is defined but never used                                                                                                                                                                                                                                                                                                                                     no-unused-vars
+  Line 11:10:   'materialName' is assigned a value but never used                                                                                                                                                                                                                                                                                                                         no-unused-vars
+  Line 11:24:   'setMaterialName' is assigned a value but never used                                                                                                                                                                                                                                                                                                                      no-unused-vars
+  Line 12:10:   'receivedDate' is assigned a value but never used                                                                                                                                                                                                                                                                                                                         no-unused-vars
+  Line 12:24:   'setReceivedDate' is assigned a value but never used                                                                                                                                                                                                                                                                                                                      no-unused-vars
+  Line 13:10:   'quantity' is assigned a value but never used                                                                                                                                                                                                                                                                                                                             no-unused-vars
+  Line 13:20:   'setQuantity' is assigned a value but never used                                                                                                                                                                                                                                                                                                                          no-unused-vars
+  Line 14:10:   'condition' is assigned a value but never used                                                                                                                                                                                                                                                                                                                            no-unused-vars
+  Line 14:21:   'setCondition' is assigned a value but never used                                                                                                                                                                                                                                                                                                                         no-unused-vars
+  Line 15:10:   'ticketId' is assigned a value but never used                                                                                                                                                                                                                                                                                                                             no-unused-vars
+  Line 15:20:   'setTicketId' is assigned a value but never used                                                                                                                                                                                                                                                                                                                          no-unused-vars
+  Line 16:10:   'scrapData' is assigned a value but never used                                                                                                                                                                                                                                                                                                                            no-unused-vars
+  Line 16:21:   'setScrapData' is assigned a value but never used                                                                                                                                                                                                                                                                                                                         no-unused-vars
+  Line 17:10:   'invoiceNumberRow' is assigned a value but never used                                                                                                                                                                                                                                                                                                                     no-unused-vars
+  Line 17:28:   'setInvoiceNumberRow' is assigned a value but never used                                                                                                                                                                                                                                                                                                                  no-unused-vars
+  Line 25:10:   'fileList' is assigned a value but never used                                                                                                                                                                                                                                                                                                                             no-unused-vars
+  Line 27:9:    'onChange' is assigned a value but never used                                                                                                                                                                                                                                                                                                                             no-unused-vars
+  Line 38:9:    'customRequest' is assigned a value but never used                                                                                                                                                                                                                                                                                                                        no-unused-vars
+  Line 102:9:   'handlePostData' is assigned a value but never used                                                                                                                                                                                                                                                                                                                       no-unused-vars
+  Line 213:27:  Array.prototype.map() expects a return value from arrow function                                                                                                                                                                                                                                                                                                          array-callback-return
+  Line 328:27:  The href attribute is required for an anchor to be keyboard accessible. Provide a valid, navigable address as the href value. If you cannot provide an href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+[info] [2024-06-12T04:52:49.719Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-12T04:52:49.720Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-12T04:53:42.011Z] : [react-plugin]: Compiling...
+[info] [2024-06-12T04:53:42.883Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-12T04:53:42.889Z] : [react-plugin]: [eslint] 
+src\components\InvoiceForm.jsx
+  Line 1:17:    'useEffect' is defined but never used                                                                                                                                                                                                                                                                                                                                     no-unused-vars
+  Line 11:10:   'materialName' is assigned a value but never used                                                                                                                                                                                                                                                                                                                         no-unused-vars
+  Line 11:24:   'setMaterialName' is assigned a value but never used                                                                                                                                                                                                                                                                                                                      no-unused-vars
+  Line 12:10:   'receivedDate' is assigned a value but never used                                                                                                                                                                                                                                                                                                                         no-unused-vars
+  Line 12:24:   'setReceivedDate' is assigned a value but never used                                                                                                                                                                                                                                                                                                                      no-unused-vars
+  Line 13:10:   'quantity' is assigned a value but never used                                                                                                                                                                                                                                                                                                                             no-unused-vars
+  Line 13:20:   'setQuantity' is assigned a value but never used                                                                                                                                                                                                                                                                                                                          no-unused-vars
+  Line 14:10:   'condition' is assigned a value but never used                                                                                                                                                                                                                                                                                                                            no-unused-vars
+  Line 14:21:   'setCondition' is assigned a value but never used                                                                                                                                                                                                                                                                                                                         no-unused-vars
+  Line 15:10:   'ticketId' is assigned a value but never used                                                                                                                                                                                                                                                                                                                             no-unused-vars
+  Line 15:20:   'setTicketId' is assigned a value but never used                                                                                                                                                                                                                                                                                                                          no-unused-vars
+  Line 16:10:   'scrapData' is assigned a value but never used                                                                                                                                                                                                                                                                                                                            no-unused-vars
+  Line 16:21:   'setScrapData' is assigned a value but never used                                                                                                                                                                                                                                                                                                                         no-unused-vars
+  Line 17:10:   'invoiceNumberRow' is assigned a value but never used                                                                                                                                                                                                                                                                                                                     no-unused-vars
+  Line 17:28:   'setInvoiceNumberRow' is assigned a value but never used                                                                                                                                                                                                                                                                                                                  no-unused-vars
+  Line 25:10:   'fileList' is assigned a value but never used                                                                                                                                                                                                                                                                                                                             no-unused-vars
+  Line 27:9:    'onChange' is assigned a value but never used                                                                                                                                                                                                                                                                                                                             no-unused-vars
+  Line 38:9:    'customRequest' is assigned a value but never used                                                                                                                                                                                                                                                                                                                        no-unused-vars
+  Line 102:9:   'handlePostData' is assigned a value but never used                                                                                                                                                                                                                                                                                                                       no-unused-vars
+  Line 213:27:  Array.prototype.map() expects a return value from arrow function                                                                                                                                                                                                                                                                                                          array-callback-return
+  Line 328:27:  The href attribute is required for an anchor to be keyboard accessible. Provide a valid, navigable address as the href value. If you cannot provide an href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+[info] [2024-06-12T04:53:42.890Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-12T04:53:42.891Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-12T04:53:50.060Z] : 
+change of index.js in waterheater_1_function detected. Preparing your function, please wait...
+[info] [2024-06-12T04:53:51.299Z] : i AdvancedIO[waterheater_1_function]: ready!
+[info] [2024-06-12T04:53:51.300Z] : i AdvancedIO[waterheater_1_function]: http://localhost:3000/server/waterheater_1_function/
+[debug] [2024-06-12T05:43:20.632Z] : > refreshing access token <
+[debug] [2024-06-12T05:43:20.635Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2024-06-12T05:43:23.383Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 12 Jun 2024 05:43:26 GMT","content-type":"application/json;charset=UTF-8","content-length":"1945","connection":"keep-alive","set-cookie":["b266a5bf57=a7f15cb1555106de5ac96d088b72e7c8; Path=/","iamcsr=4c88bd1e-182f-49b1-b589-4afdef5f1993;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=4c88bd1e-182f-49b1-b589-4afdef5f1993;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","pragma":"no-cache","x-frame-options":"SAMEORIGIN","vary":"accept-encoding","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[info] [2024-06-12T05:45:40.094Z] : Shutting down server
+[info] [2024-06-12T05:45:40.192Z] : 
+[info] [2024-06-12T05:45:40.193Z] : √ Shutdown complete
+[debug] [2024-06-12T05:45:40.194Z] : NO ERRORS REGISTERED
+[debug] [2024-06-12T05:45:40.195Z] : EXEC ENDED with event: serve, message: success
+[debug] [2024-06-12T05:45:40.195Z] : TOTAL DURATION OF COMMAND EXEC : 3192381
+[debug] [2024-06-12T05:45:40.207Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-06-12T05:45:43.608Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 12 Jun 2024 05:45:46 GMT","content-length":"0","connection":"keep-alive","set-cookie":["46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=bf44c94a-0e55-4986-baf0-93f3a01e182e;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=bf44c94a-0e55-4986-baf0-93f3a01e182e;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-12T05:45:47.510Z] : 
+[debug] [2024-06-12T05:45:47.511Z] : ----------------------------------------------------------------------
+[debug] [2024-06-12T05:45:47.512Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-06-12T05:45:47.512Z] : CLI Version:  1.17.5
+[debug] [2024-06-12T05:45:47.512Z] : Platform:     win32
+[debug] [2024-06-12T05:45:47.512Z] : Node Version: v20.14.0
+[debug] [2024-06-12T05:45:47.513Z] : Time:         Wed Jun 12 2024 11:15:47 GMT+0530 (India Standard Time)
+[debug] [2024-06-12T05:45:47.513Z] : ----------------------------------------------------------------------
+[debug] [2024-06-12T05:45:47.513Z] : 
+[debug] [2024-06-12T05:45:48.185Z] : > authorizing via signed-in user option
+[debug] [2024-06-12T05:45:48.185Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute"]
+[debug] [2024-06-12T05:45:48.197Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-06-12T05:45:50.453Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 12 Jun 2024 05:45:53 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=11e13506-b190-46d0-aa11-fd11dff8d5df;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=11e13506-b190-46d0-aa11-fd11dff8d5df;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-12T05:45:50.456Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-06-12T05:45:51.205Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 12 Jun 2024 05:45:54 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=9f9b7983-c13e-4838-80b8-2c1504745df2;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=9f9b7983-c13e-4838-80b8-2c1504745df2;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-12T05:45:51.401Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-06-12T05:45:51.842Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 12 Jun 2024 05:45:55 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["46512fd555=00fd3a8cbff58bc9307e4ac5869875ce; Path=/","ZD_CSRF_TOKEN=0d744182-c224-476c-9100-c2d91ea3a7dd;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=0d744182-c224-476c-9100-c2d91ea3a7dd;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-12T05:45:51.846Z] : unknown eol undefined hence skipping check
+[info] [2024-06-12T05:45:54.510Z] : [react-plugin]: Starting the development server...
+
+[info] [2024-06-12T05:45:54.512Z] : 
+[info] [2024-06-12T05:45:54.513Z] : i Client[react-app]: Plugin : "zcatalyst-cli-plugin-react" is used for client serve
+[info] [2024-06-12T05:45:54.513Z] : 
+[info] [2024-06-12T05:45:55.948Z] : 
+[info] [2024-06-12T05:45:55.949Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-06-12T05:45:55.950Z] : i waterheater_1_function: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-06-12T05:45:55.950Z] : 
+[info] [2024-06-12T05:45:55.950Z] : 
+[info] [2024-06-12T05:45:55.950Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2024-06-12T05:45:55.951Z] : i client[react-app]: http://localhost:3000/app/
+[info] [2024-06-12T05:45:55.951Z] : 
+[info] [2024-06-12T05:45:57.112Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-12T05:45:57.112Z] : [react-plugin]: 
+[info] [2024-06-12T05:45:57.112Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-12T05:45:57.113Z] : [react-plugin]: 
+[info] [2024-06-12T05:45:57.113Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-12T05:45:57.113Z] : [react-plugin]:   On Your Network:  http://192.168.148.235:3000/app/
+[info] [2024-06-12T05:45:57.113Z] : [react-plugin]: 
+[info] [2024-06-12T05:45:57.114Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-12T05:45:57.114Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-12T05:45:57.115Z] : [react-plugin]: 
+[info] [2024-06-12T05:46:10.017Z] : 
+change of index.js in waterheater_1_function detected. Preparing your function, please wait...
+[info] [2024-06-12T05:46:11.100Z] : i AdvancedIO[waterheater_1_function]: ready!
+[info] [2024-06-12T05:46:11.101Z] : i AdvancedIO[waterheater_1_function]: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-06-12T05:47:18.316Z] : Shutting down server
+[info] [2024-06-12T05:47:18.386Z] : 
+[info] [2024-06-12T05:47:18.386Z] : √ Shutdown complete
+[debug] [2024-06-12T05:47:18.387Z] : NO ERRORS REGISTERED
+[debug] [2024-06-12T05:47:18.388Z] : EXEC ENDED with event: serve, message: success
+[debug] [2024-06-12T05:47:18.388Z] : TOTAL DURATION OF COMMAND EXEC : 90215
+[debug] [2024-06-12T05:47:18.396Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-06-12T05:47:20.989Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 12 Jun 2024 05:47:24 GMT","content-length":"0","connection":"keep-alive","set-cookie":["46512fd555=00fd3a8cbff58bc9307e4ac5869875ce; Path=/","ZD_CSRF_TOKEN=781fa4b5-a1d7-4e09-b3cd-ecfd99847dd5;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=781fa4b5-a1d7-4e09-b3cd-ecfd99847dd5;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-12T05:58:56.936Z] : 
+[debug] [2024-06-12T05:58:56.937Z] : ----------------------------------------------------------------------
+[debug] [2024-06-12T05:58:56.937Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-06-12T05:58:56.938Z] : CLI Version:  1.17.5
+[debug] [2024-06-12T05:58:56.938Z] : Platform:     win32
+[debug] [2024-06-12T05:58:56.938Z] : Node Version: v20.14.0
+[debug] [2024-06-12T05:58:56.938Z] : Time:         Wed Jun 12 2024 11:28:56 GMT+0530 (India Standard Time)
+[debug] [2024-06-12T05:58:56.939Z] : ----------------------------------------------------------------------
+[debug] [2024-06-12T05:58:56.939Z] : 
+[debug] [2024-06-12T05:58:57.572Z] : > authorizing via signed-in user option
+[debug] [2024-06-12T05:58:57.572Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute"]
+[debug] [2024-06-12T05:58:57.586Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-06-12T05:58:59.508Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 12 Jun 2024 05:59:02 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["46512fd555=00fd3a8cbff58bc9307e4ac5869875ce; Path=/","ZD_CSRF_TOKEN=6033c474-8361-4be9-af4a-86384d3c0cca;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=6033c474-8361-4be9-af4a-86384d3c0cca;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-12T05:58:59.511Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-06-12T05:59:00.083Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 12 Jun 2024 05:59:03 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=da2c9983-0ee8-4f13-89b4-8ae6738b9822;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=da2c9983-0ee8-4f13-89b4-8ae6738b9822;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-12T05:59:00.247Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-06-12T05:59:01.522Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 12 Jun 2024 05:59:04 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=351df7dd-0fb2-4bc5-943e-cfa0f318205e;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=351df7dd-0fb2-4bc5-943e-cfa0f318205e;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-12T05:59:01.524Z] : unknown eol undefined hence skipping check
+[info] [2024-06-12T05:59:04.116Z] : [react-plugin]: Starting the development server...
+
+[info] [2024-06-12T05:59:04.118Z] : 
+[info] [2024-06-12T05:59:04.119Z] : i Client[react-app]: Plugin : "zcatalyst-cli-plugin-react" is used for client serve
+[info] [2024-06-12T05:59:04.119Z] : 
+[info] [2024-06-12T05:59:05.521Z] : 
+[info] [2024-06-12T05:59:05.522Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-06-12T05:59:05.522Z] : i waterheater_1_function: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-06-12T05:59:05.523Z] : 
+[info] [2024-06-12T05:59:05.523Z] : 
+[info] [2024-06-12T05:59:05.523Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2024-06-12T05:59:05.524Z] : i client[react-app]: http://localhost:3000/app/
+[info] [2024-06-12T05:59:05.524Z] : 
+[info] [2024-06-12T05:59:06.187Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-12T05:59:06.188Z] : [react-plugin]: 
+[info] [2024-06-12T05:59:06.188Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-12T05:59:06.188Z] : [react-plugin]: 
+[info] [2024-06-12T05:59:06.189Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-12T05:59:06.189Z] : [react-plugin]:   On Your Network:  http://192.168.148.235:3000/app/
+[info] [2024-06-12T05:59:06.189Z] : [react-plugin]: 
+[info] [2024-06-12T05:59:06.190Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-12T05:59:06.191Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-12T05:59:06.191Z] : [react-plugin]: 
+[info] [2024-06-12T05:59:06.288Z] : [react-plugin]: Compiling...
+[info] [2024-06-12T05:59:06.494Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-12T05:59:06.494Z] : [react-plugin]: 
+[info] [2024-06-12T05:59:06.495Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-12T05:59:06.495Z] : [react-plugin]: 
+[info] [2024-06-12T05:59:06.495Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-12T05:59:06.495Z] : [react-plugin]:   On Your Network:  http://192.168.148.235:3000/app/
+[info] [2024-06-12T05:59:06.496Z] : [react-plugin]: 
+[info] [2024-06-12T05:59:06.496Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-12T05:59:06.497Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-12T05:59:06.497Z] : [react-plugin]: 
+[info] [2024-06-12T06:03:33.126Z] : [react-plugin]: Failed to compile.
+
+[info] [2024-06-12T06:03:33.127Z] : [react-plugin]: Module not found: Error: Can't resolve './components/CustomerDetail' in 'C:\catalyst projects\water heater 2\react-app\src'
+[info] [2024-06-12T06:04:32.801Z] : [react-plugin]: Compiling...
+[info] [2024-06-12T06:04:34.919Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-12T06:04:34.919Z] : [react-plugin]: 
+[info] [2024-06-12T06:04:34.919Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-12T06:04:34.919Z] : [react-plugin]: 
+[info] [2024-06-12T06:04:34.919Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-12T06:04:34.920Z] : [react-plugin]:   On Your Network:  http://192.168.148.235:3000/app/
+[info] [2024-06-12T06:04:34.920Z] : [react-plugin]: 
+[info] [2024-06-12T06:04:34.921Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-12T06:04:34.921Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-12T06:04:34.921Z] : [react-plugin]: 
+[info] [2024-06-12T06:05:19.938Z] : [react-plugin]: Compiling...
+[info] [2024-06-12T06:05:20.214Z] : [react-plugin]: Failed to compile.
+
+[info] [2024-06-12T06:05:20.215Z] : [react-plugin]: Module not found: Error: Can't resolve './components/Froms/CustomerDetail' in 'C:\catalyst projects\water heater 2\react-app\src'
+[info] [2024-06-12T06:06:00.130Z] : [react-plugin]: Compiling...
+[info] [2024-06-12T06:06:00.329Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-12T06:06:00.329Z] : [react-plugin]: 
+[info] [2024-06-12T06:06:00.329Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-12T06:06:00.329Z] : [react-plugin]: 
+[info] [2024-06-12T06:06:00.329Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-12T06:06:00.329Z] : [react-plugin]:   On Your Network:  http://192.168.148.235:3000/app/
+[info] [2024-06-12T06:06:00.330Z] : [react-plugin]: 
+[info] [2024-06-12T06:06:00.331Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-12T06:06:00.331Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-12T06:06:00.331Z] : [react-plugin]: 
+[info] [2024-06-12T06:18:57.205Z] : [react-plugin]: Compiling...
+[info] [2024-06-12T06:18:57.550Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-12T06:18:57.550Z] : [react-plugin]: 
+[info] [2024-06-12T06:18:57.550Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-12T06:18:57.551Z] : [react-plugin]: 
+[info] [2024-06-12T06:18:57.551Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-12T06:18:57.551Z] : [react-plugin]:   On Your Network:  http://192.168.148.235:3000/app/
+[info] [2024-06-12T06:18:57.551Z] : [react-plugin]: 
+[info] [2024-06-12T06:18:57.552Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-12T06:18:57.552Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-12T06:18:57.552Z] : [react-plugin]: 
+[info] [2024-06-12T06:21:30.506Z] : Shutting down server
+[info] [2024-06-12T06:21:30.587Z] : 
+[info] [2024-06-12T06:21:30.588Z] : √ Shutdown complete
+[debug] [2024-06-12T06:21:30.588Z] : NO ERRORS REGISTERED
+[debug] [2024-06-12T06:21:30.589Z] : EXEC ENDED with event: serve, message: success
+[debug] [2024-06-12T06:21:30.589Z] : TOTAL DURATION OF COMMAND EXEC : 1353028
+[debug] [2024-06-12T06:21:30.598Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-06-12T06:21:33.305Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 12 Jun 2024 06:21:36 GMT","content-length":"0","connection":"keep-alive","set-cookie":["46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=1db199be-0e3d-41cb-a3a1-1deda8364dfa;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=1db199be-0e3d-41cb-a3a1-1deda8364dfa;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
