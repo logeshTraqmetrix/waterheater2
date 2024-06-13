@@ -1,14 +1,15 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 
 const TechnicianDetail = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    whatsapp: '',
-    address: '',
-    image: null
+    Technician_Name: '',
+    Technician_Email: '',
+    Technician_Phone: '',
+    Technician_Whatsapp: '',
+    Technician_Address: '',
+    Technician_Image: null
   });
 
   const handleChange = (e) => {
@@ -26,15 +27,28 @@ const TechnicianDetail = () => {
     // Handle form submission here
     console.log(formData);
 
+    //Here need to upload image then post the data with image id "waiting for upload code".
+
+    //Posting data to table
+    axios.post('/server/waterheater_1_function/addtechnician',{data:formData})
+    .then((response)=>{
+     console.log("Technician Added Successfully.");
+     console.log("Response : " + response);
+     })
+    .catch((err)=>{
+       console.error("Error Adding techinician from front-end : "+ err);
+      })
+
     // Clear form data
     setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      whatsapp: '',
-      address: '',
-      image: null
+    Technician_Name: '',
+    Technician_Email: '',
+    Technician_Phone: '',
+    Technician_Whatsapp: '',
+    Technician_Address: '',
+    Technician_Image: null
     });
+
 
     // Reset the image file input
     e.target.reset();
@@ -42,12 +56,12 @@ const TechnicianDetail = () => {
 
   const handleReset = () => {
     setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      whatsapp: '',
-      address: '',
-      image: null
+    Technician_Name: '',
+    Technician_Email: '',
+    Technician_Phone: '',
+    Technician_Whatsapp: '',
+    Technician_Address: '',
+    Technician_Image: null
     });
   };
 
@@ -62,8 +76,8 @@ const TechnicianDetail = () => {
               <Form.Control
                 type="text"
                 placeholder="Enter technician name"
-                name="name"
-                value={formData.name}
+                name="Technician_Name"
+                value={formData.Technician_Name}
                 onChange={handleChange}
                 required
               />
@@ -75,8 +89,8 @@ const TechnicianDetail = () => {
           <Form.Control
             type="email"
             placeholder="Enter email"
-            name="email"
-            value={formData.email}
+            name="Technician_Email"
+            value={formData.Technician_Email}
             onChange={handleChange}
           />
         </Form.Group>
@@ -87,8 +101,8 @@ const TechnicianDetail = () => {
               <Form.Control
                 type="text"
                 placeholder="Enter phone"
-                name="phone"
-                value={formData.phone}
+                name="Technician_Phone"
+                value={formData.Technician_Phone}
                 onChange={handleChange}
                 required
               />
@@ -102,8 +116,8 @@ const TechnicianDetail = () => {
               <Form.Control
                 type="text"
                 placeholder="Enter WhatsApp number"
-                name="whatsapp"
-                value={formData.whatsapp}
+                name="Technician_Whatsapp"
+                value={formData.Technician_Whatsapp}
                 onChange={handleChange}
               />
             </Form.Group>
@@ -115,8 +129,8 @@ const TechnicianDetail = () => {
             as="textarea"
             rows={3}
             placeholder="Enter address"
-            name="address"
-            value={formData.address}
+            name="Technician_Address"
+            value={formData.Technician_Address}
             onChange={handleChange}
           />
         </Form.Group>
@@ -124,7 +138,7 @@ const TechnicianDetail = () => {
           <Form.Label>Technician Image</Form.Label>
           <Form.Control
             type="file"
-            name="image"
+            name="Technician_Image"
             accept="image/*"
             onChange={handleImageChange}
           />

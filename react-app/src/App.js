@@ -23,17 +23,21 @@ import TechnicianDetail from './components/Forms/TechnicianDetail';
 function App() {
   return (
     <div>
-      <CustomerDetail/>
-    <TechnicianDetail />
-    <ProductMaster />
-    <SparePartsAndStocks />
-    <ProblemStatement />
-    <FeedbackForm />
-    <ScrapInwardForm />
+
+    {/* <CustomerDetail/> */}
+    {/* <TechnicianDetail /> */}
+    {/* <SparePartsAndStocks /> */}
+    {/* <ProblemStatement /> */}
+    {/* <FeedbackForm /> */}
     <InvoiceSubForm />
-    <TicketCreation />
-    <InvoiceForm />
-    <ViewCustomerDetails />
+    {/* Image Included Forms */}
+    {/* <ProductMaster /> */}
+    {/* <ScrapInwardForm /> */}
+    {/* <TicketCreation /> */}
+    {/* <InvoiceForm /> */}
+
+    { /*Reports*/}
+    {/* <ViewCustomerDetails />
     <ViewTicket />
     <ViewTechnicianDetails />
     <ViewFeedback />
@@ -43,7 +47,7 @@ function App() {
     <ViewInvoice />
     <ViewSpares />
     <ViewScrap />
-    <ViewListOfSpares />
+    <ViewListOfSpares /> */}
     </div>
   );
 }

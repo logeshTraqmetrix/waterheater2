@@ -1,14 +1,15 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
 
 const SparePartsAndStocks = () => {
   const [formData, setFormData] = useState({
-    materialName: '',
-    warranty: '',
-    price: '',
-    availableQty: '',
-    usedQtySoFar: '',
-    inwardQty: ''
+    Material_Name: '',
+    Warranty: '',
+    Price : '',
+    Available_Qty: '',
+    Consumed_Qty: '',
+    Inward_Qty: ''
   });
 
   const handleChange = (e) => {
@@ -21,14 +22,22 @@ const SparePartsAndStocks = () => {
     // Handle form submission here
     console.log(formData);
 
+    //Posting the spares to table
+    axios.post('/server/waterheater_1_function/addspares',{data:formData})
+    .then((response)=>{
+      console.log("Record Added Successfully");
+      console.log("Response : "+response);
+    })
+    .catch((err)=>{console.error("Error at added spares from front-end : "+err);})
+
     // Clear form data
     setFormData({
-      materialName: '',
-      warranty: '',
-      price: '',
-      availableQty: '',
-      usedQtySoFar: '',
-      inwardQty: ''
+      Material_Name: '',
+      Warranty: '',
+      Price : '',
+      Available_Qty: '',
+      Consumed_Qty: '',
+      Inward_Qty: ''
     });
 
     // Reset the form
@@ -37,12 +46,12 @@ const SparePartsAndStocks = () => {
 
   const handleReset = () => {
     setFormData({
-      materialName: '',
-      warranty: '',
-      price: '',
-      availableQty: '',
-      usedQtySoFar: '',
-      inwardQty: ''
+      Material_Name: '',
+      Warranty: '',
+      Price : '',
+      Available_Qty: '',
+      Consumed_Qty: '',
+      Inward_Qty: ''
     });
   };
 
@@ -55,8 +64,8 @@ const SparePartsAndStocks = () => {
           <Form.Control
             type="text"
             placeholder="Enter material name"
-            name="materialName"
-            value={formData.materialName}
+            name="Material_Name"
+            value={formData.Material_Name}
             onChange={handleChange}
             required
           />
@@ -67,8 +76,8 @@ const SparePartsAndStocks = () => {
           <Form.Control
             type="text"
             placeholder="Enter warranty"
-            name="warranty"
-            value={formData.warranty}
+            name="Warranty"
+            value={formData.Warranty}
             onChange={handleChange}
           />
         </Form.Group>
@@ -78,8 +87,8 @@ const SparePartsAndStocks = () => {
           <Form.Control
             type="text"
             placeholder="Enter price"
-            name="price"
-            value={formData.price}
+            name="Price"
+            value={formData.Price}
             onChange={handleChange}
           />
         </Form.Group>
@@ -89,8 +98,8 @@ const SparePartsAndStocks = () => {
           <Form.Control
             type="text"
             placeholder="Enter available quantity"
-            name="availableQty"
-            value={formData.availableQty}
+            name="Available_Qty"
+            value={formData.Available_Qty}
             onChange={handleChange}
           />
         </Form.Group>
@@ -100,8 +109,8 @@ const SparePartsAndStocks = () => {
           <Form.Control
             type="text"
             placeholder="Enter used quantity so far"
-            name="usedQtySoFar"
-            value={formData.usedQtySoFar}
+            name="Consumed_Qty"
+            value={formData.Consumed_Qty}
             onChange={handleChange}
           />
         </Form.Group>
@@ -111,8 +120,8 @@ const SparePartsAndStocks = () => {
           <Form.Control
             type="text"
             placeholder="Enter inward quantity"
-            name="inwardQty"
-            value={formData.inwardQty}
+            name="Inward_Qty"
+            value={formData.Inward_Qty}
             onChange={handleChange}
           />
         </Form.Group>

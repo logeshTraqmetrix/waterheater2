@@ -1,10 +1,12 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
 
 const FeedbackForm = () => {
   const [formData, setFormData] = useState({
-    rating: '',
-    comments: ''
+    Rate_Us: '',
+    Comments: '',
+    Ticket_Lookup: ''
   });
 
   const handleChange = (e) => {
@@ -17,10 +19,18 @@ const FeedbackForm = () => {
     // Handle form submission here
     console.log(formData);
 
+    //Posting feed back data to table
+    axios.post('/server/waterheater_1_function/addfeedback',{data:formData})
+    .then((response)=>{
+      console.log("Record Added Succesfully");
+      console.log("Response : "+JSON.stringify(response));
+    })
+    .catch((err)=>{console.error("Error While posting feed back data from front-end : "+err);});
+
     // Clear form data
     setFormData({
-      rating: '',
-      comments: ''
+    Rate_Us: '',
+    Comments: ''
     });
 
     // Reset the form
@@ -29,8 +39,8 @@ const FeedbackForm = () => {
 
   const handleReset = () => {
     setFormData({
-      rating: '',
-      comments: ''
+    Rate_Us: '',
+    Comments: ''
     });
   };
 
@@ -45,9 +55,9 @@ const FeedbackForm = () => {
               inline
               type="radio"
               label="Good"
-              name="rating"
+              name="Rate_Us"
               value="good"
-              checked={formData.rating === 'good'}
+              checked={formData.Rate_Us === 'good'}
               onChange={handleChange}
               required
             />
@@ -55,9 +65,9 @@ const FeedbackForm = () => {
               inline
               type="radio"
               label="Average"
-              name="rating"
+              name="Rate_Us"
               value="average"
-              checked={formData.rating === 'average'}
+              checked={formData.Rate_Us === 'average'}
               onChange={handleChange}
               required
             />
@@ -65,9 +75,9 @@ const FeedbackForm = () => {
               inline
               type="radio"
               label="Bad"
-              name="rating"
+              name="Rate_Us"
               value="bad"
-              checked={formData.rating === 'bad'}
+              checked={formData.Rate_Us === 'bad'}
               onChange={handleChange}
               required
             />
@@ -80,8 +90,8 @@ const FeedbackForm = () => {
             as="textarea"
             rows={3}
             placeholder="Enter your comments"
-            name="comments"
-            value={formData.comments}
+            name="Comments"
+            value={formData.Comments}
             onChange={handleChange}
           />
         </Form.Group>
