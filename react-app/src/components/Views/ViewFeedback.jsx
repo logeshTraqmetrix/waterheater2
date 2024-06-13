@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { Table, Dropdown, Modal, Button } from 'react-bootstrap';
 import axios from 'axios';
 
-const ViewCustomerDetails = () => {
+const ViewFeedback = () => {
   const [data, setData] = useState([]);
-  const [selectedCustomer, setSelectedCustomer] = useState(null);
+  const [selectedFeedback, setSelectedFeedback] = useState(null);
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     axios
-      .get('/server/waterheater_1_function/getcustomers')
+      .get('/server/waterheater_1_function/getfeedbacks')
       .then((res) => {
         console.log(res.data);
         setData(res.data);
@@ -19,44 +19,41 @@ const ViewCustomerDetails = () => {
       });
   }, []);
 
-  const ActionDropdown = (customer) => (
+  const ActionDropdown = (feedback) => (
     <Dropdown>
       <Dropdown.Toggle variant="primary" id="dropdown-basic">
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
-        <Dropdown.Item onClick={() => handleViewCustomer(customer)}>View</Dropdown.Item>
+        <Dropdown.Item onClick={() => handleViewFeedback(feedback)}>View</Dropdown.Item>
         <Dropdown.Item>Edit</Dropdown.Item>
         <Dropdown.Item>Delete</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );
 
-  const handleViewCustomer = (customer) => {
-    setSelectedCustomer(customer);
-    console.log(customer)
+  const handleViewFeedback = (feedback) => {
+    setSelectedFeedback(feedback);
+    console.log(feedback)
     setShowModal(true);
   };
 
-  const CustomerModal = () => {
+  const FeedbackModal = () => {
     const handleCloseModal = () => {
-      setSelectedCustomer(null);
+      setSelectedFeedback(null);
       setShowModal(false);
     };
 
     return (
       <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>
-          <Modal.Title>Customer Details</Modal.Title>
+          <Modal.Title>Feedback Details</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {selectedCustomer && (
+          {selectedFeedback && (
             <>
-              <p>Name: {selectedCustomer.customer.Customer_Name}</p>
-              <p>Phone: {selectedCustomer.customer.Customer_Phone}</p>
-              <p>Address: {selectedCustomer.customer.Customer_Address}</p>
-              <p>Email: {selectedCustomer.customer.Customer_Email}</p>
-              <p>WhatsApp : {selectedCustomer.customer.Customer_Whatsapp}</p>
+              <p>Rating: {selectedFeedback.feedback.Rate_Us}</p>
+              <p>Comments: {selectedFeedback.feedback.Comments}</p>
             </>
           )}
         </Modal.Body>
@@ -75,29 +72,27 @@ const ViewCustomerDetails = () => {
         <Table striped bordered hover>
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Phone</th>
-              <th>Address</th>
+              <th>Rating</th>
+              <th>Comments</th>
               <th>Action</th>
             </tr>
           </thead>
           <tbody>
-            {data.map((customer, index) => (
+            {data.map((feedback, index) => (
               <tr key={index}>
-                <td>{customer.Customer_Name}</td>
-                <td>{customer.Customer_Phone}</td>
-                <td>{customer.Customer_Address}</td>
+                <td>{feedback.Rate_Us}</td>
+                <td>{feedback.Comments}</td>
                 <td>
-                  <ActionDropdown customer={customer} />
+                  <ActionDropdown feedback={feedback} />
                 </td>
               </tr>
             ))}
           </tbody>
         </Table>
       </div>
-      <CustomerModal />
+      <FeedbackModal />
     </div>
   );
 };
 
-export default ViewCustomerDetails;
+export default ViewFeedback;

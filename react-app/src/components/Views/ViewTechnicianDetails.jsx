@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { Table, Dropdown, Modal, Button } from 'react-bootstrap';
 import axios from 'axios';
 
-const ViewCustomerDetails = () => {
+const ViewTechnicianDetails = () => {
   const [data, setData] = useState([]);
-  const [selectedCustomer, setSelectedCustomer] = useState(null);
+  const [selectedTechnician, setSelectedTechnician] = useState(null);
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     axios
-      .get('/server/waterheater_1_function/getcustomers')
+      .get('/server/waterheater_1_function/gettechnicians')
       .then((res) => {
         console.log(res.data);
         setData(res.data);
@@ -19,44 +19,44 @@ const ViewCustomerDetails = () => {
       });
   }, []);
 
-  const ActionDropdown = (customer) => (
+  const ActionDropdown = (technician) => (
     <Dropdown>
       <Dropdown.Toggle variant="primary" id="dropdown-basic">
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
-        <Dropdown.Item onClick={() => handleViewCustomer(customer)}>View</Dropdown.Item>
+        <Dropdown.Item onClick={() => handleViewTechnician(technician)}>View</Dropdown.Item>
         <Dropdown.Item>Edit</Dropdown.Item>
         <Dropdown.Item>Delete</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );
 
-  const handleViewCustomer = (customer) => {
-    setSelectedCustomer(customer);
-    console.log(customer)
+  const handleViewTechnician = (technician) => {
+    setSelectedTechnician(technician);
+    console.log(technician)
     setShowModal(true);
   };
 
-  const CustomerModal = () => {
+  const TechnicianModal = () => {
     const handleCloseModal = () => {
-      setSelectedCustomer(null);
+      setSelectedTechnician(null);
       setShowModal(false);
     };
 
     return (
       <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>
-          <Modal.Title>Customer Details</Modal.Title>
+          <Modal.Title>Technician Details</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {selectedCustomer && (
+          {selectedTechnician && (
             <>
-              <p>Name: {selectedCustomer.customer.Customer_Name}</p>
-              <p>Phone: {selectedCustomer.customer.Customer_Phone}</p>
-              <p>Address: {selectedCustomer.customer.Customer_Address}</p>
-              <p>Email: {selectedCustomer.customer.Customer_Email}</p>
-              <p>WhatsApp : {selectedCustomer.customer.Customer_Whatsapp}</p>
+              <p>Name: {selectedTechnician.technician.Technician_Name}</p>
+              <p>Phone: {selectedTechnician.technician.Technician_Phone}</p>
+              <p>Address: {selectedTechnician.technician.Technician_Address}</p>
+              <p>Email: {selectedTechnician.technician.Technician_Email}</p>
+              <p>WhatsApp : {selectedTechnician.technician.Technician_Whatsapp}</p>
             </>
           )}
         </Modal.Body>
@@ -82,22 +82,22 @@ const ViewCustomerDetails = () => {
             </tr>
           </thead>
           <tbody>
-            {data.map((customer, index) => (
+            {data.map((technician, index) => (
               <tr key={index}>
-                <td>{customer.Customer_Name}</td>
-                <td>{customer.Customer_Phone}</td>
-                <td>{customer.Customer_Address}</td>
+                <td>{technician.Technician_Name}</td>
+                <td>{technician.Technician_Phone}</td>
+                <td>{technician.Technician_Address}</td>
                 <td>
-                  <ActionDropdown customer={customer} />
+                  <ActionDropdown technician={technician} />
                 </td>
               </tr>
             ))}
           </tbody>
         </Table>
       </div>
-      <CustomerModal />
+      <TechnicianModal />
     </div>
   );
 };
 
-export default ViewCustomerDetails;
+export default ViewTechnicianDetails;

@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { Table, Dropdown, Modal, Button } from 'react-bootstrap';
 import axios from 'axios';
 
-const ViewCustomerDetails = () => {
+const ViewLogs = () => {
   const [data, setData] = useState([]);
-  const [selectedCustomer, setSelectedCustomer] = useState(null);
+  const [selectedLogs, setSelectedLogs] = useState(null);
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     axios
-      .get('/server/waterheater_1_function/getcustomers')
+      .get('/server/waterheater_1_function/getlogs')
       .then((res) => {
         console.log(res.data);
         setData(res.data);
@@ -19,44 +19,41 @@ const ViewCustomerDetails = () => {
       });
   }, []);
 
-  const ActionDropdown = (customer) => (
+  const ActionDropdown = (logs) => (
     <Dropdown>
       <Dropdown.Toggle variant="primary" id="dropdown-basic">
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
-        <Dropdown.Item onClick={() => handleViewCustomer(customer)}>View</Dropdown.Item>
+        <Dropdown.Item onClick={() => handleViewLogs(logs)}>View</Dropdown.Item>
         <Dropdown.Item>Edit</Dropdown.Item>
         <Dropdown.Item>Delete</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );
 
-  const handleViewCustomer = (customer) => {
-    setSelectedCustomer(customer);
-    console.log(customer)
+  const handleViewLogs = (logs) => {
+    setSelectedLogs(logs);
+    console.log(logs)
     setShowModal(true);
   };
 
-  const CustomerModal = () => {
+  const LogsModal = () => {
     const handleCloseModal = () => {
-      setSelectedCustomer(null);
+      setSelectedLogs(null);
       setShowModal(false);
     };
 
     return (
       <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>
-          <Modal.Title>Customer Details</Modal.Title>
+          <Modal.Title>Logs Details</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {selectedCustomer && (
+          {selectedLogs && (
             <>
-              <p>Name: {selectedCustomer.customer.Customer_Name}</p>
-              <p>Phone: {selectedCustomer.customer.Customer_Phone}</p>
-              <p>Address: {selectedCustomer.customer.Customer_Address}</p>
-              <p>Email: {selectedCustomer.customer.Customer_Email}</p>
-              <p>WhatsApp : {selectedCustomer.customer.Customer_Whatsapp}</p>
+              <p>Product Name: {selectedLogs.logs.Description}</p>
+
             </>
           )}
         </Modal.Body>
@@ -75,29 +72,26 @@ const ViewCustomerDetails = () => {
         <Table striped bordered hover>
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Phone</th>
-              <th>Address</th>
+              <th>Description</th>
+              
               <th>Action</th>
             </tr>
           </thead>
           <tbody>
-            {data.map((customer, index) => (
+            {data.map((logs, index) => (
               <tr key={index}>
-                <td>{customer.Customer_Name}</td>
-                <td>{customer.Customer_Phone}</td>
-                <td>{customer.Customer_Address}</td>
+                <td>{logs.Description}</td>
                 <td>
-                  <ActionDropdown customer={customer} />
+                  <ActionDropdown logs={logs} />
                 </td>
               </tr>
             ))}
           </tbody>
         </Table>
       </div>
-      <CustomerModal />
+      <LogsModal />
     </div>
   );
 };
 
-export default ViewCustomerDetails;
+export default ViewLogs;

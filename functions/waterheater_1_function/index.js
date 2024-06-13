@@ -8,7 +8,7 @@ app.use(express.json());
 
 const customerTableId = "15205000000147094";
 const technicianTableId = "15205000000147860";
-const feedbackTable = "15205000000152609";
+const feedbackTableId = "15205000000152609";
 const problemsTableId = "15205000000153333";
 const logTableId = "15205000000154082";
 const ticketTableId = "15205000000154811";

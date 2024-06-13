@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { Table, Dropdown, Modal, Button } from 'react-bootstrap';
 import axios from 'axios';
 
-const ViewCustomerDetails = () => {
+const ViewListOfSpares = () => {
   const [data, setData] = useState([]);
-  const [selectedCustomer, setSelectedCustomer] = useState(null);
+  const [selectedListOfSpares, setSelectedListOfSpares] = useState(null);
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     axios
-      .get('/server/waterheater_1_function/getcustomers')
+      .get('/server/waterheater_1_function/getlistofspares')
       .then((res) => {
         console.log(res.data);
         setData(res.data);
@@ -19,44 +19,46 @@ const ViewCustomerDetails = () => {
       });
   }, []);
 
-  const ActionDropdown = (customer) => (
+  const ActionDropdown = (listOfSpares) => (
     <Dropdown>
       <Dropdown.Toggle variant="primary" id="dropdown-basic">
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
-        <Dropdown.Item onClick={() => handleViewCustomer(customer)}>View</Dropdown.Item>
+        <Dropdown.Item onClick={() => handleViewListOfSpares(listOfSpares)}>View</Dropdown.Item>
         <Dropdown.Item>Edit</Dropdown.Item>
         <Dropdown.Item>Delete</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );
 
-  const handleViewCustomer = (customer) => {
-    setSelectedCustomer(customer);
-    console.log(customer)
+  const handleViewListOfSpares = (listOfSpares) => {
+    setSelectedListOfSpares(listOfSpares);
+    console.log(listOfSpares)
     setShowModal(true);
   };
 
-  const CustomerModal = () => {
+  const ListOfSparesModal = () => {
     const handleCloseModal = () => {
-      setSelectedCustomer(null);
+      setSelectedListOfSpares(null);
       setShowModal(false);
     };
 
     return (
       <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>
-          <Modal.Title>Customer Details</Modal.Title>
+          <Modal.Title>ListOfSpares Details</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {selectedCustomer && (
+          {selectedListOfSpares && (
             <>
-              <p>Name: {selectedCustomer.customer.Customer_Name}</p>
-              <p>Phone: {selectedCustomer.customer.Customer_Phone}</p>
-              <p>Address: {selectedCustomer.customer.Customer_Address}</p>
-              <p>Email: {selectedCustomer.customer.Customer_Email}</p>
-              <p>WhatsApp : {selectedCustomer.customer.Customer_Whatsapp}</p>
+              <p>Parts_and_service: {selectedListOfSpares.listOfSpares.Parts_and_service}</p>
+              <p>Warranty: {selectedListOfSpares.listOfSpares.Warranty}</p>
+              <p>Warranty_Rate: {selectedListOfSpares.listOfSpares.Warranty_Rate}</p>
+              <p>Rate: {selectedListOfSpares.listOfSpares.Rate}</p>
+              <p>Qty : {selectedListOfSpares.listOfSpares.Qty}</p>
+              <p>Invoice_Date : {selectedListOfSpares.listOfSpares.Invoice_Date}</p>
+              <p>Expense_Cost : {selectedListOfSpares.listOfSpares.Expense_Cost}</p>
             </>
           )}
         </Modal.Body>
@@ -75,29 +77,29 @@ const ViewCustomerDetails = () => {
         <Table striped bordered hover>
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Phone</th>
-              <th>Address</th>
+              <th>P & S</th>
+              <th>Qty</th>
+              <th>Rate</th>
               <th>Action</th>
             </tr>
           </thead>
           <tbody>
-            {data.map((customer, index) => (
+            {data.map((listOfSpares, index) => (
               <tr key={index}>
-                <td>{customer.Customer_Name}</td>
-                <td>{customer.Customer_Phone}</td>
-                <td>{customer.Customer_Address}</td>
+                <td>{listOfSpares.Parts_and_service}</td>
+                <td>{listOfSpares.Qty}</td>
+                <td>{listOfSpares.Rate}</td>
                 <td>
-                  <ActionDropdown customer={customer} />
+                  <ActionDropdown listOfSpares={listOfSpares} />
                 </td>
               </tr>
             ))}
           </tbody>
         </Table>
       </div>
-      <CustomerModal />
+      <ListOfSparesModal />
     </div>
   );
 };
 
-export default ViewCustomerDetails;
+export default ViewListOfSpares;

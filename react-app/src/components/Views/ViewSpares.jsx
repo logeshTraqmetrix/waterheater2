@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { Table, Dropdown, Modal, Button } from 'react-bootstrap';
 import axios from 'axios';
 
-const ViewCustomerDetails = () => {
+const ViewSpares = () => {
   const [data, setData] = useState([]);
-  const [selectedCustomer, setSelectedCustomer] = useState(null);
+  const [selectedSpares, setSelectedSpares] = useState(null);
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     axios
-      .get('/server/waterheater_1_function/getcustomers')
+      .get('/server/waterheater_1_function/getspares')
       .then((res) => {
         console.log(res.data);
         setData(res.data);
@@ -19,44 +19,46 @@ const ViewCustomerDetails = () => {
       });
   }, []);
 
-  const ActionDropdown = (customer) => (
+  const ActionDropdown = (spares) => (
     <Dropdown>
       <Dropdown.Toggle variant="primary" id="dropdown-basic">
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
-        <Dropdown.Item onClick={() => handleViewCustomer(customer)}>View</Dropdown.Item>
+        <Dropdown.Item onClick={() => handleViewSpares(spares)}>View</Dropdown.Item>
         <Dropdown.Item>Edit</Dropdown.Item>
         <Dropdown.Item>Delete</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );
 
-  const handleViewCustomer = (customer) => {
-    setSelectedCustomer(customer);
-    console.log(customer)
+  const handleViewSpares = (spares) => {
+    setSelectedSpares(spares);
+    console.log(spares)
     setShowModal(true);
   };
 
-  const CustomerModal = () => {
+  const SparesModal = () => {
     const handleCloseModal = () => {
-      setSelectedCustomer(null);
+      setSelectedSpares(null);
       setShowModal(false);
     };
 
     return (
       <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>
-          <Modal.Title>Customer Details</Modal.Title>
+          <Modal.Title>Spares Details</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {selectedCustomer && (
+          {selectedSpares && (
             <>
-              <p>Name: {selectedCustomer.customer.Customer_Name}</p>
-              <p>Phone: {selectedCustomer.customer.Customer_Phone}</p>
-              <p>Address: {selectedCustomer.customer.Customer_Address}</p>
-              <p>Email: {selectedCustomer.customer.Customer_Email}</p>
-              <p>WhatsApp : {selectedCustomer.customer.Customer_Whatsapp}</p>
+              <p>Material_Name: {selectedSpares.spares.Material_Name}</p>
+              <p>Warranty: {selectedSpares.spares.Warranty}</p>
+              <p>Consumed_Qty: {selectedSpares.spares.Consumed_Qty}</p>
+              <p>Price: {selectedSpares.spares.Price}</p>
+              <p>Available_Qty : {selectedSpares.spares.Available_Qty}</p>
+              <p>Inward_Qty : {selectedSpares.spares.Inward_Qty}</p>
+
             </>
           )}
         </Modal.Body>
@@ -75,29 +77,27 @@ const ViewCustomerDetails = () => {
         <Table striped bordered hover>
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Phone</th>
-              <th>Address</th>
+              <th>M_Name</th>
+              <th>Price</th>
               <th>Action</th>
             </tr>
           </thead>
           <tbody>
-            {data.map((customer, index) => (
+            {data.map((spares, index) => (
               <tr key={index}>
-                <td>{customer.Customer_Name}</td>
-                <td>{customer.Customer_Phone}</td>
-                <td>{customer.Customer_Address}</td>
+                <td>{spares.Material_Name}</td>
+                <td>{spares.Price}</td>
                 <td>
-                  <ActionDropdown customer={customer} />
+                  <ActionDropdown spares={spares} />
                 </td>
               </tr>
             ))}
           </tbody>
         </Table>
       </div>
-      <CustomerModal />
+      <SparesModal />
     </div>
   );
 };
 
-export default ViewCustomerDetails;
+export default ViewSpares;
