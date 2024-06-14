@@ -1,9 +1,11 @@
 'use strict';
 const express = require('express');
 const catalyst = require('zcatalyst-sdk-node');
-
+const fileUpload = require('express-fileupload');
+const os = require('os');
+const fs = require('fs');
 const app = express();
-
+app.use(fileUpload());
 app.use(express.json());
 
 const customerTableId = "15205000000147094";
@@ -662,7 +664,7 @@ app.post('/addinvoice',async (req,res)=>{
 		let dataStore = catalystApp.datastore();
 	
 		// let rowData = [{Customer_Name:"Test Customer"}];
-		let insertedValue = await dataStore.table(invoiceTableId).insertRow(rowData)
+		let insertedValue = await dataStore.table(invoiceTableId).insertRows(rowData)
 		.then((rows) => { 
 			console.log(rows);
 			res.json(rows);
@@ -891,6 +893,64 @@ app.post('/addlistofspare',async (req,res)=>{
 		}
 	})
 //-----------------------------------------------------------------------------//
+
+
+// file upload code
+
+app.post('/uploadfile', async (req, res) => {
+	try {
+		console.log('Uploading files...');
+ 
+		// Initialize Zoho Catalyst SDK using the request object
+		const app = catalyst.initialize(req);
+		const files = req.files;
+		console.log(files)
+		// console.log(JSON.stringify(req));
+ 
+		// Check if files exist in the request
+		if (!files) {
+			throw new Error('No files uploaded');
+		}
+ 
+		const uploadPromises = Object.values(files).map(async file => {
+			const tmpDir = os.tmpdir(); // Get system's temporary directory
+			const tmpFilePath = `${tmpDir}/${file.name}`;
+			await file.mv(tmpFilePath);
+ 
+			// Upload file to Zoho Filestore
+			const folderId = "15205000000148399"; // Replace with your folder ID
+			const config = {
+				code: fs.createReadStream(tmpFilePath),
+				name: file.name
+			};
+ 
+			return app.filestore().folder(folderId).uploadFile(config)
+				.then(fileObject => {
+					// Optionally delete the file from the temporary directory
+					fs.unlink(tmpFilePath, (err) => {
+						if (err) console.error('Error deleting temp file:', err);
+					});
+					return fileObject;
+				});
+		});
+ 
+		const uploadedFiles = await Promise.all(uploadPromises);
+ 
+		// Send the file objects to the frontend
+		res.status(200).send(uploadedFiles);
+	} catch (error) {
+		console.error('Error uploading files:', error);
+		// Send error response
+		res.status(500).send({
+			status: 'error',
+			message: 'Internal Server Error',
+			error: error.message // Include error message in response
+		});
+	}
+ });
+ 
+ //-----------------------------------------------------------------------------//
+
 
 module.exports = app;
 
