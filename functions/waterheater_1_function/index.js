@@ -764,6 +764,23 @@ app.post('/addspares',async (req,res)=>{
 		}
 	})
 
+
+//Put api for update spares
+app.put('/updatespares',(req,res)=>{
+	try {
+		let updatedRowData = req.body.data;
+		let catalystApp = catalyst.initialize(req);
+		let datastore = catalystApp.datastore(); 
+		let table = datastore.table(sparesTableId); 
+		let rowPromise = table.updateRows(updatedRowData);
+		rowPromise.then((row) => { console.log(row);
+			res.json(row);
+		 });	
+	} catch (error) {
+		console.log("Error on Updating spares : "+ error);
+	}
+})
+
 //delete api for remove spares
 app.delete('/deletespare',(req,res)=>{
 	try {
