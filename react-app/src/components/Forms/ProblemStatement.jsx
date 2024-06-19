@@ -1,10 +1,11 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
 
 const ProblemStatement = () => {
   const [formData, setFormData] = useState({
-    productName: '',
-    productIssue: ''
+    Product_Name: '',
+    Product_Issue: ''
   });
 
   const handleChange = (e) => {
@@ -17,10 +18,20 @@ const ProblemStatement = () => {
     // Handle form submission here
     console.log(formData);
 
+    //Posting problem statement data to table
+    axios.post('/server/waterheater_1_function/addproblem',{data:formData})
+    .then((response)=>{
+      console.log("Record Added Successfully");
+      console.log("Response : "+response);
+    })
+    .catch((err)=>{
+      console.log("Error at adding problem statement from front-end : "+err);
+    })
+
     // Clear form data
     setFormData({
-      productName: '',
-      productIssue: ''
+    Product_Name: '',
+    Product_Issue: ''
     });
 
     // Reset the form
@@ -29,8 +40,8 @@ const ProblemStatement = () => {
 
   const handleReset = () => {
     setFormData({
-      productName: '',
-      productIssue: ''
+    Product_Name: '',
+    Product_Issue: ''
     });
   };
 
@@ -43,8 +54,8 @@ const ProblemStatement = () => {
           <Form.Control
             type="text"
             placeholder="Enter product name"
-            name="productName"
-            value={formData.productName}
+            name="Product_Name"
+            value={formData.Product_Name}
             onChange={handleChange}
             required
           />
@@ -56,8 +67,8 @@ const ProblemStatement = () => {
             as="textarea"
             rows={3}
             placeholder="Enter product issue"
-            name="productIssue"
-            value={formData.productIssue}
+            name="Product_Issue"
+            value={formData.Product_Issue}
             onChange={handleChange}
           />
         </Form.Group>

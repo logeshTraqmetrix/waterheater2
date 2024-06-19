@@ -7,6 +7,7 @@ const fs = require('fs');
 const app = express();
 app.use(fileUpload());
 app.use(express.json());
+const mime = require('mime-types');
 
 const customerTableId = "15205000000147094";
 const technicianTableId = "15205000000147860";
@@ -126,7 +127,7 @@ app.put('/updatecustomer',(req,res)=>{
 //delete api for remove customer
 app.delete('/deletecustomer',(req,res)=>{
 	try {
-		let {ROWID} = req.body.data;
+		let ROWID = req.body.data.ROWID;
 		let catalystApp = catalyst.initialize(req);
 		let datastore = catalystApp.datastore(); 
 		let table = datastore.table(customerTableId); 
@@ -569,7 +570,7 @@ app.get('/getproducts',async (req,res)=>{
 	})
 	
 //Post product record
-app.post('/addprodcut',async (req,res)=>{
+app.post('/addproduct',async (req,res)=>{
 		try{
 		let rowData = req.body.data;
 		const catalystApp = catalyst.initialize(req);
@@ -664,7 +665,7 @@ app.post('/addinvoice',async (req,res)=>{
 		let dataStore = catalystApp.datastore();
 	
 		// let rowData = [{Customer_Name:"Test Customer"}];
-		let insertedValue = await dataStore.table(invoiceTableId).insertRows(rowData)
+		let insertedValue = await dataStore.table(invoiceTableId).insertRow(rowData)
 		.then((rows) => { 
 			console.log(rows);
 			res.json(rows);
@@ -766,6 +767,23 @@ app.post('/addspares',async (req,res)=>{
 		}
 	})
 
+
+//Put api for update spares
+app.put('/updatespares',(req,res)=>{
+	try {
+		let updatedRowData = req.body.data;
+		let catalystApp = catalyst.initialize(req);
+		let datastore = catalystApp.datastore(); 
+		let table = datastore.table(sparesTableId); 
+		let rowPromise = table.updateRows(updatedRowData);
+		rowPromise.then((row) => { console.log(row);
+			res.json(row);
+		 });	
+	} catch (error) {
+		console.log("Error on Updating spares : "+ error);
+	}
+})
+
 //delete api for remove spares
 app.delete('/deletespare',(req,res)=>{
 	try {
@@ -824,7 +842,7 @@ app.post('/addscrap',async (req,res)=>{
 		let dataStore = catalystApp.datastore();
 	
 		// let rowData = [{Customer_Name:"Test Customer"}];
-		let insertedValue = await dataStore.table(scrapTableId).insertRow(rowData)
+		let insertedValue = await dataStore.table(scrapTableId).insertRows(rowData)
 		.then((rows) => { 
 			console.log(rows);
 			res.json(rows);
@@ -879,7 +897,7 @@ app.post('/addlistofspare',async (req,res)=>{
 		let dataStore = catalystApp.datastore();
 	
 		// let rowData = [{Customer_Name:"Test Customer"}];
-		let insertedValue = await dataStore.table(lisOfSparesTableId).insertRow(rowData)
+		let insertedValue = await dataStore.table(lisOfSparesTableId).insertRows(rowData)
 		.then((rows) => { 
 			console.log(rows);
 			res.json(rows);
@@ -948,6 +966,31 @@ app.post('/uploadfile', async (req, res) => {
 		});
 	}
  });
+
+
+
+ app.get('/viewfile/:id', async (req, res) => {
+	try {
+		const app = catalyst.initialize(req);
+		const fileObject = await app.filestore().folder("15205000000148399").downloadFile(req.params.id);
+		
+		// Determine the MIME type from the file name or extension
+		const fileName = req.query.fileName;
+		const mimeType = mime.lookup(fileName) || 'application/octet-stream';
+
+		res.writeHead(200, {
+			'Content-Type': mimeType,
+			'Content-Length': fileObject.length,
+			'Content-Disposition': `inline; filename="${fileName}"`,
+		});
+		res.end(fileObject);
+	} catch (error) {
+		res.status(500).send({
+			"status": "Internal Server Error",
+			"message": error.message
+		});
+	}
+});
  
  //-----------------------------------------------------------------------------//
 

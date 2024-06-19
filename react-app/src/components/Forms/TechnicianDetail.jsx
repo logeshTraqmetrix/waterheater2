@@ -1,14 +1,15 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 
 const TechnicianDetail = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    whatsapp: '',
-    address: '',
-    image: null
+    Technician_Name: '',
+    Technician_Email: '',
+    Technician_Phone: '',
+    Technician_Whatsapp: '',
+    Technician_Address: '',
+    Technician_Image: null
   });
 
   const handleChange = (e) => {
@@ -18,36 +19,67 @@ const TechnicianDetail = () => {
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
-    setFormData({ ...formData, image: file });
+    setFormData({ ...formData, Technician_Image: file });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log(formData);
 
-    // Clear form data
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      whatsapp: '',
-      address: '',
-      image: null
-    });
+    // Upload image first
+    const imageData = new FormData();
+    imageData.append('technicianImage', formData.Technician_Image);
 
-    // Reset the image file input
-    e.target.reset();
+    try {
+      const imageResponse = await axios.post('/server/waterheater_1_function/uploadfile', imageData);
+      const imageId = imageResponse.data[0].id; // Assuming your API returns an ID
+      console.log('image responce',imageResponse)
+      if (imageResponse.status === 200) {
+        // Post technician data with image ID
+        const technicianData = {
+          Technician_Name: formData.Technician_Name,
+          Technician_Email: formData.Technician_Email,
+          Technician_Phone: formData.Technician_Phone,
+          Technician_Whatsapp: formData.Technician_Whatsapp,
+          Technician_Address: formData.Technician_Address,
+          Technician_Image: imageId // Use the uploaded image ID here
+        };
+
+        axios.post('/server/waterheater_1_function/addtechnician', { data: technicianData })
+          .then((response) => {
+            console.log("Technician Added Successfully.");
+            console.log("Response : " , response);
+          })
+          .catch((err) => {
+            console.error("Error Adding technician from front-end : " + err);
+          });
+
+        // Clear form data
+        setFormData({
+          Technician_Name: '',
+          Technician_Email: '',
+          Technician_Phone: '',
+          Technician_Whatsapp: '',
+          Technician_Address: '',
+          Technician_Image: null
+        });
+
+        // Reset the image file input (optional, depending on your UI requirement)
+        e.target.reset();
+      }
+
+    } catch (error) {
+      console.error("Error uploading image:", error);
+    }
   };
 
   const handleReset = () => {
     setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      whatsapp: '',
-      address: '',
-      image: null
+      Technician_Name: '',
+      Technician_Email: '',
+      Technician_Phone: '',
+      Technician_Whatsapp: '',
+      Technician_Address: '',
+      Technician_Image: null
     });
   };
 
@@ -55,15 +87,15 @@ const TechnicianDetail = () => {
     <Container>
       <h2 className="text-center">Technician Details</h2>
       <Form onSubmit={handleSubmit}>
-      <Row>
+        <Row>
           <Col>
             <Form.Group controlId="formTechnicianName">
               <Form.Label>Technician Name *</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter technician name"
-                name="name"
-                value={formData.name}
+                name="Technician_Name"
+                value={formData.Technician_Name}
                 onChange={handleChange}
                 required
               />
@@ -75,8 +107,8 @@ const TechnicianDetail = () => {
           <Form.Control
             type="email"
             placeholder="Enter email"
-            name="email"
-            value={formData.email}
+            name="Technician_Email"
+            value={formData.Technician_Email}
             onChange={handleChange}
           />
         </Form.Group>
@@ -87,8 +119,8 @@ const TechnicianDetail = () => {
               <Form.Control
                 type="text"
                 placeholder="Enter phone"
-                name="phone"
-                value={formData.phone}
+                name="Technician_Phone"
+                value={formData.Technician_Phone}
                 onChange={handleChange}
                 required
               />
@@ -102,8 +134,8 @@ const TechnicianDetail = () => {
               <Form.Control
                 type="text"
                 placeholder="Enter WhatsApp number"
-                name="whatsapp"
-                value={formData.whatsapp}
+                name="Technician_Whatsapp"
+                value={formData.Technician_Whatsapp}
                 onChange={handleChange}
               />
             </Form.Group>
@@ -115,8 +147,8 @@ const TechnicianDetail = () => {
             as="textarea"
             rows={3}
             placeholder="Enter address"
-            name="address"
-            value={formData.address}
+            name="Technician_Address"
+            value={formData.Technician_Address}
             onChange={handleChange}
           />
         </Form.Group>
@@ -124,7 +156,7 @@ const TechnicianDetail = () => {
           <Form.Label>Technician Image</Form.Label>
           <Form.Control
             type="file"
-            name="image"
+            name="Technician_Image"
             accept="image/*"
             onChange={handleImageChange}
           />

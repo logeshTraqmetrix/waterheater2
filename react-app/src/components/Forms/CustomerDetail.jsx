@@ -1,14 +1,15 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 
 const CustomerDetail = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    id: '',
-    email: '',
-    phone: '',
-    whatsapp: '',
-    address: ''
+    Customer_Name: '',
+    Customer_Id: '',
+    Customer_Email: '',
+    Customer_Phone: '',
+    Customer_Whatsapp: '',
+    Customer_Address: ''
   });
 
   const handleChange = (e) => {
@@ -21,24 +22,33 @@ const CustomerDetail = () => {
     // Handle form submission here
     console.log(formData);
 
+    axios.post('/server/waterheater_1_function/addcustomer',{data:formData})
+    .then((response)=>{
+      console.log("Record added successfully");
+      console.log("Response : "+response);
+    })
+    .catch((error)=>{
+      console.error("Error at add customer from frontend : "+error);
+    });
+
     setFormData({
-        name: '',
-        id: '',
-        email: '',
-        phone: '',
-        whatsapp: '',
-        address: ''
+      Customer_Name: '',
+      Customer_Id: '',
+      Customer_Email: '',
+      Customer_Phone: '',
+      Customer_Whatsapp: '',
+      Customer_Address: ''
       });
   };
 
   const handleReset = () => {
     setFormData({
-      name: '',
-      id: '',
-      email: '',
-      phone: '',
-      whatsapp: '',
-      address: ''
+      Customer_Name: '',
+      Customer_Id: '',
+      Customer_Email: '',
+      Customer_Phone: '',
+      Customer_Whatsapp: '',
+      Customer_Address: ''
     });
   };
 
@@ -54,8 +64,8 @@ const CustomerDetail = () => {
           <Form.Control
             type="text"
             placeholder="Enter name"
-            name="name"
-            value={formData.name}
+            name="Customer_Name"
+            value={formData.Customer_Name}
             onChange={handleChange}
             required
           />
@@ -71,8 +81,8 @@ const CustomerDetail = () => {
           <Form.Control
             type="text"
             placeholder="Enter ID"
-            name="id"
-            value={formData.id}
+            name="Customer_Id"
+            value={formData.Customer_Id}
             onChange={handleChange}
             required
           />
@@ -86,8 +96,8 @@ const CustomerDetail = () => {
       <Form.Control
         type="email"
         placeholder="Enter email"
-        name="email"
-        value={formData.email}
+        name="Customer_Email"
+        value={formData.Customer_Email}
         onChange={handleChange}
       />
     </Form.Group>
@@ -100,8 +110,8 @@ const CustomerDetail = () => {
           <Form.Control
             type="text"
             placeholder="Enter phone"
-            name="phone"
-            value={formData.phone}
+            name="Customer_Phone"
+            value={formData.Customer_Phone}
             onChange={handleChange}
             required
           />
@@ -117,8 +127,8 @@ const CustomerDetail = () => {
           <Form.Control
             type="text"
             placeholder="Enter WhatsApp number"
-            name="whatsapp"
-            value={formData.whatsapp}
+            name="Customer_Whatsapp"
+            value={formData.Customer_Whatsapp}
             onChange={handleChange}
           />
         </Form.Group>
@@ -132,8 +142,8 @@ const CustomerDetail = () => {
         as="textarea"
         rows={3}
         placeholder="Enter address"
-        name="address"
-        value={formData.address}
+        name="Customer_Address"
+        value={formData.Customer_Address}
         onChange={handleChange}
         required
       />
