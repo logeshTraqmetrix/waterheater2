@@ -6,12 +6,13 @@ import { Upload } from "antd";
 import axios from "axios";
 import SignatureCanvas from "react-signature-canvas";
 
-const InvoiceForm = () => {
-  const [ticketNumber, setTicketNumber] = useState("");
-  const [customerName, setCustomerName] = useState("");
+const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId }) => {
+  const [ticketRowId, setTicketRowId] = useState(RowId)
+  const [ticketNumber, setTicketNumber] = useState(ticketId);
+  const [customerName, setCustomerName] = useState(customerName5);
   const [invoiceNumber, setInvoiceNumber] = useState("");
   const [invoiceDate, setInvoiceDate] = useState("");
-  const [address, setAddress] = useState("");
+  const [address, setAddress] = useState(customerAddress);
   const [sparesData, setSparesData] = useState([]);
   const [afterServiceFileList, setAfterServiceFileList] = useState([]);
   const [sparce, setSparce] = useState("");
@@ -193,6 +194,26 @@ const InvoiceForm = () => {
           console.log(data);
           console.log('Signature and afterservice upload successful');
 
+          //updating afterservice image in ticket table
+          try {
+            let payload = {
+              ROWID: ticketRowId,
+              After_Service_Image: data[1].id,
+              Status: 'Closed'
+            }
+            axios.put('/server/waterheater_1_function/updateticket', { data: payload })
+              .then((res) => {
+                console.log('response from updating ticket', res);
+                // Optionally refresh data here
+              })
+              .catch((err) => {
+                console.log('error in updating ticket', err);
+              });
+          } catch (error) {
+
+          }
+
+          //posting data in invoice table
           try {
             let postInvoicePay = {
               Ticket_Id: ticketNumber,
@@ -389,12 +410,12 @@ const InvoiceForm = () => {
       <Form>
         {/* Rest of the form fields */}
         <Form.Group className="mb-3">
-          <Form.Label>Ticket Number</Form.Label>
-          <Form.Control type="text" value={ticketNumber} onChange={(e) => setTicketNumber(e.target.value)} placeholder="Enter Ticket Number" />
+          <Form.Label>Ticket Id</Form.Label>
+          <Form.Control type="text" value={ticketNumber} readOnly />
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Customer Name</Form.Label>
-          <Form.Control type="text" value={customerName} onChange={(e) => setCustomerName(e.target.value)} placeholder="Enter Customer Name" />
+          <Form.Control type="text" value={customerName} readOnly />
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Invoice Number</Form.Label>
@@ -405,8 +426,8 @@ const InvoiceForm = () => {
           <Form.Control type="date" value={invoiceDate} onChange={(e) => setInvoiceDate(e.target.value)} placeholder="Enter Date" />
         </Form.Group>
         <Form.Group className="mb-3">
-          <Form.Label>Address</Form.Label>
-          <Form.Control type="text" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Enter Address" />
+          <Form.Label>Customer Address</Form.Label>
+          <Form.Control type="text" value={address} readOnly />
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>After Service Image</Form.Label>
@@ -420,13 +441,37 @@ const InvoiceForm = () => {
             {afterServiceFileList.length === 0 && "+ Upload"}
           </Upload>
         </Form.Group>
-        <Form.Group className="mb-3">
+        {/* <Form.Group className="mb-3">
           <Form.Label>Enter Spares Subform</Form.Label>
           <Form.Control as="select" value={sparce} onChange={(e) => setSparce(e.target.value)}>
             <option value="">Select an option</option>
             <option value="yes">Yes</option>
             <option value="no">No</option>
           </Form.Control>
+        </Form.Group> */}
+        <Form.Group className="mb-3">
+          <Form.Label><h4>Enter Spares Subform</h4></Form.Label>
+          <div>
+            <Form.Check
+              type="radio"
+              label="Yes"
+              name="sparce"
+              id="sparceYes"
+              value="yes"
+              checked={sparce === "yes"}
+              onChange={(e) => setSparce(e.target.value)}
+            />
+            <Form.Check
+              type="radio"
+              label="No"
+              name="sparce"
+              id="sparceNo"
+              value="no"
+              checked={sparce === "no"}
+              onChange={(e) => setSparce(e.target.value)}
+              defaultChecked
+            />
+          </div>
         </Form.Group>
 
         {sparce === "yes" && (
@@ -476,7 +521,7 @@ const InvoiceForm = () => {
           <Form.Label>Grant Total</Form.Label>
           <Form.Control type="number" readOnly value={grantTotal} />
         </Form.Group>
-
+        {/* 
         <Form.Group className="mb-3">
           <Form.Label>Enter Scrap Subform</Form.Label>
           <Form.Control as="select" value={scrapOption} onChange={(e) => setScrapOption(e.target.value)}>
@@ -484,6 +529,30 @@ const InvoiceForm = () => {
             <option value="yes">Yes</option>
             <option value="no">No</option>
           </Form.Control>
+        </Form.Group> */}
+        <Form.Group className="mb-3">
+          <Form.Label><h4>Enter Scrap Subform</h4></Form.Label>
+          <div>
+            <Form.Check
+              type="radio"
+              label="Yes"
+              name="scrapOption"
+              id="scrapYes"
+              value="yes"
+              checked={scrapOption === "yes"}
+              onChange={(e) => setScrapOption(e.target.value)}
+            />
+            <Form.Check
+              type="radio"
+              label="No"
+              name="scrapOption"
+              id="scrapNo"
+              value="no"
+              checked={scrapOption === "no"}
+              onChange={(e) => setScrapOption(e.target.value)}
+              defaultChecked
+            />
+          </div>
         </Form.Group>
 
         {scrapOption === "yes" && (
@@ -514,7 +583,7 @@ const InvoiceForm = () => {
                     <option value="Good">Good</option>
                   </Form.Control>
                   <Form.Label>Ticket ID</Form.Label>
-                  <Form.Control type="text" name="ticket" value={ticketNumber} readOnly/>
+                  <Form.Control type="text" name="ticket" value={ticketNumber} readOnly />
                   <Form.Label>Damaged Image</Form.Label>
                   <Upload
                     action="https://660d2bd96ddfa2943b33731c.mockapi.io/api/upload"

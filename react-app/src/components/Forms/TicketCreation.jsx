@@ -111,7 +111,62 @@ const TicketCreation = () => {
                      Customer_Address: formValues.Customer_Address,
                      Area_In_Address: formValues.Area_In_Address,
                      Product_Issue: formValues.Product_Issue,
-                     Issue_Image: data[1].id
+                     Issue_Image: data[1].id,
+                     Status:'Ticket_Created'
+                  }
+
+                  console.log('payload', payload)
+
+                  axios.post('/server/waterheater_1_function/addticket', { data: payload })
+                     .then((res) => {
+                        console.log('ticket data response', res)
+                     })
+                     .catch((err) => {
+                        console.log('error in posting ticket data', err)
+                     })
+               } catch (error) {
+                  console.log('error in posting ticket data', error)
+               }
+            }
+         } catch (error) {
+            console.log('warranty and issue image failed:', error);
+         }
+      }else{
+         try {
+            const formData = new FormData();
+           
+            formData.append('issueImage', formValues.Issue_Image.originFileObj);
+
+            const response = await fetch('/server/waterheater_1_function/uploadfile', {
+               method: 'POST',
+               body: formData,
+            });
+
+            if (!response.ok) {
+               throw new Error('Network response was not ok');
+            }
+
+            const data = await response.json();
+            if (response.status === 200) {
+               console.log(data);
+               console.log('warranty and issue image upload successful');
+               try {
+                  const payload = {
+                     Customer_Name: formValues.Customer_Name,
+                     Year_of_Purchase: formValues.Year_of_Purchase,
+                     Serial_Number: formValues.Serial_Number,
+                     Ticket_Id: formValues.Ticket_Id,
+                     Ticket_Date: formValues.Ticket_Date,
+                     Customer_Phone: formValues.Customer_Phone,
+                     Product_Name: formValues.Product_Name,
+                     Customer_Email: formValues.Customer_Email,
+                     Customer_Whatsapp: formValues.Customer_Whatsapp,
+                     Warranty_Available: formValues.Warranty_Available,
+                     Customer_Address: formValues.Customer_Address,
+                     Area_In_Address: formValues.Area_In_Address,
+                     Product_Issue: formValues.Product_Issue,
+                     Issue_Image: data[0].id,
+                     Status:'Ticket_Created'
                   }
 
                   console.log('payload', payload)

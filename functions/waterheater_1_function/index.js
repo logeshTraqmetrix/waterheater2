@@ -658,7 +658,7 @@ app.get('/getinvoices',async (req,res)=>{
 	})
 	
 //Post invoice record
-app.post('/addinvoice',async (req,res)=>{
+app.post('/addinvoice',async (req,res)=>{	
 		try{
 		let rowData = req.body.data;
 		const catalystApp = catalyst.initialize(req);
@@ -753,7 +753,7 @@ app.post('/addspares',async (req,res)=>{
 		let dataStore = catalystApp.datastore();
 	
 		// let rowData = [{Customer_Name:"Test Customer"}];
-		let insertedValue = await dataStore.table(sparesTableId).insertRow(rowData)
+		let insertedValue = await dataStore.table(sparesTableId).insertRows(rowData)
 		.then((rows) => { 
 			console.log(rows);
 			res.json(rows);
@@ -993,6 +993,262 @@ app.post('/uploadfile', async (req, res) => {
 });
  
  //-----------------------------------------------------------------------------//
+
+ app.get('/getfilterticket', (req, res) => {
+	
+	let  search1  = req.query.search
+	let search = JSON.parse(search1)
+	var catalystApp = catalyst.initialize(req);
+	getDataFromCatalystDataStore(catalystApp, search.table, search.column, search.value ).then(Detail => {
+	   res.send(Detail)
+	})
+	   .catch((err) => {
+		  console.log(err, "error in getting time from true condition")
+	   })
+ })
+
+ function getDataFromCatalystDataStore(catalystApp, table, column, value) {
+	return new Promise((resolve, reject) => {
+	  
+		  // Queries the Catalyst Data Store table
+		  catalystApp.zcql().executeZCQLQuery("Select * from " + table + " where "+column+" ='" + value + "'").then(queryResponse => {
+			 resolve(queryResponse);
+		  }).catch(err => {
+			 console.log(err)
+		  })
+	});
+ }
+ 
+
+ //-----------------------------------------------------------------------------//
+
+
+app.get('/getallcustomer', (req, res) => {
+    var catalystApp = catalyst.initialize(req);
+    const limit = parseInt(req.query.limit) || 10;  // Default limit to 10
+    const offset = parseInt(req.query.offset) || 0; // Default offset to 0
+
+    getDataFromCatalystDataStore2(catalystApp, limit, offset)
+        .then(detail => {
+            res.send(detail);
+        })
+        .catch(err => {
+            console.log(err, "error in getting data");
+        });
+});
+
+function getDataFromCatalystDataStore2(catalystApp, limit, offset) {
+    return new Promise((resolve, reject) => {
+        const query = `SELECT * FROM customer_details LIMIT ${limit} OFFSET ${offset}`;
+        const countQuery = `SELECT COUNT(ROWID) FROM customer_details`;
+
+        Promise.all([
+            catalystApp.zcql().executeZCQLQuery(query),
+            catalystApp.zcql().executeZCQLQuery(countQuery)
+        ]).then(([queryResponse, countResponse]) => {
+            const totalRecords = countResponse[0].customer_details.ROWID;
+            resolve({ records: queryResponse, total: totalRecords });
+        }).catch(err => {
+            console.log(err);
+            reject(err);
+        });
+    });
+}
+
+
+
+ //-----------------------------------------------------------------------------//
+
+
+
+ app.get('/allgetinvoices', (req, res) => {
+    var catalystApp = catalyst.initialize(req);
+    const limit = parseInt(req.query.limit) || 10;  // Default limit to 10
+    const offset = parseInt(req.query.offset) || 0; // Default offset to 0
+
+    getDataFromCatalystDataStore3(catalystApp, limit, offset)
+        .then(detail => {
+            res.send(detail);
+        })
+        .catch(err => {
+            console.log(err, "error in getting data");
+        });
+});
+
+function getDataFromCatalystDataStore3(catalystApp, limit, offset) {
+    return new Promise((resolve, reject) => {
+        const query = `SELECT * FROM invoice_table LIMIT ${limit} OFFSET ${offset}`;
+        const countQuery = `SELECT COUNT(ROWID) FROM invoice_table`;
+
+        Promise.all([
+            catalystApp.zcql().executeZCQLQuery(query),
+            catalystApp.zcql().executeZCQLQuery(countQuery)
+        ]).then(([queryResponse, countResponse]) => {
+            const totalRecords = countResponse[0].invoice_table.ROWID;
+            resolve({ records: queryResponse, total: totalRecords });
+        }).catch(err => {
+            console.log(err);
+            reject(err);
+        });
+    });
+}
+
+
+
+ //-----------------------------------------------------------------------------//
+ 
+
+ app.get('/allgetspares', (req, res) => {
+    var catalystApp = catalyst.initialize(req);
+    const limit = parseInt(req.query.limit) || 10;  // Default limit to 10
+    const offset = parseInt(req.query.offset) || 0; // Default offset to 0
+
+    getDataFromCatalystDataStore4(catalystApp, limit, offset)
+        .then(detail => {
+            res.send(detail);
+        })
+        .catch(err => {
+            console.log(err, "error in getting data");
+        });
+});
+
+function getDataFromCatalystDataStore4(catalystApp, limit, offset) {
+    return new Promise((resolve, reject) => {
+        const query = `SELECT * FROM spares_table LIMIT ${limit} OFFSET ${offset}`;
+        const countQuery = `SELECT COUNT(ROWID) FROM spares_table`;
+
+        Promise.all([
+            catalystApp.zcql().executeZCQLQuery(query),
+            catalystApp.zcql().executeZCQLQuery(countQuery)
+        ]).then(([queryResponse, countResponse]) => {
+            const totalRecords = countResponse[0].spares_table.ROWID;
+            resolve({ records: queryResponse, total: totalRecords });
+        }).catch(err => {
+            console.log(err);
+            reject(err);
+        });
+    });
+}
+
+ //-----------------------------------------------------------------------------//
+
+ app.get('/getfiltercustomer', (req, res) => {
+    let search1 = req.query.search;
+    let search = JSON.parse(search1);
+    var catalystApp = catalyst.initialize(req);
+    getDataFromCatalystDataStore(catalystApp, search.table, search.column, search.value)
+        .then(detail => {
+		
+            res.send(detail);
+        })
+        .catch((err) => {
+            console.log(err, "error in getting data from filter condition");
+            res.status(500).send(err);
+        });
+});
+
+
+ //-----------------------------------------------------------------------------//
+
+
+ app.get('/getfilterinvoice', (req, res) => {
+    let search1 = req.query.search;
+    let search = JSON.parse(search1);
+	console.log(search)
+    var catalystApp = catalyst.initialize(req);
+    getDataFromCatalystDataStore(catalystApp, search.table, search.column, search.value)
+        .then(detail => {
+			
+            res.send(detail);
+        })
+        .catch((err) => {
+            console.log(err, "error in getting data from filter condition");
+            res.status(500).send(err);
+        });
+});
+
+function getDataFromCatalystDataStore(catalystApp, table, column, value) {
+	return new Promise((resolve, reject) => {
+	  
+		  // Queries the Catalyst Data Store table
+		  catalystApp.zcql().executeZCQLQuery("Select * from " + table + " where "+column+" ='" + value + "'").then(queryResponse => {
+			 resolve(queryResponse);
+		  }).catch(err => {
+			 console.log(err)
+		  })
+	});
+ }
+
+
+
+ //-----------------------------------------------------------------------------//
+
+
+ app.get('/getfilterproduct', (req, res) => {
+    let search1 = req.query.search;
+    let search = JSON.parse(search1);
+	console.log(search)
+    var catalystApp = catalyst.initialize(req);
+    getDataFromCatalystDataStore(catalystApp, search.table, search.column, search.value)
+        .then(detail => {
+			
+            res.send(detail);
+        })
+        .catch((err) => {
+            console.log(err, "error in getting data from filter condition");
+            res.status(500).send(err);
+        });
+});
+
+function getDataFromCatalystDataStore(catalystApp, table, column, value) {
+	return new Promise((resolve, reject) => {
+	  
+		  // Queries the Catalyst Data Store table
+		  catalystApp.zcql().executeZCQLQuery("Select * from " + table + " where "+column+" ='" + value + "'").then(queryResponse => {
+			 resolve(queryResponse);
+		  }).catch(err => {
+			 console.log(err)
+		  })
+	});
+ }
+
+
+
+
+ //-----------------------------------------------------------------------------//
+
+ app.get('/getfilterspates', (req, res) => {
+    let search1 = req.query.search;
+    let search = JSON.parse(search1);
+	console.log(search)
+    var catalystApp = catalyst.initialize(req);
+    getDataFromCatalystDataStore(catalystApp, search.table, search.column, search.value)
+        .then(detail => {
+			
+            res.send(detail);
+        })
+        .catch((err) => {
+            console.log(err, "error in getting data from filter condition");
+            res.status(500).send(err);
+        });
+});
+
+ //-----------------------------------------------------------------------------//
+
+ app.get('/getuser', (req, res) => {
+	var catalystApp = catalyst.initialize(req);
+ 
+	// get the details of the current user as a promise
+	let userManagement = catalystApp.userManagement();
+	let userPromise = userManagement.getCurrentUser();
+	userPromise.then(currentUser => {
+	   console.log("Login details", currentUser);
+	   res.send(currentUser)
+	});
+ })
+ 
+ //-----------------------------------------------------------------------------//
+
 
 
 module.exports = app;

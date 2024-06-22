@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Table, Dropdown, Modal, Button, Form } from 'react-bootstrap';
 import axios from 'axios';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
 const ViewTicket = () => {
   const [data, setData] = useState([]);
@@ -12,11 +13,20 @@ const ViewTicket = () => {
   const [scheduledDate, setScheduledDate] = useState('');
   const [modalType, setModalType] = useState('');
   const [imageModal, setImageModal] = useState({ show: false, src: '' });
+  const [selectedTechnicianEmail, setSelectedTechnicianEmail] = useState('');
+
 
   useEffect(() => {
-    // Fetching ticket data
-    axios
-      .get('/server/waterheater_1_function/getalltickets')
+    fetchData('Created Ticket'); // Initial fetch with 'Created Ticket' filter
+    fetchTechnicians(); // Fetch technicians data
+  }, []); // Empty dependency array ensures this effect runs only once
+
+  const fetchData = (status = '') => {
+    axios.get(`/server/waterheater_1_function/getfilterticket?search=${encodeURIComponent(JSON.stringify({
+      table: 'ticket_table',
+      column: 'Status',
+      value: status
+    }))}`)
       .then((res) => {
         console.log(res.data);
         setData(res.data);
@@ -24,10 +34,10 @@ const ViewTicket = () => {
       .catch((err) => {
         console.log(err);
       });
+  };
 
-    // Fetching technicians data
-    axios
-      .get('/server/waterheater_1_function/gettechnicians')
+  const fetchTechnicians = () => {
+    axios.get('/server/waterheater_1_function/gettechnicians')
       .then((res) => {
         console.log('Technician data:', res.data);
         setTechnicians(res.data);
@@ -35,7 +45,24 @@ const ViewTicket = () => {
       .catch((err) => {
         console.log('Error in getting technician data:', err);
       });
-  }, []);
+  };
+
+  const FilterDropDown = () => {
+    const handleFilterSelect = (status) => {
+      fetchData(status);
+    };
+
+    return (
+      <DropdownButton id="dropdown-basic-button" title="Filter">
+        <Dropdown.Item onClick={() => handleFilterSelect('Created Ticket')}>Created Ticket</Dropdown.Item>
+        <Dropdown.Item onClick={() => handleFilterSelect('Technician Assigned')}>Technician Assigned</Dropdown.Item>
+        <Dropdown.Item onClick={() => handleFilterSelect('On Progress')}>On Progress</Dropdown.Item>
+        <Dropdown.Item onClick={() => handleFilterSelect('Moved to Inhouse')}>Moved to Inhouse</Dropdown.Item>
+        <Dropdown.Item onClick={() => handleFilterSelect('Ready for Dispatch')}>Ready for Dispatch</Dropdown.Item>
+        <Dropdown.Item onClick={() => handleFilterSelect('Assigned for Dispatch')}>Assigned for Dispatch</Dropdown.Item>
+      </DropdownButton>
+    );
+  };
 
   const handleAssignTechnician = (ticket) => {
     setSelectedTicket(ticket);
@@ -55,6 +82,8 @@ const ViewTicket = () => {
     setScheduledDate('');
   };
 
+
+
   const handleAssignTicket = () => {
     let payload;
     if (modalType === 'technician') {
@@ -63,16 +92,18 @@ const ViewTicket = () => {
         Technician_Name: selectedTechnician,
         Scheduled_Date: scheduledDate,
         Status: 'Technician Assigned',
+        Technician_Email: selectedTechnicianEmail // Include selected technician's email
       };
     } else if (modalType === 'dispatch') {
       payload = {
         ROWID: selectedTicket.ROWID,
         Dispatch_Person: selectedTechnician,
         Dispatch_Date: scheduledDate,
-        Status: 'Assigned Dispatch',
+        Status: 'Assigned for Dispatch',
+        Dispatch_Email: selectedTechnicianEmail // Include selected technician's email
       };
     }
-
+  
     axios.put('/server/waterheater_1_function/updateticket', { data: payload })
       .then((res) => {
         console.log('response from updating ticket', res);
@@ -81,21 +112,33 @@ const ViewTicket = () => {
       .catch((err) => {
         console.log('error in updating ticket', err);
       });
-
+  
     // Close the modal after handling assignment
     handleCloseAssignModal();
   };
+  
 
-  const ActionDropdown = ({ ticket }) => (
-    <Dropdown>
-      <Dropdown.Toggle variant="primary" id="dropdown-basic"></Dropdown.Toggle>
-      <Dropdown.Menu>
-        <Dropdown.Item onClick={() => handleViewTicket(ticket)}>View</Dropdown.Item>
-        <Dropdown.Item onClick={() => handleAssignTechnician(ticket)}>Assign Technician</Dropdown.Item>
-        <Dropdown.Item onClick={() => handleAssignDispatch(ticket)}>Assign Dispatch</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
-  );
+
+  const ActionDropdown = ({ ticket }) => {
+    const { Status } = ticket;
+
+    const isTechnicianButtonEnabled = Status === 'Created Ticket';
+    const isDispatchButtonEnabled = Status === 'Ready for Dispatch';
+
+    return (
+      <Dropdown>
+        <Dropdown.Toggle variant="primary" id="dropdown-basic"></Dropdown.Toggle>
+        <Dropdown.Menu>
+          <Dropdown.Item onClick={() => handleViewTicket(ticket)}>View</Dropdown.Item>
+          <Dropdown.Item onClick={() => handleAssignTechnician(ticket)} disabled={!isTechnicianButtonEnabled}>Assign Technician</Dropdown.Item>
+          <Dropdown.Item onClick={() => handleAssignDispatch(ticket)} disabled={!isDispatchButtonEnabled}>Assign Dispatch</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+    );
+  };
+
+
+
 
   const handleViewTicket = (ticket) => {
     setSelectedTicket(ticket);
@@ -193,6 +236,7 @@ const ViewTicket = () => {
 
   return (
     <div>
+      <FilterDropDown />
       <div className="table-responsive">
         <Table striped bordered hover>
           <thead>
@@ -207,12 +251,12 @@ const ViewTicket = () => {
           <tbody>
             {data.map((ticket, index) => (
               <tr key={index}>
-                <td>{ticket.Ticket_Id}</td>
-                <td>{ticket.Product_Name}</td>
-                <td>{ticket.Warranty_Year}</td>
-                <td>{ticket.Status}</td>
+                <td>{ticket.ticket_table.Ticket_Id}</td>
+                <td>{ticket.ticket_table.Product_Name}</td>
+                <td>{ticket.ticket_table.Warranty_Year}</td>
+                <td>{ticket.ticket_table.Status}</td>
                 <td>
-                  <ActionDropdown ticket={ticket} />
+                  <ActionDropdown ticket={ticket.ticket_table} />
                 </td>
               </tr>
             ))}
@@ -237,10 +281,15 @@ const ViewTicket = () => {
             </Form.Group>
             <Form.Group controlId="technicianSelect">
               <Form.Label>{modalType === 'technician' ? 'Select Technician' : 'Select Dispatch Person'}</Form.Label>
+          
               <Form.Control
                 as="select"
                 value={selectedTechnician}
-                onChange={(e) => setSelectedTechnician(e.target.value)}
+                onChange={(e) => {
+                  const selectedTech = technicians.find(tech => tech.Technician_Name === e.target.value);
+                  setSelectedTechnician(e.target.value);
+                  setSelectedTechnicianEmail(selectedTech ? selectedTech.Technician_Email : '');
+                }}
                 style={{ maxWidth: '100%', width: '100%' }} // Adjust width as needed
               >
                 <option value="">{modalType === 'technician' ? 'Select Technician...' : 'Select Dispatch Person...'}</option>
@@ -250,6 +299,7 @@ const ViewTicket = () => {
                   </option>
                 ))}
               </Form.Control>
+
             </Form.Group>
             <Form.Group controlId="scheduledDate">
               <Form.Label>Scheduled Date</Form.Label>

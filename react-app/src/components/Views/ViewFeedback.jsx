@@ -21,21 +21,49 @@ const ViewFeedback = () => {
 
   const ActionDropdown = (feedback) => (
     <Dropdown>
-      <Dropdown.Toggle variant="primary" id="dropdown-basic">
-      </Dropdown.Toggle>
-
+      <Dropdown.Toggle variant="primary" id="dropdown-basic"></Dropdown.Toggle>
       <Dropdown.Menu>
-        <Dropdown.Item onClick={() => handleViewFeedback(feedback)}>View</Dropdown.Item>
-        <Dropdown.Item>Edit</Dropdown.Item>
-        <Dropdown.Item>Delete</Dropdown.Item>
+        <Dropdown.Item onClick={() => handleViewFeedback(feedback)}>
+          View
+        </Dropdown.Item>
+        <Dropdown.Item onClick={() => handleDeleteFeedback(feedback)}>
+          Delete
+        </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );
 
   const handleViewFeedback = (feedback) => {
     setSelectedFeedback(feedback);
-    console.log(feedback)
+    console.log(feedback);
     setShowModal(true);
+  };
+
+ 
+  const handleDeleteFeedback = (feedback) => {
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete this feedback?"
+    );
+  
+    if (confirmDelete) {
+      const payload = {
+        data: {
+          ROWID: feedback.feedback.ROWID,
+        },
+      };
+      console.log(payload)
+  
+      axios
+        .delete("/server/waterheater_1_function/deletefeedback", {data:payload})
+        .then((res) => {
+          console.log(res.data);
+          // Remove the deleted feedback from the data array
+          setData(data.filter((item) => item.ROWID !== feedback.feedback.ROWID));
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
   };
 
   const FeedbackModal = () => {

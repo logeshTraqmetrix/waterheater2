@@ -1,7 +1,8 @@
 {
   "functions": {
     "targets": [
-      "waterheater_1_function"
+      "waterheater_1_function",
+      "authbasicio"
     ],
     "ignore": [],
     "source": "functions"
