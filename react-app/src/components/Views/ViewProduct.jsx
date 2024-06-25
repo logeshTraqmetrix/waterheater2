@@ -110,6 +110,7 @@
 import React, { useEffect, useState } from 'react';
 import { Table, Dropdown, Modal, Button, Form, DropdownButton } from 'react-bootstrap';
 import axios from 'axios';
+import { FaFilter } from "react-icons/fa6";
 
 const ViewProduct = () => {
   const [data, setData] = useState([]);
@@ -186,7 +187,7 @@ const ViewProduct = () => {
   const ActionDropdown = (product) => (
     <Dropdown>
       <Dropdown.Toggle variant="primary" id="dropdown-basic">
-        Actions
+       
       </Dropdown.Toggle>
       <Dropdown.Menu>
         <Dropdown.Item onClick={() => handleViewProduct(product)}>View</Dropdown.Item>
@@ -202,7 +203,7 @@ const ViewProduct = () => {
   };
 
   const FilterDropDown = () => (
-    <DropdownButton id="dropdown-basic-button" title="Filter">
+    <DropdownButton id="dropdown-basic-button" title={<FaFilter/>}>
       <Dropdown.Item onClick={() => setShowFilterModal(true)}>Product Name</Dropdown.Item>
     </DropdownButton>
   );
@@ -239,8 +240,11 @@ const ViewProduct = () => {
   };
 
   return (
-    <div>
-      <FilterDropDown />
+    <div className='container'>
+     
+     <div className="d-flex justify-content-end mb-2">
+        <FilterDropDown />
+      </div>
       <div className="table-responsive">
         <Table striped bordered hover>
           <thead>

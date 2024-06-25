@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Table, Dropdown, Modal, Button, Form } from 'react-bootstrap';
 import axios from 'axios';
 import DropdownButton from 'react-bootstrap/DropdownButton';
+import { FaFilter } from "react-icons/fa6";
 
 const ViewTicket = () => {
   const [data, setData] = useState([]);
@@ -53,7 +54,7 @@ const ViewTicket = () => {
     };
 
     return (
-      <DropdownButton id="dropdown-basic-button" title="Filter">
+      <DropdownButton id="dropdown-basic-button" title={<FaFilter/>}>
         <Dropdown.Item onClick={() => handleFilterSelect('Created Ticket')}>Created Ticket</Dropdown.Item>
         <Dropdown.Item onClick={() => handleFilterSelect('Technician Assigned')}>Technician Assigned</Dropdown.Item>
         <Dropdown.Item onClick={() => handleFilterSelect('On Progress')}>On Progress</Dropdown.Item>
@@ -235,8 +236,10 @@ const ViewTicket = () => {
   };
 
   return (
-    <div>
-      <FilterDropDown />
+    <div className='container'>
+     <div className="d-flex justify-content-end mb-2">
+        <FilterDropDown />
+      </div>
       <div className="table-responsive">
         <Table striped bordered hover>
           <thead>

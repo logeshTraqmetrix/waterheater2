@@ -35,7 +35,6 @@ const ViewTechnicianDetails = () => {
   const ActionDropdown = ({ technician }) => (
     <Dropdown>
       <Dropdown.Toggle variant="primary" id="dropdown-basic">
-        Actions
       </Dropdown.Toggle>
       <Dropdown.Menu>
         <Dropdown.Item onClick={() => handleViewTechnician(technician)}>View</Dropdown.Item>
@@ -114,7 +113,7 @@ const ViewTechnicianDetails = () => {
   };
 
   return (
-    <div>
+    <div className='container'>
       <div className="table-responsive">
         <Table striped bordered hover>
           <thead>

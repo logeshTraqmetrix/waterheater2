@@ -70,7 +70,7 @@ const ViewScrap = () => {
   };
 
   return (
-    <div>
+    <div className='container'>
       <div className="table-responsive">
         <Table striped bordered hover>
           <thead>

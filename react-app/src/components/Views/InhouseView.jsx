@@ -156,7 +156,7 @@ const InhouseView = () => {
   };
 
   return (
-    <div>
+    <div className='container'>
       {!showInvoiceForm ? (
         <>
           <div className="table-responsive">

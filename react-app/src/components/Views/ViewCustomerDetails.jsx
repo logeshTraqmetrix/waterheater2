@@ -870,7 +870,7 @@
 //   };
 
 //   const FilterDropDown = () => {
-    
+
 
 //     return (
 //       <DropdownButton id="dropdown-basic-button" title="Filter">
@@ -1384,6 +1384,7 @@ import React, { useEffect, useState } from 'react';
 import { Table, Dropdown, Modal, Button, Form, DropdownButton } from 'react-bootstrap';
 import { Pagination } from 'antd';
 import axios from 'axios';
+import { FaFilter } from "react-icons/fa6";
 
 const ViewCustomerDetails = () => {
   const [data, setData] = useState([]);
@@ -1409,12 +1410,12 @@ const ViewCustomerDetails = () => {
     fetchData();
   }, [currentPage]); // Fetch data when currentPage changes
 
-     
+
 
   const fetchData = (column = '', value = '') => {
     const params = { limit: pageSize, offset: (currentPage - 1) * pageSize };
     let endpoint = '/server/waterheater_1_function/getallcustomer'; // Default endpoint
-  
+
     if (column && value) {
       endpoint = '/server/waterheater_1_function/getfiltercustomer'; // Use filter endpoint if column and value are provided
       params.search = JSON.stringify({
@@ -1423,7 +1424,7 @@ const ViewCustomerDetails = () => {
         value
       });
     }
-  
+
     axios
       .get(endpoint, { params })
       .then((res) => {
@@ -1443,7 +1444,7 @@ const ViewCustomerDetails = () => {
         console.log(err);
       });
   };
-  
+
 
   const handleFilterSubmit = () => {
     fetchData(filterColumn, filterValue);
@@ -1453,7 +1454,7 @@ const ViewCustomerDetails = () => {
   const ActionDropdown = ({ customer }) => (
     <Dropdown>
       <Dropdown.Toggle variant="primary" id="dropdown-basic">
-        Actions
+
       </Dropdown.Toggle>
       <Dropdown.Menu>
         <Dropdown.Item onClick={() => handleViewCustomer(customer)}>View</Dropdown.Item>
@@ -1537,15 +1538,19 @@ const ViewCustomerDetails = () => {
   };
 
   const FilterDropDown = () => (
-    <DropdownButton id="dropdown-basic-button" title="Filter">
+    <DropdownButton id="dropdown-basic-button" title={<FaFilter />}>
       <Dropdown.Item onClick={() => { setFilterColumn('Customer_Name'); setShowFilterModal(true); }}>Name</Dropdown.Item>
       <Dropdown.Item onClick={() => { setFilterColumn('Customer_Phone'); setShowFilterModal(true); }}>Phone Number</Dropdown.Item>
     </DropdownButton>
   );
 
   return (
-    <div>
-      <FilterDropDown />
+    <div className='container'>
+    
+      <div className="d-flex justify-content-end mb-2">
+        <FilterDropDown />
+      </div>
+
       <div className="table-responsive">
         <Table striped bordered hover>
           <thead>
@@ -1571,13 +1576,15 @@ const ViewCustomerDetails = () => {
         </Table>
       </div>
 
-      <Pagination
+     <div className='d-flex justify-content-center ' style={{ margin: '30px' }}>
+     <Pagination
         current={currentPage}
         pageSize={pageSize}
         total={totalRecords}
         onChange={handlePageChange}
         showSizeChanger={false}
       />
+     </div>
 
       {/* View Customer Modal */}
       <Modal show={showModal} onHide={handleCloseModal}>

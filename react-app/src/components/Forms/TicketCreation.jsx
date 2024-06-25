@@ -166,7 +166,7 @@ const TicketCreation = () => {
                      Area_In_Address: formValues.Area_In_Address,
                      Product_Issue: formValues.Product_Issue,
                      Issue_Image: data[0].id,
-                     Status:'Ticket_Created'
+                     Status:'Created Ticket'
                   }
 
                   console.log('payload', payload)

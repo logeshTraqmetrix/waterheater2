@@ -245,6 +245,7 @@ import React, { useEffect, useState } from 'react';
 import { Table, Dropdown, Modal, Button, Form, DropdownButton } from 'react-bootstrap';
 import { Pagination } from 'antd';
 import axios from 'axios';
+import { FaFilter } from "react-icons/fa6";
 
 const ViewInvoice = () => {
   const [data, setData] = useState([]);
@@ -304,7 +305,7 @@ const ViewInvoice = () => {
   const ActionDropdown = (invoice) => (
     <Dropdown>
       <Dropdown.Toggle variant="primary" id="dropdown-basic">
-        Actions
+
       </Dropdown.Toggle>
       <Dropdown.Menu>
         <Dropdown.Item onClick={() => handleViewInvoice(invoice)}>View</Dropdown.Item>
@@ -327,7 +328,7 @@ const ViewInvoice = () => {
   };
 
   const FilterDropDown = () => (
-    <DropdownButton id="dropdown-basic-button" title="Filter">
+    <DropdownButton id="dropdown-basic-button" title={<FaFilter/>}>
       <Dropdown.Item onClick={() => { setFilterColumn('Ticket_Id'); setShowFilterModal(true); }}>Ticket ID</Dropdown.Item>
       <Dropdown.Item onClick={() => { setFilterColumn('Invoice_Number'); setShowFilterModal(true); }}>Invoice Number</Dropdown.Item>
     </DropdownButton>
@@ -359,8 +360,10 @@ const ViewInvoice = () => {
   );
 
   return (
-    <div>
-      <FilterDropDown />
+    <div className='container'>
+      <div className="d-flex justify-content-end mb-2">
+        <FilterDropDown />
+      </div>
       <div className="table-responsive">
         <Table striped bordered hover>
           <thead>
@@ -386,14 +389,15 @@ const ViewInvoice = () => {
         </Table>
       </div>
 
-      <Pagination
+      <div className='d-flex justify-content-center ' style={{ margin: '30px' }}>
+     <Pagination
         current={currentPage}
         pageSize={pageSize}
         total={totalRecords}
         onChange={handlePageChange}
         showSizeChanger={false}
       />
-
+     </div>
       <InvoiceModal />
 
       {/* Filter Modal */}

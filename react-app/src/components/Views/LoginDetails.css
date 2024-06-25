@@ -36,3 +36,120 @@
     opacity: 0.7;
   }
    */
+
+/* 
+   .root {
+    max-width: 345px;
+    height: 400px;
+    margin: auto;
+    margin-top: 144px;
+    margin-bottom: 32px;
+    border-radius: 16px;
+    box-shadow: 0 8px 40px -12px rgba(0,0,0,0.3);
+    transition: 0.3s;
+  }
+  
+  .root:hover {
+    box-shadow: 0 16px 70px -12.125px rgba(0,0,0,0.3);
+  }
+  
+  .avatar {
+    width: 96px;
+    height: 96px;
+    margin: auto;
+    border: 4px solid #fff;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12);
+  }
+  
+  .name {
+    text-align: center;
+    margin-top: 16px;
+    font-weight: bold;
+  }
+  
+  .email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+  }
+  
+  .userId {
+    margin-top: 16px;
+    text-align: center;
+  }
+  
+  .infoItem {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+  }
+  
+  .icon {
+    margin-right: 8px;
+    color: #3f51b5;
+  }
+  
+  .logoutButton {
+    margin-top: 16px;
+    width: 100%;
+  } */
+
+/* 
+
+  .login-details-card {
+    max-width: 345px;
+    height: 400px;
+    margin: auto;
+    margin-top: 144px;
+    margin-bottom: 32px;
+    border-radius: 16px;
+    box-shadow: 0 8px 40px -12px rgba(0,0,0,0.3);
+    transition: 0.3s;
+  }
+  
+  .login-details-card:hover {
+    box-shadow: 0 16px 70px -12.125px rgba(0,0,0,0.3);
+  }
+  
+  .login-details-avatar {
+    width: 96px !important;
+    height: 96px !important;
+    margin: auto;
+    border: 4px solid #fff;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12);
+  }
+  
+  .login-details-name {
+    text-align: center;
+    margin-top: 16px;
+    font-weight: bold;
+  }
+  
+  .login-details-email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+  }
+  
+  .login-details-user-id {
+    margin-top: 16px;
+    text-align: center;
+  }
+  
+  .login-details-info-item {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+  }
+  
+  .login-details-icon {
+    margin-right: 8px;
+    color: #3f51b5;
+  }
+  
+  .login-details-logout-button {
+    margin-top: 16px;
+    width: 100%;
+  } */

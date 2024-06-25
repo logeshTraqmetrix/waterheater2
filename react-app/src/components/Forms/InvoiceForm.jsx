@@ -7,6 +7,7 @@ import axios from "axios";
 import SignatureCanvas from "react-signature-canvas";
 
 const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId }) => {
+  // console.log('rowid',RowId)
   const [ticketRowId, setTicketRowId] = useState(RowId)
   const [ticketNumber, setTicketNumber] = useState(ticketId);
   const [customerName, setCustomerName] = useState(customerName5);
@@ -176,31 +177,39 @@ const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId }) => {
 
       //posting signature,aferservoce,mainform,scrap subform with damaged images
       try {
+        console.log(signatureBlob,afterServiceFileList[0].originFileObj)
         const formData = new FormData();
         formData.append('signature', signatureBlob, 'signature.png');
         formData.append('service', afterServiceFileList[0].originFileObj);
+
+       
 
         const response = await fetch('/server/waterheater_1_function/uploadfile', {
           method: 'POST',
           body: formData,
         });
 
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
 
         const data = await response.json();
+
+        console.log(data)
+        
         if (response.status === 200) {
+
           console.log(data);
           console.log('Signature and afterservice upload successful');
 
           //updating afterservice image in ticket table
+          let today = new Date();
+          let formattedDate = today.toISOString().split('T')[0];
           try {
             let payload = {
               ROWID: ticketRowId,
               After_Service_Image: data[1].id,
-              Status: 'Closed'
+              Status: 'Closed',
+              Closed_Date:formattedDate
             }
+            console.log(payload)
             axios.put('/server/waterheater_1_function/updateticket', { data: payload })
               .then((res) => {
                 console.log('response from updating ticket', res);
@@ -210,7 +219,7 @@ const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId }) => {
                 console.log('error in updating ticket', err);
               });
           } catch (error) {
-
+            console.log(error)
           }
 
           //posting data in invoice table
@@ -395,6 +404,7 @@ const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId }) => {
         } else {
           console.log(data);
         }
+        
       } catch (error) {
         console.log('Signature and afterservice upload failed:', error);
       }

@@ -535,6 +535,8 @@ import React, { useEffect, useState } from 'react';
 import { Table, Dropdown, Modal, Button, Form, DropdownButton } from 'react-bootstrap';
 import { Pagination } from 'antd';
 import axios from 'axios';
+import { FaFilter } from "react-icons/fa6";
+
 
 const ViewSpares = () => {
   const [data, setData] = useState([]);
@@ -602,7 +604,7 @@ const ViewSpares = () => {
   const ActionDropdown = ({ spares }) => (
     <Dropdown>
       <Dropdown.Toggle variant="primary" id="dropdown-basic">
-        Actions
+
       </Dropdown.Toggle>
       <Dropdown.Menu>
         <Dropdown.Item onClick={() => handleViewSpares(spares)}>View</Dropdown.Item>
@@ -687,14 +689,16 @@ const ViewSpares = () => {
   };
 
   const FilterDropDown = () => (
-    <DropdownButton id="dropdown-basic-button" title="Filter">
+    <DropdownButton id="dropdown-basic-button" title={<FaFilter/>}>
       <Dropdown.Item onClick={() => setShowFilterModal(true)}>Material Name</Dropdown.Item>
     </DropdownButton>
   );
 
   return (
-    <div>
-      <FilterDropDown />
+    <div className='container'>
+      <div className="d-flex justify-content-end mb-2">
+        <FilterDropDown/>
+      </div>
       <div className="table-responsive">
         <Table striped bordered hover>
           <thead>
@@ -717,15 +721,15 @@ const ViewSpares = () => {
           </tbody>
         </Table>
       </div>
-
-      <Pagination
-        current={currentPage}
-        pageSize={pageSize}
-        total={totalRecords}
-        onChange={handlePageChange}
-        showSizeChanger={false}
-      />
-
+      <div className='d-flex justify-content-center ' style={{ margin: '30px' }}>
+        <Pagination
+          current={currentPage}
+          pageSize={pageSize}
+          total={totalRecords}
+          onChange={handlePageChange}
+          showSizeChanger={false}
+        />
+      </div>
       {/* Keep existing View and Edit Modals */}
 
       {/* View Spares Modal */}

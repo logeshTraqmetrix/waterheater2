@@ -188,14 +188,14 @@ import { Table, Dropdown, Modal, Button } from 'react-bootstrap';
 import axios from 'axios';
 import InvoiceForm from '../Forms/InvoiceForm';
 
-const TechnicianView = ({user}) => {
+const TechnicianView = ({roleEmail}) => {
   const [data, setData] = useState([]);
   const [selectedTicket, setSelectedTicket] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [imageModal, setImageModal] = useState({ show: false, src: '' });
   const [showInvoiceForm, setShowInvoiceForm] = useState(false);
 
-  const email = user.email_id;
+  const email = roleEmail;
   // console.log("email",email)
   // console.log(user)
 
@@ -343,7 +343,7 @@ const TechnicianView = ({user}) => {
   };
 
   return (
-    <div>
+    <div className='container'>
       {!showInvoiceForm ? (
         <>
           <div className="table-responsive">
@@ -392,6 +392,7 @@ const TechnicianView = ({user}) => {
             ticketId={selectedTicket?.Ticket_Id}
             customerName5={selectedTicket?.Customer_Name}
             customerAddress={selectedTicket?.Customer_Address}
+            RowId={selectedTicket?.ROWID}
           />
         </div>
       )
