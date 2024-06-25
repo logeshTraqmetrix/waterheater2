@@ -401,75 +401,75 @@
 
 
 
-// import React from 'react';
-// import { Card, CardContent, Typography, Avatar, Box, Button } from '@material-ui/core';
-// import EmailIcon from '@material-ui/icons/Email';
-// import EventIcon from '@material-ui/icons/Event';
-// import PersonAddIcon from '@material-ui/icons/PersonAdd';
-// import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import React from 'react';
+import { Card, CardContent, Typography, Avatar, Box, Button } from '@material-ui/core';
+import EmailIcon from '@material-ui/icons/Email';
+import EventIcon from '@material-ui/icons/Event';
+import PersonAddIcon from '@material-ui/icons/PersonAdd';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
-// import './LoginDetails.css';
+import './LoginDetails.css';
 
-// const LoginDetails = () => {
-//   const userDetails = {
-//     status: 'ACTIVE',
-//     email_id: 'logesh.mg@traqmetrix.com',
-//     first_name: 'Logesh',
-//     last_name: 'MG',
-//     created_time: 'Jun 20, 2024 11:52 AM',
-//     invited_time: 'Jun 20, 2024 11:52 AM',
-//     user_id: '15205000000148810',
-//   };
+const LoginDetails = ({userDetails}) => {
+  // const userDetails = {
+  //   status: 'ACTIVE',
+  //   email_id: 'logesh.mg@traqmetrix.com',
+  //   first_name: 'Logesh',
+  //   last_name: 'MG',
+  //   created_time: 'Jun 20, 2024 11:52 AM',
+  //   invited_time: 'Jun 20, 2024 11:52 AM',
+  //   user_id: '15205000000148810',
+  // };
 
-//   const logout = () => {
-//     const redirectURL = "/__catalyst/auth/login";
-//     window.catalyst.auth.signOut(redirectURL);
-//   };
+  const logout = () => {
+    const redirectURL = "/__catalyst/auth/login";
+    window.catalyst.auth.signOut(redirectURL);
+  };
 
-//   return (
-//     <Card className="login-details-card">
-//       <CardContent>
-//         <Avatar
-//           className="login-details-avatar"
-//           src={`https://ui-avatars.com/api/?name=${userDetails.first_name}+${userDetails.last_name}&background=random`}
-//           alt={`${userDetails.first_name} ${userDetails.last_name}`}
-//         />
-//         <Typography variant="h5" component="h2" className="login-details-name">
-//           {`${userDetails.first_name} ${userDetails.last_name}`}
-//         </Typography>
-//         <Typography variant="body2" color="textSecondary" className="login-details-email">
-//           <EmailIcon className="login-details-icon" fontSize="small" />
-//           {userDetails.email_id}
-//         </Typography>
-//         <Typography variant="caption" color="textSecondary" component="p" className="login-details-user-id">
-//           User ID: {userDetails.user_id}
-//         </Typography>
+  return (
+    <Card className="login-details-card">
+      <CardContent>
+        <Avatar
+          className="login-details-avatar"
+          src={`https://ui-avatars.com/api/?name=${userDetails.first_name}+${userDetails.last_name}&background=random`}
+          alt={`${userDetails.first_name} ${userDetails.last_name}`}
+        />
+        <Typography variant="h5" component="h2" className="login-details-name">
+          {`${userDetails.first_name} ${userDetails.last_name}`}
+        </Typography>
+        <Typography variant="body2" color="textSecondary" className="login-details-email">
+          <EmailIcon className="login-details-icon" fontSize="small" />
+          {userDetails.email_id}
+        </Typography>
+        <Typography variant="caption" color="textSecondary" component="p" className="login-details-user-id">
+          User ID: {userDetails.user_id}
+        </Typography>
         
-//         <Box className="login-details-info-item">
-//           <EventIcon className="login-details-icon" />
-//           <Typography variant="body2">
-//             Created: {new Date(userDetails.created_time).toLocaleDateString()}
-//           </Typography>
-//         </Box>
-//         <Box className="login-details-info-item">
-//           <PersonAddIcon className="login-details-icon" />
-//           <Typography variant="body2">
-//             Invited: {new Date(userDetails.invited_time).toLocaleDateString()}
-//           </Typography>
-//         </Box>
+        <Box className="login-details-info-item">
+          <EventIcon className="login-details-icon" />
+          <Typography variant="body2">
+            Created: {new Date(userDetails.created_time).toLocaleDateString()}
+          </Typography>
+        </Box>
+        <Box className="login-details-info-item">
+          <PersonAddIcon className="login-details-icon" />
+          <Typography variant="body2">
+            Invited: {new Date(userDetails.invited_time).toLocaleDateString()}
+          </Typography>
+        </Box>
         
-//         <Button
-//           variant="contained"
-//           color="secondary"
-//           className="login-details-logout-button"
-//           startIcon={<ExitToAppIcon />}
-//           onClick={logout}
-//         >
-//           Logout
-//         </Button>
-//       </CardContent>
-//     </Card>
-//   );
-// };
+        <Button
+          variant="contained"
+          color="secondary"
+          className="login-details-logout-button"
+          startIcon={<ExitToAppIcon />}
+          onClick={logout}
+        >
+          Logout
+        </Button>
+      </CardContent>
+    </Card>
+  );
+};
 
-// export default LoginDetails;
+export default LoginDetails;

@@ -3,14 +3,14 @@ import { Table, Dropdown, Modal, Button } from 'react-bootstrap';
 import axios from 'axios';
 import InvoiceForm from '../Forms/InvoiceForm';
 
-const DispatchView = ({user}) => {
+const DispatchView = ({roleEmail}) => {
   const [data, setData] = useState([]);
   const [selectedTicket, setSelectedTicket] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [imageModal, setImageModal] = useState({ show: false, src: '' });
   const [showInvoiceForm, setShowInvoiceForm] = useState(false);
 
-  const email = user.email_id;
+  const email = roleEmail;
 
   useEffect(() => {
     fetchData(email);

@@ -1285,18 +1285,3288 @@
 
 //working partially
 
+// import React, { useState, useEffect } from 'react';
+// import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+// import axios from 'axios';
+// import Box from '@mui/material/Box';
+// import Drawer from '@mui/material/Drawer';
+// import List from '@mui/material/List';
+// import ListItem from '@mui/material/ListItem';
+// import ListItemButton from '@mui/material/ListItemButton';
+// import ListItemText from '@mui/material/ListItemText';
+// import Button from '@mui/material/Button';
+
+// // Import your components (unchanged)
+// import ViewInvoice from './components/Views/ViewInvoice';
+// import ViewListOfSpares from './components/Views/ViewListOfSpares';
+// import ViewLogs from './components/Views/ViewLogs';
+// import ViewFeedback from './components/Views/ViewFeedback';
+// import ViewProblem from './components/Views/ViewProblem';
+// import ViewProduct from './components/Views/ViewProduct';
+// import ViewScrap from './components/Views/ViewScrap';
+// import ViewSpares from './components/Views/ViewSpares';
+// import ViewTechnicianDetails from './components/Views/ViewTechnicianDetails';
+// import ViewCustomerDetails from './components/Views/ViewCustomerDetails';
+// import ViewTicket from './components/Views/ViewTicket';
+// import InvoiceForm from './components/Forms/InvoiceForm';
+// import TicketCreation from './components/Forms/TicketCreation';
+// import FeedbackForm from './components/Forms/FeedbackForm';
+// import ProblemStatement from './components/Forms/ProblemStatement';
+// import ProductMaster from './components/Forms/ProductMaster';
+// import SparePartsAndStocks from './components/Forms/SparePartsAndStocks';
+// import CustomerDetail from './components/Forms/CustomerDetail';
+// import TechnicianDetail from './components/Forms/TechnicianDetail';
+// import LoginDetails from './components/Views/LoginDetails';
+// import TechnicianView from './components/Views/TechnicianView';
+// import DispatchView from './components/Views/DispatchView';
+// import InhouseView from './components/Views/InhouseView';
+// import Home from './components/Views/Home';
+// import Dashboard from './components/Views/Dashboard';
+
+
+// const App = () => {
+//   const [userRole, setUserRole] = useState('');
+//   const [userEmail, setUserEmail] = useState('');
+//   const [drawerOpen, setDrawerOpen] = useState(false);
+//   const [selectedComponent, setSelectedComponent] = useState(null);
+//   const [userDetails, setUserDetails] = useState({})
+
+//   useEffect(() => {
+//     const fetchUserRole = async () => {
+//       try {
+//         const res = await axios.get('/server/waterheater_1_function/getuser');
+//         setUserRole(res.data.role_details.role_name);
+//         setUserEmail(res.data.email_id);
+//         setUserDetails(res.data)
+
+//       } catch (err) {
+//         console.error('Error fetching user role:', err);
+//       }
+//     };
+//     fetchUserRole();
+//   }, []);
+
+//   const getItems = () => {
+//     if (userRole === 'App Administrator') {
+//       return [...formsItems, ...viewsItems];
+//     } else if (userRole === 'Technician') {
+//       return technicianItems;
+//     } else if (userRole === 'Inhouse') {
+//       return inhouseItems;
+//     }
+//     return [];
+//   };
+
+//   const formsItems = [
+//     { key: '1', label: 'Customer Detail', component: <CustomerDetail /> },
+//     { key: '2', label: 'Technician Detail', component: <TechnicianDetail /> },
+//     { key: '3', label: 'Product Master', component: <ProductMaster /> },
+//     { key: '4', label: 'Spare Parts and Stocks', component: <SparePartsAndStocks /> },
+//     { key: '5', label: 'Ticket Creation', component: <TicketCreation /> },
+//   ];
+
+//   const viewsItems = [
+//     { key: '1', label: 'View Customer Details', component: <ViewCustomerDetails /> },
+//     { key: '2', label: 'View Ticket', component: <ViewTicket /> },
+//     { key: '3', label: 'View Technician Details', component: <ViewTechnicianDetails /> },
+//     { key: '4', label: 'View Product', component: <ViewProduct /> },
+//     { key: '5', label: 'View Invoice', component: <ViewInvoice /> },
+//     { key: '6', label: 'View Spares', component: <ViewSpares /> },
+//     { key: '7', label: 'View Scrap', component: <ViewScrap /> },
+//     { key: '8', label: 'View List of Spares', component: <ViewListOfSpares /> },
+//     { key: '9', label: 'Login Details', component: <LoginDetails userDetails={userDetails}/> },
+//     { key: '10', label: 'Inhouse View', component: <InhouseView /> },
+//     { key: '11', label: 'Dashboard', component: <Dashboard /> },
+//     // { key: '12', label: 'Technician View', component: <TechnicianView user={userDetails}/> },
+//     { key: '13', label: 'Invoice Form', component: <InvoiceForm/> },
+
+//   ];
+
+//   const technicianItems = [
+//     { key: '1', label: 'Technician View', component: <TechnicianView roleEmail={userEmail}/> },
+//     // { key: '2', label: 'Invoice Form', component: <InvoiceForm/> },
+//     { key: '3', label: 'Login Details', component: <LoginDetails userDetails={userDetails}/> },
+//     { key: '4', label: 'Dispatch View', component: <DispatchView roleEmail={userEmail}/> },
+//   ];
+
+//   const inhouseItems = [
+//     { key: '1', label: 'Inhouse View', component: <InhouseView /> },
+//     { key: '2', label: 'Login Details', component: <LoginDetails userDetails={userDetails}/> },
+//   ];
+
+//   const toggleDrawer = (open) => (event) => {
+//     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+//       return;
+//     }
+//     setDrawerOpen(open);
+//   };
+
+//   const handleItemClick = (component) => {
+//     setSelectedComponent(component);
+//     setDrawerOpen(false);
+//   };
+
+//   const list = () => (
+//     <Box
+//       sx={{ width: 250 }}
+//       role="presentation"
+//       onClick={toggleDrawer(false)}
+//       onKeyDown={toggleDrawer(false)}
+//     >
+//       <List>
+//         {getItems().map((item) => (
+//           <ListItem key={item.key} disablePadding>
+//             <ListItemButton onClick={() => handleItemClick(item.component)}>
+//               <ListItemText primary={item.label} />
+//             </ListItemButton>
+//           </ListItem>
+//         ))}
+//       </List>
+//     </Box>
+//   );
+
+//   return (
+//     <Router basename="/app">
+//       <div>
+//         <Button onClick={toggleDrawer(true)}>Open Menu</Button>
+//         {selectedComponent || <Home />}
+//         <Drawer
+//           anchor="left"
+//           open={drawerOpen}
+//           onClose={toggleDrawer(false)}
+//         >
+//           {list()}
+//         </Drawer>
+//       </div>
+//       <Routes>
+//         {userRole === 'App Administrator' && (
+//           <>
+//             {[...formsItems, ...viewsItems].map(item => (
+//               <Route key={item.key} path={`/${item.label.toLowerCase().replace(/\s+/g, '-')}`} element={item.component} />
+//             ))}
+//           </>
+//         )}
+//         {userRole === 'Technician' && (
+//           <>
+//             <Route path="/technician-view" element={<TechnicianView user={userEmail}/>} />
+//             <Route path="/invoice-form" element={<InvoiceForm />} />
+//             <Route path="/login-details" element={<LoginDetails userDetails={userDetails}/>} />
+//             <Route path="/dispatch-view" element={<DispatchView user={userEmail}/>} />
+//           </>
+//         )}
+//         {userRole === 'Inhouse' && (
+//           <>
+//             <Route path="/inhouse-view" element={<InhouseView />} />
+//             <Route path="/login-details" element={<LoginDetails userDetails={userDetails}/>} />
+//           </>
+//         )}
+//         <Route path="*" element={<Navigate to="/" replace />} />
+//       </Routes>
+//     </Router>
+//   );
+// };
+
+// export default App;
+
+
+
+
+
+
+// import React, { useState, useEffect } from 'react';
+// import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+// import axios from 'axios';
+// import Box from '@mui/material/Box';
+// import Drawer from '@mui/material/Drawer';
+// import List from '@mui/material/List';
+// import ListItem from '@mui/material/ListItem';
+// import ListItemButton from '@mui/material/ListItemButton';
+// import ListItemText from '@mui/material/ListItemText';
+// import Button from '@mui/material/Button';
+// import AppBar from '@mui/material/AppBar';
+// import Toolbar from '@mui/material/Toolbar';
+// import Typography from '@mui/material/Typography';
+// import IconButton from '@mui/material/IconButton';
+// import MenuIcon from '@mui/icons-material/Menu';
+
+// // Import your components (unchanged)
+// import ViewInvoice from './components/Views/ViewInvoice';
+// import ViewListOfSpares from './components/Views/ViewListOfSpares';
+// import ViewLogs from './components/Views/ViewLogs';
+// import ViewFeedback from './components/Views/ViewFeedback';
+// import ViewProblem from './components/Views/ViewProblem';
+// import ViewProduct from './components/Views/ViewProduct';
+// import ViewScrap from './components/Views/ViewScrap';
+// import ViewSpares from './components/Views/ViewSpares';
+// import ViewTechnicianDetails from './components/Views/ViewTechnicianDetails';
+// import ViewCustomerDetails from './components/Views/ViewCustomerDetails';
+// import ViewTicket from './components/Views/ViewTicket';
+// import InvoiceForm from './components/Forms/InvoiceForm';
+// import TicketCreation from './components/Forms/TicketCreation';
+// import FeedbackForm from './components/Forms/FeedbackForm';
+// import ProblemStatement from './components/Forms/ProblemStatement';
+// import ProductMaster from './components/Forms/ProductMaster';
+// import SparePartsAndStocks from './components/Forms/SparePartsAndStocks';
+// import CustomerDetail from './components/Forms/CustomerDetail';
+// import TechnicianDetail from './components/Forms/TechnicianDetail';
+// import LoginDetails from './components/Views/LoginDetails';
+// import TechnicianView from './components/Views/TechnicianView';
+// import DispatchView from './components/Views/DispatchView';
+// import InhouseView from './components/Views/InhouseView';
+// import Home from './components/Views/Home';
+// import Dashboard from './components/Views/Dashboard';
+
+// const App = () => {
+//   const [userRole, setUserRole] = useState('');
+//   const [userEmail, setUserEmail] = useState('');
+//   const [drawerOpen, setDrawerOpen] = useState(false);
+//   const [selectedComponent, setSelectedComponent] = useState(null);
+//   const [userDetails, setUserDetails] = useState({})
+
+//   useEffect(() => {
+//     const fetchUserRole = async () => {
+//       try {
+//         const res = await axios.get('/server/waterheater_1_function/getuser');
+//         setUserRole(res.data.role_details.role_name);
+//         setUserEmail(res.data.email_id);
+//         setUserDetails(res.data)
+
+//       } catch (err) {
+//         console.error('Error fetching user role:', err);
+//       }
+//     };
+//     fetchUserRole();
+//   }, []);
+
+//   const getItems = () => {
+//     if (userRole === 'App Administrator') {
+//       return [...formsItems, ...viewsItems];
+//     } else if (userRole === 'Technician') {
+//       return technicianItems;
+//     } else if (userRole === 'Inhouse') {
+//       return inhouseItems;
+//     }
+//     return [];
+//   };
+
+//   const formsItems = [
+//     { key: '1', label: 'Customer Detail', component: <CustomerDetail /> },
+//     { key: '2', label: 'Technician Detail', component: <TechnicianDetail /> },
+//     { key: '3', label: 'Product Master', component: <ProductMaster /> },
+//     { key: '4', label: 'Spare Parts and Stocks', component: <SparePartsAndStocks /> },
+//     { key: '5', label: 'Ticket Creation', component: <TicketCreation /> },
+//   ];
+
+//   const viewsItems = [
+//     { key: '1', label: 'View Customer Details', component: <ViewCustomerDetails /> },
+//     { key: '2', label: 'View Ticket', component: <ViewTicket /> },
+//     { key: '3', label: 'View Technician Details', component: <ViewTechnicianDetails /> },
+//     { key: '4', label: 'View Product', component: <ViewProduct /> },
+//     { key: '5', label: 'View Invoice', component: <ViewInvoice /> },
+//     { key: '6', label: 'View Spares', component: <ViewSpares /> },
+//     { key: '7', label: 'View Scrap', component: <ViewScrap /> },
+//     { key: '8', label: 'View List of Spares', component: <ViewListOfSpares /> },
+//     { key: '9', label: 'Login Details', component: <LoginDetails userDetails={userDetails}/> },
+//     { key: '10', label: 'Inhouse View', component: <InhouseView /> },
+//     { key: '11', label: 'Dashboard', component: <Dashboard /> },
+//     { key: '13', label: 'Invoice Form', component: <InvoiceForm/> },
+//   ];
+
+//   const technicianItems = [
+//     { key: '1', label: 'Technician View', component: <TechnicianView roleEmail={userEmail}/> },
+//     { key: '3', label: 'Login Details', component: <LoginDetails userDetails={userDetails}/> },
+//     { key: '4', label: 'Dispatch View', component: <DispatchView roleEmail={userEmail}/> },
+//   ];
+
+//   const inhouseItems = [
+//     { key: '1', label: 'Inhouse View', component: <InhouseView /> },
+//     { key: '2', label: 'Login Details', component: <LoginDetails userDetails={userDetails}/> },
+//   ];
+
+//   const toggleDrawer = (open) => (event) => {
+//     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+//       return;
+//     }
+//     setDrawerOpen(open);
+//   };
+
+//   const handleItemClick = (component) => {
+//     setSelectedComponent(component);
+//     setDrawerOpen(false);
+//   };
+
+//   const list = () => (
+//     <Box
+//       sx={{ width: 250 }}
+//       role="presentation"
+//       onClick={toggleDrawer(false)}
+//       onKeyDown={toggleDrawer(false)}
+//     >
+//       <List>
+//         {getItems().map((item) => (
+//           <ListItem key={item.key} disablePadding>
+//             <ListItemButton onClick={() => handleItemClick(item.component)}>
+//               <ListItemText primary={item.label} />
+//             </ListItemButton>
+//           </ListItem>
+//         ))}
+//       </List>
+//     </Box>
+//   );
+
+//   return (
+//     <Router basename="/app">
+//       <Box sx={{ flexGrow: 1 }}>
+//         <AppBar position="static">
+//           <Toolbar>
+            
+//             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+//               Water Heater App
+//             </Typography>
+            
+//             <IconButton
+//               size="large"
+//               edge="start"
+//               color="inherit"
+//               aria-label="menu"
+//               sx={{ mr: 2 }}
+//               onClick={toggleDrawer(true)}
+//             >
+//               <MenuIcon />
+//             </IconButton>
+//           </Toolbar>
+//         </AppBar>
+//       </Box>
+//       <div>
+//         {selectedComponent || <Home />}
+//         <Drawer
+//           anchor="left"
+//           open={drawerOpen}
+//           onClose={toggleDrawer(false)}
+//         >
+//           {list()}
+//         </Drawer>
+//       </div>
+//       <Routes>
+//         {userRole === 'App Administrator' && (
+//           <>
+//             {[...formsItems, ...viewsItems].map(item => (
+//               <Route key={item.key} path={`/${item.label.toLowerCase().replace(/\s+/g, '-')}`} element={item.component} />
+//             ))}
+//           </>
+//         )}
+//         {userRole === 'Technician' && (
+//           <>
+//             <Route path="/technician-view" element={<TechnicianView user={userEmail}/>} />
+//             <Route path="/invoice-form" element={<InvoiceForm />} />
+//             <Route path="/login-details" element={<LoginDetails userDetails={userDetails}/>} />
+//             <Route path="/dispatch-view" element={<DispatchView user={userEmail}/>} />
+//           </>
+//         )}
+//         {userRole === 'Inhouse' && (
+//           <>
+//             <Route path="/inhouse-view" element={<InhouseView />} />
+//             <Route path="/login-details" element={<LoginDetails userDetails={userDetails}/>} />
+//           </>
+//         )}
+//         <Route path="*" element={<Navigate to="/" replace />} />
+//       </Routes>
+//     </Router>
+//   );
+// };
+
+// export default App;
+
+
+
+
+
+
+// import React, { useState, useEffect } from 'react';
+// import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+// import axios from 'axios';
+// import Box from '@mui/material/Box';
+// import Drawer from '@mui/material/Drawer';
+// import AppBar from '@mui/material/AppBar';
+// import Toolbar from '@mui/material/Toolbar';
+// import Typography from '@mui/material/Typography';
+// import IconButton from '@mui/material/IconButton';
+// import MenuIcon from '@mui/icons-material/Menu';
+// import { Menu, Switch } from 'antd';
+// import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+
+// // Import your components
+// import ViewInvoice from './components/Views/ViewInvoice';
+// import ViewListOfSpares from './components/Views/ViewListOfSpares';
+// import ViewLogs from './components/Views/ViewLogs';
+// import ViewFeedback from './components/Views/ViewFeedback';
+// import ViewProblem from './components/Views/ViewProblem';
+// import ViewProduct from './components/Views/ViewProduct';
+// import ViewScrap from './components/Views/ViewScrap';
+// import ViewSpares from './components/Views/ViewSpares';
+// import ViewTechnicianDetails from './components/Views/ViewTechnicianDetails';
+// import ViewCustomerDetails from './components/Views/ViewCustomerDetails';
+// import ViewTicket from './components/Views/ViewTicket';
+// import InvoiceForm from './components/Forms/InvoiceForm';
+// import TicketCreation from './components/Forms/TicketCreation';
+// import FeedbackForm from './components/Forms/FeedbackForm';
+// import ProblemStatement from './components/Forms/ProblemStatement';
+// import ProductMaster from './components/Forms/ProductMaster';
+// import SparePartsAndStocks from './components/Forms/SparePartsAndStocks';
+// import CustomerDetail from './components/Forms/CustomerDetail';
+// import TechnicianDetail from './components/Forms/TechnicianDetail';
+// import LoginDetails from './components/Views/LoginDetails';
+// import TechnicianView from './components/Views/TechnicianView';
+// import DispatchView from './components/Views/DispatchView';
+// import InhouseView from './components/Views/InhouseView';
+// import Home from './components/Views/Home';
+// import Dashboard from './components/Views/Dashboard';
+
+// const App = () => {
+//   const [userRole, setUserRole] = useState('');
+//   const [userEmail, setUserEmail] = useState('');
+//   const [drawerOpen, setDrawerOpen] = useState(false);
+//   const [selectedComponent, setSelectedComponent] = useState(null);
+//   const [userDetails, setUserDetails] = useState({});
+//   const [theme, setTheme] = useState('dark');
+//   const [current, setCurrent] = useState('1');
+
+//   useEffect(() => {
+//     const fetchUserRole = async () => {
+//       try {
+//         const res = await axios.get('/server/waterheater_1_function/getuser');
+//         setUserRole(res.data.role_details.role_name);
+//         setUserEmail(res.data.email_id);
+//         setUserDetails(res.data);
+//       } catch (err) {
+//         console.error('Error fetching user role:', err);
+//       }
+//     };
+//     fetchUserRole();
+//   }, []);
+
+//   const formsItems = [
+//     { key: '1', label: 'Customer Detail', component: <CustomerDetail /> },
+//     { key: '2', label: 'Technician Detail', component: <TechnicianDetail /> },
+//     { key: '3', label: 'Product Master', component: <ProductMaster /> },
+//     { key: '4', label: 'Spare Parts and Stocks', component: <SparePartsAndStocks /> },
+//     { key: '5', label: 'Ticket Creation', component: <TicketCreation /> },
+//   ];
+
+//   const viewsItems = [
+//     { key: '1', label: 'View Customer Details', component: <ViewCustomerDetails /> },
+//     { key: '2', label: 'View Ticket', component: <ViewTicket /> },
+//     { key: '3', label: 'View Technician Details', component: <ViewTechnicianDetails /> },
+//     { key: '4', label: 'View Product', component: <ViewProduct /> },
+//     { key: '5', label: 'View Invoice', component: <ViewInvoice /> },
+//     { key: '6', label: 'View Spares', component: <ViewSpares /> },
+//     { key: '7', label: 'View Scrap', component: <ViewScrap /> },
+//     { key: '8', label: 'View List of Spares', component: <ViewListOfSpares /> },
+//     { key: '9', label: 'Login Details', component: <LoginDetails userDetails={userDetails}/> },
+//     { key: '10', label: 'Inhouse View', component: <InhouseView /> },
+//     { key: '11', label: 'Dashboard', component: <Dashboard /> },
+//     { key: '12', label: 'Invoice Form', component: <InvoiceForm /> },
+//   ];
+
+//   const technicianItems = [
+//     { key: '1', label: 'Technician View', component: <TechnicianView roleEmail={userEmail}/> },
+//     { key: '2', label: 'Login Details', component: <LoginDetails userDetails={userDetails}/> },
+//     { key: '3', label: 'Dispatch View', component: <DispatchView roleEmail={userEmail}/> },
+//   ];
+
+//   const inhouseItems = [
+//     { key: '1', label: 'Inhouse View', component: <InhouseView /> },
+//     { key: '2', label: 'Login Details', component: <LoginDetails userDetails={userDetails}/> },
+//   ];
+
+//   const changeTheme = (value) => {
+//     setTheme(value ? 'dark' : 'light');
+//   };
+
+//   const onClick = (e) => {
+//     console.log('click ', e);
+//     setCurrent(e.key);
+//     const allItems = [...formsItems, ...viewsItems, ...technicianItems, ...inhouseItems];
+//     const selectedItem = allItems.find(item => item.key === e.key);
+//     if (selectedItem) {
+//       setSelectedComponent(selectedItem.component);
+//     }
+//     setDrawerOpen(false);
+//   };
+
+//   const toggleDrawer = (open) => (event) => {
+//     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+//       return;
+//     }
+//     setDrawerOpen(open);
+//   };
+
+//   const getMenuItems = () => {
+//     if (userRole === 'App Administrator') {
+//       return [
+//         {
+//           key: 'sub1',
+//           label: 'Forms',
+//           icon: <MailOutlined />,
+//           children: formsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//           })),
+//         },
+//         {
+//           key: 'sub2',
+//           label: 'Views',
+//           icon: <AppstoreOutlined />,
+//           children: viewsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//           })),
+//         },
+//       ];
+//     } else if (userRole === 'Technician') {
+//       return technicianItems.map(item => ({
+//         key: item.key,
+//         label: item.label,
+//       }));
+//     } else if (userRole === 'Inhouse') {
+//       return inhouseItems.map(item => ({
+//         key: item.key,
+//         label: item.label,
+//       }));
+//     }
+//     return [];
+//   };
+
+//   return (
+//     <Router basename="/app">
+//       <Box sx={{ flexGrow: 1 }}>
+//         <AppBar position="static">
+//           <Toolbar>
+//             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+//               Water Heater App
+//             </Typography>
+//             <IconButton
+//               size="large"
+//               edge="start"
+//               color="inherit"
+//               aria-label="menu"
+//               sx={{ mr: 2 }}
+//               onClick={toggleDrawer(true)}
+//             >
+//               <MenuIcon />
+//             </IconButton>
+//           </Toolbar>
+//         </AppBar>
+//       </Box>
+//       <div>
+//         {selectedComponent || <Home />}
+//         <Drawer
+//           anchor="left"
+//           open={drawerOpen}
+//           onClose={toggleDrawer(false)}
+//         >
+//           <Box sx={{ width: 256, padding: 2 }}>
+//             <Switch
+//               checked={theme === 'dark'}
+//               onChange={changeTheme}
+//               checkedChildren="Dark"
+//               unCheckedChildren="Light"
+//             />
+//             <br />
+//             <br />
+//             <Menu
+//               theme={theme}
+//               onClick={onClick}
+//               style={{ width: 256 }}
+//               defaultOpenKeys={['sub1']}
+//               selectedKeys={[current]}
+//               mode="inline"
+//               items={getMenuItems()}
+//             />
+//           </Box>
+//         </Drawer>
+//       </div>
+//       <Routes>
+//         {userRole === 'App Administrator' && (
+//           <>
+//             {[...formsItems, ...viewsItems].map(item => (
+//               <Route key={item.key} path={`/${item.label.toLowerCase().replace(/\s+/g, '-')}`} element={item.component} />
+//             ))}
+//           </>
+//         )}
+//         {userRole === 'Technician' && (
+//           <>
+//             <Route path="/technician-view" element={<TechnicianView user={userEmail}/>} />
+//             <Route path="/invoice-form" element={<InvoiceForm />} />
+//             <Route path="/login-details" element={<LoginDetails userDetails={userDetails}/>} />
+//             <Route path="/dispatch-view" element={<DispatchView user={userEmail}/>} />
+//           </>
+//         )}
+//         {userRole === 'Inhouse' && (
+//           <>
+//             <Route path="/inhouse-view" element={<InhouseView />} />
+//             <Route path="/login-details" element={<LoginDetails userDetails={userDetails}/>} />
+//           </>
+//         )}
+//         <Route path="*" element={<Navigate to="/" replace />} />
+//       </Routes>
+//     </Router>
+//   );
+// };
+
+// export default App;
+
+
+
+
+
+
+
+
+
+// import React, { useState, useEffect } from 'react';
+// import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+// import axios from 'axios';
+// import Box from '@mui/material/Box';
+// import Drawer from '@mui/material/Drawer';
+// import AppBar from '@mui/material/AppBar';
+// import Toolbar from '@mui/material/Toolbar';
+// import Typography from '@mui/material/Typography';
+// import IconButton from '@mui/material/IconButton';
+// import MenuIcon from '@mui/icons-material/Menu';
+// import { Menu } from 'antd';
+// import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+
+// // Import your components
+// import ViewInvoice from './components/Views/ViewInvoice';
+// import ViewListOfSpares from './components/Views/ViewListOfSpares';
+// import ViewLogs from './components/Views/ViewLogs';
+// import ViewFeedback from './components/Views/ViewFeedback';
+// import ViewProblem from './components/Views/ViewProblem';
+// import ViewProduct from './components/Views/ViewProduct';
+// import ViewScrap from './components/Views/ViewScrap';
+// import ViewSpares from './components/Views/ViewSpares';
+// import ViewTechnicianDetails from './components/Views/ViewTechnicianDetails';
+// import ViewCustomerDetails from './components/Views/ViewCustomerDetails';
+// import ViewTicket from './components/Views/ViewTicket';
+// import InvoiceForm from './components/Forms/InvoiceForm';
+// import TicketCreation from './components/Forms/TicketCreation';
+// import FeedbackForm from './components/Forms/FeedbackForm';
+// import ProblemStatement from './components/Forms/ProblemStatement';
+// import ProductMaster from './components/Forms/ProductMaster';
+// import SparePartsAndStocks from './components/Forms/SparePartsAndStocks';
+// import CustomerDetail from './components/Forms/CustomerDetail';
+// import TechnicianDetail from './components/Forms/TechnicianDetail';
+// import LoginDetails from './components/Views/LoginDetails';
+// import TechnicianView from './components/Views/TechnicianView';
+// import DispatchView from './components/Views/DispatchView';
+// import InhouseView from './components/Views/InhouseView';
+// import Home from './components/Views/Home';
+// import Dashboard from './components/Views/Dashboard';
+
+// const App = () => {
+//   const [userRole, setUserRole] = useState('');
+//   const [userEmail, setUserEmail] = useState('');
+//   const [drawerOpen, setDrawerOpen] = useState(false);
+//   const [selectedComponent, setSelectedComponent] = useState(null);
+//   const [userDetails, setUserDetails] = useState({});
+//   const [current, setCurrent] = useState('1');
+
+//   useEffect(() => {
+//     const fetchUserRole = async () => {
+//       try {
+//         const res = await axios.get('/server/waterheater_1_function/getuser');
+//         setUserRole(res.data.role_details.role_name);
+//         setUserEmail(res.data.email_id);
+//         setUserDetails(res.data);
+//       } catch (err) {
+//         console.error('Error fetching user role:', err);
+//       }
+//     };
+//     fetchUserRole();
+//   }, []);
+
+//   const formsItems = [
+//     { key: '1', label: 'Customer Detail', component: <CustomerDetail /> },
+//     { key: '2', label: 'Technician Detail', component: <TechnicianDetail /> },
+//     { key: '3', label: 'Product Master', component: <ProductMaster /> },
+//     { key: '4', label: 'Spare Parts and Stocks', component: <SparePartsAndStocks /> },
+//     { key: '5', label: 'Ticket Creation', component: <TicketCreation /> },
+//   ];
+
+//   const viewsItems = [
+//     { key: '1', label: 'View Customer Details', component: <ViewCustomerDetails /> },
+//     { key: '2', label: 'View Ticket', component: <ViewTicket /> },
+//     { key: '3', label: 'View Technician Details', component: <ViewTechnicianDetails /> },
+//     { key: '4', label: 'View Product', component: <ViewProduct /> },
+//     { key: '5', label: 'View Invoice', component: <ViewInvoice /> },
+//     { key: '6', label: 'View Spares', component: <ViewSpares /> },
+//     { key: '7', label: 'View Scrap', component: <ViewScrap /> },
+//     { key: '8', label: 'View List of Spares', component: <ViewListOfSpares /> },
+//     { key: '9', label: 'Login Details', component: <LoginDetails userDetails={userDetails}/> },
+//     { key: '10', label: 'Inhouse View', component: <InhouseView /> },
+//     { key: '11', label: 'Dashboard', component: <Dashboard /> },
+//     { key: '12', label: 'Invoice Form', component: <InvoiceForm /> },
+//   ];
+
+//   const technicianItems = [
+//     { key: '1', label: 'Technician View', component: <TechnicianView roleEmail={userEmail}/> },
+//     { key: '2', label: 'Login Details', component: <LoginDetails userDetails={userDetails}/> },
+//     { key: '3', label: 'Dispatch View', component: <DispatchView roleEmail={userEmail}/> },
+//   ];
+
+//   const inhouseItems = [
+//     { key: '1', label: 'Inhouse View', component: <InhouseView /> },
+//     { key: '2', label: 'Login Details', component: <LoginDetails userDetails={userDetails}/> },
+//   ];
+
+//   const onClick = (e) => {
+//     console.log('click ', e);
+//     setCurrent(e.key);
+//     const allItems = [...formsItems, ...viewsItems, ...technicianItems, ...inhouseItems];
+//     const selectedItem = allItems.find(item => item.key === e.key);
+//     if (selectedItem) {
+//       setSelectedComponent(selectedItem.component);
+//     }
+//     setDrawerOpen(false);
+//   };
+
+//   const toggleDrawer = (open) => (event) => {
+//     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+//       return;
+//     }
+//     setDrawerOpen(open);
+//   };
+
+//   const getMenuItems = () => {
+//     if (userRole === 'App Administrator') {
+//       return [
+//         {
+//           key: 'sub1',
+//           label: 'Forms',
+//           icon: <MailOutlined />,
+//           children: formsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//           })),
+//         },
+//         {
+//           key: 'sub2',
+//           label: 'Views',
+//           icon: <AppstoreOutlined />,
+//           children: viewsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//           })),
+//         },
+//       ];
+//     } else if (userRole === 'Technician') {
+//       return technicianItems.map(item => ({
+//         key: item.key,
+//         label: item.label,
+//       }));
+//     } else if (userRole === 'Inhouse') {
+//       return inhouseItems.map(item => ({
+//         key: item.key,
+//         label: item.label,
+//       }));
+//     }
+//     return [];
+//   };
+
+//   return (
+//     <Router basename="/app">
+//       <Box sx={{ flexGrow: 1 }}>
+//         <AppBar position="static">
+//           <Toolbar>
+//             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+//               Water Heater App
+//             </Typography>
+//             <IconButton
+//               size="large"
+//               edge="start"
+//               color="inherit"
+//               aria-label="menu"
+//               sx={{ mr: 2 }}
+//               onClick={toggleDrawer(true)}
+//             >
+//               <MenuIcon />
+//             </IconButton>
+//           </Toolbar>
+//         </AppBar>
+//       </Box>
+//       <div>
+//         {selectedComponent || <Home />}
+//         <Drawer
+//           anchor="left"
+//           open={drawerOpen}
+//           onClose={toggleDrawer(false)}
+//         >
+//           <Box sx={{ width: '100%' }}>
+//             <Menu
+//               theme="dark"
+//               onClick={onClick}
+//               style={{ width: '100%' }}
+//               defaultOpenKeys={['sub1']}
+//               selectedKeys={[current]}
+//               mode="inline"
+//               items={getMenuItems()}
+//             />
+//           </Box>
+//         </Drawer>
+//       </div>
+//       <Routes>
+//         {userRole === 'App Administrator' && (
+//           <>
+//             {[...formsItems, ...viewsItems].map(item => (
+//               <Route key={item.key} path={`/${item.label.toLowerCase().replace(/\s+/g, '-')}`} element={item.component} />
+//             ))}
+//           </>
+//         )}
+//         {userRole === 'Technician' && (
+//           <>
+//             <Route path="/technician-view" element={<TechnicianView user={userEmail}/>} />
+//             <Route path="/invoice-form" element={<InvoiceForm />} />
+//             <Route path="/login-details" element={<LoginDetails userDetails={userDetails}/>} />
+//             <Route path="/dispatch-view" element={<DispatchView user={userEmail}/>} />
+//           </>
+//         )}
+//         {userRole === 'Inhouse' && (
+//           <>
+//             <Route path="/inhouse-view" element={<InhouseView />} />
+//             <Route path="/login-details" element={<LoginDetails userDetails={userDetails}/>} />
+//           </>
+//         )}
+//         <Route path="*" element={<Navigate to="/" replace />} />
+//       </Routes>
+//     </Router>
+//   );
+// };
+
+// export default App;
+
+
+
+
+
+
+
+
+
+// import React, { useState, useEffect } from 'react';
+// import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+// import axios from 'axios';
+// import Box from '@mui/material/Box';
+// import Drawer from '@mui/material/Drawer';
+// import AppBar from '@mui/material/AppBar';
+// import Toolbar from '@mui/material/Toolbar';
+// import Typography from '@mui/material/Typography';
+// import IconButton from '@mui/material/IconButton';
+// import MenuIcon from '@mui/icons-material/Menu';
+// import { Menu } from 'antd';
+// import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+
+// // Import your components
+// import ViewInvoice from './components/Views/ViewInvoice';
+// import ViewListOfSpares from './components/Views/ViewListOfSpares';
+// import ViewLogs from './components/Views/ViewLogs';
+// import ViewFeedback from './components/Views/ViewFeedback';
+// import ViewProblem from './components/Views/ViewProblem';
+// import ViewProduct from './components/Views/ViewProduct';
+// import ViewScrap from './components/Views/ViewScrap';
+// import ViewSpares from './components/Views/ViewSpares';
+// import ViewTechnicianDetails from './components/Views/ViewTechnicianDetails';
+// import ViewCustomerDetails from './components/Views/ViewCustomerDetails';
+// import ViewTicket from './components/Views/ViewTicket';
+// import InvoiceForm from './components/Forms/InvoiceForm';
+// import TicketCreation from './components/Forms/TicketCreation';
+// import FeedbackForm from './components/Forms/FeedbackForm';
+// import ProblemStatement from './components/Forms/ProblemStatement';
+// import ProductMaster from './components/Forms/ProductMaster';
+// import SparePartsAndStocks from './components/Forms/SparePartsAndStocks';
+// import CustomerDetail from './components/Forms/CustomerDetail';
+// import TechnicianDetail from './components/Forms/TechnicianDetail';
+// import LoginDetails from './components/Views/LoginDetails';
+// import TechnicianView from './components/Views/TechnicianView';
+// import DispatchView from './components/Views/DispatchView';
+// import InhouseView from './components/Views/InhouseView';
+// import Home from './components/Views/Home';
+// import Dashboard from './components/Views/Dashboard';
+
+// const App = () => {
+//   const [userRole, setUserRole] = useState('');
+//   const [userEmail, setUserEmail] = useState('');
+//   const [drawerOpen, setDrawerOpen] = useState(false);
+//   const [selectedComponent, setSelectedComponent] = useState(null);
+//   const [userDetails, setUserDetails] = useState({});
+//   const [current, setCurrent] = useState('1');
+
+//   useEffect(() => {
+//     const fetchUserRole = async () => {
+//       try {
+//         const res = await axios.get('/server/waterheater_1_function/getuser');
+//         setUserRole(res.data.role_details.role_name);
+//         setUserEmail(res.data.email_id);
+//         setUserDetails(res.data);
+//       } catch (err) {
+//         console.error('Error fetching user role:', err);
+//       }
+//     };
+//     fetchUserRole();
+//   }, []);
+
+//   const formsItems = [
+//     { key: '1', label: 'Customer Detail', component: <CustomerDetail /> },
+//     { key: '2', label: 'Technician Detail', component: <TechnicianDetail /> },
+//     { key: '3', label: 'Product Master', component: <ProductMaster /> },
+//     { key: '4', label: 'Spare Parts and Stocks', component: <SparePartsAndStocks /> },
+//     { key: '5', label: 'Ticket Creation', component: <TicketCreation /> },
+//   ];
+
+//   const viewsItems = [
+//     { key: '1', label: 'View Customer Details', component: <ViewCustomerDetails /> },
+//     { key: '2', label: 'View Ticket', component: <ViewTicket /> },
+//     { key: '3', label: 'View Technician Details', component: <ViewTechnicianDetails /> },
+//     { key: '4', label: 'View Product', component: <ViewProduct /> },
+//     { key: '5', label: 'View Invoice', component: <ViewInvoice /> },
+//     { key: '6', label: 'View Spares', component: <ViewSpares /> },
+//     { key: '7', label: 'View Scrap', component: <ViewScrap /> },
+//     { key: '8', label: 'View List of Spares', component: <ViewListOfSpares /> },
+//     { key: '9', label: 'Inhouse View', component: <InhouseView /> },
+//     { key: '10', label: 'Invoice Form', component: <InvoiceForm /> },
+//   ];
+
+//   const technicianItems = [
+//     { key: '1', label: 'Technician View', component: <TechnicianView roleEmail={userEmail}/> },
+//     { key: '2', label: 'Dispatch View', component: <DispatchView roleEmail={userEmail}/> },
+//   ];
+
+//   const inhouseItems = [
+//     { key: '1', label: 'Inhouse View', component: <InhouseView /> },
+//   ];
+
+//   const onClick = (e) => {
+//     console.log('click ', e);
+//     setCurrent(e.key);
+//     const allItems = [...formsItems, ...viewsItems, ...technicianItems, ...inhouseItems];
+//     const selectedItem = allItems.find(item => item.key === e.key);
+//     if (selectedItem) {
+//       setSelectedComponent(selectedItem.component);
+//     }
+//     setDrawerOpen(false);
+//   };
+
+//   const toggleDrawer = (open) => (event) => {
+//     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+//       return;
+//     }
+//     setDrawerOpen(open);
+//   };
+
+//   const getMenuItems = () => {
+//     if (userRole === 'App Administrator') {
+//       return [
+//         {
+//           key: 'sub1',
+//           label: 'Forms',
+//           icon: <MailOutlined />,
+//           children: formsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//           })),
+//         },
+//         {
+//           key: 'sub2',
+//           label: 'Views',
+//           icon: <AppstoreOutlined />,
+//           children: viewsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//           })),
+//         },
+//       ];
+//     } else if (userRole === 'Technician') {
+//       return technicianItems.map(item => ({
+//         key: item.key,
+//         label: item.label,
+//       }));
+//     } else if (userRole === 'Inhouse') {
+//       return inhouseItems.map(item => ({
+//         key: item.key,
+//         label: item.label,
+//       }));
+//     }
+//     return [];
+//   };
+
+//   return (
+//     <Router basename="/app">
+//       <Box sx={{ flexGrow: 1 }}>
+//         <AppBar position="static" sx={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', backdropFilter: 'blur(10px)' }}>
+//           <Toolbar>
+//             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+//               Water Heater App
+//             </Typography>
+//             <IconButton
+//               size="large"
+//               edge="end"
+//               color="inherit"
+//               aria-label="menu"
+//               sx={{ ml: 2 }}
+//               onClick={toggleDrawer(true)}
+//             >
+//               <MenuIcon />
+//             </IconButton>
+//           </Toolbar>
+//         </AppBar>
+//       </Box>
+//       <div>
+//         {selectedComponent || <Home />}
+//         <Drawer
+//           anchor="right"
+//           open={drawerOpen}
+//           onClose={toggleDrawer(false)}
+//           PaperProps={{
+//             sx: {
+//               backgroundColor: '#001529', // Ant Design's default dark theme color
+//             },
+//           }}
+//         >
+//           <Box sx={{ width: 250 }}>
+//             <Menu
+//               theme="dark"
+//               onClick={onClick}
+//               style={{ width: '100%' }}
+//               defaultOpenKeys={['sub1']}
+//               selectedKeys={[current]}
+//               mode="inline"
+//               items={getMenuItems()}
+//             />
+//           </Box>
+//         </Drawer>
+//       </div>
+//       <Routes>
+//         {userRole === 'App Administrator' && (
+//           <>
+//             {[...formsItems, ...viewsItems].map(item => (
+//               <Route key={item.key} path={`/${item.label.toLowerCase().replace(/\s+/g, '-')}`} element={item.component} />
+//             ))}
+//           </>
+//         )}
+//         {userRole === 'Technician' && (
+//           <>
+//             <Route path="/technician-view" element={<TechnicianView user={userEmail}/>} />
+//             <Route path="/invoice-form" element={<InvoiceForm />} />
+//             <Route path="/dispatch-view" element={<DispatchView user={userEmail}/>} />
+//           </>
+//         )}
+//         {userRole === 'Inhouse' && (
+//           <>
+//             <Route path="/inhouse-view" element={<InhouseView />} />
+//           </>
+//         )}
+//         <Route path="/login-details" element={<LoginDetails userDetails={userDetails}/>} />
+//         <Route path="/dashboard" element={<Dashboard />} />
+//         <Route path="*" element={<Navigate to="/" replace />} />
+//       </Routes>
+//     </Router>
+//   );
+// };
+
+// export default App;
+
+
+
+
+
+// import React, { useState, useEffect } from 'react';
+// import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+// import axios from 'axios';
+// import Box from '@mui/material/Box';
+// import Drawer from '@mui/material/Drawer';
+// import AppBar from '@mui/material/AppBar';
+// import Toolbar from '@mui/material/Toolbar';
+// import Typography from '@mui/material/Typography';
+// import IconButton from '@mui/material/IconButton';
+// import MenuIcon from '@mui/icons-material/Menu';
+// import { Menu } from 'antd';
+// import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+
+// // Import your components
+// import ViewInvoice from './components/Views/ViewInvoice';
+// import ViewListOfSpares from './components/Views/ViewListOfSpares';
+// import ViewLogs from './components/Views/ViewLogs';
+// import ViewFeedback from './components/Views/ViewFeedback';
+// import ViewProblem from './components/Views/ViewProblem';
+// import ViewProduct from './components/Views/ViewProduct';
+// import ViewScrap from './components/Views/ViewScrap';
+// import ViewSpares from './components/Views/ViewSpares';
+// import ViewTechnicianDetails from './components/Views/ViewTechnicianDetails';
+// import ViewCustomerDetails from './components/Views/ViewCustomerDetails';
+// import ViewTicket from './components/Views/ViewTicket';
+// import InvoiceForm from './components/Forms/InvoiceForm';
+// import TicketCreation from './components/Forms/TicketCreation';
+// import FeedbackForm from './components/Forms/FeedbackForm';
+// import ProblemStatement from './components/Forms/ProblemStatement';
+// import ProductMaster from './components/Forms/ProductMaster';
+// import SparePartsAndStocks from './components/Forms/SparePartsAndStocks';
+// import CustomerDetail from './components/Forms/CustomerDetail';
+// import TechnicianDetail from './components/Forms/TechnicianDetail';
+// import LoginDetails from './components/Views/LoginDetails';
+// import TechnicianView from './components/Views/TechnicianView';
+// import DispatchView from './components/Views/DispatchView';
+// import InhouseView from './components/Views/InhouseView';
+// import Home from './components/Views/Home';
+// import Dashboard from './components/Views/Dashboard';
+
+// const App = () => {
+//   const [userRole, setUserRole] = useState('');
+//   const [userEmail, setUserEmail] = useState('');
+//   const [drawerOpen, setDrawerOpen] = useState(false);
+//   const [selectedComponent, setSelectedComponent] = useState(null);
+//   const [userDetails, setUserDetails] = useState({});
+//   const [current, setCurrent] = useState('1');
+
+//   useEffect(() => {
+//     const fetchUserRole = async () => {
+//       try {
+//         const res = await axios.get('/server/waterheater_1_function/getuser');
+//         setUserRole(res.data.role_details.role_name);
+//         setUserEmail(res.data.email_id);
+//         setUserDetails(res.data);
+//       } catch (err) {
+//         console.error('Error fetching user role:', err);
+//       }
+//     };
+//     fetchUserRole();
+//   }, []);
+
+//   const formsItems = [
+//     { key: 'f1', label: 'Customer Detail', component: <CustomerDetail /> },
+//     { key: 'f2', label: 'Technician Detail', component: <TechnicianDetail /> },
+//     { key: 'f3', label: 'Product Master', component: <ProductMaster /> },
+//     { key: 'f4', label: 'Spare Parts and Stocks', component: <SparePartsAndStocks /> },
+//     { key: 'f5', label: 'Ticket Creation', component: <TicketCreation /> },
+//   ];
+
+//   const viewsItems = [
+//     { key: 'v1', label: 'View Customer Details', component: <ViewCustomerDetails /> },
+//     { key: 'v2', label: 'View Ticket', component: <ViewTicket /> },
+//     { key: 'v3', label: 'View Technician Details', component: <ViewTechnicianDetails /> },
+//     { key: 'v4', label: 'View Product', component: <ViewProduct /> },
+//     { key: 'v5', label: 'View Invoice', component: <ViewInvoice /> },
+//     { key: 'v6', label: 'View Spares', component: <ViewSpares /> },
+//     { key: 'v7', label: 'View Scrap', component: <ViewScrap /> },
+//     { key: 'v8', label: 'View List of Spares', component: <ViewListOfSpares /> },
+//     { key: 'v9', label: 'Inhouse View', component: <InhouseView /> },
+//     { key: 'v10', label: 'Invoice Form', component: <InvoiceForm /> },
+//   ];
+
+//   const technicianItems = [
+//     { key: 't1', label: 'Technician View', component: <TechnicianView roleEmail={userEmail}/> },
+//     { key: 't2', label: 'Dispatch View', component: <DispatchView roleEmail={userEmail}/> },
+//   ];
+
+//   const inhouseItems = [
+//     { key: 'i1', label: 'Inhouse View', component: <InhouseView /> },
+//   ];
+
+//   const onClick = (e) => {
+//     console.log('click ', e);
+//     setCurrent(e.key);
+//     const allItems = [...formsItems, ...viewsItems, ...technicianItems, ...inhouseItems];
+//     const selectedItem = allItems.find(item => item.key === e.key);
+//     if (selectedItem) {
+//       setSelectedComponent(selectedItem.component);
+//     }
+//     setDrawerOpen(false);
+//   };
+
+//   const toggleDrawer = (open) => (event) => {
+//     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+//       return;
+//     }
+//     setDrawerOpen(open);
+//   };
+
+//   const getMenuItems = () => {
+//     if (userRole === 'App Administrator') {
+//       return [
+//         {
+//           key: 'sub1',
+//           label: 'Forms',
+//           icon: <MailOutlined />,
+//           children: formsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//           })),
+//         },
+//         {
+//           key: 'sub2',
+//           label: 'Views',
+//           icon: <AppstoreOutlined />,
+//           children: viewsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//           })),
+//         },
+//       ];
+//     } else if (userRole === 'Technician') {
+//       return technicianItems.map(item => ({
+//         key: item.key,
+//         label: item.label,
+//       }));
+//     } else if (userRole === 'Inhouse') {
+//       return inhouseItems.map(item => ({
+//         key: item.key,
+//         label: item.label,
+//       }));
+//     }
+//     return [];
+//   };
+
+//   return (
+//     <Router basename="/app">
+//       <Box sx={{ flexGrow: 1 }}>
+//         <AppBar position="static" sx={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', backdropFilter: 'blur(10px)' }}>
+//           <Toolbar>
+//             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+//               Water Heater App
+//             </Typography>
+//             <IconButton
+//               size="large"
+//               edge="end"
+//               color="inherit"
+//               aria-label="menu"
+//               sx={{ ml: 2 }}
+//               onClick={toggleDrawer(true)}
+//             >
+//               <MenuIcon />
+//             </IconButton>
+//           </Toolbar>
+//         </AppBar>
+//       </Box>
+//       <div>
+//         {selectedComponent || <Home />}
+//         <Drawer
+//           anchor="right"
+//           open={drawerOpen}
+//           onClose={toggleDrawer(false)}
+//           PaperProps={{
+//             sx: {
+//               backgroundColor: '#001529', // Ant Design's default dark theme color
+//             },
+//           }}
+//         >
+//           <Box sx={{ width: 250 }}>
+//             <Menu
+//               theme="dark"
+//               onClick={onClick}
+//               style={{ width: '100%' }}
+//               defaultOpenKeys={['sub1']}
+//               selectedKeys={[current]}
+//               mode="inline"
+//               items={getMenuItems()}
+//             />
+//           </Box>
+//         </Drawer>
+//       </div>
+//       <Routes>
+//         {userRole === 'App Administrator' && (
+//           <>
+//             {[...formsItems, ...viewsItems].map(item => (
+//               <Route key={item.key} path={`/${item.label.toLowerCase().replace(/\s+/g, '-')}`} element={item.component} />
+//             ))}
+//           </>
+//         )}
+//         {userRole === 'Technician' && (
+//           <>
+//             {technicianItems.map(item => (
+//               <Route key={item.key} path={`/${item.label.toLowerCase().replace(/\s+/g, '-')}`} element={item.component} />
+//             ))}
+//           </>
+//         )}
+//         {userRole === 'Inhouse' && (
+//           <>
+//             {inhouseItems.map(item => (
+//               <Route key={item.key} path={`/${item.label.toLowerCase().replace(/\s+/g, '-')}`} element={item.component} />
+//             ))}
+//           </>
+//         )}
+//         <Route path="/login-details" element={<LoginDetails userDetails={userDetails}/>} />
+//         <Route path="/dashboard" element={<Dashboard />} />
+//         <Route path="*" element={<Navigate to="/" replace />} />
+//       </Routes>
+//     </Router>
+//   );
+// };
+
+// export default App;
+
+
+
+
+
+// import React, { useState, useEffect } from 'react';
+// import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+// import axios from 'axios';
+// import Box from '@mui/material/Box';
+// import Drawer from '@mui/material/Drawer';
+// import AppBar from '@mui/material/AppBar';
+// import Toolbar from '@mui/material/Toolbar';
+// import Typography from '@mui/material/Typography';
+// import IconButton from '@mui/material/IconButton';
+// import MenuIcon from '@mui/icons-material/Menu';
+// import { Menu } from 'antd';
+// import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+
+// // Import your components
+// import ViewInvoice from './components/Views/ViewInvoice';
+// import ViewListOfSpares from './components/Views/ViewListOfSpares';
+// import ViewLogs from './components/Views/ViewLogs';
+// import ViewFeedback from './components/Views/ViewFeedback';
+// import ViewProblem from './components/Views/ViewProblem';
+// import ViewProduct from './components/Views/ViewProduct';
+// import ViewScrap from './components/Views/ViewScrap';
+// import ViewSpares from './components/Views/ViewSpares';
+// import ViewTechnicianDetails from './components/Views/ViewTechnicianDetails';
+// import ViewCustomerDetails from './components/Views/ViewCustomerDetails';
+// import ViewTicket from './components/Views/ViewTicket';
+// import InvoiceForm from './components/Forms/InvoiceForm';
+// import TicketCreation from './components/Forms/TicketCreation';
+// import FeedbackForm from './components/Forms/FeedbackForm';
+// import ProblemStatement from './components/Forms/ProblemStatement';
+// import ProductMaster from './components/Forms/ProductMaster';
+// import SparePartsAndStocks from './components/Forms/SparePartsAndStocks';
+// import CustomerDetail from './components/Forms/CustomerDetail';
+// import TechnicianDetail from './components/Forms/TechnicianDetail';
+// import LoginDetails from './components/Views/LoginDetails';
+// import TechnicianView from './components/Views/TechnicianView';
+// import DispatchView from './components/Views/DispatchView';
+// import InhouseView from './components/Views/InhouseView';
+// import Home from './components/Views/Home';
+// import Dashboard from './components/Views/Dashboard';
+
+// const App = () => {
+//   const [userRole, setUserRole] = useState('');
+//   const [userEmail, setUserEmail] = useState('');
+//   const [drawerOpen, setDrawerOpen] = useState(false);
+//   const [selectedComponent, setSelectedComponent] = useState(null);
+//   const [userDetails, setUserDetails] = useState({});
+//   const [current, setCurrent] = useState('1');
+
+//   useEffect(() => {
+//     const fetchUserRole = async () => {
+//       try {
+//         const res = await axios.get('/server/waterheater_1_function/getuser');
+//         setUserRole(res.data.role_details.role_name);
+//         setUserEmail(res.data.email_id);
+//         setUserDetails(res.data);
+//       } catch (err) {
+//         console.error('Error fetching user role:', err);
+//       }
+//     };
+//     fetchUserRole();
+//   }, []);
+
+//   const formsItems = [
+//     { key: 'f1', label: 'Customer Detail', component: <CustomerDetail /> },
+//     { key: 'f2', label: 'Technician Detail', component: <TechnicianDetail /> },
+//     { key: 'f3', label: 'Product Master', component: <ProductMaster /> },
+//     { key: 'f4', label: 'Spare Parts and Stocks', component: <SparePartsAndStocks /> },
+//     { key: 'f5', label: 'Ticket Creation', component: <TicketCreation /> },
+//   ];
+
+//   const viewsItems = [
+//     { key: 'v1', label: 'View Customer Details', component: <ViewCustomerDetails /> },
+//     { key: 'v2', label: 'View Ticket', component: <ViewTicket /> },
+//     { key: 'v3', label: 'View Technician Details', component: <ViewTechnicianDetails /> },
+//     { key: 'v4', label: 'View Product', component: <ViewProduct /> },
+//     { key: 'v5', label: 'View Invoice', component: <ViewInvoice /> },
+//     { key: 'v6', label: 'View Spares', component: <ViewSpares /> },
+//     { key: 'v7', label: 'View Scrap', component: <ViewScrap /> },
+//     { key: 'v8', label: 'View List of Spares', component: <ViewListOfSpares /> },
+//     { key: 'v9', label: 'Inhouse View', component: <InhouseView /> },
+//     { key: 'v10', label: 'Invoice Form', component: <InvoiceForm /> },
+//   ];
+
+//   const technicianItems = [
+//     { key: 't1', label: 'Technician View', component: <TechnicianView roleEmail={userEmail}/> },
+//     { key: 't2', label: 'Dispatch View', component: <DispatchView roleEmail={userEmail}/> },
+//   ];
+
+//   const inhouseItems = [
+//     { key: 'i1', label: 'Inhouse View', component: <InhouseView /> },
+//   ];
+
+//   const commonItems = [
+//     { key: 'home', label: 'Home', component: <Home /> },
+//     { key: 'login', label: 'Login Details', component: <LoginDetails userDetails={userDetails}/> },
+//     { key: 'dashboard', label: 'Dashboard', component: <Dashboard /> },
+//   ];
+
+//   const onClick = (e) => {
+//     console.log('click ', e);
+//     setCurrent(e.key);
+//     const allItems = [...formsItems, ...viewsItems, ...technicianItems, ...inhouseItems, ...commonItems];
+//     const selectedItem = allItems.find(item => item.key === e.key);
+//     if (selectedItem) {
+//       setSelectedComponent(selectedItem.component);
+//     }
+//     setDrawerOpen(false);
+//   };
+
+//   const toggleDrawer = (open) => (event) => {
+//     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+//       return;
+//     }
+//     setDrawerOpen(open);
+//   };
+
+//   const getMenuItems = () => {
+//     if (userRole === 'App Administrator') {
+//       return [
+//         {
+//           key: 'sub1',
+//           label: 'Forms',
+//           icon: <MailOutlined />,
+//           children: formsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//           })),
+//         },
+//         {
+//           key: 'sub2',
+//           label: 'Views',
+//           icon: <AppstoreOutlined />,
+//           children: viewsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//           })),
+//         },
+//         ...commonItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//       ];
+//     } else if (userRole === 'Technician') {
+//       return [
+//         ...technicianItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//         ...commonItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//       ];
+//     } else if (userRole === 'Inhouse') {
+//       return [
+//         ...inhouseItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//         ...commonItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//       ];
+//     }
+//     return commonItems.map(item => ({
+//       key: item.key,
+//       label: item.label,
+//     }));
+//   };
+
+//   return (
+//     <Router basename="/app">
+//       <Box sx={{ flexGrow: 1 }}>
+//         <AppBar position="static" sx={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', backdropFilter: 'blur(10px)' }}>
+//           <Toolbar>
+//             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+//               Water Heater App
+//             </Typography>
+//             <IconButton
+//               size="large"
+//               edge="end"
+//               color="inherit"
+//               aria-label="menu"
+//               sx={{ ml: 2 }}
+//               onClick={toggleDrawer(true)}
+//             >
+//               <MenuIcon />
+//             </IconButton>
+//           </Toolbar>
+//         </AppBar>
+//       </Box>
+//       <div>
+//         {selectedComponent || <Home />}
+//         <Drawer
+//           anchor="right"
+//           open={drawerOpen}
+//           onClose={toggleDrawer(false)}
+//           PaperProps={{
+//             sx: {
+//               backgroundColor: '#001529', // Ant Design's default dark theme color
+//             },
+//           }}
+//         >
+//           <Box sx={{ width: 250 }}>
+//             <Menu
+//               theme="dark"
+//               onClick={onClick}
+//               style={{ width: '100%' }}
+//               defaultOpenKeys={['sub1']}
+//               selectedKeys={[current]}
+//               mode="inline"
+//               items={getMenuItems()}
+//             />
+//           </Box>
+//         </Drawer>
+//       </div>
+//       <Routes>
+//         {[...formsItems, ...viewsItems, ...technicianItems, ...inhouseItems, ...commonItems].map(item => (
+//           <Route key={item.key} path={`/${item.label.toLowerCase().replace(/\s+/g, '-')}`} element={item.component} />
+//         ))}
+//         <Route path="*" element={<Navigate to="/" replace />} />
+//       </Routes>
+//     </Router>
+//   );
+// };
+
+// export default App;
+
+
+
+
+// import React, { useState, useEffect } from 'react';
+// import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+// import axios from 'axios';
+// import Box from '@mui/material/Box';
+// import Drawer from '@mui/material/Drawer';
+// import AppBar from '@mui/material/AppBar';
+// import Toolbar from '@mui/material/Toolbar';
+// import Typography from '@mui/material/Typography';
+// import IconButton from '@mui/material/IconButton';
+// import MenuIcon from '@mui/icons-material/Menu';
+// import { Menu } from 'antd';
+// import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+
+// // Import your components
+// import ViewInvoice from './components/Views/ViewInvoice';
+// import ViewListOfSpares from './components/Views/ViewListOfSpares';
+// import ViewLogs from './components/Views/ViewLogs';
+// import ViewFeedback from './components/Views/ViewFeedback';
+// import ViewProblem from './components/Views/ViewProblem';
+// import ViewProduct from './components/Views/ViewProduct';
+// import ViewScrap from './components/Views/ViewScrap';
+// import ViewSpares from './components/Views/ViewSpares';
+// import ViewTechnicianDetails from './components/Views/ViewTechnicianDetails';
+// import ViewCustomerDetails from './components/Views/ViewCustomerDetails';
+// import ViewTicket from './components/Views/ViewTicket';
+// import InvoiceForm from './components/Forms/InvoiceForm';
+// import TicketCreation from './components/Forms/TicketCreation';
+// import FeedbackForm from './components/Forms/FeedbackForm';
+// import ProblemStatement from './components/Forms/ProblemStatement';
+// import ProductMaster from './components/Forms/ProductMaster';
+// import SparePartsAndStocks from './components/Forms/SparePartsAndStocks';
+// import CustomerDetail from './components/Forms/CustomerDetail';
+// import TechnicianDetail from './components/Forms/TechnicianDetail';
+// import LoginDetails from './components/Views/LoginDetails';
+// import TechnicianView from './components/Views/TechnicianView';
+// import DispatchView from './components/Views/DispatchView';
+// import InhouseView from './components/Views/InhouseView';
+// import Home from './components/Views/Home';
+// import Dashboard from './components/Views/Dashboard';
+
+// const App = () => {
+//   const [userRole, setUserRole] = useState('');
+//   const [userEmail, setUserEmail] = useState('');
+//   const [drawerOpen, setDrawerOpen] = useState(false);
+//   const [selectedComponent, setSelectedComponent] = useState(null);
+//   const [userDetails, setUserDetails] = useState({});
+//   const [current, setCurrent] = useState('1');
+
+//   const darkThemeColor = '#001529';
+
+//   useEffect(() => {
+//     const fetchUserRole = async () => {
+//       try {
+//         const res = await axios.get('/server/waterheater_1_function/getuser');
+//         setUserRole(res.data.role_details.role_name);
+//         setUserEmail(res.data.email_id);
+//         setUserDetails(res.data);
+//       } catch (err) {
+//         console.error('Error fetching user role:', err);
+//       }
+//     };
+//     fetchUserRole();
+//   }, []);
+
+//   const formsItems = [
+//     { key: 'f1', label: 'Customer Detail', component: <CustomerDetail /> },
+//     { key: 'f2', label: 'Technician Detail', component: <TechnicianDetail /> },
+//     { key: 'f3', label: 'Product Master', component: <ProductMaster /> },
+//     { key: 'f4', label: 'Spare Parts and Stocks', component: <SparePartsAndStocks /> },
+//     { key: 'f5', label: 'Ticket Creation', component: <TicketCreation /> },
+//   ];
+
+//   const viewsItems = [
+//     { key: 'v1', label: 'View Customer Details', component: <ViewCustomerDetails /> },
+//     { key: 'v2', label: 'View Ticket', component: <ViewTicket /> },
+//     { key: 'v3', label: 'View Technician Details', component: <ViewTechnicianDetails /> },
+//     { key: 'v4', label: 'View Product', component: <ViewProduct /> },
+//     { key: 'v5', label: 'View Invoice', component: <ViewInvoice /> },
+//     { key: 'v6', label: 'View Spares', component: <ViewSpares /> },
+//     { key: 'v7', label: 'View Scrap', component: <ViewScrap /> },
+//     { key: 'v8', label: 'View List of Spares', component: <ViewListOfSpares /> },
+//     { key: 'v9', label: 'Inhouse View', component: <InhouseView /> },
+//     { key: 'v10', label: 'Invoice Form', component: <InvoiceForm /> },
+//   ];
+
+//   const technicianItems = [
+//     { key: 't1', label: 'Technician View', component: <TechnicianView roleEmail={userEmail}/> },
+//     { key: 't2', label: 'Dispatch View', component: <DispatchView roleEmail={userEmail}/> },
+//   ];
+
+//   const inhouseItems = [
+//     { key: 'i1', label: 'Inhouse View', component: <InhouseView /> },
+//   ];
+
+//   const commonItems = [
+//     { key: 'home', label: 'Home', component: <Home /> },
+//     { key: 'login', label: 'Login Details', component: <LoginDetails userDetails={userDetails}/> },
+//     { key: 'dashboard', label: 'Dashboard', component: <Dashboard /> },
+//   ];
+
+//   const onClick = (e) => {
+//     console.log('click ', e);
+//     setCurrent(e.key);
+//     const allItems = [...formsItems, ...viewsItems, ...technicianItems, ...inhouseItems, ...commonItems];
+//     const selectedItem = allItems.find(item => item.key === e.key);
+//     if (selectedItem) {
+//       setSelectedComponent(selectedItem.component);
+//     }
+//     setDrawerOpen(false);
+//   };
+
+//   const toggleDrawer = (open) => (event) => {
+//     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+//       return;
+//     }
+//     setDrawerOpen(open);
+//   };
+
+//   const getMenuItems = () => {
+//     if (userRole === 'App Administrator') {
+//       return [
+//         {
+//           key: 'sub1',
+//           label: 'Forms',
+//           icon: <MailOutlined />,
+//           children: formsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//           })),
+//         },
+//         {
+//           key: 'sub2',
+//           label: 'Views',
+//           icon: <AppstoreOutlined />,
+//           children: viewsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//           })),
+//         },
+//         ...commonItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//       ];
+//     } else if (userRole === 'Technician') {
+//       return [
+//         ...technicianItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//         ...commonItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//       ];
+//     } else if (userRole === 'Inhouse') {
+//       return [
+//         ...inhouseItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//         ...commonItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//       ];
+//     }
+//     return commonItems.map(item => ({
+//       key: item.key,
+//       label: item.label,
+//     }));
+//   };
+
+//   return (
+//     <Router basename="/app">
+//       <Box sx={{ flexGrow: 1 }}>
+//         <AppBar position="static" sx={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', backdropFilter: 'blur(10px)' }}>
+//           <Toolbar>
+//             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+//               Water Heater App
+//             </Typography>
+//             <IconButton
+//               size="large"
+//               edge="end"
+//               color="inherit"
+//               aria-label="menu"
+//               sx={{ ml: 2 }}
+//               onClick={toggleDrawer(true)}
+//             >
+//               <MenuIcon />
+//             </IconButton>
+//           </Toolbar>
+//         </AppBar>
+//       </Box>
+//       <div>
+//         {selectedComponent || <Home />}
+//         <Drawer
+//           anchor="right"
+//           open={drawerOpen}
+//           onClose={toggleDrawer(false)}
+//           PaperProps={{
+//             sx: {
+//               backgroundColor: darkThemeColor,
+//             },
+//           }}
+//         >
+//           <Box sx={{ width: 250 }}>
+//             <Menu
+//               theme="dark"
+//               onClick={onClick}
+//               style={{ width: '100%' }}
+//               defaultOpenKeys={['sub1']}
+//               selectedKeys={[current]}
+//               mode="inline"
+//               items={getMenuItems()}
+//             />
+//           </Box>
+//         </Drawer>
+//       </div>
+//       <Routes>
+//         {[...formsItems, ...viewsItems, ...technicianItems, ...inhouseItems, ...commonItems].map(item => (
+//           <Route key={item.key} path={`/${item.label.toLowerCase().replace(/\s+/g, '-')}`} element={item.component} />
+//         ))}
+//         <Route path="*" element={<Navigate to="/" replace />} />
+//       </Routes>
+//     </Router>
+//   );
+// };
+
+// export default App;
+
+
+
+
+
+
+
+
+
+// import React, { useState, useEffect } from 'react';
+// import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+// import axios from 'axios';
+// import Box from '@mui/material/Box';
+// import Drawer from '@mui/material/Drawer';
+// import AppBar from '@mui/material/AppBar';
+// import Toolbar from '@mui/material/Toolbar';
+// import Typography from '@mui/material/Typography';
+// import IconButton from '@mui/material/IconButton';
+// import MenuIcon from '@mui/icons-material/Menu';
+// import { Menu } from 'antd';
+// import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+
+// // Import your components
+// import ViewInvoice from './components/Views/ViewInvoice';
+// import ViewListOfSpares from './components/Views/ViewListOfSpares';
+// import ViewLogs from './components/Views/ViewLogs';
+// import ViewFeedback from './components/Views/ViewFeedback';
+// import ViewProblem from './components/Views/ViewProblem';
+// import ViewProduct from './components/Views/ViewProduct';
+// import ViewScrap from './components/Views/ViewScrap';
+// import ViewSpares from './components/Views/ViewSpares';
+// import ViewTechnicianDetails from './components/Views/ViewTechnicianDetails';
+// import ViewCustomerDetails from './components/Views/ViewCustomerDetails';
+// import ViewTicket from './components/Views/ViewTicket';
+// import InvoiceForm from './components/Forms/InvoiceForm';
+// import TicketCreation from './components/Forms/TicketCreation';
+// import FeedbackForm from './components/Forms/FeedbackForm';
+// import ProblemStatement from './components/Forms/ProblemStatement';
+// import ProductMaster from './components/Forms/ProductMaster';
+// import SparePartsAndStocks from './components/Forms/SparePartsAndStocks';
+// import CustomerDetail from './components/Forms/CustomerDetail';
+// import TechnicianDetail from './components/Forms/TechnicianDetail';
+// import LoginDetails from './components/Views/LoginDetails';
+// import TechnicianView from './components/Views/TechnicianView';
+// import DispatchView from './components/Views/DispatchView';
+// import InhouseView from './components/Views/InhouseView';
+// import Home from './components/Views/Home';
+// import Dashboard from './components/Views/Dashboard';
+
+// const App = () => {
+//   const [userRole, setUserRole] = useState('');
+//   const [userEmail, setUserEmail] = useState('');
+//   const [drawerOpen, setDrawerOpen] = useState(false);
+//   const [selectedComponent, setSelectedComponent] = useState(null);
+//   const [userDetails, setUserDetails] = useState({});
+//   const [current, setCurrent] = useState('1');
+
+//   const darkThemeColor = '#001529';
+
+//   useEffect(() => {
+//     const fetchUserRole = async () => {
+//       try {
+//         const res = await axios.get('/server/waterheater_1_function/getuser');
+//         setUserRole(res.data.role_details.role_name);
+//         setUserEmail(res.data.email_id);
+//         setUserDetails(res.data);
+//       } catch (err) {
+//         console.error('Error fetching user role:', err);
+//       }
+//     };
+//     fetchUserRole();
+//   }, []);
+
+//   const formsItems = [
+//     { key: 'f1', label: 'Customer Detail', component: <CustomerDetail /> },
+//     { key: 'f2', label: 'Technician Detail', component: <TechnicianDetail /> },
+//     { key: 'f3', label: 'Product Master', component: <ProductMaster /> },
+//     { key: 'f4', label: 'Spare Parts and Stocks', component: <SparePartsAndStocks /> },
+//     { key: 'f5', label: 'Ticket Creation', component: <TicketCreation /> },
+//   ];
+
+//   const viewsItems = [
+//     { key: 'v1', label: 'View Customer Details', component: <ViewCustomerDetails /> },
+//     { key: 'v2', label: 'View Ticket', component: <ViewTicket /> },
+//     { key: 'v3', label: 'View Technician Details', component: <ViewTechnicianDetails /> },
+//     { key: 'v4', label: 'View Product', component: <ViewProduct /> },
+//     { key: 'v5', label: 'View Invoice', component: <ViewInvoice /> },
+//     { key: 'v6', label: 'View Spares', component: <ViewSpares /> },
+//     { key: 'v7', label: 'View Scrap', component: <ViewScrap /> },
+//     { key: 'v8', label: 'View List of Spares', component: <ViewListOfSpares /> },
+//     { key: 'v9', label: 'Inhouse View', component: <InhouseView /> },
+//     { key: 'v10', label: 'Invoice Form', component: <InvoiceForm /> },
+//   ];
+
+//   const technicianItems = [
+//     { key: 't1', label: 'Technician View', component: <TechnicianView roleEmail={userEmail}/> },
+//     { key: 't2', label: 'Dispatch View', component: <DispatchView roleEmail={userEmail}/> },
+//   ];
+
+//   const inhouseItems = [
+//     { key: 'i1', label: 'Inhouse View', component: <InhouseView /> },
+//   ];
+
+//   const commonItems = [
+//     { key: 'home', label: 'Home', component: <Home /> },
+//     { key: 'login', label: 'Login Details', component: <LoginDetails userDetails={userDetails}/> },
+//     { key: 'dashboard', label: 'Dashboard', component: <Dashboard /> },
+//   ];
+
+//   const onClick = (e) => {
+//     console.log('click ', e);
+//     setCurrent(e.key);
+//     const allItems = [...formsItems, ...viewsItems, ...technicianItems, ...inhouseItems, ...commonItems];
+//     const selectedItem = allItems.find(item => item.key === e.key);
+//     if (selectedItem) {
+//       setSelectedComponent(selectedItem.component);
+//     }
+//     setDrawerOpen(false);
+//   };
+
+//   const toggleDrawer = (open) => (event) => {
+//     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+//       return;
+//     }
+//     setDrawerOpen(open);
+//   };
+
+//   const getMenuItems = () => {
+//     if (userRole === 'App Administrator') {
+//       return [
+//         {
+//           key: 'sub1',
+//           label: 'Forms',
+//           icon: <MailOutlined />,
+//           children: formsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//           })),
+//         },
+//         {
+//           key: 'sub2',
+//           label: 'Views',
+//           icon: <AppstoreOutlined />,
+//           children: viewsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//           })),
+//         },
+//         ...commonItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//       ];
+//     } else if (userRole === 'Technician') {
+//       return [
+//         ...technicianItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//         ...commonItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//       ];
+//     } else if (userRole === 'Inhouse') {
+//       return [
+//         ...inhouseItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//         ...commonItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//       ];
+//     }
+//     return commonItems.map(item => ({
+//       key: item.key,
+//       label: item.label,
+//     }));
+//   };
+
+//   return (
+//     <Router>
+//       <Box sx={{ flexGrow: 1 }}>
+//         <AppBar position="static" sx={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', backdropFilter: 'blur(10px)' }}>
+//           <Toolbar>
+//             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+//               Water Heater App
+//             </Typography>
+//             <IconButton
+//               size="large"
+//               edge="end"
+//               color="inherit"
+//               aria-label="menu"
+//               sx={{ ml: 2 }}
+//               onClick={toggleDrawer(true)}
+//             >
+//               <MenuIcon />
+//             </IconButton>
+//           </Toolbar>
+//         </AppBar>
+//       </Box>
+//       <div>
+//         {selectedComponent || <Home />}
+//         <Drawer
+//           anchor="right"
+//           open={drawerOpen}
+//           onClose={toggleDrawer(false)}
+//           PaperProps={{
+//             sx: {
+//               backgroundColor: darkThemeColor,
+//             },
+//           }}
+//         >
+//           <Box sx={{ width: 250 }}>
+//             <Menu
+//               theme="dark"
+//               onClick={onClick}
+//               style={{ width: '100%' }}
+//               defaultOpenKeys={['sub1']}
+//               selectedKeys={[current]}
+//               mode="inline"
+//               items={getMenuItems()}
+//             />
+//           </Box>
+//         </Drawer>
+//       </div>
+//       <Routes>
+//         {[...formsItems, ...viewsItems, ...technicianItems, ...inhouseItems, ...commonItems].map(item => (
+//           <Route key={item.key} path={`/${item.label.toLowerCase().replace(/\s+/g, '-')}`} element={item.component} />
+//         ))}
+//         <Route path="*" element={<Navigate to="/" replace />} />
+//       </Routes>
+//     </Router>
+//   );
+// };
+
+// export default App;
+
+
+
+
+
+
+
+// working good except refresh
+
+
+
+// import React, { useState, useEffect } from 'react';
+// import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+// import axios from 'axios';
+// import Box from '@mui/material/Box';
+// import Drawer from '@mui/material/Drawer';
+// import AppBar from '@mui/material/AppBar';
+// import Toolbar from '@mui/material/Toolbar';
+// import Typography from '@mui/material/Typography';
+// import IconButton from '@mui/material/IconButton';
+// import MenuIcon from '@mui/icons-material/Menu';
+// import { Menu } from 'antd';
+// import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+
+// // Import your components
+// import ViewInvoice from './components/Views/ViewInvoice';
+// import ViewListOfSpares from './components/Views/ViewListOfSpares';
+// import ViewLogs from './components/Views/ViewLogs';
+// import ViewFeedback from './components/Views/ViewFeedback';
+// import ViewProblem from './components/Views/ViewProblem';
+// import ViewProduct from './components/Views/ViewProduct';
+// import ViewScrap from './components/Views/ViewScrap';
+// import ViewSpares from './components/Views/ViewSpares';
+// import ViewTechnicianDetails from './components/Views/ViewTechnicianDetails';
+// import ViewCustomerDetails from './components/Views/ViewCustomerDetails';
+// import ViewTicket from './components/Views/ViewTicket';
+// import InvoiceForm from './components/Forms/InvoiceForm';
+// import TicketCreation from './components/Forms/TicketCreation';
+// import FeedbackForm from './components/Forms/FeedbackForm';
+// import ProblemStatement from './components/Forms/ProblemStatement';
+// import ProductMaster from './components/Forms/ProductMaster';
+// import SparePartsAndStocks from './components/Forms/SparePartsAndStocks';
+// import CustomerDetail from './components/Forms/CustomerDetail';
+// import TechnicianDetail from './components/Forms/TechnicianDetail';
+// import LoginDetails from './components/Views/LoginDetails';
+// import TechnicianView from './components/Views/TechnicianView';
+// import DispatchView from './components/Views/DispatchView';
+// import InhouseView from './components/Views/InhouseView';
+// import Home from './components/Views/Home';
+// import Dashboard from './components/Views/Dashboard';
+
+// const App = () => {
+//   const [userRole, setUserRole] = useState('');
+//   const [userEmail, setUserEmail] = useState('');
+//   const [drawerOpen, setDrawerOpen] = useState(false);
+//   const [selectedComponent, setSelectedComponent] = useState(null);
+//   const [userDetails, setUserDetails] = useState({});
+//   const [current, setCurrent] = useState('1');
+
+//   const darkThemeColor = '#001529';
+
+//   useEffect(() => {
+//     const fetchUserRole = async () => {
+//       try {
+//         const res = await axios.get('/server/waterheater_1_function/getuser');
+//         setUserRole(res.data.role_details.role_name);
+//         setUserEmail(res.data.email_id);
+//         setUserDetails(res.data);
+//       } catch (err) {
+//         console.error('Error fetching user role:', err);
+//       }
+//     };
+//     fetchUserRole();
+//   }, []);
+
+//   const formsItems = [
+//     { key: 'f1', label: 'Customer Detail', component: <CustomerDetail /> },
+//     { key: 'f2', label: 'Technician Detail', component: <TechnicianDetail /> },
+//     { key: 'f3', label: 'Product Master', component: <ProductMaster /> },
+//     { key: 'f4', label: 'Spare Parts and Stocks', component: <SparePartsAndStocks /> },
+//     { key: 'f5', label: 'Ticket Creation', component: <TicketCreation /> },
+//   ];
+
+//   const viewsItems = [
+//     { key: 'v1', label: 'View Customer Details', component: <ViewCustomerDetails /> },
+//     { key: 'v2', label: 'View Ticket', component: <ViewTicket /> },
+//     { key: 'v3', label: 'View Technician Details', component: <ViewTechnicianDetails /> },
+//     { key: 'v4', label: 'View Product', component: <ViewProduct /> },
+//     { key: 'v5', label: 'View Invoice', component: <ViewInvoice /> },
+//     { key: 'v6', label: 'View Spares', component: <ViewSpares /> },
+//     { key: 'v7', label: 'View Scrap', component: <ViewScrap /> },
+//     { key: 'v8', label: 'View List of Spares', component: <ViewListOfSpares /> },
+//     { key: 'v9', label: 'Inhouse View', component: <InhouseView /> },
+//     { key: 'v10', label: 'Invoice Form', component: <InvoiceForm /> },
+//   ];
+
+//   const technicianItems = [
+//     { key: 't1', label: 'Technician View', component: <TechnicianView roleEmail={userEmail}/> },
+//     { key: 't2', label: 'Dispatch View', component: <DispatchView roleEmail={userEmail}/> },
+//   ];
+
+//   const inhouseItems = [
+//     { key: 'i1', label: 'Inhouse View', component: <InhouseView /> },
+//   ];
+
+//   const commonItems = [
+//     { key: 'home', label: 'Home', component: <Home /> },
+//     { key: 'login', label: 'Login Details', component: <LoginDetails userDetails={userDetails}/> },
+//     { key: 'dashboard', label: 'Dashboard', component: <Dashboard /> },
+//   ];
+
+//   const onClick = (e) => {
+//     console.log('click ', e);
+//     setCurrent(e.key);
+//     const allItems = [...formsItems, ...viewsItems, ...technicianItems, ...inhouseItems, ...commonItems];
+//     const selectedItem = allItems.find(item => item.key === e.key);
+//     if (selectedItem) {
+//       setSelectedComponent(selectedItem.component);
+//     }
+//     setDrawerOpen(false);
+//   };
+
+//   const toggleDrawer = (open) => (event) => {
+//     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+//       return;
+//     }
+//     setDrawerOpen(open);
+//   };
+
+//   const getMenuItems = () => {
+//     if (userRole === 'App Administrator') {
+//       return [
+//         {
+//           key: 'sub1',
+//           label: 'Forms',
+//           icon: <MailOutlined />,
+//           children: formsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//           })),
+//         },
+//         {
+//           key: 'sub2',
+//           label: 'Views',
+//           icon: <AppstoreOutlined />,
+//           children: viewsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//           })),
+//         },
+//         ...commonItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//       ];
+//     } else if (userRole === 'Technician') {
+//       return [
+//         ...technicianItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//         ...commonItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//       ];
+//     } else if (userRole === 'Inhouse') {
+//       return [
+//         ...inhouseItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//         ...commonItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//       ];
+//     }
+//     return commonItems.map(item => ({
+//       key: item.key,
+//       label: item.label,
+//     }));
+//   };
+
+//   return (
+//     <Router>
+//       <Box sx={{ flexGrow: 1 }}>
+//         <AppBar position="static" sx={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', backdropFilter: 'blur(10px)' }}>
+//           <Toolbar>
+//             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+//               Water Heater App
+//             </Typography>
+//             <IconButton
+//               size="large"
+//               edge="end"
+//               color="inherit"
+//               aria-label="menu"
+//               sx={{ ml: 2 }}
+//               onClick={toggleDrawer(true)}
+//             >
+//               <MenuIcon />
+//             </IconButton>
+//           </Toolbar>
+//         </AppBar>
+//       </Box>
+//       <div>
+//         {selectedComponent || <Home />}
+//         <Drawer
+//           anchor="right"
+//           open={drawerOpen}
+//           onClose={toggleDrawer(false)}
+//           PaperProps={{
+//             sx: {
+//               backgroundColor: darkThemeColor,
+//             },
+//           }}
+//         >
+//           <Box sx={{ width: 250 }}>
+//             <Menu
+//               theme="dark"
+//               onClick={onClick}
+//               style={{ width: '100%' }}
+//               defaultOpenKeys={['sub1']}
+//               selectedKeys={[current]}
+//               mode="inline"
+//               items={getMenuItems()}
+//             />
+//           </Box>
+//         </Drawer>
+//       </div>
+//       <Routes>
+//         {[...formsItems, ...viewsItems, ...technicianItems, ...inhouseItems, ...commonItems].map(item => (
+//           <Route key={item.key} path={`/${item.label.toLowerCase().replace(/\s+/g, '-')}`} element={item.component} />
+//         ))}
+//         <Route path="*" element={<Navigate to="/" replace />} />
+//       </Routes>
+//     </Router>
+//   );
+// };
+
+// export default App;
+
+
+
+
+
+
+// import React, { useState, useEffect } from 'react';
+// import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+// import axios from 'axios';
+// import Box from '@mui/material/Box';
+// import Drawer from '@mui/material/Drawer';
+// import AppBar from '@mui/material/AppBar';
+// import Toolbar from '@mui/material/Toolbar';
+// import Typography from '@mui/material/Typography';
+// import IconButton from '@mui/material/IconButton';
+// import MenuIcon from '@mui/icons-material/Menu';
+// import { Menu } from 'antd';
+// import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+
+// // Import your components
+// import ViewInvoice from './components/Views/ViewInvoice';
+// import ViewListOfSpares from './components/Views/ViewListOfSpares';
+// import ViewLogs from './components/Views/ViewLogs';
+// import ViewFeedback from './components/Views/ViewFeedback';
+// import ViewProblem from './components/Views/ViewProblem';
+// import ViewProduct from './components/Views/ViewProduct';
+// import ViewScrap from './components/Views/ViewScrap';
+// import ViewSpares from './components/Views/ViewSpares';
+// import ViewTechnicianDetails from './components/Views/ViewTechnicianDetails';
+// import ViewCustomerDetails from './components/Views/ViewCustomerDetails';
+// import ViewTicket from './components/Views/ViewTicket';
+// import InvoiceForm from './components/Forms/InvoiceForm';
+// import TicketCreation from './components/Forms/TicketCreation';
+// import FeedbackForm from './components/Forms/FeedbackForm';
+// import ProblemStatement from './components/Forms/ProblemStatement';
+// import ProductMaster from './components/Forms/ProductMaster';
+// import SparePartsAndStocks from './components/Forms/SparePartsAndStocks';
+// import CustomerDetail from './components/Forms/CustomerDetail';
+// import TechnicianDetail from './components/Forms/TechnicianDetail';
+// import LoginDetails from './components/Views/LoginDetails';
+// import TechnicianView from './components/Views/TechnicianView';
+// import DispatchView from './components/Views/DispatchView';
+// import InhouseView from './components/Views/InhouseView';
+// import Home from './components/Views/Home';
+// import Dashboard from './components/Views/Dashboard';
+
+// const App = () => {
+//   const [userRole, setUserRole] = useState('');
+//   const [userEmail, setUserEmail] = useState('');
+//   const [drawerOpen, setDrawerOpen] = useState(false);
+//   const [selectedComponent, setSelectedComponent] = useState(null);
+//   const [userDetails, setUserDetails] = useState({});
+//   const [current, setCurrent] = useState('');
+
+//   const darkThemeColor = '#001529';
+
+//   useEffect(() => {
+//     const fetchUserRole = async () => {
+//       try {
+//         const res = await axios.get('/server/waterheater_1_function/getuser');
+//         setUserRole(res.data.role_details.role_name);
+//         setUserEmail(res.data.email_id);
+//         setUserDetails(res.data);
+//       } catch (err) {
+//         console.error('Error fetching user role:', err);
+//       }
+//     };
+//     fetchUserRole();
+//   }, []);
+
+//   const formsItems = [
+//     { key: 'f1', label: 'Customer Detail', path: 'customer-detail', component: <CustomerDetail /> },
+//     { key: 'f2', label: 'Technician Detail', path: 'technician-detail', component: <TechnicianDetail /> },
+//     { key: 'f3', label: 'Product Master', path: 'product-master', component: <ProductMaster /> },
+//     { key: 'f4', label: 'Spare Parts and Stocks', path: 'spare-parts-stocks', component: <SparePartsAndStocks /> },
+//     { key: 'f5', label: 'Ticket Creation', path: 'ticket-creation', component: <TicketCreation /> },
+//   ];
+
+//   const viewsItems = [
+//     { key: 'v1', label: 'View Customer Details', path: 'view-customer-details', component: <ViewCustomerDetails /> },
+//     { key: 'v2', label: 'View Ticket', path: 'view-ticket', component: <ViewTicket /> },
+//     { key: 'v3', label: 'View Technician Details', path: 'view-technician-details', component: <ViewTechnicianDetails /> },
+//     { key: 'v4', label: 'View Product', path: 'view-product', component: <ViewProduct /> },
+//     { key: 'v5', label: 'View Invoice', path: 'view-invoice', component: <ViewInvoice /> },
+//     { key: 'v6', label: 'View Spares', path: 'view-spares', component: <ViewSpares /> },
+//     { key: 'v7', label: 'View Scrap', path: 'view-scrap', component: <ViewScrap /> },
+//     { key: 'v8', label: 'View List of Spares', path: 'view-list-of-spares', component: <ViewListOfSpares /> },
+//     { key: 'v9', label: 'Inhouse View', path: 'inhouse-view', component: <InhouseView /> },
+//     { key: 'v10', label: 'Invoice Form', path: 'invoice-form', component: <InvoiceForm /> },
+//   ];
+
+//   const technicianItems = [
+//     { key: 't1', label: 'Technician View', path: 'technician-view', component: <TechnicianView roleEmail={userEmail}/> },
+//     { key: 't2', label: 'Dispatch View', path: 'dispatch-view', component: <DispatchView roleEmail={userEmail}/> },
+//   ];
+
+//   const inhouseItems = [
+//     { key: 'i1', label: 'Inhouse View', path: 'inhouse-view', component: <InhouseView /> },
+//   ];
+
+//   const commonItems = [
+//     { key: 'home', label: 'Home', path: '', component: <Home /> },
+//     { key: 'login', label: 'Login Details', path: 'login-details', component: <LoginDetails userDetails={userDetails}/> },
+//     { key: 'dashboard', label: 'Dashboard', path: 'dashboard', component: <Dashboard /> },
+//   ];
+
+//   const onClick = (e) => {
+//     setCurrent(e.key);
+//     const selectedItem = [...formsItems, ...viewsItems, ...technicianItems, ...inhouseItems, ...commonItems].find(item => item.key === e.key);
+//     if (selectedItem) {
+//       setSelectedComponent(selectedItem.component);
+//     }
+//     setDrawerOpen(false);
+//   };
+
+//   const toggleDrawer = (open) => (event) => {
+//     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+//       return;
+//     }
+//     setDrawerOpen(open);
+//   };
+
+//   const getMenuItems = () => {
+//     let items = [];
+//     if (userRole === 'App Administrator') {
+//       items = [
+//         {
+//           key: 'sub1',
+//           label: 'Forms',
+//           icon: <MailOutlined />,
+//           children: formsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//           })),
+//         },
+//         {
+//           key: 'sub2',
+//           label: 'Views',
+//           icon: <AppstoreOutlined />,
+//           children: viewsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//           })),
+//         },
+//         ...commonItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//       ];
+//     } else if (userRole === 'Technician') {
+//       items = [
+//         ...technicianItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//         ...commonItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//       ];
+//     } else if (userRole === 'Inhouse') {
+//       items = [
+//         ...inhouseItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//         ...commonItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//       ];
+//     } else {
+//       items = commonItems.map(item => ({
+//         key: item.key,
+//         label: item.label,
+//       }));
+//     }
+//     return items;
+//   };
+
+//   return (
+//     <Router>
+//       <Box sx={{ flexGrow: 1 }}>
+//         <AppBar position="static" sx={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', backdropFilter: 'blur(10px)' }}>
+//           <Toolbar>
+//             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+//               Water Heater App
+//             </Typography>
+//             <IconButton
+//               size="large"
+//               edge="end"
+//               color="inherit"
+//               aria-label="menu"
+//               sx={{ ml: 2 }}
+//               onClick={toggleDrawer(true)}
+//             >
+//               <MenuIcon />
+//             </IconButton>
+//           </Toolbar>
+//         </AppBar>
+//       </Box>
+//       <div>
+//         {selectedComponent || <Home />}
+//         <Drawer
+//           anchor="right"
+//           open={drawerOpen}
+//           onClose={toggleDrawer(false)}
+//           PaperProps={{
+//             sx: {
+//               backgroundColor: darkThemeColor,
+//             },
+//           }}
+//         >
+//           <Box sx={{ width: 250 }}>
+//             <Menu
+//               theme="dark"
+//               onClick={onClick}
+//               style={{ width: '100%' }}
+//               defaultOpenKeys={['sub1']}
+//               selectedKeys={[current]}
+//               mode="inline"
+//               items={getMenuItems()}
+//             />
+//           </Box>
+//         </Drawer>
+//       </div>
+//       <Routes>
+//         {[...formsItems, ...viewsItems, ...technicianItems, ...inhouseItems, ...commonItems].map(item => (
+//           <Route key={item.key} path={`/${item.path}`} element={item.component} />
+//         ))}
+//         <Route path="*" element={<Navigate to="/" replace />} />
+//       </Routes>
+//     </Router>
+//   );
+// };
+
+// export default App;
+
+
+
+
+
+
+
+
+
+
+// import React, { useState, useEffect } from 'react';
+// import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+// import axios from 'axios';
+// import Box from '@mui/material/Box';
+// import Drawer from '@mui/material/Drawer';
+// import AppBar from '@mui/material/AppBar';
+// import Toolbar from '@mui/material/Toolbar';
+// import Typography from '@mui/material/Typography';
+// import IconButton from '@mui/material/IconButton';
+// import MenuIcon from '@mui/icons-material/Menu';
+// import { Menu } from 'antd';
+// import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+
+// // Import your components
+// import ViewInvoice from './components/Views/ViewInvoice';
+// import ViewListOfSpares from './components/Views/ViewListOfSpares';
+// import ViewLogs from './components/Views/ViewLogs';
+// import ViewFeedback from './components/Views/ViewFeedback';
+// import ViewProblem from './components/Views/ViewProblem';
+// import ViewProduct from './components/Views/ViewProduct';
+// import ViewScrap from './components/Views/ViewScrap';
+// import ViewSpares from './components/Views/ViewSpares';
+// import ViewTechnicianDetails from './components/Views/ViewTechnicianDetails';
+// import ViewCustomerDetails from './components/Views/ViewCustomerDetails';
+// import ViewTicket from './components/Views/ViewTicket';
+// import InvoiceForm from './components/Forms/InvoiceForm';
+// import TicketCreation from './components/Forms/TicketCreation';
+// import FeedbackForm from './components/Forms/FeedbackForm';
+// import ProblemStatement from './components/Forms/ProblemStatement';
+// import ProductMaster from './components/Forms/ProductMaster';
+// import SparePartsAndStocks from './components/Forms/SparePartsAndStocks';
+// import CustomerDetail from './components/Forms/CustomerDetail';
+// import TechnicianDetail from './components/Forms/TechnicianDetail';
+// import LoginDetails from './components/Views/LoginDetails';
+// import TechnicianView from './components/Views/TechnicianView';
+// import DispatchView from './components/Views/DispatchView';
+// import InhouseView from './components/Views/InhouseView';
+// import Home from './components/Views/Home';
+// import Dashboard from './components/Views/Dashboard';
+
+// const App = () => {
+//   const [userRole, setUserRole] = useState('');
+//   const [userEmail, setUserEmail] = useState('');
+//   const [drawerOpen, setDrawerOpen] = useState(false);
+//   const [userDetails, setUserDetails] = useState({});
+//   const [current, setCurrent] = useState('');
+
+//   const darkThemeColor = '#001529';
+
+//   useEffect(() => {
+//     const fetchUserRole = async () => {
+//       try {
+//         const res = await axios.get('/server/waterheater_1_function/getuser');
+//         setUserRole(res.data.role_details.role_name);
+//         setUserEmail(res.data.email_id);
+//         setUserDetails(res.data);
+//       } catch (err) {
+//         console.error('Error fetching user role:', err);
+//       }
+//     };
+//     fetchUserRole();
+//   }, []);
+
+//   const formsItems = [
+//     { key: 'f1', label: 'Customer Detail', path: 'customer-detail', component: <CustomerDetail /> },
+//     { key: 'f2', label: 'Technician Detail', path: 'technician-detail', component: <TechnicianDetail /> },
+//     { key: 'f3', label: 'Product Master', path: 'product-master', component: <ProductMaster /> },
+//     { key: 'f4', label: 'Spare Parts and Stocks', path: 'spare-parts-stocks', component: <SparePartsAndStocks /> },
+//     { key: 'f5', label: 'Ticket Creation', path: 'ticket-creation', component: <TicketCreation /> },
+//   ];
+
+//   const viewsItems = [
+//     { key: 'v1', label: 'View Customer Details', path: 'view-customer-details', component: <ViewCustomerDetails /> },
+//     { key: 'v2', label: 'View Ticket', path: 'view-ticket', component: <ViewTicket /> },
+//     { key: 'v3', label: 'View Technician Details', path: 'view-technician-details', component: <ViewTechnicianDetails /> },
+//     { key: 'v4', label: 'View Product', path: 'view-product', component: <ViewProduct /> },
+//     { key: 'v5', label: 'View Invoice', path: 'view-invoice', component: <ViewInvoice /> },
+//     { key: 'v6', label: 'View Spares', path: 'view-spares', component: <ViewSpares /> },
+//     { key: 'v7', label: 'View Scrap', path: 'view-scrap', component: <ViewScrap /> },
+//     { key: 'v8', label: 'View List of Spares', path: 'view-list-of-spares', component: <ViewListOfSpares /> },
+//     { key: 'v9', label: 'Inhouse View', path: 'inhouse-view', component: <InhouseView /> },
+//     { key: 'v10', label: 'Invoice Form', path: 'invoice-form', component: <InvoiceForm /> },
+//   ];
+
+//   const technicianItems = [
+//     { key: 't1', label: 'Technician View', path: 'technician-view', component: <TechnicianView roleEmail={userEmail}/> },
+//     { key: 't2', label: 'Dispatch View', path: 'dispatch-view', component: <DispatchView roleEmail={userEmail}/> },
+//   ];
+
+//   const inhouseItems = [
+//     { key: 'i1', label: 'Inhouse View', path: 'inhouse-view', component: <InhouseView /> },
+//   ];
+
+//   const commonItems = [
+//     { key: 'home', label: 'Home', path: '', component: <Home /> },
+//     { key: 'login', label: 'Login Details', path: 'login-details', component: <LoginDetails userDetails={userDetails}/> },
+//     { key: 'dashboard', label: 'Dashboard', path: 'dashboard', component: <Dashboard /> },
+//   ];
+
+//   const onClick = (key, path) => {
+//     setCurrent(key);
+//     setDrawerOpen(false);
+//     // Navigate to the selected path
+//     window.history.replaceState(null, '', `/${path}`);
+//   };
+
+//   const toggleDrawer = (open) => (event) => {
+//     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+//       return;
+//     }
+//     setDrawerOpen(open);
+//   };
+
+//   const getMenuItems = () => {
+//     let items = [];
+//     if (userRole === 'App Administrator') {
+//       items = [
+//         {
+//           key: 'sub1',
+//           label: 'Forms',
+//           icon: <MailOutlined />,
+//           children: formsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//             path: item.path,
+//           })),
+//         },
+//         {
+//           key: 'sub2',
+//           label: 'Views',
+//           icon: <AppstoreOutlined />,
+//           children: viewsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//             path: item.path,
+//           })),
+//         },
+//         ...commonItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//           path: item.path,
+//         })),
+//       ];
+//     } else if (userRole === 'Technician') {
+//       items = [
+//         ...technicianItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//           path: item.path,
+//         })),
+//         ...commonItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//           path: item.path,
+//         })),
+//       ];
+//     } else if (userRole === 'Inhouse') {
+//       items = [
+//         ...inhouseItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//           path: item.path,
+//         })),
+//         ...commonItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//           path: item.path,
+//         })),
+//       ];
+//     } else {
+//       items = commonItems.map(item => ({
+//         key: item.key,
+//         label: item.label,
+//         path: item.path,
+//       }));
+//     }
+//     return items;
+//   };
+
+//   return (
+//     <Router>
+//       <Box sx={{ flexGrow: 1 }}>
+//         <AppBar position="static" sx={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', backdropFilter: 'blur(10px)' }}>
+//           <Toolbar>
+//             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+//               Water Heater App
+//             </Typography>
+//             <IconButton
+//               size="large"
+//               edge="end"
+//               color="inherit"
+//               aria-label="menu"
+//               sx={{ ml: 2 }}
+//               onClick={toggleDrawer(true)}
+//             >
+//               <MenuIcon />
+//             </IconButton>
+//           </Toolbar>
+//         </AppBar>
+//       </Box>
+//       <div>
+//         <Routes>
+//           {[...formsItems, ...viewsItems, ...technicianItems, ...inhouseItems, ...commonItems].map(item => (
+//             <Route key={item.key} path={`/${item.path}`} element={item.component} />
+//           ))}
+//           <Route path="/" element={<Navigate to="/home" />} />
+//           <Route path="*" element={<Navigate to="/" replace />} />
+//         </Routes>
+//         <Drawer
+//           anchor="right"
+//           open={drawerOpen}
+//           onClose={toggleDrawer(false)}
+//           PaperProps={{
+//             sx: {
+//               backgroundColor: darkThemeColor,
+//             },
+//           }}
+//         >
+//           <Box sx={{ width: 250 }}>
+//             <Menu
+//               theme="dark"
+//               onClick={(e) => onClick(e.key, e.item.props.path)}
+//               style={{ width: '100%' }}
+//               defaultOpenKeys={['sub1']}
+//               selectedKeys={[current]}
+//               mode="inline"
+//               items={getMenuItems().map(item => ({
+//                 ...item,
+//                 children: item.children && item.children.map(child => ({
+//                   ...child,
+//                   path: child.path
+//                 }))
+//               }))}
+//             />
+//           </Box>
+//         </Drawer>
+//       </div>
+//     </Router>
+//   );
+// };
+
+// export default App;
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useState, useEffect } from 'react';
+// import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+// import axios from 'axios';
+// import Box from '@mui/material/Box';
+// import Drawer from '@mui/material/Drawer';
+// import AppBar from '@mui/material/AppBar';
+// import Toolbar from '@mui/material/Toolbar';
+// import Typography from '@mui/material/Typography';
+// import IconButton from '@mui/material/IconButton';
+// import MenuIcon from '@mui/icons-material/Menu';
+// import { Menu } from 'antd';
+// import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+
+// // Import your components
+// import ViewInvoice from './components/Views/ViewInvoice';
+// import ViewListOfSpares from './components/Views/ViewListOfSpares';
+// import ViewLogs from './components/Views/ViewLogs';
+// import ViewFeedback from './components/Views/ViewFeedback';
+// import ViewProblem from './components/Views/ViewProblem';
+// import ViewProduct from './components/Views/ViewProduct';
+// import ViewScrap from './components/Views/ViewScrap';
+// import ViewSpares from './components/Views/ViewSpares';
+// import ViewTechnicianDetails from './components/Views/ViewTechnicianDetails';
+// import ViewCustomerDetails from './components/Views/ViewCustomerDetails';
+// import ViewTicket from './components/Views/ViewTicket';
+// import InvoiceForm from './components/Forms/InvoiceForm';
+// import TicketCreation from './components/Forms/TicketCreation';
+// import FeedbackForm from './components/Forms/FeedbackForm';
+// import ProblemStatement from './components/Forms/ProblemStatement';
+// import ProductMaster from './components/Forms/ProductMaster';
+// import SparePartsAndStocks from './components/Forms/SparePartsAndStocks';
+// import CustomerDetail from './components/Forms/CustomerDetail';
+// import TechnicianDetail from './components/Forms/TechnicianDetail';
+// import LoginDetails from './components/Views/LoginDetails';
+// import TechnicianView from './components/Views/TechnicianView';
+// import DispatchView from './components/Views/DispatchView';
+// import InhouseView from './components/Views/InhouseView';
+// import Home from './components/Views/Home';
+// import Dashboard from './components/Views/Dashboard';
+
+// const App = () => {
+//   const [userRole, setUserRole] = useState('');
+//   const [userEmail, setUserEmail] = useState('');
+//   const [drawerOpen, setDrawerOpen] = useState(false);
+//   const [userDetails, setUserDetails] = useState({});
+//   const [current, setCurrent] = useState('');
+
+//   const darkThemeColor = '#001529';
+
+//   useEffect(() => {
+//     const fetchUserRole = async () => {
+//       try {
+//         const res = await axios.get('/server/waterheater_1_function/getuser');
+//         setUserRole(res.data.role_details.role_name);
+//         setUserEmail(res.data.email_id);
+//         setUserDetails(res.data);
+//       } catch (err) {
+//         console.error('Error fetching user role:', err);
+//       }
+//     };
+//     fetchUserRole();
+//   }, []);
+
+//   const formsItems = [
+//     { key: 'f1', label: 'Customer Detail', path: 'customer-detail', component: CustomerDetail },
+//     { key: 'f2', label: 'Technician Detail', path: 'technician-detail', component: TechnicianDetail },
+//     { key: 'f3', label: 'Product Master', path: 'product-master', component: ProductMaster },
+//     { key: 'f4', label: 'Spare Parts and Stocks', path: 'spare-parts-stocks', component: SparePartsAndStocks },
+//     { key: 'f5', label: 'Ticket Creation', path: 'ticket-creation', component: TicketCreation },
+//   ];
+
+//   const viewsItems = [
+//     { key: 'v1', label: 'View Customer Details', path: 'view-customer-details', component: ViewCustomerDetails },
+//     { key: 'v2', label: 'View Ticket', path: 'view-ticket', component: ViewTicket },
+//     { key: 'v3', label: 'View Technician Details', path: 'view-technician-details', component: ViewTechnicianDetails },
+//     { key: 'v4', label: 'View Product', path: 'view-product', component: ViewProduct },
+//     { key: 'v5', label: 'View Invoice', path: 'view-invoice', component: ViewInvoice },
+//     { key: 'v6', label: 'View Spares', path: 'view-spares', component: ViewSpares },
+//     { key: 'v7', label: 'View Scrap', path: 'view-scrap', component: ViewScrap },
+//     { key: 'v8', label: 'View List of Spares', path: 'view-list-of-spares', component: ViewListOfSpares },
+//     { key: 'v9', label: 'Inhouse View', path: 'inhouse-view', component: InhouseView },
+//     { key: 'v10', label: 'Invoice Form', path: 'invoice-form', component: InvoiceForm },
+//   ];
+
+//   const technicianItems = [
+//     { key: 't1', label: 'Technician View', path: 'technician-view', component: () => <TechnicianView roleEmail={userEmail}/> },
+//     { key: 't2', label: 'Dispatch View', path: 'dispatch-view', component: () => <DispatchView roleEmail={userEmail}/> },
+//   ];
+
+//   const inhouseItems = [
+//     { key: 'i1', label: 'Inhouse View', path: 'inhouse-view', component: InhouseView },
+//   ];
+
+//   const commonItems = [
+//     { key: 'home', label: 'Home', path: '', component: Home },
+//     { key: 'login', label: 'Login Details', path: 'login-details', component: () => <LoginDetails userDetails={userDetails}/> },
+//     { key: 'dashboard', label: 'Dashboard', path: 'dashboard', component: Dashboard },
+//   ];
+
+//   const onClick = (key, path) => {
+//     setCurrent(key);
+//     setDrawerOpen(false);
+//     // Navigate to the selected path
+//     window.history.replaceState(null, '', `/${path}`);
+//   };
+
+//   const toggleDrawer = (open) => (event) => {
+//     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+//       return;
+//     }
+//     setDrawerOpen(open);
+//   };
+
+//   const getMenuItems = () => {
+//     let items = [];
+//     if (userRole === 'App Administrator') {
+//       items = [
+//         {
+//           key: 'sub1',
+//           label: 'Forms',
+//           icon: <MailOutlined />,
+//           children: formsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//             path: item.path,
+//           })),
+//         },
+//         {
+//           key: 'sub2',
+//           label: 'Views',
+//           icon: <AppstoreOutlined />,
+//           children: viewsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//             path: item.path,
+//           })),
+//         },
+//         ...commonItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//           path: item.path,
+//         })),
+//       ];
+//     } else if (userRole === 'Technician') {
+//       items = [
+//         ...technicianItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//           path: item.path,
+//         })),
+//         ...commonItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//           path: item.path,
+//         })),
+//       ];
+//     } else if (userRole === 'Inhouse') {
+//       items = [
+//         ...inhouseItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//           path: item.path,
+//         })),
+//         ...commonItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//           path: item.path,
+//         })),
+//       ];
+//     } else {
+//       items = commonItems.map(item => ({
+//         key: item.key,
+//         label: item.label,
+//         path: item.path,
+//       }));
+//     }
+//     return items;
+//   };
+
+//   return (
+//     <Router>
+//       <Box sx={{ flexGrow: 1 }}>
+//         <AppBar position="static" sx={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', backdropFilter: 'blur(10px)' }}>
+//           <Toolbar>
+//             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+//               Water Heater App
+//             </Typography>
+//             <IconButton
+//               size="large"
+//               edge="end"
+//               color="inherit"
+//               aria-label="menu"
+//               sx={{ ml: 2 }}
+//               onClick={toggleDrawer(true)}
+//             >
+//               <MenuIcon />
+//             </IconButton>
+//           </Toolbar>
+//         </AppBar>
+//       </Box>
+//       <div>
+//         <Routes>
+//           {[...formsItems, ...viewsItems, ...technicianItems, ...inhouseItems, ...commonItems].map(item => (
+//             <Route key={item.key} path={`/${item.path}`} element={<item.component />} />
+//           ))}
+//           <Route path="/" element={<Navigate to="/home" />} />
+//           <Route path="*" element={<Navigate to="/" replace />} />
+//         </Routes>
+//         <Drawer
+//           anchor="right"
+//           open={drawerOpen}
+//           onClose={toggleDrawer(false)}
+//           PaperProps={{
+//             sx: {
+//               backgroundColor: darkThemeColor,
+//             },
+//           }}
+//         >
+//           <Box sx={{ width: 250 }}>
+//             <Menu
+//               theme="dark"
+//               onClick={(e) => onClick(e.key, e.item.props.path)}
+//               style={{ width: '100%' }}
+//               defaultOpenKeys={['sub1']}
+//               selectedKeys={[current]}
+//               mode="inline"
+//               items={getMenuItems().map(item => ({
+//                 ...item,
+//                 children: item.children && item.children.map(child => ({
+//                   ...child,
+//                   path: child.path
+//                 }))
+//               }))}
+//             />
+//           </Box>
+//         </Drawer>
+//       </div>
+//     </Router>
+//   );
+// };
+
+// export default App;
+
+
+
+
+//good with url and component
+
+// import React, { useState, useEffect } from 'react';
+// import { HashRouter as Router, Route, Routes, Navigate, useNavigate } from 'react-router-dom';
+// import axios from 'axios';
+// import Box from '@mui/material/Box';
+// import Drawer from '@mui/material/Drawer';
+// import AppBar from '@mui/material/AppBar';
+// import Toolbar from '@mui/material/Toolbar';
+// import Typography from '@mui/material/Typography';
+// import IconButton from '@mui/material/IconButton';
+// import MenuIcon from '@mui/icons-material/Menu';
+// import { Menu } from 'antd';
+// import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+
+// // Import your components
+// import ViewInvoice from './components/Views/ViewInvoice';
+// import ViewListOfSpares from './components/Views/ViewListOfSpares';
+// import ViewLogs from './components/Views/ViewLogs';
+// import ViewFeedback from './components/Views/ViewFeedback';
+// import ViewProblem from './components/Views/ViewProblem';
+// import ViewProduct from './components/Views/ViewProduct';
+// import ViewScrap from './components/Views/ViewScrap';
+// import ViewSpares from './components/Views/ViewSpares';
+// import ViewTechnicianDetails from './components/Views/ViewTechnicianDetails';
+// import ViewCustomerDetails from './components/Views/ViewCustomerDetails';
+// import ViewTicket from './components/Views/ViewTicket';
+// import InvoiceForm from './components/Forms/InvoiceForm';
+// import TicketCreation from './components/Forms/TicketCreation';
+// import FeedbackForm from './components/Forms/FeedbackForm';
+// import ProblemStatement from './components/Forms/ProblemStatement';
+// import ProductMaster from './components/Forms/ProductMaster';
+// import SparePartsAndStocks from './components/Forms/SparePartsAndStocks';
+// import CustomerDetail from './components/Forms/CustomerDetail';
+// import TechnicianDetail from './components/Forms/TechnicianDetail';
+// import LoginDetails from './components/Views/LoginDetails';
+// import TechnicianView from './components/Views/TechnicianView';
+// import DispatchView from './components/Views/DispatchView';
+// import InhouseView from './components/Views/InhouseView';
+// import Home from './components/Views/Home';
+// import Dashboard from './components/Views/Dashboard';
+
+// const App = () => {
+//   const [userRole, setUserRole] = useState('');
+//   const [userEmail, setUserEmail] = useState('');
+//   const [drawerOpen, setDrawerOpen] = useState(false);
+//   const [userDetails, setUserDetails] = useState({});
+//   const [current, setCurrent] = useState('');
+//   const navigate = useNavigate();
+
+//   const darkThemeColor = '#001529';
+
+//   useEffect(() => {
+//     const fetchUserRole = async () => {
+//       try {
+//         const res = await axios.get('/server/waterheater_1_function/getuser');
+//         setUserRole(res.data.role_details.role_name);
+//         setUserEmail(res.data.email_id);
+//         setUserDetails(res.data);
+//       } catch (err) {
+//         console.error('Error fetching user role:', err);
+//       }
+//     };
+//     fetchUserRole();
+//   }, []);
+
+//   const formsItems = [
+//     { key: 'f1', label: 'Customer Detail', path: 'customer-detail', component: CustomerDetail },
+//     { key: 'f2', label: 'Technician Detail', path: 'technician-detail', component: TechnicianDetail },
+//     { key: 'f3', label: 'Product Master', path: 'product-master', component: ProductMaster },
+//     { key: 'f4', label: 'Spare Parts and Stocks', path: 'spare-parts-stocks', component: SparePartsAndStocks },
+//     { key: 'f5', label: 'Ticket Creation', path: 'ticket-creation', component: TicketCreation },
+//   ];
+
+//   const viewsItems = [
+//     { key: 'v1', label: 'View Customer Details', path: 'view-customer-details', component: ViewCustomerDetails },
+//     { key: 'v2', label: 'View Ticket', path: 'view-ticket', component: ViewTicket },
+//     { key: 'v3', label: 'View Technician Details', path: 'view-technician-details', component: ViewTechnicianDetails },
+//     { key: 'v4', label: 'View Product', path: 'view-product', component: ViewProduct },
+//     { key: 'v5', label: 'View Invoice', path: 'view-invoice', component: ViewInvoice },
+//     { key: 'v6', label: 'View Spares', path: 'view-spares', component: ViewSpares },
+//     { key: 'v7', label: 'View Scrap', path: 'view-scrap', component: ViewScrap },
+//     { key: 'v8', label: 'View List of Spares', path: 'view-list-of-spares', component: ViewListOfSpares },
+//     { key: 'v9', label: 'Inhouse View', path: 'inhouse-view', component: InhouseView },
+//     { key: 'v10', label: 'Invoice Form', path: 'invoice-form', component: InvoiceForm },
+//   ];
+
+//   const technicianItems = [
+//     { key: 't1', label: 'Technician View', path: 'technician-view', component: () => <TechnicianView roleEmail={userEmail}/> },
+//     { key: 't2', label: 'Dispatch View', path: 'dispatch-view', component: () => <DispatchView roleEmail={userEmail}/> },
+//   ];
+
+//   const inhouseItems = [
+//     { key: 'i1', label: 'Inhouse View', path: 'inhouse-view', component: InhouseView },
+//   ];
+
+//   const commonItems = [
+//     { key: 'home', label: 'Home', path: 'home', component: Home },
+//     { key: 'login', label: 'Login Details', path: 'login-details', component: () => <LoginDetails userDetails={userDetails}/> },
+//     { key: 'dashboard', label: 'Dashboard', path: 'dashboard', component: Dashboard },
+//   ];
+
+//   const onClick = (key, path) => {
+//     setCurrent(key);
+//     navigate(`/${path}`);
+//     setTimeout(() => setDrawerOpen(false), 100);
+//   };
+
+//   const toggleDrawer = (open) => (event) => {
+//     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+//       return;
+//     }
+//     setDrawerOpen(open);
+//   };
+
+//   const getMenuItems = () => {
+//     let items = [];
+//     if (userRole === 'App Administrator') {
+//       items = [
+//         {
+//           key: 'sub1',
+//           label: 'Forms',
+//           icon: <MailOutlined />,
+//           children: formsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//             path: item.path,
+//           })),
+//         },
+//         {
+//           key: 'sub2',
+//           label: 'Views',
+//           icon: <AppstoreOutlined />,
+//           children: viewsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//             path: item.path,
+//           })),
+//         },
+//         ...commonItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//           path: item.path,
+//         })),
+//       ];
+//     } else if (userRole === 'Technician') {
+//       items = [
+//         ...technicianItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//           path: item.path,
+//         })),
+//         ...commonItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//           path: item.path,
+//         })),
+//       ];
+//     } else if (userRole === 'Inhouse') {
+//       items = [
+//         ...inhouseItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//           path: item.path,
+//         })),
+//         ...commonItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//           path: item.path,
+//         })),
+//       ];
+//     } else {
+//       items = commonItems.map(item => ({
+//         key: item.key,
+//         label: item.label,
+//         path: item.path,
+//       }));
+//     }
+//     return items;
+//   };
+
+//   return (
+//     <div>
+//       <Box sx={{ flexGrow: 1 }}>
+//         <AppBar position="static" sx={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', backdropFilter: 'blur(10px)' }}>
+//           <Toolbar>
+//             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+//               Water Heater App
+//             </Typography>
+//             <IconButton
+//               size="large"
+//               edge="end"
+//               color="inherit"
+//               aria-label="menu"
+//               sx={{ ml: 2 }}
+//               onClick={toggleDrawer(true)}
+//             >
+//               <MenuIcon />
+//             </IconButton>
+//           </Toolbar>
+//         </AppBar>
+//       </Box>
+//       <div>
+//         <Routes>
+//           {[...formsItems, ...viewsItems, ...technicianItems, ...inhouseItems, ...commonItems].map(item => (
+//             <Route key={item.key} path={`/${item.path}`} element={<item.component />} />
+//           ))}
+//           <Route path="/home" element={<Home />} />
+//           <Route path="/" element={<Navigate to="/home" />} />
+//           <Route path="*" element={<Navigate to="/" replace />} />
+//         </Routes>
+//         <Drawer
+//           anchor="right"
+//           open={drawerOpen}
+//           onClose={toggleDrawer(false)}
+//           PaperProps={{
+//             sx: {
+//               backgroundColor: darkThemeColor,
+//             },
+//           }}
+//         >
+//           <Box sx={{ width: 250 }}>
+//             <Menu
+//               theme="dark"
+//               onClick={(e) => onClick(e.key, e.item.props.path)}
+//               style={{ width: '100%' }}
+//               defaultOpenKeys={['sub1']}
+//               selectedKeys={[current]}
+//               mode="inline"
+//               items={getMenuItems().map(item => ({
+//                 ...item,
+//                 children: item.children && item.children.map(child => ({
+//                   ...child,
+//                   path: child.path
+//                 }))
+//               }))}
+//             />
+//           </Box>
+//         </Drawer>
+//       </div>
+//     </div>
+//   );
+// };
+
+// const AppWrapper = () => {
+//   return (
+    
+//     <Router basename='/app'>
+//       <App />
+//     </Router>
+//   );
+// };
+
+// export default AppWrapper;
+
+
+
+
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, Navigate, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-import Button from '@mui/material/Button';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import { Menu } from 'antd';
+import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
 
-// Import your components (unchanged)
+// Import your components
 import ViewInvoice from './components/Views/ViewInvoice';
 import ViewListOfSpares from './components/Views/ViewListOfSpares';
 import ViewLogs from './components/Views/ViewLogs';
@@ -1323,19 +4593,23 @@ import InhouseView from './components/Views/InhouseView';
 import Home from './components/Views/Home';
 import Dashboard from './components/Views/Dashboard';
 
-
 const App = () => {
   const [userRole, setUserRole] = useState('');
-  const [userDetails, setUserDetails] = useState({});
+  const [userEmail, setUserEmail] = useState('');
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [selectedComponent, setSelectedComponent] = useState(null);
+  const [userDetails, setUserDetails] = useState({});
+  const [current, setCurrent] = useState('');
+  const navigate = useNavigate();
+
+  const darkThemeColor = '#001529';
 
   useEffect(() => {
     const fetchUserRole = async () => {
       try {
         const res = await axios.get('/server/waterheater_1_function/getuser');
         setUserRole(res.data.role_details.role_name);
-        setUserDetails(res.data.email_id);
+        setUserEmail(res.data.email_id);
+        setUserDetails(res.data);
       } catch (err) {
         console.error('Error fetching user role:', err);
       }
@@ -1343,53 +4617,49 @@ const App = () => {
     fetchUserRole();
   }, []);
 
-  const getItems = () => {
-    if (userRole === 'App Administrator') {
-      return [...formsItems, ...viewsItems];
-    } else if (userRole === 'Technician') {
-      return technicianItems;
-    } else if (userRole === 'Inhouse') {
-      return inhouseItems;
-    }
-    return [];
-  };
-
   const formsItems = [
-    { key: '1', label: 'Customer Detail', component: <CustomerDetail /> },
-    { key: '2', label: 'Technician Detail', component: <TechnicianDetail /> },
-    { key: '3', label: 'Product Master', component: <ProductMaster /> },
-    { key: '4', label: 'Spare Parts and Stocks', component: <SparePartsAndStocks /> },
-    { key: '5', label: 'Ticket Creation', component: <TicketCreation /> },
+    { key: 'f1', label: 'Customer Detail', path: 'customer-detail', component: CustomerDetail },
+    { key: 'f2', label: 'Technician Detail', path: 'technician-detail', component: TechnicianDetail },
+    { key: 'f3', label: 'Product Master', path: 'product-master', component: ProductMaster },
+    { key: 'f4', label: 'Spare Parts and Stocks', path: 'spare-parts-stocks', component: SparePartsAndStocks },
+    { key: 'f5', label: 'Ticket Creation', path: 'ticket-creation', component: TicketCreation },
   ];
 
   const viewsItems = [
-    { key: '1', label: 'View Customer Details', component: <ViewCustomerDetails /> },
-    { key: '2', label: 'View Ticket', component: <ViewTicket /> },
-    { key: '3', label: 'View Technician Details', component: <ViewTechnicianDetails /> },
-    { key: '4', label: 'View Product', component: <ViewProduct /> },
-    { key: '5', label: 'View Invoice', component: <ViewInvoice /> },
-    { key: '6', label: 'View Spares', component: <ViewSpares /> },
-    { key: '7', label: 'View Scrap', component: <ViewScrap /> },
-    { key: '8', label: 'View List of Spares', component: <ViewListOfSpares /> },
-    { key: '9', label: 'Login Details', component: <LoginDetails /> },
-    { key: '10', label: 'Inhouse View', component: <InhouseView /> },
-    { key: '11', label: 'Dashboard', component: <Dashboard /> },
-    // { key: '12', label: 'Technician View', component: <TechnicianView user={userDetails}/> },
-    { key: '13', label: 'Invoice Form', component: <InvoiceForm/> },
-
+    { key: 'v1', label: 'View Customer Details', path: 'view-customer-details', component: ViewCustomerDetails },
+    { key: 'v2', label: 'View Ticket', path: 'view-ticket', component: ViewTicket },
+    { key: 'v3', label: 'View Technician Details', path: 'view-technician-details', component: ViewTechnicianDetails },
+    { key: 'v4', label: 'View Product', path: 'view-product', component: ViewProduct },
+    { key: 'v5', label: 'View Invoice', path: 'view-invoice', component: ViewInvoice },
+    { key: 'v6', label: 'View Spares', path: 'view-spares', component: ViewSpares },
+    { key: 'v7', label: 'View Scrap', path: 'view-scrap', component: ViewScrap },
+    { key: 'v8', label: 'View List of Spares', path: 'view-list-of-spares', component: ViewListOfSpares },
+    { key: 'v9', label: 'Inhouse View', path: 'inhouse-view', component: InhouseView },
+    // { key: 'v10', label: 'Invoice Form', path: 'invoice-form', component: InvoiceForm },
   ];
 
   const technicianItems = [
-    { key: '1', label: 'Technician View', component: <TechnicianView roleEmail={userDetails}/> },
-    { key: '2', label: 'Invoice Form', component: <InvoiceForm/> },
-    { key: '3', label: 'Login Details', component: <LoginDetails /> },
-    { key: '4', label: 'Dispatch View', component: <DispatchView roleEmail={userDetails}/> },
+    { key: 't1', label: 'Technician View', path: 'technician-view', component: () => <TechnicianView roleEmail={userEmail}/> },
+    { key: 't2', label: 'Dispatch View', path: 'dispatch-view', component: () => <DispatchView roleEmail={userEmail}/> },
+    { key: 't3', label: 'Invoice Form', path: 'invoice-form', component: InvoiceForm },
+
   ];
 
   const inhouseItems = [
-    { key: '1', label: 'Inhouse View', component: <InhouseView /> },
-    { key: '2', label: 'Login Details', component: <LoginDetails /> },
+    { key: 'i1', label: 'Inhouse View', path: 'inhouse-view', component: InhouseView },
   ];
+
+  const commonItems = [
+    { key: 'home', label: 'Home', path: 'home', component: Home },
+    { key: 'login', label: 'Login Details', path: 'login-details', component: () => <LoginDetails userDetails={userDetails}/> },
+    { key: 'dashboard', label: 'Dashboard', path: 'dashboard', component: Dashboard },
+  ];
+
+  const onClick = (key, path) => {
+    setCurrent(key);
+    navigate(`/${path}`);
+    setTimeout(() => setDrawerOpen(false), 100);
+  };
 
   const toggleDrawer = (open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -1398,72 +4668,396 @@ const App = () => {
     setDrawerOpen(open);
   };
 
-  const handleItemClick = (component) => {
-    setSelectedComponent(component);
-    setDrawerOpen(false);
+  const getMenuItems = () => {
+    let items = [];
+    if (userRole === 'App Administrator') {
+      items = [
+        {
+          key: 'sub1',
+          label: 'Forms',
+          icon: <MailOutlined />,
+          children: formsItems.map(item => ({
+            key: item.key,
+            label: item.label,
+            path: item.path,
+          })),
+        },
+        {
+          key: 'sub2',
+          label: 'Views',
+          icon: <AppstoreOutlined />,
+          children: viewsItems.map(item => ({
+            key: item.key,
+            label: item.label,
+            path: item.path,
+          })),
+        },
+        ...commonItems.map(item => ({
+          key: item.key,
+          label: item.label,
+          path: item.path,
+        })),
+      ];
+    } else if (userRole === 'Technician') {
+      items = [
+        ...technicianItems.map(item => ({
+          key: item.key,
+          label: item.label,
+          path: item.path,
+        })),
+        ...commonItems.map(item => ({
+          key: item.key,
+          label: item.label,
+          path: item.path,
+        })),
+      ];
+    } else if (userRole === 'Inhouse') {
+      items = [
+        ...inhouseItems.map(item => ({
+          key: item.key,
+          label: item.label,
+          path: item.path,
+        })),
+        ...commonItems.map(item => ({
+          key: item.key,
+          label: item.label,
+          path: item.path,
+        })),
+      ];
+    } else {
+      items = commonItems.map(item => ({
+        key: item.key,
+        label: item.label,
+        path: item.path,
+      }));
+    }
+    return items;
   };
 
-  const list = () => (
-    <Box
-      sx={{ width: 250 }}
-      role="presentation"
-      onClick={toggleDrawer(false)}
-      onKeyDown={toggleDrawer(false)}
-    >
-      <List>
-        {getItems().map((item) => (
-          <ListItem key={item.key} disablePadding>
-            <ListItemButton onClick={() => handleItemClick(item.component)}>
-              <ListItemText primary={item.label} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
-
   return (
-    <Router basename="/app">
+    <div >
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static" sx={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', backdropFilter: 'blur(10px)', marginBottom:'25px' }}>
+          <Toolbar>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              Water Heater App
+            </Typography>
+            <IconButton
+              size="large"
+              edge="end"
+              color="inherit"
+              aria-label="menu"
+              sx={{ ml: 2 }}
+              onClick={toggleDrawer(true)}
+            >
+              <MenuIcon />
+            </IconButton>
+          </Toolbar>
+        </AppBar>
+      </Box>
       <div>
-        <Button onClick={toggleDrawer(true)}>Open Menu</Button>
-        {selectedComponent || <Home />}
+        <Routes>
+          {[...formsItems, ...viewsItems, ...technicianItems, ...inhouseItems, ...commonItems].map(item => (
+            <Route key={item.key} path={`/${item.path}`} element={<item.component />} />
+          ))}
+          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
         <Drawer
-          anchor="left"
+          anchor="right"
           open={drawerOpen}
           onClose={toggleDrawer(false)}
+          PaperProps={{
+            sx: {
+              backgroundColor: darkThemeColor,
+            },
+          }}
         >
-          {list()}
+          <Box sx={{ width: 250 }}>
+            <Menu
+              theme="dark"
+              onClick={(e) => onClick(e.key, e.item.props.path)}
+              style={{ width: '100%' }}
+              defaultOpenKeys={['sub1']}
+              selectedKeys={[current]}
+              mode="inline"
+              items={getMenuItems().map(item => ({
+                ...item,
+                children: item.children && item.children.map(child => ({
+                  ...child,
+                  path: child.path
+                }))
+              }))}
+            />
+          </Box>
         </Drawer>
       </div>
-      <Routes>
-        {userRole === 'App Administrator' && (
-          <>
-            {[...formsItems, ...viewsItems].map(item => (
-              <Route key={item.key} path={`/${item.label.toLowerCase().replace(/\s+/g, '-')}`} element={item.component} />
-            ))}
-          </>
-        )}
-        {userRole === 'Technician' && (
-          <>
-            <Route path="/technician-view" element={<TechnicianView user={userDetails}/>} />
-            <Route path="/invoice-form" element={<InvoiceForm />} />
-            <Route path="/login-details" element={<LoginDetails />} />
-            <Route path="/dispatch-view" element={<DispatchView user={userDetails}/>} />
-          </>
-        )}
-        {userRole === 'Inhouse' && (
-          <>
-            <Route path="/inhouse-view" element={<InhouseView />} />
-            <Route path="/login-details" element={<LoginDetails />} />
-          </>
-        )}
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
+    </div>
+  );
+};
+
+const AppWrapper = () => {
+  return (
+    <Router>
+      <App />
     </Router>
   );
 };
 
-export default App;
+export default AppWrapper;
+
+
+
+
+
+
+
+// import React, { useState, useEffect } from 'react';
+// import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+// import axios from 'axios';
+// import Box from '@mui/material/Box';
+// import Drawer from '@mui/material/Drawer';
+// import AppBar from '@mui/material/AppBar';
+// import Toolbar from '@mui/material/Toolbar';
+// import Typography from '@mui/material/Typography';
+// import IconButton from '@mui/material/IconButton';
+// import MenuIcon from '@mui/icons-material/Menu';
+// import { Menu } from 'antd';
+// import { AppstoreOutlined, MailOutlined, SettingOutlined, HomeOutlined, DashboardOutlined, LoginOutlined } from '@ant-design/icons';
+
+// // Import your components
+// import ViewInvoice from './components/Views/ViewInvoice';
+// import ViewListOfSpares from './components/Views/ViewListOfSpares';
+// import ViewLogs from './components/Views/ViewLogs';
+// import ViewFeedback from './components/Views/ViewFeedback';
+// import ViewProblem from './components/Views/ViewProblem';
+// import ViewProduct from './components/Views/ViewProduct';
+// import ViewScrap from './components/Views/ViewScrap';
+// import ViewSpares from './components/Views/ViewSpares';
+// import ViewTechnicianDetails from './components/Views/ViewTechnicianDetails';
+// import ViewCustomerDetails from './components/Views/ViewCustomerDetails';
+// import ViewTicket from './components/Views/ViewTicket';
+// import InvoiceForm from './components/Forms/InvoiceForm';
+// import TicketCreation from './components/Forms/TicketCreation';
+// import FeedbackForm from './components/Forms/FeedbackForm';
+// import ProblemStatement from './components/Forms/ProblemStatement';
+// import ProductMaster from './components/Forms/ProductMaster';
+// import SparePartsAndStocks from './components/Forms/SparePartsAndStocks';
+// import CustomerDetail from './components/Forms/CustomerDetail';
+// import TechnicianDetail from './components/Forms/TechnicianDetail';
+// import LoginDetails from './components/Views/LoginDetails';
+// import TechnicianView from './components/Views/TechnicianView';
+// import DispatchView from './components/Views/DispatchView';
+// import InhouseView from './components/Views/InhouseView';
+// import Home from './components/Views/Home';
+// import Dashboard from './components/Views/Dashboard';
+
+// const App = () => {
+//   const [userRole, setUserRole] = useState('');
+//   const [userEmail, setUserEmail] = useState('');
+//   const [drawerOpen, setDrawerOpen] = useState(false);
+//   const [selectedComponent, setSelectedComponent] = useState(null);
+//   const [userDetails, setUserDetails] = useState({});
+//   const [current, setCurrent] = useState('1');
+
+//   useEffect(() => {
+//     const fetchUserRole = async () => {
+//       try {
+//         const res = await axios.get('/server/waterheater_1_function/getuser');
+//         setUserRole(res.data.role_details.role_name);
+//         setUserEmail(res.data.email_id);
+//         setUserDetails(res.data);
+//       } catch (err) {
+//         console.error('Error fetching user role:', err);
+//       }
+//     };
+//     fetchUserRole();
+//   }, []);
+
+//   const formsItems = [
+//     { key: 'f1', label: 'Customer Detail', component: <CustomerDetail /> },
+//     { key: 'f2', label: 'Technician Detail', component: <TechnicianDetail /> },
+//     { key: 'f3', label: 'Product Master', component: <ProductMaster /> },
+//     { key: 'f4', label: 'Spare Parts and Stocks', component: <SparePartsAndStocks /> },
+//     { key: 'f5', label: 'Ticket Creation', component: <TicketCreation /> },
+//   ];
+
+//   const viewsItems = [
+//     { key: 'v1', label: 'View Customer Details', component: <ViewCustomerDetails /> },
+//     { key: 'v2', label: 'View Ticket', component: <ViewTicket /> },
+//     { key: 'v3', label: 'View Technician Details', component: <ViewTechnicianDetails /> },
+//     { key: 'v4', label: 'View Product', component: <ViewProduct /> },
+//     { key: 'v5', label: 'View Invoice', component: <ViewInvoice /> },
+//     { key: 'v6', label: 'View Spares', component: <ViewSpares /> },
+//     { key: 'v7', label: 'View Scrap', component: <ViewScrap /> },
+//     { key: 'v8', label: 'View List of Spares', component: <ViewListOfSpares /> },
+//     { key: 'v9', label: 'Inhouse View', component: <InhouseView /> },
+//     { key: 'v10', label: 'Invoice Form', component: <InvoiceForm /> },
+//   ];
+
+//   const technicianItems = [
+//     { key: 't1', label: 'Technician View', component: <TechnicianView roleEmail={userEmail}/> },
+//     { key: 't2', label: 'Dispatch View', component: <DispatchView roleEmail={userEmail}/> },
+//   ];
+
+//   const inhouseItems = [
+//     { key: 'i1', label: 'Inhouse View', component: <InhouseView /> },
+//   ];
+
+//   const onClick = (e) => {
+//     console.log('click ', e);
+//     setCurrent(e.key);
+//     const allItems = [
+//       { key: 'home', label: 'Home', component: <Home /> },
+//       { key: 'dashboard', label: 'Dashboard', component: <Dashboard /> },
+//       { key: 'login', label: 'Login Details', component: <LoginDetails userDetails={userDetails}/> },
+//       ...formsItems,
+//       ...viewsItems,
+//       ...technicianItems,
+//       ...inhouseItems
+//     ];
+//     const selectedItem = allItems.find(item => item.key === e.key);
+//     if (selectedItem) {
+//       setSelectedComponent(selectedItem.component);
+//     }
+//     setDrawerOpen(false);
+//   };
+
+//   const toggleDrawer = (open) => (event) => {
+//     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+//       return;
+//     }
+//     setDrawerOpen(open);
+//   };
+
+//   const getMenuItems = () => {
+//     const commonItems = [
+//       { key: 'home', icon: <HomeOutlined />, label: 'Home' },
+//       { key: 'dashboard', icon: <DashboardOutlined />, label: 'Dashboard' },
+//       { key: 'login', icon: <LoginOutlined />, label: 'Login Details' },
+//     ];
+
+//     if (userRole === 'App Administrator') {
+//       return [
+//         ...commonItems,
+//         {
+//           key: 'sub1',
+//           label: 'Forms',
+//           icon: <MailOutlined />,
+//           children: formsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//           })),
+//         },
+//         {
+//           key: 'sub2',
+//           label: 'Views',
+//           icon: <AppstoreOutlined />,
+//           children: viewsItems.map(item => ({
+//             key: item.key,
+//             label: item.label,
+//           })),
+//         },
+//       ];
+//     } else if (userRole === 'Technician') {
+//       return [
+//         ...commonItems,
+//         ...technicianItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//       ];
+//     } else if (userRole === 'Inhouse') {
+//       return [
+//         ...commonItems,
+//         ...inhouseItems.map(item => ({
+//           key: item.key,
+//           label: item.label,
+//         })),
+//       ];
+//     }
+//     return commonItems;
+//   };
+
+//   return (
+//     <Router basename="/app">
+//       <Box sx={{ flexGrow: 1 }}>
+//         <AppBar position="static" sx={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', backdropFilter: 'blur(10px)' }}>
+//           <Toolbar>
+//             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+//               Water Heater App
+//             </Typography>
+//             <IconButton
+//               size="large"
+//               edge="end"
+//               color="inherit"
+//               aria-label="menu"
+//               sx={{ ml: 2 }}
+//               onClick={toggleDrawer(true)}
+//             >
+//               <MenuIcon />
+//             </IconButton>
+//           </Toolbar>
+//         </AppBar>
+//       </Box>
+//       <div>
+//         {selectedComponent || <Home />}
+//         <Drawer
+//           anchor="right"
+//           open={drawerOpen}
+//           onClose={toggleDrawer(false)}
+//           PaperProps={{
+//             sx: {
+//               backgroundColor: '#001529', // Ant Design's default dark theme color
+//             },
+//           }}
+//         >
+//           <Box sx={{ width: 250 }}>
+//             <Menu
+//               theme="dark"
+//               onClick={onClick}
+//               style={{ width: '100%' }}
+//               defaultOpenKeys={['sub1']}
+//               selectedKeys={[current]}
+//               mode="inline"
+//               items={getMenuItems()}
+//             />
+//           </Box>
+//         </Drawer>
+//       </div>
+//       <Routes>
+//         <Route path="/home" element={<Home />} />
+//         <Route path="/dashboard" element={<Dashboard />} />
+//         <Route path="/login-details" element={<LoginDetails userDetails={userDetails}/>} />
+//         {userRole === 'App Administrator' && (
+//           <>
+//             {[...formsItems, ...viewsItems].map(item => (
+//               <Route key={item.key} path={`/${item.label.toLowerCase().replace(/\s+/g, '-')}`} element={item.component} />
+//             ))}
+//           </>
+//         )}
+//         {userRole === 'Technician' && (
+//           <>
+//             {technicianItems.map(item => (
+//               <Route key={item.key} path={`/${item.label.toLowerCase().replace(/\s+/g, '-')}`} element={item.component} />
+//             ))}
+//           </>
+//         )}
+//         {userRole === 'Inhouse' && (
+//           <>
+//             {inhouseItems.map(item => (
+//               <Route key={item.key} path={`/${item.label.toLowerCase().replace(/\s+/g, '-')}`} element={item.component} />
+//             ))}
+//           </>
+//         )}
+//         <Route path="*" element={<Navigate to="/home" replace />} />
+//       </Routes>
+//     </Router>
+//   );
+// };
+
+// export default App;
 
 
 
