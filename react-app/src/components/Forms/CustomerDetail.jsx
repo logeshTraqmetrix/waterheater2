@@ -174,11 +174,17 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import './styleForms.css'; // Import the CSS file
+import Swal from 'sweetalert2';
 
 const CustomerDetail = () => {
+
+  function generateAlphanumericID(length) {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    return Array.from({ length }, () => characters.charAt(Math.floor(Math.random() * characters.length))).join('');
+ }
   const [formData, setFormData] = useState({
     Customer_Name: '',
-    Customer_Id: '',
+    Customer_Id: generateAlphanumericID(8),
     Customer_Email: '',
     Customer_Phone: '',
     Customer_Whatsapp: '',
@@ -197,8 +203,15 @@ const CustomerDetail = () => {
 
     axios.post('/server/waterheater_1_function/addcustomer', { data: formData })
       .then((response) => {
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Your work has been saved",
+          showConfirmButton: false,
+          timer: 1500
+        });
         console.log("Record added successfully");
-        console.log("Response : " + response);
+        console.log("Response : " , response);
       })
       .catch((error) => {
         console.error("Error at add customer from frontend : " + error);
@@ -206,7 +219,7 @@ const CustomerDetail = () => {
 
     setFormData({
       Customer_Name: '',
-      Customer_Id: '',
+      Customer_Id: generateAlphanumericID(8),
       Customer_Email: '',
       Customer_Phone: '',
       Customer_Whatsapp: '',
@@ -217,7 +230,7 @@ const CustomerDetail = () => {
   const handleReset = () => {
     setFormData({
       Customer_Name: '',
-      Customer_Id: '',
+      Customer_Id: generateAlphanumericID(8),
       Customer_Email: '',
       Customer_Phone: '',
       Customer_Whatsapp: '',
@@ -247,7 +260,7 @@ const CustomerDetail = () => {
             <Form.Group controlId="formId">
               <Form.Label>Customer ID *</Form.Label>
               <Form.Control
-                type="text"
+              readOnly
                 placeholder="Enter ID"
                 name="Customer_Id"
                 value={formData.Customer_Id}
@@ -274,7 +287,7 @@ const CustomerDetail = () => {
             <Form.Group controlId="formPhone">
               <Form.Label>Phone *</Form.Label>
               <Form.Control
-                type="text"
+                type="number"
                 placeholder="Enter phone"
                 name="Customer_Phone"
                 value={formData.Customer_Phone}
@@ -303,7 +316,7 @@ const CustomerDetail = () => {
             <Form.Group controlId="formWhatsapp">
               <Form.Label>WhatsApp Number</Form.Label>
               <Form.Control
-                type="text"
+                type="number"
                 placeholder="Enter WhatsApp number"
                 name="Customer_Whatsapp"
                 value={formData.Customer_Whatsapp}

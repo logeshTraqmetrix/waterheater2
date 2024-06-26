@@ -1,0 +1,44 @@
+
+#container-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 84vh;
+    flex-direction: row;
+  }
+  
+#backgroundImage-home {
+    background-image: url("https://media.licdn.com/dms/image/D560BAQH-L__907880g/company-logo_200_200/0/1695224940207?e=2147483647&v=beta&t=ogRNlEfU51LtXMa2jRgOPYQZakWUeV7ekA3n96tEAJA");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 45vh;
+    width: 45vh;
+  }
+  
+#text-home {
+    margin-left: 20px;
+  }
+  
+#text-home h2 {
+    font-weight: 300; 
+  }
+  
+  
+  @media (max-width: 768px) {
+    #container-home {
+      flex-direction: column;
+      text-align: center;
+      padding-bottom: 150px;
+    }
+    #backgroundImage-home {
+      background-size: cover;
+      width: 50%;
+      height: 20vh;
+
+    }
+    #text-home {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  }
+  

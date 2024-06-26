@@ -4672,6 +4672,11 @@ const App = () => {
     let items = [];
     if (userRole === 'App Administrator') {
       items = [
+        ...commonItems.map(item => ({
+          key: item.key,
+          label: item.label,
+          path: item.path,
+        })),
         {
           key: 'sub1',
           label: 'Forms',
@@ -4692,11 +4697,7 @@ const App = () => {
             path: item.path,
           })),
         },
-        ...commonItems.map(item => ({
-          key: item.key,
-          label: item.label,
-          path: item.path,
-        })),
+       
       ];
     } else if (userRole === 'Technician') {
       items = [
@@ -4740,7 +4741,7 @@ const App = () => {
         <AppBar position="static" sx={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', backdropFilter: 'blur(10px)', marginBottom:'25px' }}>
           <Toolbar>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              Water Heater App
+              Traqmetrix Service Handling
             </Typography>
             <IconButton
               size="large"

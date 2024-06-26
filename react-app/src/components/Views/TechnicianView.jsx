@@ -567,7 +567,7 @@ const TechnicianView = ({ roleEmail }) => {
       {loading ? (
         <div className="d-flex justify-content-center mt-5">
           <HashLoader color={'#36D7B7'} loading={loading} size={50} />
-          <p className="ms-3">Loading...</p>
+          {/* <p className="ms-3">Loading...</p> */}
         </div>
       ) : !showInvoiceForm ? (
         <>

@@ -13467,3 +13467,2014 @@ Response Headers: {"server":"ZGS","date":"Tue, 25 Jun 2024 21:32:52 GMT","conten
 [debug] [2024-06-25T21:32:52.490Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
 
 [debug] [2024-06-25T21:32:52.493Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2024-06-26T03:34:02.461Z] : 
+[debug] [2024-06-26T03:34:02.462Z] : ----------------------------------------------------------------------
+[debug] [2024-06-26T03:34:02.462Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-06-26T03:34:02.463Z] : CLI Version:  1.17.5
+[debug] [2024-06-26T03:34:02.463Z] : Platform:     win32
+[debug] [2024-06-26T03:34:02.463Z] : Node Version: v20.14.0
+[debug] [2024-06-26T03:34:02.464Z] : Time:         Wed Jun 26 2024 09:04:02 GMT+0530 (India Standard Time)
+[debug] [2024-06-26T03:34:02.464Z] : ----------------------------------------------------------------------
+[debug] [2024-06-26T03:34:02.464Z] : 
+[debug] [2024-06-26T03:34:03.996Z] : > authorizing via signed-in user option
+[debug] [2024-06-26T03:34:03.997Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute"]
+[debug] [2024-06-26T03:34:04.012Z] : > refreshing access token <
+[debug] [2024-06-26T03:34:04.014Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2024-06-26T03:34:05.736Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 03:34:06 GMT","content-type":"application/json;charset=UTF-8","content-length":"1945","connection":"keep-alive","set-cookie":["zalb_b266a5bf57=9f371135a524e2d1f51eb9f41fa26c60; Path=/","iamcsr=6071a351-aeac-4eee-91fd-28b7da381560;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=6071a351-aeac-4eee-91fd-28b7da381560;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","pragma":"no-cache","x-frame-options":"SAMEORIGIN","vary":"accept-encoding","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T03:34:05.747Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-06-26T03:34:07.361Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 03:34:08 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=254266db-d743-4243-a24c-e23efd7795c3;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=254266db-d743-4243-a24c-e23efd7795c3;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T03:34:07.363Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-06-26T03:34:07.744Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 03:34:08 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=843c7ad7-c49f-40b3-b032-0be3a78badeb;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=843c7ad7-c49f-40b3-b032-0be3a78badeb;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T03:34:08.245Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-06-26T03:34:08.786Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 03:34:09 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=00fd3a8cbff58bc9307e4ac5869875ce; Path=/","ZD_CSRF_TOKEN=1545b770-87bd-405d-8d39-88da66ec50fb;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=1545b770-87bd-405d-8d39-88da66ec50fb;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T03:34:08.790Z] : unknown eol undefined hence skipping check
+[debug] [2024-06-26T03:34:08.791Z] : unknown eol undefined hence skipping check
+[info] [2024-06-26T03:34:13.921Z] : [react-plugin]: Starting the development server...
+
+[info] [2024-06-26T03:34:13.923Z] : 
+[info] [2024-06-26T03:34:13.924Z] : i Client[react-app]: Plugin : "zcatalyst-cli-plugin-react" is used for client serve
+[info] [2024-06-26T03:34:13.924Z] : 
+[info] [2024-06-26T03:34:16.142Z] : 
+[info] [2024-06-26T03:34:16.142Z] :  >>>>>>>>>>>>>> BasicIO <<<<<<<<<<<<<< 
+[info] [2024-06-26T03:34:16.143Z] : i authbasicio: http://localhost:3000/server/authbasicio/execute
+[info] [2024-06-26T03:34:16.143Z] : 
+[info] [2024-06-26T03:34:16.144Z] : 
+[info] [2024-06-26T03:34:16.144Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-06-26T03:34:16.144Z] : i waterheater_1_function: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-06-26T03:34:16.145Z] : 
+[info] [2024-06-26T03:34:16.145Z] : 
+[info] [2024-06-26T03:34:16.145Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2024-06-26T03:34:16.145Z] : i client[react-app]: http://localhost:3000/app/
+[info] [2024-06-26T03:34:16.145Z] : 
+[info] [2024-06-26T03:34:20.770Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T03:34:20.771Z] : [react-plugin]: 
+[info] [2024-06-26T03:34:20.771Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T03:34:20.772Z] : [react-plugin]: 
+[info] [2024-06-26T03:34:20.772Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T03:34:20.773Z] : [react-plugin]:   On Your Network:  http://192.168.166.235:3000/app/
+[info] [2024-06-26T03:34:20.773Z] : [react-plugin]: 
+[info] [2024-06-26T03:34:20.774Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T03:34:20.774Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T03:34:20.775Z] : [react-plugin]: 
+[info] [2024-06-26T03:37:18.082Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T03:37:24.227Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T03:37:24.228Z] : [react-plugin]: 
+[info] [2024-06-26T03:37:24.229Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T03:37:24.229Z] : [react-plugin]: 
+[info] [2024-06-26T03:37:24.230Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T03:37:24.230Z] : [react-plugin]:   On Your Network:  http://192.168.166.235:3000/app/
+[info] [2024-06-26T03:37:24.230Z] : [react-plugin]: 
+[info] [2024-06-26T03:37:24.232Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T03:37:24.234Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T03:37:24.235Z] : [react-plugin]: 
+[info] [2024-06-26T03:37:49.400Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T03:37:51.524Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T03:37:51.524Z] : [react-plugin]: 
+[info] [2024-06-26T03:37:51.525Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T03:37:51.525Z] : [react-plugin]: 
+[info] [2024-06-26T03:37:51.526Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T03:37:51.526Z] : [react-plugin]:   On Your Network:  http://192.168.166.235:3000/app/
+[info] [2024-06-26T03:37:51.527Z] : [react-plugin]: 
+[info] [2024-06-26T03:37:51.528Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T03:37:51.529Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T03:37:51.533Z] : [react-plugin]: 
+[info] [2024-06-26T03:38:29.773Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T03:38:31.545Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T03:38:31.545Z] : [react-plugin]: 
+[info] [2024-06-26T03:38:31.546Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T03:38:31.546Z] : [react-plugin]: 
+[info] [2024-06-26T03:38:31.546Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T03:38:31.547Z] : [react-plugin]:   On Your Network:  http://192.168.166.235:3000/app/
+[info] [2024-06-26T03:38:31.547Z] : [react-plugin]: 
+[info] [2024-06-26T03:38:31.548Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T03:38:31.549Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T03:38:31.550Z] : [react-plugin]: 
+[info] [2024-06-26T03:38:54.587Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T03:38:56.576Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T03:38:56.577Z] : [react-plugin]: 
+[info] [2024-06-26T03:38:56.578Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T03:38:56.578Z] : [react-plugin]: 
+[info] [2024-06-26T03:38:56.579Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T03:38:56.579Z] : [react-plugin]:   On Your Network:  http://192.168.166.235:3000/app/
+[info] [2024-06-26T03:38:56.580Z] : [react-plugin]: 
+[info] [2024-06-26T03:38:56.581Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T03:38:56.582Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T03:38:56.583Z] : [react-plugin]: 
+[info] [2024-06-26T03:40:55.225Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T03:40:58.465Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T03:40:58.465Z] : [react-plugin]: 
+[info] [2024-06-26T03:40:58.466Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T03:40:58.466Z] : [react-plugin]: 
+[info] [2024-06-26T03:40:58.466Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T03:40:58.466Z] : [react-plugin]:   On Your Network:  http://192.168.166.235:3000/app/
+[info] [2024-06-26T03:40:58.467Z] : [react-plugin]: 
+[info] [2024-06-26T03:40:58.467Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T03:40:58.469Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T03:40:58.470Z] : [react-plugin]: 
+[info] [2024-06-26T03:41:15.827Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T03:41:17.695Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T03:41:17.696Z] : [react-plugin]: 
+[info] [2024-06-26T03:41:17.696Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T03:41:17.696Z] : [react-plugin]: 
+[info] [2024-06-26T03:41:17.697Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T03:41:17.697Z] : [react-plugin]:   On Your Network:  http://192.168.166.235:3000/app/
+[info] [2024-06-26T03:41:17.697Z] : [react-plugin]: 
+[info] [2024-06-26T03:41:17.697Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T03:41:17.698Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T03:41:17.699Z] : [react-plugin]: 
+[info] [2024-06-26T03:43:32.604Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T03:43:35.199Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T03:43:35.200Z] : [react-plugin]: 
+[info] [2024-06-26T03:43:35.200Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T03:43:35.201Z] : [react-plugin]: 
+[info] [2024-06-26T03:43:35.201Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T03:43:35.202Z] : [react-plugin]:   On Your Network:  http://192.168.166.235:3000/app/
+[info] [2024-06-26T03:43:35.203Z] : [react-plugin]: 
+[info] [2024-06-26T03:43:35.204Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T03:43:35.205Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T03:43:35.205Z] : [react-plugin]: 
+[info] [2024-06-26T03:43:45.668Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T03:43:47.747Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T03:43:47.748Z] : [react-plugin]: 
+[info] [2024-06-26T03:43:47.748Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T03:43:47.758Z] : [react-plugin]: 
+[info] [2024-06-26T03:43:47.758Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T03:43:47.758Z] : [react-plugin]:   On Your Network:  http://192.168.166.235:3000/app/
+[info] [2024-06-26T03:43:47.759Z] : [react-plugin]: 
+[info] [2024-06-26T03:43:47.760Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T03:43:47.761Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T03:43:47.763Z] : [react-plugin]: 
+[info] [2024-06-26T03:44:54.912Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T03:44:57.190Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T03:44:57.191Z] : [react-plugin]: 
+[info] [2024-06-26T03:44:57.191Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T03:44:57.191Z] : [react-plugin]: 
+[info] [2024-06-26T03:44:57.192Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T03:44:57.192Z] : [react-plugin]:   On Your Network:  http://192.168.166.235:3000/app/
+[info] [2024-06-26T03:44:57.192Z] : [react-plugin]: 
+[info] [2024-06-26T03:44:57.193Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T03:44:57.198Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T03:44:57.199Z] : [react-plugin]: 
+[info] [2024-06-26T03:46:43.145Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T03:46:45.936Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T03:46:45.937Z] : [react-plugin]: 
+[info] [2024-06-26T03:46:45.938Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T03:46:45.938Z] : [react-plugin]: 
+[info] [2024-06-26T03:46:45.938Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T03:46:45.939Z] : [react-plugin]:   On Your Network:  http://192.168.166.235:3000/app/
+[info] [2024-06-26T03:46:45.939Z] : [react-plugin]: 
+[info] [2024-06-26T03:46:45.939Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T03:46:45.941Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T03:46:45.943Z] : [react-plugin]: 
+[info] [2024-06-26T03:47:17.464Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T03:47:19.602Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T03:47:19.603Z] : [react-plugin]: 
+[info] [2024-06-26T03:47:19.603Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T03:47:19.604Z] : [react-plugin]: 
+[info] [2024-06-26T03:47:19.604Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T03:47:19.605Z] : [react-plugin]:   On Your Network:  http://192.168.166.235:3000/app/
+[info] [2024-06-26T03:47:19.605Z] : [react-plugin]: 
+[info] [2024-06-26T03:47:19.606Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T03:47:19.606Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T03:47:19.607Z] : [react-plugin]: 
+[info] [2024-06-26T03:47:31.271Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T03:47:33.423Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T03:47:33.423Z] : [react-plugin]: 
+[info] [2024-06-26T03:47:33.424Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T03:47:33.424Z] : [react-plugin]: 
+[info] [2024-06-26T03:47:33.425Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T03:47:33.425Z] : [react-plugin]:   On Your Network:  http://192.168.166.235:3000/app/
+[info] [2024-06-26T03:47:33.425Z] : [react-plugin]: 
+[info] [2024-06-26T03:47:33.426Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T03:47:33.427Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T03:47:33.428Z] : [react-plugin]: 
+[info] [2024-06-26T03:48:33.778Z] : Shutting down server
+[info] [2024-06-26T03:48:34.121Z] : 
+[info] [2024-06-26T03:48:34.122Z] : √ Shutdown complete
+[debug] [2024-06-26T03:48:34.123Z] : NO ERRORS REGISTERED
+[debug] [2024-06-26T03:48:34.124Z] : EXEC ENDED with event: serve, message: success
+[debug] [2024-06-26T03:48:34.124Z] : TOTAL DURATION OF COMMAND EXEC : 870146
+[debug] [2024-06-26T03:48:34.249Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-06-26T03:48:41.403Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 03:48:42 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"keep-alive","set-cookie":["zalb_46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=eb22f2b3-7a89-4a4e-a767-92607ebb95e5;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=eb22f2b3-7a89-4a4e-a767-92607ebb95e5;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=B63718E66B551D422DA03137AB25EC48; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T03:48:41.405Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2024-06-26T03:48:41.407Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2024-06-26T03:48:56.596Z] : 
+[debug] [2024-06-26T03:48:56.598Z] : ----------------------------------------------------------------------
+[debug] [2024-06-26T03:48:56.599Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js deploy
+[debug] [2024-06-26T03:48:56.599Z] : CLI Version:  1.17.5
+[debug] [2024-06-26T03:48:56.599Z] : Platform:     win32
+[debug] [2024-06-26T03:48:56.600Z] : Node Version: v20.14.0
+[debug] [2024-06-26T03:48:56.600Z] : Time:         Wed Jun 26 2024 09:18:56 GMT+0530 (India Standard Time)
+[debug] [2024-06-26T03:48:56.601Z] : ----------------------------------------------------------------------
+[debug] [2024-06-26T03:48:56.601Z] : 
+[debug] [2024-06-26T03:48:57.958Z] : > authorizing via signed-in user option
+[debug] [2024-06-26T03:48:57.959Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.webapp.ALL","ZohoCatalyst.appsail.Update"]
+[debug] [2024-06-26T03:48:57.978Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-06-26T03:48:59.692Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 03:49:00 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=3b8028ae-3011-4c14-80bd-356d02cdedd1;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=3b8028ae-3011-4c14-80bd-356d02cdedd1;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T03:48:59.698Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-06-26T03:49:00.235Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 03:49:01 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=b4eca985-514e-4af7-af20-c885bdb2abd8;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=b4eca985-514e-4af7-af20-c885bdb2abd8;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T03:49:00.292Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-06-26T03:49:00.908Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 03:49:01 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=863ecb10-6e67-4e47-8416-d9451ae22c7d;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=863ecb10-6e67-4e47-8416-d9451ae22c7d;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T03:49:00.913Z] : unknown eol undefined hence skipping check
+[debug] [2024-06-26T03:49:00.913Z] : unknown eol undefined hence skipping check
+[debug] [2024-06-26T03:49:02.617Z] : >>>> HTTP REQUEST : PUT https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/server/upsert 
+
+[debug] [2024-06-26T03:49:08.365Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 03:49:09 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=00fd3a8cbff58bc9307e4ac5869875ce; Path=/","ZD_CSRF_TOKEN=d5d6acdb-345a-4183-a637-fd9a11b785b0;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=d5d6acdb-345a-4183-a637-fd9a11b785b0;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T03:49:08.369Z] : >>>> HTTP REQUEST : PUT https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function/upsert 
+
+[debug] [2024-06-26T03:49:11.255Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 03:49:12 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=a7700e2e-6dd1-4e17-ac59-18e7d89d4b53;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=a7700e2e-6dd1-4e17-ac59-18e7d89d4b53;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[info] [2024-06-26T03:49:11.465Z] : i Plugin : "zcatalyst-cli-plugin-react" is used for client deploy
+[info] [2024-06-26T03:49:11.466Z] : i Building Application...
+[info] [2024-06-26T03:49:14.202Z] : [react-plugin]: Creating an optimized production build...
+[info] [2024-06-26T03:49:54.292Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T03:49:54.295Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\DispatchView.jsx
+  Line 17:6:    React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 125:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-06-26T03:49:54.296Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T03:49:54.296Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T03:49:54.297Z] : [react-plugin]: File sizes after gzip:
+
+[info] [2024-06-26T03:49:54.357Z] : [react-plugin]:   447.87 kB (+1.43 kB)  build\static\js\main.b3dbd912.js
+[info] [2024-06-26T03:49:54.358Z] : [react-plugin]:   1.67 kB               build\static\js\453.45c1065d.chunk.js
+[info] [2024-06-26T03:49:54.359Z] : [react-plugin]:   730 B (+7 B)          build\static\css\main.bda880eb.css
+[info] [2024-06-26T03:49:54.359Z] : [react-plugin]:  
+[debug] [2024-06-26T03:50:01.482Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/webapp 
+
+[debug] [2024-06-26T03:50:18.843Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 03:50:19 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=27d297d6-2b37-4245-9abc-313176dacf9c;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=27d297d6-2b37-4245-9abc-313176dacf9c;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[info] [2024-06-26T03:50:18.848Z] : 
+[info] [2024-06-26T03:50:18.849Z] : i functions(waterheater_1_function): URL => https://waterheater1-808166282.development.catalystserverless.com/server/waterheater_1_function/
+[info] [2024-06-26T03:50:18.850Z] : √ functions(waterheater_1_function): deploy successful
+[info] [2024-06-26T03:50:18.851Z] : i functions(authbasicio): URL => https://waterheater1-808166282.development.catalystserverless.com/server/authbasicio/execute
+[info] [2024-06-26T03:50:18.851Z] : √ functions(authbasicio): deploy successful
+[info] [2024-06-26T03:50:18.852Z] : 
+[info] [2024-06-26T03:50:18.852Z] : √ client: deploy successful
+[info] [2024-06-26T03:50:18.853Z] : i client: URL => https://waterheater1-808166282.development.catalystserverless.com/__catalyst/auth/login
+[info] [2024-06-26T03:50:18.853Z] : 
+[info] [2024-06-26T03:50:18.854Z] : √ Catalyst deploy complete!
+[debug] [2024-06-26T03:50:18.855Z] : NO ERRORS REGISTERED
+[debug] [2024-06-26T03:50:18.855Z] : EXEC ENDED with event: deploy, message: success
+[debug] [2024-06-26T03:50:18.855Z] : TOTAL DURATION OF COMMAND EXEC : 80927
+[debug] [2024-06-26T03:50:18.910Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-06-26T03:50:23.133Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 03:50:24 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"keep-alive","set-cookie":["zalb_46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=97b33fcc-38f2-49b1-9864-9004aef0687b;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=97b33fcc-38f2-49b1-9864-9004aef0687b;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=9AE1A38B5CEDA1BA55A41B485587D6F4; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T03:50:23.134Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2024-06-26T03:50:23.136Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2024-06-26T03:58:41.197Z] : 
+[debug] [2024-06-26T03:58:41.200Z] : ----------------------------------------------------------------------
+[debug] [2024-06-26T03:58:41.200Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-06-26T03:58:41.200Z] : CLI Version:  1.17.5
+[debug] [2024-06-26T03:58:41.201Z] : Platform:     win32
+[debug] [2024-06-26T03:58:41.201Z] : Node Version: v20.14.0
+[debug] [2024-06-26T03:58:41.202Z] : Time:         Wed Jun 26 2024 09:28:41 GMT+0530 (India Standard Time)
+[debug] [2024-06-26T03:58:41.202Z] : ----------------------------------------------------------------------
+[debug] [2024-06-26T03:58:41.202Z] : 
+[debug] [2024-06-26T03:58:42.491Z] : > authorizing via signed-in user option
+[debug] [2024-06-26T03:58:42.492Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute"]
+[debug] [2024-06-26T03:58:42.511Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-06-26T03:58:44.811Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 03:58:45 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=38e971d5-ec8a-4521-b8de-c7516107bcea;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=38e971d5-ec8a-4521-b8de-c7516107bcea;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T03:58:44.817Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-06-26T03:58:45.159Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 03:58:46 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=f4799eb2-40b2-4c28-90b7-ab531f7ec338;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=f4799eb2-40b2-4c28-90b7-ab531f7ec338;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T03:58:45.547Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-06-26T03:58:46.147Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 03:58:46 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=00fd3a8cbff58bc9307e4ac5869875ce; Path=/","ZD_CSRF_TOKEN=3def2992-1132-46ff-a16e-5ae5c44230f1;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=3def2992-1132-46ff-a16e-5ae5c44230f1;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T03:58:46.151Z] : unknown eol undefined hence skipping check
+[debug] [2024-06-26T03:58:46.152Z] : unknown eol undefined hence skipping check
+[info] [2024-06-26T03:58:51.742Z] : [react-plugin]: Starting the development server...
+
+[info] [2024-06-26T03:58:51.745Z] : 
+[info] [2024-06-26T03:58:51.746Z] : i Client[react-app]: Plugin : "zcatalyst-cli-plugin-react" is used for client serve
+[info] [2024-06-26T03:58:51.747Z] : 
+[info] [2024-06-26T03:58:54.050Z] : 
+[info] [2024-06-26T03:58:54.051Z] :  >>>>>>>>>>>>>> BasicIO <<<<<<<<<<<<<< 
+[info] [2024-06-26T03:58:54.052Z] : i authbasicio: http://localhost:3000/server/authbasicio/execute
+[info] [2024-06-26T03:58:54.052Z] : 
+[info] [2024-06-26T03:58:54.053Z] : 
+[info] [2024-06-26T03:58:54.053Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-06-26T03:58:54.054Z] : i waterheater_1_function: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-06-26T03:58:54.054Z] : 
+[info] [2024-06-26T03:58:54.055Z] : 
+[info] [2024-06-26T03:58:54.055Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2024-06-26T03:58:54.055Z] : i client[react-app]: http://localhost:3000/app/
+[info] [2024-06-26T03:58:54.056Z] : 
+[info] [2024-06-26T03:59:02.185Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T03:59:02.185Z] : [react-plugin]: [eslint] 
+src\components\Views\Home.jsx
+  Line 66:6:  React Hook React.useEffect has a missing dependency: 'getStyle'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-06-26T03:59:02.186Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T03:59:02.188Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T04:00:58.100Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T04:01:00.585Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T04:01:00.586Z] : [react-plugin]: 
+[info] [2024-06-26T04:01:00.586Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T04:01:00.586Z] : [react-plugin]: 
+[info] [2024-06-26T04:01:00.588Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T04:01:00.588Z] : [react-plugin]:   On Your Network:  http://192.168.166.235:3000/app/
+[info] [2024-06-26T04:01:00.589Z] : [react-plugin]: 
+[info] [2024-06-26T04:01:00.590Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T04:01:00.591Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T04:01:00.597Z] : [react-plugin]: 
+[info] [2024-06-26T04:03:06.444Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T04:03:08.567Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T04:03:08.586Z] : [react-plugin]: 
+[info] [2024-06-26T04:03:08.587Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T04:03:08.587Z] : [react-plugin]: 
+[info] [2024-06-26T04:03:08.588Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T04:03:08.588Z] : [react-plugin]:   On Your Network:  http://192.168.166.235:3000/app/
+[info] [2024-06-26T04:03:08.589Z] : [react-plugin]: 
+[info] [2024-06-26T04:03:08.589Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T04:03:08.590Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T04:03:08.591Z] : [react-plugin]: 
+[info] [2024-06-26T04:03:28.323Z] : Shutting down server
+[info] [2024-06-26T04:03:28.628Z] : 
+[info] [2024-06-26T04:03:28.629Z] : √ Shutdown complete
+[debug] [2024-06-26T04:03:28.630Z] : NO ERRORS REGISTERED
+[debug] [2024-06-26T04:03:28.631Z] : EXEC ENDED with event: serve, message: success
+[debug] [2024-06-26T04:03:28.631Z] : TOTAL DURATION OF COMMAND EXEC : 286163
+[debug] [2024-06-26T04:03:28.680Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-06-26T04:03:33.250Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 04:03:34 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=ed29a9c6-741a-46f7-814a-bbb5bee39fa4;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=ed29a9c6-741a-46f7-814a-bbb5bee39fa4;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=86FFBC42AEFA6984DA95482960B246E7; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T04:03:33.252Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2024-06-26T04:03:33.255Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2024-06-26T04:03:58.998Z] : 
+[debug] [2024-06-26T04:03:59.000Z] : ----------------------------------------------------------------------
+[debug] [2024-06-26T04:03:59.000Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js deploy
+[debug] [2024-06-26T04:03:59.001Z] : CLI Version:  1.17.5
+[debug] [2024-06-26T04:03:59.001Z] : Platform:     win32
+[debug] [2024-06-26T04:03:59.002Z] : Node Version: v20.14.0
+[debug] [2024-06-26T04:03:59.002Z] : Time:         Wed Jun 26 2024 09:33:59 GMT+0530 (India Standard Time)
+[debug] [2024-06-26T04:03:59.002Z] : ----------------------------------------------------------------------
+[debug] [2024-06-26T04:03:59.002Z] : 
+[debug] [2024-06-26T04:04:00.271Z] : > authorizing via signed-in user option
+[debug] [2024-06-26T04:04:00.272Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.webapp.ALL","ZohoCatalyst.appsail.Update"]
+[debug] [2024-06-26T04:04:00.292Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-06-26T04:04:02.281Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 04:04:03 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=6799a86e-d43c-46df-bc9f-14f18da896cb;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=6799a86e-d43c-46df-bc9f-14f18da896cb;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T04:04:02.287Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-06-26T04:04:02.771Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 04:04:03 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=3d14c356-3b8b-4ff5-9c34-a7d7e625752d;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=3d14c356-3b8b-4ff5-9c34-a7d7e625752d;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T04:04:02.792Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-06-26T04:04:03.207Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 04:04:04 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=62ea399b-0a50-40d4-9ed4-a748383d69f8;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=62ea399b-0a50-40d4-9ed4-a748383d69f8;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T04:04:03.212Z] : unknown eol undefined hence skipping check
+[debug] [2024-06-26T04:04:03.213Z] : unknown eol undefined hence skipping check
+[debug] [2024-06-26T04:04:04.886Z] : >>>> HTTP REQUEST : PUT https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/server/upsert 
+
+[debug] [2024-06-26T04:04:11.273Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 04:04:12 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=19f66c14-95c3-4174-bbc0-d71b3e25611d;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=19f66c14-95c3-4174-bbc0-d71b3e25611d;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T04:04:11.277Z] : >>>> HTTP REQUEST : PUT https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function/upsert 
+
+[debug] [2024-06-26T04:04:14.960Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 04:04:15 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=fd5a0eb8-c81f-40e4-ba33-4c6e63acc410;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=fd5a0eb8-c81f-40e4-ba33-4c6e63acc410;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[info] [2024-06-26T04:04:15.135Z] : i Plugin : "zcatalyst-cli-plugin-react" is used for client deploy
+[info] [2024-06-26T04:04:15.135Z] : i Building Application...
+[info] [2024-06-26T04:04:17.744Z] : [react-plugin]: Creating an optimized production build...
+[info] [2024-06-26T04:04:51.942Z] : [react-plugin]: Compiled successfully.
+
+[info] [2024-06-26T04:04:51.942Z] : [react-plugin]: File sizes after gzip:
+
+[info] [2024-06-26T04:04:52.007Z] : [react-plugin]:   447.86 kB (-7 B)  build\static\js\main.b653f3aa.js
+[info] [2024-06-26T04:04:52.008Z] : [react-plugin]:   1.67 kB           build\static\js\453.45c1065d.chunk.js
+[info] [2024-06-26T04:04:52.008Z] : [react-plugin]:   730 B             build\static\css\main.bda880eb.css
+[info] [2024-06-26T04:04:52.009Z] : [react-plugin]:  
+[debug] [2024-06-26T04:04:56.909Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/webapp 
+
+[debug] [2024-06-26T04:05:15.543Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 04:05:16 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=ce3facd4-f4fc-4ef6-8981-ec6a0d97aacd;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=ce3facd4-f4fc-4ef6-8981-ec6a0d97aacd;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[info] [2024-06-26T04:05:15.548Z] : 
+[info] [2024-06-26T04:05:15.549Z] : i functions(waterheater_1_function): URL => https://waterheater1-808166282.development.catalystserverless.com/server/waterheater_1_function/
+[info] [2024-06-26T04:05:15.550Z] : √ functions(waterheater_1_function): deploy successful
+[info] [2024-06-26T04:05:15.551Z] : i functions(authbasicio): URL => https://waterheater1-808166282.development.catalystserverless.com/server/authbasicio/execute
+[info] [2024-06-26T04:05:15.552Z] : √ functions(authbasicio): deploy successful
+[info] [2024-06-26T04:05:15.552Z] : 
+[info] [2024-06-26T04:05:15.553Z] : √ client: deploy successful
+[info] [2024-06-26T04:05:15.554Z] : i client: URL => https://waterheater1-808166282.development.catalystserverless.com/__catalyst/auth/login
+[info] [2024-06-26T04:05:15.554Z] : 
+[info] [2024-06-26T04:05:15.555Z] : √ Catalyst deploy complete!
+[debug] [2024-06-26T04:05:15.556Z] : NO ERRORS REGISTERED
+[debug] [2024-06-26T04:05:15.557Z] : EXEC ENDED with event: deploy, message: success
+[debug] [2024-06-26T04:05:15.557Z] : TOTAL DURATION OF COMMAND EXEC : 75308
+[debug] [2024-06-26T04:05:15.610Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-06-26T04:05:17.995Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 04:05:18 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=6b29674a-8d98-4364-9fdd-0e10a7739240;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=6b29674a-8d98-4364-9fdd-0e10a7739240;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=B361949E70531E721210A950B7C3238C; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T04:05:17.996Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2024-06-26T04:05:17.998Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2024-06-26T04:58:57.660Z] : 
+[debug] [2024-06-26T04:58:57.662Z] : ----------------------------------------------------------------------
+[debug] [2024-06-26T04:58:57.662Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-06-26T04:58:57.663Z] : CLI Version:  1.17.5
+[debug] [2024-06-26T04:58:57.663Z] : Platform:     win32
+[debug] [2024-06-26T04:58:57.664Z] : Node Version: v20.14.0
+[debug] [2024-06-26T04:58:57.664Z] : Time:         Wed Jun 26 2024 10:28:57 GMT+0530 (India Standard Time)
+[debug] [2024-06-26T04:58:57.664Z] : ----------------------------------------------------------------------
+[debug] [2024-06-26T04:58:57.665Z] : 
+[debug] [2024-06-26T04:58:59.664Z] : > authorizing via signed-in user option
+[debug] [2024-06-26T04:58:59.665Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute"]
+[debug] [2024-06-26T04:58:59.685Z] : > refreshing access token <
+[debug] [2024-06-26T04:58:59.687Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2024-06-26T04:59:01.222Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 04:59:01 GMT","content-type":"application/json;charset=UTF-8","content-length":"1945","connection":"keep-alive","set-cookie":["zalb_b266a5bf57=9f371135a524e2d1f51eb9f41fa26c60; Path=/","iamcsr=cd49c30b-37e7-47e3-884d-016890e9dd31;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=cd49c30b-37e7-47e3-884d-016890e9dd31;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","pragma":"no-cache","x-frame-options":"SAMEORIGIN","vary":"accept-encoding","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T04:59:01.236Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-06-26T04:59:02.451Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 04:59:03 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=1d249c91-f0f0-49ac-bf45-71fc65dc4d73;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=1d249c91-f0f0-49ac-bf45-71fc65dc4d73;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T04:59:02.454Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-06-26T04:59:02.858Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 04:59:03 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=00fd3a8cbff58bc9307e4ac5869875ce; Path=/","ZD_CSRF_TOKEN=564c0375-0424-40a5-b806-4bbdb54b6266;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=564c0375-0424-40a5-b806-4bbdb54b6266;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T04:59:03.388Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-06-26T04:59:03.729Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 04:59:04 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=fb063019-7c93-49b1-80b8-c441301be49e;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=fb063019-7c93-49b1-80b8-c441301be49e;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T04:59:03.733Z] : unknown eol undefined hence skipping check
+[debug] [2024-06-26T04:59:03.734Z] : unknown eol undefined hence skipping check
+[info] [2024-06-26T04:59:10.309Z] : [react-plugin]: Starting the development server...
+
+[info] [2024-06-26T04:59:10.312Z] : 
+[info] [2024-06-26T04:59:10.313Z] : i Client[react-app]: Plugin : "zcatalyst-cli-plugin-react" is used for client serve
+[info] [2024-06-26T04:59:10.313Z] : 
+[info] [2024-06-26T04:59:13.208Z] : 
+[info] [2024-06-26T04:59:13.208Z] :  >>>>>>>>>>>>>> BasicIO <<<<<<<<<<<<<< 
+[info] [2024-06-26T04:59:13.209Z] : i authbasicio: http://localhost:3000/server/authbasicio/execute
+[info] [2024-06-26T04:59:13.210Z] : 
+[info] [2024-06-26T04:59:13.210Z] : 
+[info] [2024-06-26T04:59:13.211Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-06-26T04:59:13.212Z] : i waterheater_1_function: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-06-26T04:59:13.212Z] : 
+[info] [2024-06-26T04:59:13.213Z] : 
+[info] [2024-06-26T04:59:13.213Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2024-06-26T04:59:13.214Z] : i client[react-app]: http://localhost:3000/app/
+[info] [2024-06-26T04:59:13.214Z] : 
+[info] [2024-06-26T04:59:22.180Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T04:59:22.181Z] : [react-plugin]: 
+[info] [2024-06-26T04:59:22.181Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T04:59:22.181Z] : [react-plugin]: 
+[info] [2024-06-26T04:59:22.182Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T04:59:22.182Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T04:59:22.183Z] : [react-plugin]: 
+[info] [2024-06-26T04:59:22.183Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T04:59:22.184Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T04:59:22.187Z] : [react-plugin]: 
+[info] [2024-06-26T05:07:36.787Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:07:39.639Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T05:07:39.640Z] : [react-plugin]: 
+[info] [2024-06-26T05:07:39.640Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T05:07:39.640Z] : [react-plugin]: 
+[info] [2024-06-26T05:07:39.640Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T05:07:39.641Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T05:07:39.641Z] : [react-plugin]: 
+[info] [2024-06-26T05:07:39.642Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T05:07:39.644Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T05:07:39.645Z] : [react-plugin]: 
+[info] [2024-06-26T05:10:26.502Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:10:29.089Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T05:10:29.089Z] : [react-plugin]: 
+[info] [2024-06-26T05:10:29.090Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T05:10:29.090Z] : [react-plugin]: 
+[info] [2024-06-26T05:10:29.091Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T05:10:29.091Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T05:10:29.093Z] : [react-plugin]: 
+[info] [2024-06-26T05:10:29.094Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T05:10:29.095Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T05:10:29.096Z] : [react-plugin]: 
+[info] [2024-06-26T05:11:07.661Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:11:09.534Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T05:11:09.534Z] : [react-plugin]: 
+[info] [2024-06-26T05:11:09.536Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T05:11:09.536Z] : [react-plugin]: 
+[info] [2024-06-26T05:11:09.537Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T05:11:09.537Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T05:11:09.538Z] : [react-plugin]: 
+[info] [2024-06-26T05:11:09.538Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T05:11:09.544Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T05:11:09.550Z] : [react-plugin]: 
+[info] [2024-06-26T05:11:27.707Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:11:29.420Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T05:11:29.420Z] : [react-plugin]: 
+[info] [2024-06-26T05:11:29.421Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T05:11:29.421Z] : [react-plugin]: 
+[info] [2024-06-26T05:11:29.421Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T05:11:29.422Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T05:11:29.422Z] : [react-plugin]: 
+[info] [2024-06-26T05:11:29.423Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T05:11:29.423Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T05:11:29.429Z] : [react-plugin]: 
+[info] [2024-06-26T05:11:46.191Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:11:47.970Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T05:11:47.971Z] : [react-plugin]: 
+[info] [2024-06-26T05:11:47.980Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T05:11:47.981Z] : [react-plugin]: 
+[info] [2024-06-26T05:11:47.981Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T05:11:47.981Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T05:11:47.982Z] : [react-plugin]: 
+[info] [2024-06-26T05:11:47.982Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T05:11:47.983Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T05:11:47.989Z] : [react-plugin]: 
+[info] [2024-06-26T05:11:55.201Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:11:57.096Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T05:11:57.097Z] : [react-plugin]: 
+[info] [2024-06-26T05:11:57.097Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T05:11:57.097Z] : [react-plugin]: 
+[info] [2024-06-26T05:11:57.098Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T05:11:57.098Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T05:11:57.099Z] : [react-plugin]: 
+[info] [2024-06-26T05:11:57.099Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T05:11:57.103Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T05:11:57.124Z] : [react-plugin]: 
+[info] [2024-06-26T05:13:01.224Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:13:03.280Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T05:13:03.281Z] : [react-plugin]: 
+[info] [2024-06-26T05:13:03.281Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T05:13:03.281Z] : [react-plugin]: 
+[info] [2024-06-26T05:13:03.281Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T05:13:03.282Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T05:13:03.282Z] : [react-plugin]: 
+[info] [2024-06-26T05:13:03.283Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T05:13:03.283Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T05:13:03.284Z] : [react-plugin]: 
+[info] [2024-06-26T05:13:33.276Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:13:35.055Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T05:13:35.055Z] : [react-plugin]: 
+[info] [2024-06-26T05:13:35.055Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T05:13:35.056Z] : [react-plugin]: 
+[info] [2024-06-26T05:13:35.056Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T05:13:35.056Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T05:13:35.056Z] : [react-plugin]: 
+[info] [2024-06-26T05:13:35.057Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T05:13:35.057Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T05:13:35.058Z] : [react-plugin]: 
+[info] [2024-06-26T05:13:49.639Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:13:51.467Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T05:13:51.467Z] : [react-plugin]: 
+[info] [2024-06-26T05:13:51.468Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T05:13:51.469Z] : [react-plugin]: 
+[info] [2024-06-26T05:13:51.469Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T05:13:51.469Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T05:13:51.470Z] : [react-plugin]: 
+[info] [2024-06-26T05:13:51.474Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T05:13:51.480Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T05:13:51.481Z] : [react-plugin]: 
+[info] [2024-06-26T05:14:41.037Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:14:42.980Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T05:14:42.981Z] : [react-plugin]: 
+[info] [2024-06-26T05:14:42.981Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T05:14:42.981Z] : [react-plugin]: 
+[info] [2024-06-26T05:14:42.982Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T05:14:42.982Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T05:14:42.982Z] : [react-plugin]: 
+[info] [2024-06-26T05:14:42.983Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T05:14:42.985Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T05:14:42.986Z] : [react-plugin]: 
+[info] [2024-06-26T05:16:58.438Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:17:00.897Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T05:17:00.938Z] : [react-plugin]: [eslint] 
+src\components\Views\Home.jsx
+  Line 62:9:  'mobileStyles' is assigned a value but never used  no-unused-vars
+[info] [2024-06-26T05:17:00.941Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T05:17:00.947Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T05:17:17.003Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:17:18.688Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T05:17:18.688Z] : [react-plugin]: [eslint] 
+src\components\Views\Home.jsx
+  Line 62:9:  'mobileStyles' is assigned a value but never used  no-unused-vars
+[info] [2024-06-26T05:17:18.689Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T05:17:18.690Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T05:17:55.661Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:17:57.517Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T05:17:57.518Z] : [react-plugin]: [eslint] 
+src\components\Views\Home.jsx
+  Line 62:9:  'mobileStyles' is assigned a value but never used  no-unused-vars
+[info] [2024-06-26T05:17:57.518Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T05:17:57.519Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T05:22:12.345Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:22:14.912Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T05:22:14.915Z] : [react-plugin]: [eslint] 
+src\components\Views\Home.jsx
+  Line 65:9:  'mobileStyles' is assigned a value but never used  no-unused-vars
+[info] [2024-06-26T05:22:14.916Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T05:22:14.917Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T05:22:25.852Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:22:27.515Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T05:22:27.517Z] : [react-plugin]: [eslint] 
+src\components\Views\Home.jsx
+  Line 65:9:  'mobileStyles' is assigned a value but never used  no-unused-vars
+[info] [2024-06-26T05:22:27.518Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T05:22:27.520Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T05:22:45.342Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:22:47.056Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T05:22:47.057Z] : [react-plugin]: [eslint] 
+src\components\Views\Home.jsx
+  Line 65:9:  'mobileStyles' is assigned a value but never used  no-unused-vars
+[info] [2024-06-26T05:22:47.057Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T05:22:47.058Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T05:22:52.796Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:22:54.403Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T05:22:54.404Z] : [react-plugin]: [eslint] 
+src\components\Views\Home.jsx
+  Line 65:9:  'mobileStyles' is assigned a value but never used  no-unused-vars
+[info] [2024-06-26T05:22:54.404Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T05:22:54.405Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T05:27:16.442Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:27:18.818Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T05:27:18.819Z] : [react-plugin]: 
+[info] [2024-06-26T05:27:18.819Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T05:27:18.820Z] : [react-plugin]: 
+[info] [2024-06-26T05:27:18.820Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T05:27:18.820Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T05:27:18.821Z] : [react-plugin]: 
+[info] [2024-06-26T05:27:18.821Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T05:27:18.822Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T05:27:18.823Z] : [react-plugin]: 
+[info] [2024-06-26T05:28:24.637Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:28:26.752Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T05:28:26.753Z] : [react-plugin]: 
+[info] [2024-06-26T05:28:26.753Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T05:28:26.754Z] : [react-plugin]: 
+[info] [2024-06-26T05:28:26.754Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T05:28:26.755Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T05:28:26.755Z] : [react-plugin]: 
+[info] [2024-06-26T05:28:26.756Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T05:28:26.756Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T05:28:26.757Z] : [react-plugin]: 
+[info] [2024-06-26T05:28:53.551Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:28:55.286Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T05:28:55.287Z] : [react-plugin]: 
+[info] [2024-06-26T05:28:55.287Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T05:28:55.287Z] : [react-plugin]: 
+[info] [2024-06-26T05:28:55.288Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T05:28:55.288Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T05:28:55.288Z] : [react-plugin]: 
+[info] [2024-06-26T05:28:55.289Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T05:28:55.289Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T05:28:55.290Z] : [react-plugin]: 
+[info] [2024-06-26T05:30:13.763Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:30:16.901Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T05:30:16.901Z] : [react-plugin]: 
+[info] [2024-06-26T05:30:16.902Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T05:30:16.902Z] : [react-plugin]: 
+[info] [2024-06-26T05:30:16.903Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T05:30:16.903Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T05:30:16.903Z] : [react-plugin]: 
+[info] [2024-06-26T05:30:16.904Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T05:30:16.905Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T05:30:16.906Z] : [react-plugin]: 
+[info] [2024-06-26T05:31:14.519Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:31:16.330Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T05:31:16.331Z] : [react-plugin]: 
+[info] [2024-06-26T05:31:16.331Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T05:31:16.331Z] : [react-plugin]: 
+[info] [2024-06-26T05:31:16.332Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T05:31:16.332Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T05:31:16.332Z] : [react-plugin]: 
+[info] [2024-06-26T05:31:16.333Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T05:31:16.334Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T05:31:16.334Z] : [react-plugin]: 
+[info] [2024-06-26T05:31:21.077Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:31:22.621Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T05:31:22.621Z] : [react-plugin]: 
+[info] [2024-06-26T05:31:22.622Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T05:31:22.622Z] : [react-plugin]: 
+[info] [2024-06-26T05:31:22.622Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T05:31:22.622Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T05:31:22.623Z] : [react-plugin]: 
+[info] [2024-06-26T05:31:22.624Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T05:31:22.625Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T05:31:22.626Z] : [react-plugin]: 
+[info] [2024-06-26T05:31:22.946Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:31:23.511Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T05:31:23.512Z] : [react-plugin]: 
+[info] [2024-06-26T05:31:23.512Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T05:31:23.512Z] : [react-plugin]: 
+[info] [2024-06-26T05:31:23.512Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T05:31:23.513Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T05:31:23.513Z] : [react-plugin]: 
+[info] [2024-06-26T05:31:23.514Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T05:31:23.514Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T05:31:23.515Z] : [react-plugin]: 
+[info] [2024-06-26T05:37:10.341Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:37:12.725Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T05:37:12.726Z] : [react-plugin]: 
+[info] [2024-06-26T05:37:12.727Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T05:37:12.727Z] : [react-plugin]: 
+[info] [2024-06-26T05:37:12.727Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T05:37:12.728Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T05:37:12.728Z] : [react-plugin]: 
+[info] [2024-06-26T05:37:12.728Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T05:37:12.729Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T05:37:12.730Z] : [react-plugin]: 
+[info] [2024-06-26T05:37:13.061Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:37:14.519Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T05:37:14.526Z] : [react-plugin]: 
+[info] [2024-06-26T05:37:14.526Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T05:37:14.526Z] : [react-plugin]: 
+[info] [2024-06-26T05:37:14.527Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T05:37:14.527Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T05:37:14.527Z] : [react-plugin]: 
+[info] [2024-06-26T05:37:14.528Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T05:37:14.529Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T05:37:14.530Z] : [react-plugin]: 
+[info] [2024-06-26T05:38:15.773Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:38:18.185Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T05:38:18.199Z] : [react-plugin]: 
+[info] [2024-06-26T05:38:18.200Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T05:38:18.201Z] : [react-plugin]: 
+[info] [2024-06-26T05:38:18.201Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T05:38:18.202Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T05:38:18.202Z] : [react-plugin]: 
+[info] [2024-06-26T05:38:18.203Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T05:38:18.205Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T05:38:18.207Z] : [react-plugin]: 
+[info] [2024-06-26T05:38:24.003Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:38:25.596Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T05:38:25.597Z] : [react-plugin]: 
+[info] [2024-06-26T05:38:25.598Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T05:38:25.598Z] : [react-plugin]: 
+[info] [2024-06-26T05:38:25.598Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T05:38:25.598Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T05:38:25.599Z] : [react-plugin]: 
+[info] [2024-06-26T05:38:25.600Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T05:38:25.602Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T05:38:25.603Z] : [react-plugin]: 
+[info] [2024-06-26T05:38:30.713Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:38:32.279Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T05:38:32.280Z] : [react-plugin]: 
+[info] [2024-06-26T05:38:32.280Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T05:38:32.281Z] : [react-plugin]: 
+[info] [2024-06-26T05:38:32.281Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T05:38:32.281Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T05:38:32.282Z] : [react-plugin]: 
+[info] [2024-06-26T05:38:32.282Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T05:38:32.283Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T05:38:32.284Z] : [react-plugin]: 
+[info] [2024-06-26T05:39:37.614Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:39:39.566Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T05:39:39.566Z] : [react-plugin]: 
+[info] [2024-06-26T05:39:39.567Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T05:39:39.567Z] : [react-plugin]: 
+[info] [2024-06-26T05:39:39.567Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T05:39:39.568Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T05:39:39.568Z] : [react-plugin]: 
+[info] [2024-06-26T05:39:39.569Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T05:39:39.570Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T05:39:39.571Z] : [react-plugin]: 
+[info] [2024-06-26T05:42:01.866Z] : Shutting down server
+[info] [2024-06-26T05:42:02.241Z] : 
+[info] [2024-06-26T05:42:02.242Z] : √ Shutdown complete
+[debug] [2024-06-26T05:42:02.243Z] : NO ERRORS REGISTERED
+[debug] [2024-06-26T05:42:02.244Z] : EXEC ENDED with event: serve, message: success
+[debug] [2024-06-26T05:42:02.244Z] : TOTAL DURATION OF COMMAND EXEC : 2582604
+[debug] [2024-06-26T05:42:02.299Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-06-26T05:42:06.241Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 05:42:06 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"keep-alive","set-cookie":["zalb_46512fd555=00fd3a8cbff58bc9307e4ac5869875ce; Path=/","ZD_CSRF_TOKEN=8b5c6b73-9ad1-49fa-a1c6-6616162ea669;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=8b5c6b73-9ad1-49fa-a1c6-6616162ea669;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=73D0A8CF195E1CC5715FADD8E6B43D3B; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T05:42:06.243Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2024-06-26T05:42:06.245Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2024-06-26T05:51:01.737Z] : 
+[debug] [2024-06-26T05:51:01.739Z] : ----------------------------------------------------------------------
+[debug] [2024-06-26T05:51:01.739Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-06-26T05:51:01.740Z] : CLI Version:  1.17.5
+[debug] [2024-06-26T05:51:01.740Z] : Platform:     win32
+[debug] [2024-06-26T05:51:01.741Z] : Node Version: v20.14.0
+[debug] [2024-06-26T05:51:01.741Z] : Time:         Wed Jun 26 2024 11:21:01 GMT+0530 (India Standard Time)
+[debug] [2024-06-26T05:51:01.741Z] : ----------------------------------------------------------------------
+[debug] [2024-06-26T05:51:01.742Z] : 
+[debug] [2024-06-26T05:51:03.055Z] : > authorizing via signed-in user option
+[debug] [2024-06-26T05:51:03.056Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute"]
+[debug] [2024-06-26T05:51:03.080Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-06-26T05:51:04.619Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 05:51:05 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=00fd3a8cbff58bc9307e4ac5869875ce; Path=/","ZD_CSRF_TOKEN=d8dc20ed-9a86-43d5-9acd-02f293b116ec;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=d8dc20ed-9a86-43d5-9acd-02f293b116ec;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T05:51:04.624Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-06-26T05:51:04.990Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 05:51:05 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=91b662dd-b86b-4387-8768-155479917340;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=91b662dd-b86b-4387-8768-155479917340;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T05:51:05.385Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-06-26T05:51:05.968Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 05:51:06 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=b71bebf1-507d-481f-b743-a374a2459904;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=b71bebf1-507d-481f-b743-a374a2459904;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T05:51:05.980Z] : unknown eol undefined hence skipping check
+[debug] [2024-06-26T05:51:05.981Z] : unknown eol undefined hence skipping check
+[info] [2024-06-26T05:51:11.190Z] : [react-plugin]: Starting the development server...
+
+[info] [2024-06-26T05:51:11.193Z] : 
+[info] [2024-06-26T05:51:11.193Z] : i Client[react-app]: Plugin : "zcatalyst-cli-plugin-react" is used for client serve
+[info] [2024-06-26T05:51:11.193Z] : 
+[info] [2024-06-26T05:51:13.455Z] : 
+[info] [2024-06-26T05:51:13.456Z] :  >>>>>>>>>>>>>> BasicIO <<<<<<<<<<<<<< 
+[info] [2024-06-26T05:51:13.457Z] : i authbasicio: http://localhost:3000/server/authbasicio/execute
+[info] [2024-06-26T05:51:13.457Z] : 
+[info] [2024-06-26T05:51:13.458Z] : 
+[info] [2024-06-26T05:51:13.458Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-06-26T05:51:13.459Z] : i waterheater_1_function: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-06-26T05:51:13.460Z] : 
+[info] [2024-06-26T05:51:13.460Z] : 
+[info] [2024-06-26T05:51:13.460Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2024-06-26T05:51:13.461Z] : i client[react-app]: http://localhost:3000/app/
+[info] [2024-06-26T05:51:13.461Z] : 
+[info] [2024-06-26T05:51:19.502Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T05:51:19.502Z] : [react-plugin]: 
+[info] [2024-06-26T05:51:19.503Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T05:51:19.503Z] : [react-plugin]: 
+[info] [2024-06-26T05:51:19.503Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T05:51:19.504Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T05:51:19.504Z] : [react-plugin]: 
+[info] [2024-06-26T05:51:19.504Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T05:51:19.504Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T05:51:19.505Z] : [react-plugin]: 
+[debug] [2024-06-26T05:51:27.332Z] : proxy closed
+[info] [2024-06-26T05:56:04.438Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:56:10.321Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T05:56:10.321Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+[info] [2024-06-26T05:56:10.322Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T05:56:10.323Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T05:58:24.575Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:58:27.267Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T05:58:27.268Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+[info] [2024-06-26T05:58:27.269Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T05:58:27.270Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[debug] [2024-06-26T05:59:01.380Z] : > refreshing access token <
+[debug] [2024-06-26T05:59:01.384Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2024-06-26T05:59:02.857Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 05:59:03 GMT","content-type":"application/json;charset=UTF-8","content-length":"1945","connection":"keep-alive","set-cookie":["zalb_b266a5bf57=a711b6da0e6cbadb5e254290f114a026; Path=/","iamcsr=d1a27c32-5f8c-48cd-8877-fff280e801df;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=d1a27c32-5f8c-48cd-8877-fff280e801df;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","pragma":"no-cache","x-frame-options":"SAMEORIGIN","vary":"accept-encoding","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[info] [2024-06-26T05:59:25.206Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T05:59:27.501Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T05:59:27.502Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+[info] [2024-06-26T05:59:27.504Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T05:59:27.510Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T06:00:48.048Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T06:00:50.231Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T06:00:50.232Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+[info] [2024-06-26T06:00:50.232Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T06:00:50.234Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T06:01:42.854Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T06:01:45.078Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T06:01:45.078Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+[info] [2024-06-26T06:01:45.079Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T06:01:45.080Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T06:02:53.063Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T06:02:54.905Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T06:02:54.906Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+[info] [2024-06-26T06:02:54.906Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T06:02:54.907Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T06:03:32.231Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T06:03:33.888Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T06:03:33.888Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+[info] [2024-06-26T06:03:33.888Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T06:03:33.889Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T06:04:36.703Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T06:04:39.026Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T06:04:39.027Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+[info] [2024-06-26T06:04:39.028Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T06:04:39.029Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T06:05:11.214Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T06:05:12.924Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T06:05:12.924Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+[info] [2024-06-26T06:05:12.925Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T06:05:12.926Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T06:20:52.741Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T06:20:54.996Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T06:20:55.000Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+[info] [2024-06-26T06:20:55.001Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T06:20:55.002Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T06:21:52.780Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T06:21:55.757Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T06:21:55.758Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 678:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 694:10:  'signature' is assigned a value but never used       no-unused-vars
+[info] [2024-06-26T06:21:55.760Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T06:21:55.760Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T06:27:35.118Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T06:27:37.349Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T06:27:37.350Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 678:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 694:10:  'signature' is assigned a value but never used       no-unused-vars
+[info] [2024-06-26T06:27:37.351Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T06:27:37.352Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T06:27:59.410Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T06:28:01.280Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T06:28:01.282Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 678:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 694:10:  'signature' is assigned a value but never used       no-unused-vars
+[info] [2024-06-26T06:28:01.283Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T06:28:01.284Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T06:30:00.091Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T06:30:02.440Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T06:30:02.444Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 678:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 694:10:  'signature' is assigned a value but never used       no-unused-vars
+[info] [2024-06-26T06:30:02.446Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T06:30:02.447Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T06:34:38.431Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T06:34:39.913Z] : [react-plugin]: Failed to compile.
+
+[info] [2024-06-26T06:34:39.913Z] : [react-plugin]: [eslint] 
+src\components\Forms\CustomerDetail.jsx
+  Line 200:9:  'Swal' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+[info] [2024-06-26T06:34:48.573Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T06:34:49.592Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T06:34:49.594Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 678:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 694:10:  'signature' is assigned a value but never used       no-unused-vars
+[info] [2024-06-26T06:34:49.595Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T06:34:49.595Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T06:35:45.251Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T06:35:46.415Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T06:35:46.416Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 678:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 694:10:  'signature' is assigned a value but never used       no-unused-vars
+[info] [2024-06-26T06:35:46.417Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T06:35:46.418Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T06:36:35.604Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T06:36:36.727Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T06:36:36.728Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 678:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 694:10:  'signature' is assigned a value but never used       no-unused-vars
+[info] [2024-06-26T06:36:36.728Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T06:36:36.729Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T06:38:16.981Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T06:38:18.682Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T06:38:18.684Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 678:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 694:10:  'signature' is assigned a value but never used       no-unused-vars
+[info] [2024-06-26T06:38:18.684Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T06:38:18.685Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T06:42:05.087Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T06:42:06.469Z] : [react-plugin]: Failed to compile.
+
+[info] [2024-06-26T06:42:06.470Z] : [react-plugin]: [eslint] 
+src\components\Forms\ProductMaster.jsx
+  Line 57:15:  'Swal' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+[info] [2024-06-26T06:42:13.448Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T06:42:14.425Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T06:42:14.426Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 678:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 694:10:  'signature' is assigned a value but never used       no-unused-vars
+[info] [2024-06-26T06:42:14.426Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T06:42:14.427Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T06:43:05.919Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T06:43:07.054Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T06:43:07.056Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 678:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 694:10:  'signature' is assigned a value but never used       no-unused-vars
+[info] [2024-06-26T06:43:07.056Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T06:43:07.057Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T06:44:34.507Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T06:44:36.069Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T06:44:36.071Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 678:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 694:10:  'signature' is assigned a value but never used       no-unused-vars
+[info] [2024-06-26T06:44:36.072Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T06:44:36.072Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T06:49:26.484Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T06:49:28.227Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T06:49:28.229Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 678:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 694:10:  'signature' is assigned a value but never used       no-unused-vars
+[info] [2024-06-26T06:49:28.230Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T06:49:28.231Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T06:50:31.675Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T06:50:32.872Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T06:50:32.874Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 678:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 694:10:  'signature' is assigned a value but never used       no-unused-vars
+[info] [2024-06-26T06:50:32.875Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T06:50:32.876Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T07:01:49.929Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T07:01:51.467Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T07:01:51.468Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 678:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 694:10:  'signature' is assigned a value but never used       no-unused-vars
+[info] [2024-06-26T07:01:51.469Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T07:01:51.469Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[debug] [2024-06-26T07:01:51.784Z] : > refreshing access token <
+[debug] [2024-06-26T07:01:51.786Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2024-06-26T07:01:53.005Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 07:01:53 GMT","content-type":"application/json;charset=UTF-8","content-length":"1945","connection":"keep-alive","set-cookie":["zalb_b266a5bf57=9f371135a524e2d1f51eb9f41fa26c60; Path=/","iamcsr=e5d7a8b7-6279-41f2-bca9-cb270f452b39;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=e5d7a8b7-6279-41f2-bca9-cb270f452b39;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","pragma":"no-cache","x-frame-options":"SAMEORIGIN","vary":"accept-encoding","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[info] [2024-06-26T07:02:09.915Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T07:02:11.024Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T07:02:11.025Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 678:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 694:10:  'signature' is assigned a value but never used       no-unused-vars
+[info] [2024-06-26T07:02:11.026Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T07:02:11.026Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T07:10:26.666Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T07:10:28.145Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T07:10:28.147Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 678:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 694:10:  'signature' is assigned a value but never used       no-unused-vars
+
+src\components\Forms\TicketCreation.jsx
+  Line 4:10:   'Upload' is defined but never used                          no-unused-vars
+  Line 36:11:  'fileList' is assigned a value but never used               no-unused-vars
+  Line 37:11:  'customerIssueFileList' is assigned a value but never used  no-unused-vars
+  Line 57:10:  'onChange' is assigned a value but never used               no-unused-vars
+  Line 62:10:  'onCustomerIssueChange' is assigned a value but never used  no-unused-vars
+  Line 67:10:  'customRequest' is assigned a value but never used          no-unused-vars
+[info] [2024-06-26T07:10:28.147Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T07:10:28.148Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T07:13:33.388Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T07:13:34.891Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T07:13:34.892Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 678:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 694:10:  'signature' is assigned a value but never used       no-unused-vars
+
+src\components\Forms\TicketCreation.jsx
+  Line 36:11:  'fileList' is assigned a value but never used  no-unused-vars
+  Line 57:10:  'onChange' is assigned a value but never used  no-unused-vars
+[info] [2024-06-26T07:13:34.893Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T07:13:34.894Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T07:18:12.100Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T07:18:13.534Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T07:18:13.536Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 678:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 694:10:  'signature' is assigned a value but never used       no-unused-vars
+
+src\components\Forms\TicketCreation.jsx
+  Line 36:11:  'fileList' is assigned a value but never used  no-unused-vars
+  Line 57:10:  'onChange' is assigned a value but never used  no-unused-vars
+[info] [2024-06-26T07:18:13.536Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T07:18:13.537Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T07:19:17.003Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T07:19:18.375Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T07:19:18.391Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 678:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 694:10:  'signature' is assigned a value but never used       no-unused-vars
+
+src\components\Forms\TicketCreation.jsx
+  Line 36:11:  'fileList' is assigned a value but never used  no-unused-vars
+  Line 57:10:  'onChange' is assigned a value but never used  no-unused-vars
+[info] [2024-06-26T07:19:18.393Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T07:19:18.399Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T07:21:59.582Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T07:22:01.134Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T07:22:01.135Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 678:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 694:10:  'signature' is assigned a value but never used       no-unused-vars
+[info] [2024-06-26T07:22:01.136Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T07:22:01.137Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T07:27:00.168Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T07:27:01.657Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T07:27:01.658Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 678:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 694:10:  'signature' is assigned a value but never used       no-unused-vars
+[info] [2024-06-26T07:27:01.659Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T07:27:01.660Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T07:30:06.062Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T07:30:07.581Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T07:30:07.582Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 678:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 694:10:  'signature' is assigned a value but never used       no-unused-vars
+[info] [2024-06-26T07:30:07.583Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T07:30:07.584Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T07:31:57.750Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T07:31:59.161Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T07:31:59.162Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 678:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 694:10:  'signature' is assigned a value but never used       no-unused-vars
+[info] [2024-06-26T07:31:59.163Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T07:31:59.163Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T07:33:58.543Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T07:34:00.123Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T07:34:00.125Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 678:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 694:10:  'signature' is assigned a value but never used       no-unused-vars
+[info] [2024-06-26T07:34:00.126Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T07:34:00.128Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T07:39:33.188Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T07:39:34.656Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T07:39:34.658Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 678:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 694:10:  'signature' is assigned a value but never used       no-unused-vars
+[info] [2024-06-26T07:39:34.662Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T07:39:34.662Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T07:54:44.492Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T07:54:46.139Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T07:54:46.140Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 681:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 697:10:  'signature' is assigned a value but never used       no-unused-vars
+[info] [2024-06-26T07:54:46.141Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T07:54:46.142Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T07:54:48.813Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T07:54:49.876Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T07:54:49.878Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 681:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 697:10:  'signature' is assigned a value but never used       no-unused-vars
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-06-26T07:54:49.878Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T07:54:49.879Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T07:56:55.239Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T07:56:56.840Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T07:56:56.843Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 681:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 697:10:  'signature' is assigned a value but never used       no-unused-vars
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-06-26T07:56:56.844Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T07:56:56.844Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T07:57:39.479Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T07:57:40.978Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T07:57:40.980Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 681:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 697:10:  'signature' is assigned a value but never used       no-unused-vars
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-06-26T07:57:40.981Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T07:57:40.982Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T08:01:19.990Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T08:01:21.609Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T08:01:21.611Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 681:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 697:10:  'signature' is assigned a value but never used       no-unused-vars
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-06-26T08:01:21.611Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T08:01:21.612Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T08:10:52.228Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T08:10:55.530Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T08:10:55.536Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 675:10:  'HashLoader' is defined but never used               no-unused-vars
+  Line 681:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 697:10:  'signature' is assigned a value but never used       no-unused-vars
+  Line 698:10:  'loading' is assigned a value but never used         no-unused-vars
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-06-26T08:10:55.537Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T08:10:55.538Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[debug] [2024-06-26T08:10:55.873Z] : > refreshing access token <
+[debug] [2024-06-26T08:10:55.877Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2024-06-26T08:10:58.045Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 08:10:58 GMT","content-type":"application/json;charset=UTF-8","content-length":"1945","connection":"keep-alive","set-cookie":["zalb_b266a5bf57=a7f15cb1555106de5ac96d088b72e7c8; Path=/","iamcsr=203c90c6-883e-4243-96d2-43ae8ebf6c5a;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=203c90c6-883e-4243-96d2-43ae8ebf6c5a;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","pragma":"no-cache","x-frame-options":"SAMEORIGIN","vary":"accept-encoding","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[info] [2024-06-26T08:11:40.532Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T08:11:43.579Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T08:11:43.582Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 675:10:  'HashLoader' is defined but never used               no-unused-vars
+  Line 681:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 697:10:  'signature' is assigned a value but never used       no-unused-vars
+  Line 698:10:  'loading' is assigned a value but never used         no-unused-vars
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-06-26T08:11:43.583Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T08:11:43.584Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T08:24:43.399Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T08:24:45.406Z] : [react-plugin]: Failed to compile.
+
+[info] [2024-06-26T08:24:45.408Z] : [react-plugin]: SyntaxError: C:\catalyst projects\water heater 2\react-app\src\components\Forms\InvoiceForm.jsx: Identifier 'React' has already been declared. (1375:7)
+  1373 |
+  1374 |
+> 1375 | import React, { useEffect, useState, useRef } from "react";
+       |        ^
+  1376 | import Form from "react-bootstrap/Form";
+  1377 | import Button from "react-bootstrap/Button";
+  1378 | import { CloseCircleOutlined, PlusCircleOutlined } from "@ant-design/icons";
+    at parser.next (<anonymous>)
+    at normalizeFile.next (<anonymous>)
+    at run.next (<anonymous>)
+    at transform.next (<anonymous>)
+[info] [2024-06-26T08:25:00.062Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T08:25:02.345Z] : [react-plugin]: Failed to compile.
+
+[info] [2024-06-26T08:25:02.347Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1426:5:   'setAfterServiceFileList' is not defined  no-undef
+  Line 1561:36:  'afterServiceFileList' is not defined     no-undef
+  Line 1602:31:  'sparce' is not defined                   no-undef
+  Line 1683:26:  'loadingHome' is not defined              no-undef
+  Line 1709:23:  'afterServiceFileList' is not defined     no-undef
+  Line 1713:14:  'afterServiceFileList' is not defined     no-undef
+  Line 1733:24:  'sparce' is not defined                   no-undef
+  Line 1734:32:  'setSparce' is not defined                no-undef
+  Line 1742:24:  'sparce' is not defined                   no-undef
+  Line 1743:32:  'setSparce' is not defined                no-undef
+  Line 1749:10:  'sparce' is not defined                   no-undef
+
+Search for the keywords to learn more about each error.
+[info] [2024-06-26T08:25:52.918Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T08:25:55.700Z] : [react-plugin]: Failed to compile.
+
+[info] [2024-06-26T08:25:55.702Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1426:5:   'setAfterServiceFileList' is not defined  no-undef
+  Line 1561:36:  'afterServiceFileList' is not defined     no-undef
+  Line 1602:31:  'sparce' is not defined                   no-undef
+  Line 1709:23:  'afterServiceFileList' is not defined     no-undef
+  Line 1713:14:  'afterServiceFileList' is not defined     no-undef
+  Line 1733:24:  'sparce' is not defined                   no-undef
+  Line 1734:32:  'setSparce' is not defined                no-undef
+  Line 1742:24:  'sparce' is not defined                   no-undef
+  Line 1743:32:  'setSparce' is not defined                no-undef
+  Line 1749:10:  'sparce' is not defined                   no-undef
+
+Search for the keywords to learn more about each error.
+[info] [2024-06-26T08:26:58.869Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T08:27:01.212Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T08:27:01.214Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 675:10:  'HashLoader' is defined but never used               no-unused-vars
+  Line 681:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 697:10:  'signature' is assigned a value but never used       no-unused-vars
+  Line 698:10:  'loading' is assigned a value but never used         no-unused-vars
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-06-26T08:27:01.215Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T08:27:01.217Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T08:29:47.410Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T08:29:50.390Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T08:29:50.393Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\CustomerDetail.jsx
+  Line 175:24:  'Container' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 681:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 697:10:  'signature' is assigned a value but never used       no-unused-vars
+  Line 698:19:  'setLoading' is assigned a value but never used      no-unused-vars
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-06-26T08:29:50.399Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T08:29:50.407Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T09:12:53.016Z] : Shutting down server
+[debug] [2024-06-26T09:12:53.068Z] : Connection reset from target URL :  Url {
+  protocol: 'http:',
+  slashes: true,
+  auth: null,
+  host: '127.0.0.1:3010',
+  port: '3010',
+  hostname: '127.0.0.1',
+  hash: null,
+  search: null,
+  query: null,
+  pathname: '/',
+  path: '/',
+  href: 'http://127.0.0.1:3010/'
+}
+[info] [2024-06-26T09:12:53.312Z] : 
+[info] [2024-06-26T09:12:53.313Z] : √ Shutdown complete
+[debug] [2024-06-26T09:12:53.314Z] : NO ERRORS REGISTERED
+[debug] [2024-06-26T09:12:53.314Z] : EXEC ENDED with event: serve, message: success
+[debug] [2024-06-26T09:12:53.314Z] : TOTAL DURATION OF COMMAND EXEC : 12110282
+[debug] [2024-06-26T09:12:53.356Z] : > refreshing access token <
+[debug] [2024-06-26T09:12:53.359Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2024-06-26T09:12:54.713Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 09:12:55 GMT","content-type":"application/json;charset=UTF-8","content-length":"1945","connection":"keep-alive","set-cookie":["zalb_b266a5bf57=a7f15cb1555106de5ac96d088b72e7c8; Path=/","iamcsr=3e8b043b-aa48-48d9-b81d-328bbb13c420;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=3e8b043b-aa48-48d9-b81d-328bbb13c420;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","pragma":"no-cache","x-frame-options":"SAMEORIGIN","vary":"accept-encoding","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T09:12:54.769Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-06-26T09:12:58.105Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 09:12:58 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"keep-alive","set-cookie":["zalb_46512fd555=00fd3a8cbff58bc9307e4ac5869875ce; Path=/","ZD_CSRF_TOKEN=ab3244b0-5d76-4c07-aed0-7d4d130bb9a2;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=ab3244b0-5d76-4c07-aed0-7d4d130bb9a2;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=0282EA5542564F64635DF8A03916E36B; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T09:12:58.105Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2024-06-26T09:12:58.107Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range

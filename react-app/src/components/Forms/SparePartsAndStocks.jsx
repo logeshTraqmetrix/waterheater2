@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
+import Swal from 'sweetalert2';
 
 const SparePartsAndStocks = () => {
   const [formData, setFormData] = useState({
@@ -23,10 +24,17 @@ const SparePartsAndStocks = () => {
     console.log(formData);
 
     //Posting the spares to table
-    axios.post('/server/waterheater_1_function/addspares',{data:formData})
+    axios.post('/server/waterheater_1_function/addspares',{data:[formData]})
     .then((response)=>{
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Your work has been saved",
+        showConfirmButton: false,
+        timer: 1500
+      });
       console.log("Record Added Successfully");
-      console.log("Response : "+response);
+      console.log("Response : ",response);
     })
     .catch((err)=>{console.error("Error at added spares from front-end : "+err);})
 

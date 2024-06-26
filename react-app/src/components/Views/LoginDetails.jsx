@@ -458,7 +458,8 @@ const LoginDetails = ({userDetails}) => {
           </Typography>
         </Box>
         
-        <Button
+        <div id='logout-button'>
+        <Button  
           variant="contained"
           color="secondary"
           className="login-details-logout-button"
@@ -467,6 +468,7 @@ const LoginDetails = ({userDetails}) => {
         >
           Logout
         </Button>
+        </div>
       </CardContent>
     </Card>
   );

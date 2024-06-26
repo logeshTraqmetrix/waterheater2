@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
+import Swal from 'sweetalert2';
 
 const TechnicianDetail = () => {
   const [formData, setFormData] = useState({
@@ -46,6 +47,13 @@ const TechnicianDetail = () => {
 
         axios.post('/server/waterheater_1_function/addtechnician', { data: technicianData })
           .then((response) => {
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "Your work has been saved",
+              showConfirmButton: false,
+              timer: 1500
+            });
             console.log("Technician Added Successfully.");
             console.log("Response : " , response);
           })
@@ -117,7 +125,7 @@ const TechnicianDetail = () => {
             <Form.Group controlId="formTechnicianPhone">
               <Form.Label>Phone *</Form.Label>
               <Form.Control
-                type="text"
+                type="number"
                 placeholder="Enter phone"
                 name="Technician_Phone"
                 value={formData.Technician_Phone}
@@ -132,7 +140,7 @@ const TechnicianDetail = () => {
             <Form.Group controlId="formTechnicianWhatsapp">
               <Form.Label>WhatsApp Number</Form.Label>
               <Form.Control
-                type="text"
+                type="number"
                 placeholder="Enter WhatsApp number"
                 name="Technician_Whatsapp"
                 value={formData.Technician_Whatsapp}

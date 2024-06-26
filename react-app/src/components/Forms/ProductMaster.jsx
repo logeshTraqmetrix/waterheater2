@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
+import Swal from 'sweetalert2';
 
 const ProductMaster = () => {
   const [formData, setFormData] = useState({
@@ -54,6 +55,13 @@ const ProductMaster = () => {
           axios.post('/server/waterheater_1_function/addproduct',{data:payload})
             .then((res)=>{
               console.log('response from product posting',res)
+              Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Your work has been saved",
+                showConfirmButton: false,
+                timer: 1500
+              });
             })
             .catch((err)=>{
               console.log('error in posting product data',err)
