@@ -2275,6 +2275,7 @@ const ViewCustomerDetails = () => {
         </div>
       ) : (
         <>
+        <h2>Customer Details</h2>
           <div className="d-flex justify-content-end mb-2">
             <FilterDropDown />
           </div>

@@ -763,6 +763,7 @@ const ViewProduct = () => {
         </div>
       ) : (
         <div>
+          <h2>Product View</h2>
           <div className="d-flex justify-content-end mb-2">
           <FilterDropDown />
         </div>

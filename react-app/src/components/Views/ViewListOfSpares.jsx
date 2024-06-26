@@ -195,6 +195,8 @@ const ViewListOfSpares = () => {
           <h3>No Data Added</h3>
         </div>
       ) : (
+       <div>
+         <h2>List Of Spares</h2>
         <div className="table-responsive">
           <Table striped bordered hover>
             <thead>
@@ -219,6 +221,7 @@ const ViewListOfSpares = () => {
             </tbody>
           </Table>
         </div>
+       </div>
       )}
       <ListOfSparesModal />
     </div>

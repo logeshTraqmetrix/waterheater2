@@ -190,6 +190,8 @@ const ViewScrap = () => {
           <h3>No Data Added</h3>
         </div>
       ) : (
+        <div>
+          <h2>Scrap View</h2>
         <div className="table-responsive">
           <Table striped bordered hover>
             <thead>
@@ -213,6 +215,7 @@ const ViewScrap = () => {
               ))}
             </tbody>
           </Table>
+        </div>
         </div>
       )}
       <ScrapModal />

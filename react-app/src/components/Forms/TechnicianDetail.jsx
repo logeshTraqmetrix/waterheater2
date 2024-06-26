@@ -26,6 +26,14 @@ const TechnicianDetail = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (formData.Technician_Image == null) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Please upload images!",
+      });
+      return;
+    }
     // Upload image first
     const imageData = new FormData();
     imageData.append('technicianImage', formData.Technician_Image);

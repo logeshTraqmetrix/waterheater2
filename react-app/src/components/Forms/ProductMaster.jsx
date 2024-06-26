@@ -29,6 +29,14 @@ const ProductMaster = () => {
     console.log(formData);
 
     try {
+      if (formData.Image == null) {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Please upload images!",
+        });
+        return;
+      }
       const fileObj = new FormData();
       fileObj.append('data', formData.Image);
 

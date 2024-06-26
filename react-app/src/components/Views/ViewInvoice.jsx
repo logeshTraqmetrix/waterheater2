@@ -584,6 +584,7 @@ const ViewInvoice = () => {
         </div>
       ) : (
         <div>
+          <h2>Invoice View</h2>
           <div className="d-flex justify-content-end mb-2">
         <FilterDropDown />
       </div>

@@ -962,6 +962,8 @@ const ViewTicket = () => {
           <h1>No Data Added</h1>
         </div>
       ) : (
+       <div>
+         <h2>Ticket View</h2>
         <div className="table-responsive">
           <Table striped bordered hover>
             <thead>
@@ -988,6 +990,7 @@ const ViewTicket = () => {
             </tbody>
           </Table>
         </div>
+       </div>
       )}
 
       {/* Modal for assigning technician or dispatch */}

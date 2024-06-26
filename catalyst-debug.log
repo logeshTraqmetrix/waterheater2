@@ -15478,3 +15478,546 @@ Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 09:12:58 GMT","conten
 [debug] [2024-06-26T09:12:58.105Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
 
 [debug] [2024-06-26T09:12:58.107Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2024-06-26T09:14:46.466Z] : 
+[debug] [2024-06-26T09:14:46.468Z] : ----------------------------------------------------------------------
+[debug] [2024-06-26T09:14:46.469Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-06-26T09:14:46.469Z] : CLI Version:  1.17.5
+[debug] [2024-06-26T09:14:46.470Z] : Platform:     win32
+[debug] [2024-06-26T09:14:46.470Z] : Node Version: v20.14.0
+[debug] [2024-06-26T09:14:46.470Z] : Time:         Wed Jun 26 2024 14:44:46 GMT+0530 (India Standard Time)
+[debug] [2024-06-26T09:14:46.471Z] : ----------------------------------------------------------------------
+[debug] [2024-06-26T09:14:46.471Z] : 
+[debug] [2024-06-26T09:14:47.810Z] : > authorizing via signed-in user option
+[debug] [2024-06-26T09:14:47.811Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute"]
+[debug] [2024-06-26T09:14:47.834Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-06-26T09:14:49.119Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 09:14:49 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=00fd3a8cbff58bc9307e4ac5869875ce; Path=/","ZD_CSRF_TOKEN=186b4042-637f-4068-9928-4a9b44653115;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=186b4042-637f-4068-9928-4a9b44653115;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T09:14:49.125Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-06-26T09:14:49.569Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 09:14:50 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=bc3d74f3-8c51-4d0f-bc81-1edb5fad1aa8;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=bc3d74f3-8c51-4d0f-bc81-1edb5fad1aa8;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T09:14:49.948Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-06-26T09:14:50.398Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 09:14:51 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=648e93bb-8a1f-4d28-9d27-14e81b48e1b2;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=648e93bb-8a1f-4d28-9d27-14e81b48e1b2;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T09:14:50.402Z] : unknown eol undefined hence skipping check
+[debug] [2024-06-26T09:14:50.402Z] : unknown eol undefined hence skipping check
+[info] [2024-06-26T09:14:55.637Z] : [react-plugin]: Starting the development server...
+
+[info] [2024-06-26T09:14:55.640Z] : 
+[info] [2024-06-26T09:14:55.641Z] : i Client[react-app]: Plugin : "zcatalyst-cli-plugin-react" is used for client serve
+[info] [2024-06-26T09:14:55.641Z] : 
+[info] [2024-06-26T09:14:58.103Z] : 
+[info] [2024-06-26T09:14:58.104Z] :  >>>>>>>>>>>>>> BasicIO <<<<<<<<<<<<<< 
+[info] [2024-06-26T09:14:58.105Z] : i authbasicio: http://localhost:3000/server/authbasicio/execute
+[info] [2024-06-26T09:14:58.105Z] : 
+[info] [2024-06-26T09:14:58.106Z] : 
+[info] [2024-06-26T09:14:58.106Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-06-26T09:14:58.107Z] : i waterheater_1_function: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-06-26T09:14:58.108Z] : 
+[info] [2024-06-26T09:14:58.108Z] : 
+[info] [2024-06-26T09:14:58.108Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2024-06-26T09:14:58.109Z] : i client[react-app]: http://localhost:3000/app/
+[info] [2024-06-26T09:14:58.109Z] : 
+[info] [2024-06-26T09:15:03.527Z] : [react-plugin]: Compiled successfully!
+[info] [2024-06-26T09:15:03.527Z] : [react-plugin]: 
+[info] [2024-06-26T09:15:03.527Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-06-26T09:15:03.528Z] : [react-plugin]: 
+[info] [2024-06-26T09:15:03.528Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-06-26T09:15:03.528Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-06-26T09:15:03.529Z] : [react-plugin]: 
+[info] [2024-06-26T09:15:03.529Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-06-26T09:15:03.529Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-06-26T09:15:03.530Z] : [react-plugin]: 
+[info] [2024-06-26T09:22:37.411Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T09:22:43.008Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T09:22:43.009Z] : [react-plugin]: [eslint] 
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-06-26T09:22:43.009Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T09:22:43.010Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T09:24:13.145Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T09:24:15.516Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T09:24:15.516Z] : [react-plugin]: [eslint] 
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-06-26T09:24:15.517Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T09:24:15.517Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T09:24:25.901Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T09:24:27.770Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T09:24:27.771Z] : [react-plugin]: [eslint] 
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-06-26T09:24:27.771Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T09:24:27.772Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T09:24:52.845Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T09:24:54.914Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T09:24:54.914Z] : [react-plugin]: [eslint] 
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-06-26T09:24:54.915Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T09:24:54.915Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T09:26:38.970Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T09:26:41.234Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T09:26:41.235Z] : [react-plugin]: [eslint] 
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-06-26T09:26:41.235Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T09:26:41.236Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T09:27:03.367Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T09:27:05.265Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T09:27:05.266Z] : [react-plugin]: [eslint] 
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-06-26T09:27:05.266Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T09:27:05.267Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T09:33:19.469Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T09:33:22.008Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T09:33:22.009Z] : [react-plugin]: [eslint] 
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-06-26T09:33:22.009Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T09:33:22.011Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T09:38:26.959Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T09:38:29.405Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T09:38:29.405Z] : [react-plugin]: [eslint] 
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-06-26T09:38:29.406Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T09:38:29.407Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T09:46:03.049Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T09:46:05.669Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T09:46:05.670Z] : [react-plugin]: [eslint] 
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-06-26T09:46:05.670Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T09:46:05.671Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T10:02:37.984Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T10:02:40.394Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T10:02:40.394Z] : [react-plugin]: [eslint] 
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-06-26T10:02:40.395Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T10:02:40.396Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T10:04:48.003Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T10:04:50.018Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T10:04:50.019Z] : [react-plugin]: [eslint] 
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-06-26T10:04:50.019Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T10:04:50.020Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T10:05:40.856Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T10:05:43.099Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T10:05:43.101Z] : [react-plugin]: [eslint] 
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2122:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-06-26T10:05:43.101Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T10:05:43.102Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T10:06:44.677Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T10:06:47.242Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T10:06:47.244Z] : [react-plugin]: [eslint] 
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2122:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-06-26T10:06:47.246Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T10:06:47.247Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T10:07:19.768Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T10:07:21.779Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T10:07:21.782Z] : [react-plugin]: [eslint] 
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2122:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-06-26T10:07:21.783Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T10:07:21.784Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T10:07:50.956Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T10:07:52.696Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T10:07:52.702Z] : [react-plugin]: [eslint] 
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2122:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 471:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-06-26T10:07:52.705Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T10:07:52.708Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T10:08:32.658Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T10:08:34.849Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T10:08:34.852Z] : [react-plugin]: [eslint] 
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2122:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 471:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-06-26T10:08:34.854Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T10:08:34.855Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T10:09:36.592Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T10:09:39.073Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T10:09:39.076Z] : [react-plugin]: [eslint] 
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2122:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 471:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-06-26T10:09:39.077Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T10:09:39.078Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T10:10:17.901Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T10:10:19.148Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T10:10:19.151Z] : [react-plugin]: [eslint] 
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2122:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 471:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-06-26T10:10:19.152Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T10:10:19.153Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T10:10:41.257Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T10:10:43.154Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T10:10:43.158Z] : [react-plugin]: [eslint] 
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2122:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 471:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewSpares.jsx
+  Line 912:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-06-26T10:10:43.169Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T10:10:43.171Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T10:11:33.288Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T10:11:34.961Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T10:11:34.965Z] : [react-plugin]: [eslint] 
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2122:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 471:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewSpares.jsx
+  Line 912:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-06-26T10:11:34.966Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T10:11:34.967Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T10:12:17.421Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T10:12:19.609Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T10:12:19.613Z] : [react-plugin]: [eslint] 
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2122:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 471:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewSpares.jsx
+  Line 912:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 937:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-06-26T10:12:19.614Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T10:12:19.615Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[debug] [2024-06-26T10:12:59.490Z] : > refreshing access token <
+[debug] [2024-06-26T10:12:59.495Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2024-06-26T10:13:00.771Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 10:13:01 GMT","content-type":"application/json;charset=UTF-8","content-length":"1945","connection":"keep-alive","set-cookie":["zalb_b266a5bf57=a711b6da0e6cbadb5e254290f114a026; Path=/","iamcsr=2ec35deb-7fe0-4e72-86ce-bdab00eb1ec2;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=2ec35deb-7fe0-4e72-86ce-bdab00eb1ec2;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","pragma":"no-cache","x-frame-options":"SAMEORIGIN","vary":"accept-encoding","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[info] [2024-06-26T10:17:36.981Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T10:17:39.342Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T10:17:39.346Z] : [react-plugin]: [eslint] 
+src\components\Views\Dashboard.jsx
+  Line 1028:9:  'isMobile' is assigned a value but never used  no-unused-vars
+
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2122:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 471:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewSpares.jsx
+  Line 912:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 937:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-06-26T10:17:39.347Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T10:17:39.348Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T10:20:56.684Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T10:20:59.359Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T10:20:59.364Z] : [react-plugin]: [eslint] 
+src\components\Views\Dashboard.jsx
+  Line 1028:9:  'isMobile' is assigned a value but never used  no-unused-vars
+
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2122:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 471:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewSpares.jsx
+  Line 912:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 937:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-06-26T10:20:59.364Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T10:20:59.365Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T10:22:36.795Z] : [react-plugin]: Compiling...
+[info] [2024-06-26T10:22:39.274Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-06-26T10:22:39.277Z] : [react-plugin]: [eslint] 
+src\components\Views\Dashboard.jsx
+  Line 1269:9:  'isMobile' is assigned a value but never used  no-unused-vars
+
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2122:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 471:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewSpares.jsx
+  Line 912:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 937:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-06-26T10:22:39.278Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-06-26T10:22:39.279Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-06-26T10:24:38.065Z] : Shutting down server
+[info] [2024-06-26T10:24:38.528Z] : 
+[info] [2024-06-26T10:24:38.529Z] : √ Shutdown complete
+[debug] [2024-06-26T10:24:38.530Z] : NO ERRORS REGISTERED
+[debug] [2024-06-26T10:24:38.531Z] : EXEC ENDED with event: serve, message: success
+[debug] [2024-06-26T10:24:38.531Z] : TOTAL DURATION OF COMMAND EXEC : 4190744
+[debug] [2024-06-26T10:24:38.570Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-06-26T10:24:42.329Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Wed, 26 Jun 2024 10:24:43 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"keep-alive","set-cookie":["zalb_46512fd555=00fd3a8cbff58bc9307e4ac5869875ce; Path=/","ZD_CSRF_TOKEN=f4742854-01e8-40d1-83d1-93ff59724858;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=f4742854-01e8-40d1-83d1-93ff59724858;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=4951360136768239BDB4AC140A96761C; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-26T10:24:42.331Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2024-06-26T10:24:42.333Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range

@@ -399,7 +399,11 @@ const ViewTechnicianDetails = () => {
         <div className="d-flex justify-content-center align-items-center" style={{ height: '94vh' }}>
           <h1>No Data Added</h1>
         </div>
-      ) : ( <div className="table-responsive">
+      ) : (
+
+        <div>
+           <h2>Technician Details</h2>
+         <div className="table-responsive">
         <Table striped bordered hover>
           <thead>
             <tr>
@@ -422,7 +426,9 @@ const ViewTechnicianDetails = () => {
             ))}
           </tbody>
         </Table>
-      </div>)}
+      </div>
+        </div>
+       )}
 
       {/* View Technician Modal */}
       <Modal show={showModal} onHide={handleCloseModal}>

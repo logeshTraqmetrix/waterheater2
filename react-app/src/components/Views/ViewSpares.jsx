@@ -1084,6 +1084,7 @@ const ViewSpares = () => {
         </div>
       ) : (
         <div>
+          <h2>Spares View</h2>
           <div className="d-flex justify-content-end mb-2">
         <FilterDropDown/>
       </div>

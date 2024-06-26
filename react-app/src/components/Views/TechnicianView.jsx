@@ -571,6 +571,7 @@ const TechnicianView = ({ roleEmail }) => {
         </div>
       ) : !showInvoiceForm ? (
         <>
+        <h2>Tedhnician Details</h2>
           <div className="table-responsive">
             <Table striped bordered hover>
               <thead>
