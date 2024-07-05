@@ -957,7 +957,7 @@ const ViewSpares = () => {
 
   // ... (keep the existing ActionDropdown, handleViewSpares, handleCloseModal, handleEditSpares, handleEditInputChange, handleEditSubmit, confirmDeleteSpares, and handlePageChange functions)
   const ActionDropdown = ({ spares }) => (
-    <Dropdown>
+    <Dropdown  drop={'start'}>
       <Dropdown.Toggle variant="primary" id="dropdown-basic">
 
       </Dropdown.Toggle>

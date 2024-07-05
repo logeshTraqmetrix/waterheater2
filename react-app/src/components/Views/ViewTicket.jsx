@@ -822,7 +822,7 @@ const ViewTicket = () => {
     const isDispatchButtonEnabled = Status === 'Ready for Dispatch';
 
     return (
-      <Dropdown>
+      <Dropdown  drop={'start'}>
         <Dropdown.Toggle variant="primary" id="dropdown-basic"></Dropdown.Toggle>
         <Dropdown.Menu>
           <Dropdown.Item onClick={() => handleViewTicket(ticket)}>View</Dropdown.Item>

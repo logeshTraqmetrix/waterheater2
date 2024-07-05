@@ -135,10 +135,9 @@ const ViewListOfSpares = () => {
   }, []);
 
   const ActionDropdown = (listOfSpares) => (
-    <Dropdown>
+    <Dropdown  drop={'start'}>
       <Dropdown.Toggle variant="primary" id="dropdown-basic">
       </Dropdown.Toggle>
-
       <Dropdown.Menu>
         <Dropdown.Item onClick={() => handleViewListOfSpares(listOfSpares)}>View</Dropdown.Item>
       </Dropdown.Menu>

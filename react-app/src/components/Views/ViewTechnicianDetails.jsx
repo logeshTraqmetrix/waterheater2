@@ -299,7 +299,7 @@ const ViewTechnicianDetails = () => {
   };
 
   const ActionDropdown = ({ technician }) => (
-    <Dropdown>
+    <Dropdown  drop={'start'}>
       <Dropdown.Toggle variant="primary" id="dropdown-basic">
       </Dropdown.Toggle>
       <Dropdown.Menu>

@@ -17892,3 +17892,1718 @@ Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 06:42:26 GMT","conten
 [debug] [2024-07-05T06:42:26.401Z] : Response Body : {"status":"failure","data":{"error_code":"MORE_THAN_MAX_LENGTH","message":"Please check if the length of the input is in the correct range"}}
 
 [debug] [2024-07-05T06:42:26.404Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the length of the input is in the correct range
+[debug] [2024-07-05T06:45:25.721Z] : 
+[debug] [2024-07-05T06:45:25.723Z] : ----------------------------------------------------------------------
+[debug] [2024-07-05T06:45:25.724Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js deploy
+[debug] [2024-07-05T06:45:25.724Z] : CLI Version:  1.17.5
+[debug] [2024-07-05T06:45:25.724Z] : Platform:     win32
+[debug] [2024-07-05T06:45:25.725Z] : Node Version: v20.14.0
+[debug] [2024-07-05T06:45:25.725Z] : Time:         Fri Jul 05 2024 12:15:25 GMT+0530 (India Standard Time)
+[debug] [2024-07-05T06:45:25.726Z] : ----------------------------------------------------------------------
+[debug] [2024-07-05T06:45:25.726Z] : 
+[debug] [2024-07-05T06:45:27.301Z] : > authorizing via signed-in user option
+[debug] [2024-07-05T06:45:27.302Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.webapp.ALL","ZohoCatalyst.appsail.Update"]
+[debug] [2024-07-05T06:45:27.329Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-07-05T06:45:28.693Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 06:45:28 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=30ffe6b9-3e2e-48f7-af19-fb90bdddef2f;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=30ffe6b9-3e2e-48f7-af19-fb90bdddef2f;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-07-05T06:45:28.699Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-07-05T06:45:29.017Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 06:45:28 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=00fd3a8cbff58bc9307e4ac5869875ce; Path=/","ZD_CSRF_TOKEN=70ea7801-962d-4938-b852-e028d8c516a5;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=70ea7801-962d-4938-b852-e028d8c516a5;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-07-05T06:45:29.081Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-07-05T06:45:29.438Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 06:45:29 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=96b99b0c-3908-4d5a-b25a-24c0841b7e55;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=96b99b0c-3908-4d5a-b25a-24c0841b7e55;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-07-05T06:45:29.442Z] : unknown eol undefined hence skipping check
+[debug] [2024-07-05T06:45:29.443Z] : unknown eol undefined hence skipping check
+[debug] [2024-07-05T06:45:31.215Z] : >>>> HTTP REQUEST : PUT https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/server/upsert 
+
+[debug] [2024-07-05T06:46:02.862Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 06:46:02 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=00fd3a8cbff58bc9307e4ac5869875ce; Path=/","ZD_CSRF_TOKEN=9e369562-765a-42ef-9e8b-655029ea2cf2;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=9e369562-765a-42ef-9e8b-655029ea2cf2;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-07-05T06:46:02.871Z] : >>>> HTTP REQUEST : PUT https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function/upsert 
+
+[debug] [2024-07-05T06:46:30.190Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 06:46:29 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=f0d804be-335f-4a21-ab87-2d51eca5725e;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=f0d804be-335f-4a21-ab87-2d51eca5725e;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[info] [2024-07-05T06:46:30.398Z] : i Plugin : "zcatalyst-cli-plugin-react" is used for client deploy
+[info] [2024-07-05T06:46:30.399Z] : i Building Application...
+[info] [2024-07-05T06:46:33.346Z] : [react-plugin]: Creating an optimized production build...
+[info] [2024-07-05T06:47:10.170Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T06:47:10.176Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Forms\InvoiceForm.jsx
+  Line 682:23:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 698:10:  'signature' is assigned a value but never used       no-unused-vars
+  Line 699:19:  'setLoading' is assigned a value but never used      no-unused-vars
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewClosedTicket.jsx
+  Line 560:6:   React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array                                                                                     react-hooks/exhaustive-deps
+  Line 726:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 472:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewSpares.jsx
+  Line 913:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 936:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T06:47:10.177Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T06:47:10.185Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T06:47:10.186Z] : [react-plugin]: File sizes after gzip:
+
+[info] [2024-07-05T06:47:10.249Z] : [react-plugin]:   449.61 kB (+1.72 kB)  build\static\js\main.6c238675.js
+[info] [2024-07-05T06:47:10.250Z] : [react-plugin]:   1.67 kB               build\static\js\453.45c1065d.chunk.js
+[info] [2024-07-05T06:47:10.251Z] : [react-plugin]:   1.01 kB               build\static\css\main.bfab33ae.css
+[info] [2024-07-05T06:47:10.252Z] : [react-plugin]:  
+[debug] [2024-07-05T06:47:15.439Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/webapp 
+
+[debug] [2024-07-05T06:47:38.339Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 06:47:37 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=e6b74126-410c-4174-928f-26f652ea93a7;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=e6b74126-410c-4174-928f-26f652ea93a7;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[info] [2024-07-05T06:47:38.344Z] : 
+[info] [2024-07-05T06:47:38.346Z] : i functions(waterheater_1_function): URL => https://waterheater1-808166282.development.catalystserverless.com/server/waterheater_1_function/
+[info] [2024-07-05T06:47:38.347Z] : √ functions(waterheater_1_function): deploy successful
+[info] [2024-07-05T06:47:38.348Z] : i functions(authbasicio): URL => https://waterheater1-808166282.development.catalystserverless.com/server/authbasicio/execute
+[info] [2024-07-05T06:47:38.348Z] : √ functions(authbasicio): deploy successful
+[info] [2024-07-05T06:47:38.349Z] : 
+[info] [2024-07-05T06:47:38.349Z] : √ client: deploy successful
+[info] [2024-07-05T06:47:38.350Z] : i client: URL => https://waterheater1-808166282.development.catalystserverless.com/__catalyst/auth/login
+[info] [2024-07-05T06:47:38.350Z] : 
+[info] [2024-07-05T06:47:38.351Z] : √ Catalyst deploy complete!
+[debug] [2024-07-05T06:47:38.352Z] : NO ERRORS REGISTERED
+[debug] [2024-07-05T06:47:38.353Z] : EXEC ENDED with event: deploy, message: success
+[debug] [2024-07-05T06:47:38.353Z] : TOTAL DURATION OF COMMAND EXEC : 131079
+[debug] [2024-07-05T06:47:38.422Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-07-05T06:47:39.167Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 06:47:38 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"141","connection":"keep-alive","set-cookie":["zalb_46512fd555=00fd3a8cbff58bc9307e4ac5869875ce; Path=/","JSESSIONID=893E08A3FD5F636902A0C949F23E7F55; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-07-05T06:47:39.168Z] : Response Body : {"status":"failure","data":{"error_code":"MORE_THAN_MAX_LENGTH","message":"Please check if the length of the input is in the correct range"}}
+
+[debug] [2024-07-05T06:47:39.170Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the length of the input is in the correct range
+[debug] [2024-07-05T08:04:39.319Z] : 
+[debug] [2024-07-05T08:04:39.321Z] : ----------------------------------------------------------------------
+[debug] [2024-07-05T08:04:39.322Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-07-05T08:04:39.322Z] : CLI Version:  1.17.5
+[debug] [2024-07-05T08:04:39.322Z] : Platform:     win32
+[debug] [2024-07-05T08:04:39.323Z] : Node Version: v20.14.0
+[debug] [2024-07-05T08:04:39.323Z] : Time:         Fri Jul 05 2024 13:34:39 GMT+0530 (India Standard Time)
+[debug] [2024-07-05T08:04:39.324Z] : ----------------------------------------------------------------------
+[debug] [2024-07-05T08:04:39.324Z] : 
+[debug] [2024-07-05T08:04:40.791Z] : > authorizing via signed-in user option
+[debug] [2024-07-05T08:04:40.791Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute"]
+[debug] [2024-07-05T08:04:40.821Z] : > refreshing access token <
+[debug] [2024-07-05T08:04:40.822Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2024-07-05T08:04:42.250Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 08:04:41 GMT","content-type":"application/json;charset=UTF-8","content-length":"1945","connection":"keep-alive","set-cookie":["zalb_b266a5bf57=a711b6da0e6cbadb5e254290f114a026; Path=/","iamcsr=3f0463a0-c562-4dff-983a-8b52c49b64b9;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=3f0463a0-c562-4dff-983a-8b52c49b64b9;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","pragma":"no-cache","x-frame-options":"SAMEORIGIN","vary":"accept-encoding","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-07-05T08:04:42.264Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-07-05T08:04:43.250Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 08:04:42 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=bd6ff560-957f-4b57-9a09-55de1ecd67a7;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=bd6ff560-957f-4b57-9a09-55de1ecd67a7;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-07-05T08:04:43.253Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-07-05T08:04:43.561Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 08:04:43 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=00fd3a8cbff58bc9307e4ac5869875ce; Path=/","ZD_CSRF_TOKEN=dd0414b6-ca65-4ca6-9fb0-04582a3ec5b9;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=dd0414b6-ca65-4ca6-9fb0-04582a3ec5b9;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-07-05T08:04:44.080Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-07-05T08:04:44.441Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 08:04:43 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=d26d0fd8-d398-454d-9f68-2f083db4350b;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=d26d0fd8-d398-454d-9f68-2f083db4350b;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-07-05T08:04:44.446Z] : unknown eol undefined hence skipping check
+[debug] [2024-07-05T08:04:44.447Z] : unknown eol undefined hence skipping check
+[info] [2024-07-05T08:04:50.185Z] : [react-plugin]: Starting the development server...
+
+[info] [2024-07-05T08:04:50.189Z] : 
+[info] [2024-07-05T08:04:50.190Z] : i Client[react-app]: Plugin : "zcatalyst-cli-plugin-react" is used for client serve
+[info] [2024-07-05T08:04:50.190Z] : 
+[info] [2024-07-05T08:04:52.685Z] : 
+[info] [2024-07-05T08:04:52.686Z] :  >>>>>>>>>>>>>> BasicIO <<<<<<<<<<<<<< 
+[info] [2024-07-05T08:04:52.687Z] : i authbasicio: http://localhost:3000/server/authbasicio/execute
+[info] [2024-07-05T08:04:52.687Z] : 
+[info] [2024-07-05T08:04:52.687Z] : 
+[info] [2024-07-05T08:04:52.688Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-07-05T08:04:52.688Z] : i waterheater_1_function: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-07-05T08:04:52.689Z] : 
+[info] [2024-07-05T08:04:52.689Z] : 
+[info] [2024-07-05T08:04:52.690Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2024-07-05T08:04:52.690Z] : i client[react-app]: http://localhost:3000/app/
+[info] [2024-07-05T08:04:52.691Z] : 
+[info] [2024-07-05T08:04:57.793Z] : [react-plugin]: Compiled successfully!
+[info] [2024-07-05T08:04:57.793Z] : [react-plugin]: 
+[info] [2024-07-05T08:04:57.794Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-07-05T08:04:57.794Z] : [react-plugin]: 
+[info] [2024-07-05T08:04:57.794Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-07-05T08:04:57.794Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-07-05T08:04:57.795Z] : [react-plugin]: 
+[info] [2024-07-05T08:04:57.795Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-07-05T08:04:57.795Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-07-05T08:04:57.795Z] : [react-plugin]: 
+[info] [2024-07-05T08:09:32.071Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:09:40.089Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:09:40.090Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+[info] [2024-07-05T08:09:40.090Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:09:40.091Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:13:09.518Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:13:12.719Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:13:12.719Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-07-05T08:13:12.720Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:13:12.721Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:14:12.162Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:14:14.676Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:14:14.677Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-07-05T08:14:14.677Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:14:14.678Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:18:35.822Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:18:38.774Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:18:38.775Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-07-05T08:18:38.775Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:18:38.776Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:18:46.629Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:18:49.026Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:18:49.027Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-07-05T08:18:49.028Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:18:49.029Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:19:12.408Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:19:14.669Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:19:14.670Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-07-05T08:19:14.670Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:19:14.671Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:23:07.453Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:23:09.110Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:23:09.111Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-07-05T08:23:09.111Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:23:09.112Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:23:54.670Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:23:56.126Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:23:56.126Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-07-05T08:23:56.127Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:23:56.127Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:24:34.339Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:24:35.750Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:24:35.750Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-07-05T08:24:35.751Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:24:35.751Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:26:10.608Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:26:12.176Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:26:12.177Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-07-05T08:26:12.177Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:26:12.178Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:30:09.072Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:30:10.611Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:30:10.612Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-07-05T08:30:10.612Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:30:10.612Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:30:34.642Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:30:36.100Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:30:36.100Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-07-05T08:30:36.101Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:30:36.101Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:31:57.098Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:31:58.708Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:31:58.709Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-07-05T08:31:58.709Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:31:58.710Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:40:17.041Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:40:18.984Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:40:18.985Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-07-05T08:40:18.985Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:40:18.986Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:41:06.037Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:41:07.329Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:41:07.329Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-07-05T08:41:07.330Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:41:07.330Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:43:38.202Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:43:39.813Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:43:39.814Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-07-05T08:43:39.814Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:43:39.814Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:43:55.561Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:43:56.857Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:43:56.858Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-07-05T08:43:56.859Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:43:56.859Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:45:37.033Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:45:38.805Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:45:38.807Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 936:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T08:45:38.808Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:45:38.809Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:46:02.804Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:46:03.879Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:46:03.881Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 936:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T08:46:03.881Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:46:03.882Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:46:27.086Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:46:28.193Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:46:28.194Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 936:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T08:46:28.195Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:46:28.196Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:47:14.159Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:47:15.405Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:47:15.409Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 472:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 936:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T08:47:15.410Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:47:15.411Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:47:49.257Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:47:50.401Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:47:50.403Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 472:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewSpares.jsx
+  Line 913:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 936:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T08:47:50.403Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:47:50.404Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:48:14.861Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:48:16.509Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:48:16.512Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 472:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewSpares.jsx
+  Line 913:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 936:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T08:48:16.513Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:48:16.515Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:48:40.765Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:48:41.840Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:48:41.842Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 472:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewSpares.jsx
+  Line 913:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 936:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T08:48:41.843Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:48:41.844Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:48:50.470Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:48:51.540Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:48:51.542Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 472:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewSpares.jsx
+  Line 913:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 936:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T08:48:51.543Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:48:51.543Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:49:18.176Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:49:19.421Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:49:19.424Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\ViewClosedTicket.jsx
+  Line 560:6:   React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array                                                                                     react-hooks/exhaustive-deps
+  Line 726:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 472:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewSpares.jsx
+  Line 913:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 936:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T08:49:19.425Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:49:19.426Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:50:07.169Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:50:08.359Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:50:08.362Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewClosedTicket.jsx
+  Line 560:6:   React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array                                                                                     react-hooks/exhaustive-deps
+  Line 726:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 472:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewSpares.jsx
+  Line 913:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 936:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T08:50:08.363Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:50:08.364Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:50:48.726Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:50:50.142Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:50:50.145Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewClosedTicket.jsx
+  Line 560:6:   React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array                                                                                     react-hooks/exhaustive-deps
+  Line 726:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 472:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewSpares.jsx
+  Line 913:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 936:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T08:50:50.146Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:50:50.147Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:52:30.055Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:52:31.557Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:52:31.561Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewClosedTicket.jsx
+  Line 560:6:   React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array                                                                                     react-hooks/exhaustive-deps
+  Line 726:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 472:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewSpares.jsx
+  Line 913:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 936:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T08:52:31.562Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:52:31.563Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:53:00.108Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:53:01.523Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:53:01.527Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 4567:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 4572:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 4573:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 4574:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 4583:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 4584:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewClosedTicket.jsx
+  Line 560:6:   React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array                                                                                     react-hooks/exhaustive-deps
+  Line 726:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 472:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewSpares.jsx
+  Line 913:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 936:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T08:53:01.528Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:53:01.529Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:53:30.566Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:53:31.715Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:53:31.719Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 271:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 276:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 277:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 278:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 287:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 288:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewClosedTicket.jsx
+  Line 560:6:   React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array                                                                                     react-hooks/exhaustive-deps
+  Line 726:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 472:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewSpares.jsx
+  Line 913:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 936:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T08:53:31.720Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:53:31.721Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:58:09.163Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:58:10.544Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:58:10.547Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 271:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 276:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 277:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 278:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 287:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 288:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewClosedTicket.jsx
+  Line 560:6:   React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array                                                                                     react-hooks/exhaustive-deps
+  Line 726:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 472:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewSpares.jsx
+  Line 913:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 936:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T08:58:10.548Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:58:10.549Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:59:19.874Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:59:21.126Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:59:21.130Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 271:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 276:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 277:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 278:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 287:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 288:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewClosedTicket.jsx
+  Line 560:6:   React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array                                                                                     react-hooks/exhaustive-deps
+  Line 726:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 472:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewSpares.jsx
+  Line 913:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 936:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T08:59:21.131Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:59:21.132Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T08:59:40.500Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T08:59:41.828Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T08:59:41.833Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 271:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 276:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 277:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 278:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 287:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 288:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewClosedTicket.jsx
+  Line 560:6:   React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array                                                                                     react-hooks/exhaustive-deps
+  Line 726:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 472:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewSpares.jsx
+  Line 913:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 936:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T08:59:41.834Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T08:59:41.835Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T09:01:24.557Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T09:01:25.283Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T09:01:25.288Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 271:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 276:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 277:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 278:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 287:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 288:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewClosedTicket.jsx
+  Line 560:6:   React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array                                                                                     react-hooks/exhaustive-deps
+  Line 726:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 472:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewSpares.jsx
+  Line 913:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 936:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T09:01:25.288Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T09:01:25.289Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[debug] [2024-07-05T09:06:02.092Z] : > refreshing access token <
+[debug] [2024-07-05T09:06:02.103Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2024-07-05T09:06:03.389Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 09:06:02 GMT","content-type":"application/json;charset=UTF-8","content-length":"1945","connection":"keep-alive","set-cookie":["zalb_b266a5bf57=a711b6da0e6cbadb5e254290f114a026; Path=/","iamcsr=fdd6c9c4-d4ea-415d-aec1-789cb4ef7342;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=fdd6c9c4-d4ea-415d-aec1-789cb4ef7342;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","pragma":"no-cache","x-frame-options":"SAMEORIGIN","vary":"accept-encoding","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-07-05T10:06:06.740Z] : > refreshing access token <
+[debug] [2024-07-05T10:06:06.742Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2024-07-05T10:06:07.980Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 10:06:07 GMT","content-type":"application/json;charset=UTF-8","content-length":"1945","connection":"keep-alive","set-cookie":["zalb_b266a5bf57=a7f15cb1555106de5ac96d088b72e7c8; Path=/","iamcsr=9994db43-d88c-4e91-84c8-63c1da6e6cb5;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=9994db43-d88c-4e91-84c8-63c1da6e6cb5;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","pragma":"no-cache","x-frame-options":"SAMEORIGIN","vary":"accept-encoding","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[info] [2024-07-05T10:07:12.591Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T10:07:14.681Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T10:07:14.685Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 271:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 276:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 277:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 278:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 287:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 288:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewClosedTicket.jsx
+  Line 560:6:   React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array                                                                                     react-hooks/exhaustive-deps
+  Line 726:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 472:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewSpares.jsx
+  Line 913:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 936:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T10:07:14.686Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T10:07:14.687Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T10:07:34.450Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T10:07:35.512Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T10:07:35.517Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 271:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 276:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 277:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 278:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 287:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 288:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewClosedTicket.jsx
+  Line 560:6:   React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array                                                                                     react-hooks/exhaustive-deps
+  Line 726:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 472:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewSpares.jsx
+  Line 913:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 936:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T10:07:35.518Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T10:07:35.519Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T10:12:08.462Z] : Shutting down server
+[info] [2024-07-05T10:12:08.979Z] : 
+[info] [2024-07-05T10:12:08.981Z] : √ Shutdown complete
+[debug] [2024-07-05T10:12:08.982Z] : NO ERRORS REGISTERED
+[debug] [2024-07-05T10:12:08.983Z] : EXEC ENDED with event: serve, message: success
+[debug] [2024-07-05T10:12:08.983Z] : TOTAL DURATION OF COMMAND EXEC : 7648219
+[debug] [2024-07-05T10:12:09.032Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-07-05T10:12:13.029Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 10:12:13 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"141","connection":"keep-alive","set-cookie":["zalb_46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","JSESSIONID=DE8F17A05E851F3C2BB48303584B3424; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-07-05T10:12:13.032Z] : Response Body : {"status":"failure","data":{"error_code":"MORE_THAN_MAX_LENGTH","message":"Please check if the length of the input is in the correct range"}}
+
+[debug] [2024-07-05T10:12:13.072Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the length of the input is in the correct range
+[debug] [2024-07-05T10:49:41.886Z] : 
+[debug] [2024-07-05T10:49:41.888Z] : ----------------------------------------------------------------------
+[debug] [2024-07-05T10:49:41.889Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js deploy
+[debug] [2024-07-05T10:49:41.889Z] : CLI Version:  1.17.5
+[debug] [2024-07-05T10:49:41.890Z] : Platform:     win32
+[debug] [2024-07-05T10:49:41.890Z] : Node Version: v20.14.0
+[debug] [2024-07-05T10:49:41.890Z] : Time:         Fri Jul 05 2024 16:19:41 GMT+0530 (India Standard Time)
+[debug] [2024-07-05T10:49:41.891Z] : ----------------------------------------------------------------------
+[debug] [2024-07-05T10:49:41.891Z] : 
+[debug] [2024-07-05T10:49:43.131Z] : > authorizing via signed-in user option
+[debug] [2024-07-05T10:49:43.132Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.webapp.ALL","ZohoCatalyst.appsail.Update"]
+[debug] [2024-07-05T10:49:43.154Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-07-05T10:49:44.472Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 10:49:44 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=fdc295bc-c925-4211-a777-d45ab3b309c5;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=fdc295bc-c925-4211-a777-d45ab3b309c5;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-07-05T10:49:44.477Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-07-05T10:49:44.793Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 10:49:44 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=48e0d3f8-9e1d-4065-ac67-27c21b866785;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=48e0d3f8-9e1d-4065-ac67-27c21b866785;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-07-05T10:49:44.851Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-07-05T10:49:45.281Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 10:49:45 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=e83105ba-e19e-4765-a472-f004f21ee12b;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=e83105ba-e19e-4765-a472-f004f21ee12b;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-07-05T10:49:45.286Z] : unknown eol undefined hence skipping check
+[debug] [2024-07-05T10:49:45.286Z] : unknown eol undefined hence skipping check
+[debug] [2024-07-05T10:49:47.108Z] : >>>> HTTP REQUEST : PUT https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/server/upsert 
+
+[debug] [2024-07-05T10:49:57.475Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 10:49:57 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=00fd3a8cbff58bc9307e4ac5869875ce; Path=/","ZD_CSRF_TOKEN=a218109c-fabc-46e1-9294-7fd2e35245c6;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=a218109c-fabc-46e1-9294-7fd2e35245c6;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-07-05T10:49:57.479Z] : >>>> HTTP REQUEST : PUT https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function/upsert 
+
+[debug] [2024-07-05T10:50:00.742Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 10:50:00 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=88b6d2cd-b12f-464a-8358-773ead39e4ec;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=88b6d2cd-b12f-464a-8358-773ead39e4ec;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[info] [2024-07-05T10:50:01.078Z] : i Plugin : "zcatalyst-cli-plugin-react" is used for client deploy
+[info] [2024-07-05T10:50:01.078Z] : i Building Application...
+[info] [2024-07-05T10:50:05.062Z] : [react-plugin]: Creating an optimized production build...
+[info] [2024-07-05T10:50:43.587Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T10:50:43.599Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 271:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 276:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 277:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 278:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 287:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 288:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\DispatchView.jsx
+  Line 344:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\InhouseView.jsx
+  Line 616:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewClosedTicket.jsx
+  Line 560:6:   React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array                                                                                     react-hooks/exhaustive-deps
+  Line 726:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src\components\Views\ViewCustomerDetails.jsx
+  Line 2124:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewInvoice.jsx
+  Line 472:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewSpares.jsx
+  Line 913:6:  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\ViewTicket.jsx
+  Line 694:48:  'Spinner' is defined but never used                                                                                                                                                              no-unused-vars
+  Line 713:24:  'setImageLoading' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 936:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T10:50:43.600Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T10:50:43.601Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T10:50:43.601Z] : [react-plugin]: File sizes after gzip:
+
+[info] [2024-07-05T10:50:43.673Z] : [react-plugin]:   449.62 kB (+16 B)  build\static\js\main.c761af71.js
+[info] [2024-07-05T10:50:43.674Z] : [react-plugin]:   1.67 kB            build\static\js\453.45c1065d.chunk.js
+[info] [2024-07-05T10:50:43.674Z] : [react-plugin]:   1.01 kB            build\static\css\main.bfab33ae.css
+[info] [2024-07-05T10:50:43.674Z] : [react-plugin]:  
+[debug] [2024-07-05T10:50:48.830Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/webapp 
+
+[debug] [2024-07-05T10:51:07.100Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 10:51:06 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=c6114de0-d0e2-492b-9813-a162d4a5475e;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=c6114de0-d0e2-492b-9813-a162d4a5475e;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[info] [2024-07-05T10:51:07.107Z] : 
+[info] [2024-07-05T10:51:07.109Z] : i functions(waterheater_1_function): URL => https://waterheater1-808166282.development.catalystserverless.com/server/waterheater_1_function/
+[info] [2024-07-05T10:51:07.110Z] : √ functions(waterheater_1_function): deploy successful
+[info] [2024-07-05T10:51:07.111Z] : i functions(authbasicio): URL => https://waterheater1-808166282.development.catalystserverless.com/server/authbasicio/execute
+[info] [2024-07-05T10:51:07.112Z] : √ functions(authbasicio): deploy successful
+[info] [2024-07-05T10:51:07.112Z] : 
+[info] [2024-07-05T10:51:07.113Z] : √ client: deploy successful
+[info] [2024-07-05T10:51:07.114Z] : i client: URL => https://waterheater1-808166282.development.catalystserverless.com/__catalyst/auth/login
+[info] [2024-07-05T10:51:07.114Z] : 
+[info] [2024-07-05T10:51:07.115Z] : √ Catalyst deploy complete!
+[debug] [2024-07-05T10:51:07.116Z] : NO ERRORS REGISTERED
+[debug] [2024-07-05T10:51:07.117Z] : EXEC ENDED with event: deploy, message: success
+[debug] [2024-07-05T10:51:07.117Z] : TOTAL DURATION OF COMMAND EXEC : 84010
+[debug] [2024-07-05T10:51:07.247Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-07-05T10:51:07.700Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 10:51:07 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"141","connection":"keep-alive","set-cookie":["zalb_46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","JSESSIONID=7E01148FD648907CCC43F1DF89875AD3; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-07-05T10:51:07.700Z] : Response Body : {"status":"failure","data":{"error_code":"MORE_THAN_MAX_LENGTH","message":"Please check if the length of the input is in the correct range"}}
+
+[debug] [2024-07-05T10:51:07.703Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the length of the input is in the correct range
+[debug] [2024-07-05T10:57:42.096Z] : 
+[debug] [2024-07-05T10:57:42.098Z] : ----------------------------------------------------------------------
+[debug] [2024-07-05T10:57:42.099Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-07-05T10:57:42.099Z] : CLI Version:  1.17.5
+[debug] [2024-07-05T10:57:42.099Z] : Platform:     win32
+[debug] [2024-07-05T10:57:42.100Z] : Node Version: v20.14.0
+[debug] [2024-07-05T10:57:42.100Z] : Time:         Fri Jul 05 2024 16:27:42 GMT+0530 (India Standard Time)
+[debug] [2024-07-05T10:57:42.100Z] : ----------------------------------------------------------------------
+[debug] [2024-07-05T10:57:42.101Z] : 
+[debug] [2024-07-05T10:57:43.315Z] : > authorizing via signed-in user option
+[debug] [2024-07-05T10:57:43.316Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute"]
+[debug] [2024-07-05T10:57:43.339Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-07-05T10:57:44.447Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 10:57:44 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=c7714366-9678-4dff-86db-bbce9d2c89be;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=c7714366-9678-4dff-86db-bbce9d2c89be;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-07-05T10:57:44.455Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-07-05T10:57:44.838Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 10:57:44 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=d388b458-b6e8-45f0-9cfe-0c662fb00f56;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=d388b458-b6e8-45f0-9cfe-0c662fb00f56;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-07-05T10:57:45.397Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-07-05T10:57:45.870Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 10:57:45 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=00fd3a8cbff58bc9307e4ac5869875ce; Path=/","ZD_CSRF_TOKEN=6461d0ec-dd70-41c3-86d8-548301cccd03;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=6461d0ec-dd70-41c3-86d8-548301cccd03;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-07-05T10:57:45.875Z] : unknown eol undefined hence skipping check
+[debug] [2024-07-05T10:57:45.875Z] : unknown eol undefined hence skipping check
+[info] [2024-07-05T10:57:51.100Z] : [react-plugin]: Starting the development server...
+
+[info] [2024-07-05T10:57:51.103Z] : 
+[info] [2024-07-05T10:57:51.104Z] : i Client[react-app]: Plugin : "zcatalyst-cli-plugin-react" is used for client serve
+[info] [2024-07-05T10:57:51.104Z] : 
+[info] [2024-07-05T10:57:53.289Z] : 
+[info] [2024-07-05T10:57:53.290Z] :  >>>>>>>>>>>>>> BasicIO <<<<<<<<<<<<<< 
+[info] [2024-07-05T10:57:53.290Z] : i authbasicio: http://localhost:3000/server/authbasicio/execute
+[info] [2024-07-05T10:57:53.290Z] : 
+[info] [2024-07-05T10:57:53.290Z] : 
+[info] [2024-07-05T10:57:53.291Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-07-05T10:57:53.291Z] : i waterheater_1_function: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-07-05T10:57:53.292Z] : 
+[info] [2024-07-05T10:57:53.292Z] : 
+[info] [2024-07-05T10:57:53.293Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2024-07-05T10:57:53.293Z] : i client[react-app]: http://localhost:3000/app/
+[info] [2024-07-05T10:57:53.293Z] : 
+[info] [2024-07-05T10:57:58.163Z] : [react-plugin]: Compiled successfully!
+[info] [2024-07-05T10:57:58.164Z] : [react-plugin]: 
+[info] [2024-07-05T10:57:58.165Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-07-05T10:57:58.165Z] : [react-plugin]: 
+[info] [2024-07-05T10:57:58.165Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-07-05T10:57:58.166Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-07-05T10:57:58.166Z] : [react-plugin]: 
+[info] [2024-07-05T10:57:58.166Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-07-05T10:57:58.166Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-07-05T10:57:58.167Z] : [react-plugin]: 
+[info] [2024-07-05T11:02:32.459Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T11:02:38.203Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T11:02:38.204Z] : [react-plugin]: [eslint] 
+src\components\Views\TechnicianView.jsx
+  Line 430:6:   React Hook useEffect has a missing dependency: 'email'. Either include it or remove the dependency array                                                                                         react-hooks/exhaustive-deps
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T11:02:38.204Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T11:02:38.205Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T11:04:57.946Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T11:05:00.799Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T11:05:00.800Z] : [react-plugin]: [eslint] 
+src\components\Views\TechnicianView.jsx
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T11:05:00.800Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T11:05:00.800Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T11:09:34.085Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T11:09:37.042Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T11:09:37.044Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 540:42:  'SettingOutlined' is defined but never used       no-unused-vars
+  Line 545:8:   'ViewLogs' is defined but never used              no-unused-vars
+  Line 546:8:   'ViewFeedback' is defined but never used          no-unused-vars
+  Line 547:8:   'ViewProblem' is defined but never used           no-unused-vars
+  Line 556:8:   'FeedbackForm' is defined but never used          no-unused-vars
+  Line 557:8:   'ProblemStatement' is defined but never used      no-unused-vars
+  Line 574:10:  'userDetails' is assigned a value but never used  no-unused-vars
+
+src\components\Views\TechnicianView.jsx
+  Line 484:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 553:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T11:09:37.045Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T11:09:37.046Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[debug] [2024-07-05T11:09:37.370Z] : > refreshing access token <
+[debug] [2024-07-05T11:09:37.374Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2024-07-05T11:09:38.702Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 05 Jul 2024 11:09:38 GMT","content-type":"application/json;charset=UTF-8","content-length":"1945","connection":"keep-alive","set-cookie":["zalb_b266a5bf57=a711b6da0e6cbadb5e254290f114a026; Path=/","iamcsr=5905a3eb-d090-4a3e-97a1-1e12d6362165;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=5905a3eb-d090-4a3e-97a1-1e12d6362165;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","pragma":"no-cache","x-frame-options":"SAMEORIGIN","vary":"accept-encoding","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[info] [2024-07-05T11:10:45.746Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T11:10:48.201Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T11:10:48.202Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 540:42:  'SettingOutlined' is defined but never used       no-unused-vars
+  Line 545:8:   'ViewLogs' is defined but never used              no-unused-vars
+  Line 546:8:   'ViewFeedback' is defined but never used          no-unused-vars
+  Line 547:8:   'ViewProblem' is defined but never used           no-unused-vars
+  Line 556:8:   'FeedbackForm' is defined but never used          no-unused-vars
+  Line 557:8:   'ProblemStatement' is defined but never used      no-unused-vars
+  Line 574:10:  'userDetails' is assigned a value but never used  no-unused-vars
+
+src\components\Views\TechnicianView.jsx
+  Line 723:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 791:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T11:10:48.202Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T11:10:48.203Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T11:15:56.689Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T11:15:59.113Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T11:15:59.114Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 540:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 545:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 546:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 547:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 556:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 557:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\TechnicianView.jsx
+  Line 723:9:   'handleViewImage' is assigned a value but never used                                                                                                                                             no-unused-vars
+  Line 791:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T11:15:59.115Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T11:15:59.116Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T11:18:10.362Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T11:18:12.831Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T11:18:12.832Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 540:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 545:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 546:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 547:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 556:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 557:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T11:18:12.832Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T11:18:12.835Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T11:24:17.809Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T11:24:20.500Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T11:24:20.501Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 825:42:  'SettingOutlined' is defined but never used       no-unused-vars
+  Line 830:8:   'ViewLogs' is defined but never used              no-unused-vars
+  Line 831:8:   'ViewFeedback' is defined but never used          no-unused-vars
+  Line 832:8:   'ViewProblem' is defined but never used           no-unused-vars
+  Line 841:8:   'FeedbackForm' is defined but never used          no-unused-vars
+  Line 842:8:   'ProblemStatement' is defined but never used      no-unused-vars
+  Line 859:10:  'userDetails' is assigned a value but never used  no-unused-vars
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T11:24:20.503Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T11:24:20.504Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T11:25:20.508Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T11:25:22.875Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T11:25:22.876Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 825:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 830:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 831:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 832:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 841:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 842:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T11:25:22.876Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T11:25:22.878Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T11:33:32.716Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T11:33:35.640Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T11:33:35.641Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1114:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 1119:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 1120:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 1121:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 1130:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 1131:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T11:33:35.641Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T11:33:35.642Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T11:34:46.589Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T11:34:49.310Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T11:34:49.311Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 825:42:  'SettingOutlined' is defined but never used   no-unused-vars
+  Line 830:8:   'ViewLogs' is defined but never used          no-unused-vars
+  Line 831:8:   'ViewFeedback' is defined but never used      no-unused-vars
+  Line 832:8:   'ViewProblem' is defined but never used       no-unused-vars
+  Line 841:8:   'FeedbackForm' is defined but never used      no-unused-vars
+  Line 842:8:   'ProblemStatement' is defined but never used  no-unused-vars
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T11:34:49.311Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T11:34:49.313Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T11:46:01.033Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T11:46:03.540Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T11:46:03.542Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1112:42:  'SettingOutlined' is defined but never used                                                                                                                                            no-unused-vars
+  Line 1117:8:   'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1118:8:   'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1119:8:   'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1128:8:   'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1129:8:   'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1211:6:   React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1225:6:   React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T11:46:03.543Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T11:46:03.544Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T11:54:08.190Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T11:54:10.035Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T11:54:10.038Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1112:42:  'SettingOutlined' is defined but never used                                                                                                                                            no-unused-vars
+  Line 1117:8:   'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1118:8:   'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1119:8:   'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1128:8:   'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1129:8:   'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1147:10:  'current' is assigned a value but never used                                                                                                                                           no-unused-vars
+  Line 1211:6:   React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1225:6:   React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T11:54:10.039Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T11:54:10.039Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T11:54:34.407Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T11:54:36.608Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T11:54:36.611Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1112:42:  'SettingOutlined' is defined but never used                                                                                                                                            no-unused-vars
+  Line 1117:8:   'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1118:8:   'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1119:8:   'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1128:8:   'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1129:8:   'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1211:6:   React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1225:6:   React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T11:54:36.613Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T11:54:36.615Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T11:55:31.778Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T11:55:34.264Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T11:55:34.267Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1403:42:  'SettingOutlined' is defined but never used                                                                                                                                            no-unused-vars
+  Line 1408:8:   'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1409:8:   'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1410:8:   'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1419:8:   'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1420:8:   'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1502:6:   React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1516:6:   React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T11:55:34.268Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T11:55:34.269Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T11:56:19.383Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T11:56:21.316Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T11:56:21.318Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1112:42:  'SettingOutlined' is defined but never used                                                                                                                                            no-unused-vars
+  Line 1117:8:   'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1118:8:   'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1119:8:   'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1128:8:   'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1129:8:   'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1211:6:   React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1225:6:   React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T11:56:21.319Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T11:56:21.320Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T12:00:47.104Z] : [react-plugin]: Compiling...
+[info] [2024-07-05T12:00:49.958Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-07-05T12:00:49.961Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1513:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1527:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-07-05T12:00:49.963Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-07-05T12:00:49.965Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-07-05T12:01:52.756Z] : Shutting down server
+[info] [2024-07-05T12:01:53.089Z] : 
+[info] [2024-07-05T12:01:53.090Z] : √ Shutdown complete
+[debug] [2024-07-05T12:01:53.091Z] : NO ERRORS REGISTERED
+[debug] [2024-07-05T12:01:53.092Z] : EXEC ENDED with event: serve, message: success
+[debug] [2024-07-05T12:01:53.092Z] : TOTAL DURATION OF COMMAND EXEC : 3849801
+[debug] [2024-07-05T12:01:53.134Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-07-05T12:07:44.573Z] : Unable to send debug log to server: API Error: read ECONNRESET

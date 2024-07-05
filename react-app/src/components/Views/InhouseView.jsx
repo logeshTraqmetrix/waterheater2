@@ -658,7 +658,7 @@ const InhouseView = () => {
                       <td>{ticket.ticket_table.Customer_Phone}</td>
                       <td>{ticket.ticket_table.Scheduled_Date}</td>
                       <td>
-                        <Dropdown>
+                        <Dropdown  drop={'start'}>
                           <Dropdown.Toggle variant="primary" id="dropdown-basic"></Dropdown.Toggle>
                           <Dropdown.Menu>
                             <Dropdown.Item onClick={() => handleViewTicket(ticket.ticket_table)}>View</Dropdown.Item>

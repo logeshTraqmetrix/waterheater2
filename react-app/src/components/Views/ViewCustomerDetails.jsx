@@ -2166,16 +2166,18 @@ const ViewCustomerDetails = () => {
   };
 
   const ActionDropdown = ({ customer }) => (
-    <Dropdown>
+    <Dropdown drop={'start'}>
       <Dropdown.Toggle variant="primary" id="dropdown-basic">
       </Dropdown.Toggle>
-      <Dropdown.Menu>
+      <Dropdown.Menu >
         <Dropdown.Item onClick={() => handleViewCustomer(customer)}>View</Dropdown.Item>
         <Dropdown.Item onClick={() => handleEditCustomer(customer)}>Edit</Dropdown.Item>
         <Dropdown.Item onClick={() => confirmDeleteCustomer(customer)}>Delete</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );
+
+  
 
   const handleViewCustomer = (customer) => {
     setSelectedCustomer(customer);
@@ -2280,7 +2282,7 @@ const ViewCustomerDetails = () => {
   );
 
   return (  
-    <div className='container'>
+    <div className='container' >
       {loading ? (
         <div className="d-flex justify-content-center align-items-center" style={{ height: '94vh' }}>
           <HashLoader color="#2080c2" />
@@ -2296,8 +2298,8 @@ const ViewCustomerDetails = () => {
             <FilterDropDown />
           </div>
 
-          <div className="table-responsive">
-            <Table striped bordered hover>
+          <div className="table-responsive"  >
+            <Table striped bordered hover >
               <thead>
                 <tr>
                   <th>Name</th>

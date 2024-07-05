@@ -132,7 +132,7 @@ const ViewScrap = () => {
   }, []);
 
   const ActionDropdown = (scrap) => (
-    <Dropdown>
+    <Dropdown  drop={'start'}>
       <Dropdown.Toggle variant="primary" id="dropdown-basic">
       </Dropdown.Toggle>
 

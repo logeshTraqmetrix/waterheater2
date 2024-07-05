@@ -5,7 +5,7 @@ module.exports = (context, basicIO) => {
     .userManagement()
     .getSignupValidationRequest(basicIO);
   if (requestDetails) {
-    if (requestDetails.user_details.email_id.includes("@traqmetrix.com")) {
+    if (requestDetails.user_details.email_id.includes("@traqmetrix.com") || requestDetails.user_details.email_id.includes("@gmail.com")) {
       // The actions that occur in the event of a successful authentication can be customized
       basicIO.write(
         JSON.stringify({
