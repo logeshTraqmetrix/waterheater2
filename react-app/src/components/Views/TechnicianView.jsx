@@ -563,7 +563,7 @@ const TechnicianView = ({ roleEmail }) => {
 
   return (
     <div className="container">
-      <h2>Technician View</h2>
+     
       {loading ? (
         <div className="d-flex justify-content-center mt-5">
           <HashLoader color={'#36D7B7'} loading={loading} size={50} />
@@ -571,7 +571,7 @@ const TechnicianView = ({ roleEmail }) => {
         </div>
       ) : !showInvoiceForm ? (
         <>
-        <h2>Tedhnician Details</h2>
+         <h2>Technician View</h2>
           <div className="table-responsive">
             <Table striped bordered hover>
               <thead>
@@ -615,7 +615,7 @@ const TechnicianView = ({ roleEmail }) => {
           </Button>
           <InvoiceForm
             ticketId={selectedTicket?.Ticket_Id}
-            customerName={selectedTicket?.Customer_Name}
+            customerName5={selectedTicket?.Customer_Name}
             customerAddress={selectedTicket?.Customer_Address}
             RowId={selectedTicket?.ROWID}
             onSubmit={handleSubmitInvoice}

@@ -598,6 +598,7 @@ const ViewProduct = () => {
   const [showFilterModal, setShowFilterModal] = useState(false);
   const [filterValue, setFilterValue] = useState('');
   const [loading, setLoading] = useState(false);
+  const [removeFilter,setRemoveFilter] = useState('')
   const [editFormData, setEditFormData] = useState({
     ROWID: '',
     Product_Name: '',
@@ -609,7 +610,7 @@ const ViewProduct = () => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [removeFilter]);
 
   const fetchData = (value = '') => {
     setLoading(true);
@@ -689,6 +690,17 @@ const ViewProduct = () => {
   };
 
   const handleEditSubmit = () => {
+    if (
+      editFormData.Product_Name === '' ||
+      editFormData.Variant === '' ||
+      editFormData.Remarks === '' ||
+      editFormData.Warranty_Month === '' ||
+      editFormData.Warranty_Details === ''
+    ) {
+      Swal.fire('Error!', 'Please fill out all fields.', 'error');
+      return;
+    }
+    
     console.log('editFormData', editFormData);
     axios
       .put('/server/waterheater_1_function/updateproduct', {
@@ -747,6 +759,7 @@ const ViewProduct = () => {
   const FilterDropDown = () => (
     <DropdownButton id="dropdown-basic-button" title={<FaFilter />}>
       <Dropdown.Item onClick={() => setShowFilterModal(true)}>Product Name</Dropdown.Item>
+      <Dropdown.Item onClick={() => setRemoveFilter()}>Remove Filter</Dropdown.Item>
     </DropdownButton>
   );
 

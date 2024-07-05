@@ -760,7 +760,6 @@ const ViewTicket = () => {
         <Dropdown.Item onClick={() => handleFilterSelect('Moved to Inhouse')}>Moved to Inhouse</Dropdown.Item>
         <Dropdown.Item onClick={() => handleFilterSelect('Ready for Dispatch')}>Ready for Dispatch</Dropdown.Item>
         <Dropdown.Item onClick={() => handleFilterSelect('Assigned for Dispatch')}>Assigned for Dispatch</Dropdown.Item>
-        <Dropdown.Item onClick={() => handleFilterSelect('Closed')}>Closed</Dropdown.Item>
       </DropdownButton>
     );
   };

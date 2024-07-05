@@ -1242,6 +1242,77 @@ app.get('/getfilterspates', (req, res) => {
 
 //-----------------------------------------------------------------------------//
 
+
+app.get('/getallclosedtickets', (req, res) => {
+	var catalystApp = catalyst.initialize(req);
+	const limit = parseInt(req.query.limit) || 10;
+	const offset = parseInt(req.query.offset) || 0;
+	const status = req.query.status || 'Closed';
+  
+	getDataFromCatalystDataStore01(catalystApp, limit, offset, status)
+	  .then(detail => {
+		res.send(detail);
+	  })
+	  .catch(err => {
+		console.log(err, "error in getting data");
+		res.status(500).send(err);
+	  });
+  });
+
+  function getDataFromCatalystDataStore01(catalystApp, limit, offset, status) {
+	return new Promise((resolve, reject) => {
+	  const query = `SELECT * FROM ticket_table WHERE Status = 'Closed' LIMIT ${limit} OFFSET ${offset}`;
+	  const countQuery = `SELECT COUNT(ROWID) FROM ticket_table WHERE Status = 'Closed'`;
+  
+	  Promise.all([
+		catalystApp.zcql().executeZCQLQuery(query),
+		catalystApp.zcql().executeZCQLQuery(countQuery)
+	  ]).then(([queryResponse, countResponse]) => {
+		const totalRecords = countResponse[0].ticket_table.ROWID;
+		resolve({ records: queryResponse, total: totalRecords });
+	  }).catch(err => {
+		console.log(err);
+		reject(err);
+	  });
+	});
+  }
+
+
+  
+  app.get('/getfilterclosedticket', (req, res) => {
+	let search1 = req.query.search;
+	let search = JSON.parse(search1);
+	var catalystApp = catalyst.initialize(req);
+	getDataFromCatalystDataStore02(catalystApp, search.table, search.column, search.value)
+	  .then(detail => {
+		res.send(detail);
+	  })
+	  .catch((err) => {
+		console.log(err, "error in getting data from filter condition");
+		res.status(500).send(err);
+	  });
+  });
+  
+ 
+  
+  function getDataFromCatalystDataStore02(catalystApp, table, column, value) {
+	return new Promise((resolve, reject) => {
+	  let query = `SELECT * FROM ${table} WHERE ${column} = '${value}' AND Status = 'Closed'`;
+	  catalystApp.zcql().executeZCQLQuery(query)
+		.then(queryResponse => {
+		  resolve(queryResponse);
+		})
+		.catch(err => {
+		  console.log(err);
+		  reject(err);
+		});
+	});
+  }
+
+
+//-----------------------------------------------------------------------------//
+
+
 app.get('/getuser', (req, res) => {
 	var catalystApp = catalyst.initialize(req);
 

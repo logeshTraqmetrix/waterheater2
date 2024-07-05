@@ -893,6 +893,7 @@ const ViewSpares = () => {
   const [showEditModal, setShowEditModal] = useState(false);
   const [showFilterModal, setShowFilterModal] = useState(false);
   const [filterValue, setFilterValue] = useState('');
+  const [removeFilter,setRemoveFilter] = useState('')
   const [editFormData, setEditFormData] = useState({
     ROWID: '',
     Material_Name: '',
@@ -909,7 +910,7 @@ const ViewSpares = () => {
 
   useEffect(() => {
     fetchData();
-  }, [currentPage]);
+  }, [currentPage,removeFilter]);
 
   const fetchData = (value = '') => {
     setLoading(true);
@@ -1001,6 +1002,17 @@ const ViewSpares = () => {
   };
 
   const handleEditSubmit = () => {
+    if (
+      editFormData.Material_Name === '' ||
+      editFormData.Warranty === '' ||
+      editFormData.Price === '' ||
+      editFormData.Available_Qty === '' ||
+      editFormData.Inward_Qty === ''
+    ) {
+      Swal.fire('Error!', 'Please fill out all fields.', 'error');
+      return;
+    }
+
     console.log('editFormData', editFormData);
     axios
       .put('/server/waterheater_1_function/updatespares', {
@@ -1024,6 +1036,7 @@ const ViewSpares = () => {
   const FilterDropDown = () => (
     <DropdownButton id="dropdown-basic-button" title={<FaFilter/>}>
       <Dropdown.Item onClick={() => setShowFilterModal(true)}>Material Name</Dropdown.Item>
+      <Dropdown.Item onClick={() => setRemoveFilter()}>Remove Filter</Dropdown.Item>
     </DropdownButton>
   );
 
@@ -1175,7 +1188,7 @@ const ViewSpares = () => {
                 onChange={handleEditInputChange}
               />
             </Form.Group>
-            <Form.Group controlId="formConsumedQty">
+            {/* <Form.Group controlId="formConsumedQty">
               <Form.Label>Consumed Qty</Form.Label>
               <Form.Control
                 type="text"
@@ -1184,7 +1197,7 @@ const ViewSpares = () => {
                 value={editFormData.Consumed_Qty}
                 onChange={handleEditInputChange}
               />
-            </Form.Group>
+            </Form.Group> */}
             <Form.Group controlId="formPrice">
               <Form.Label>Price</Form.Label>
               <Form.Control
@@ -1198,7 +1211,7 @@ const ViewSpares = () => {
             <Form.Group controlId="formAvailableQty">
               <Form.Label>Available Qty</Form.Label>
               <Form.Control
-                type="text"
+                type="number"
                 placeholder="Enter available qty"
                 name="Available_Qty"
                 value={editFormData.Available_Qty}
@@ -1208,7 +1221,7 @@ const ViewSpares = () => {
             <Form.Group controlId="formInwardQty">
               <Form.Label>Inward Qty</Form.Label>
               <Form.Control
-                type="text"
+                type="number"
                 placeholder="Enter inward qty"
                 name="Inward_Qty"
                 value={editFormData.Inward_Qty}

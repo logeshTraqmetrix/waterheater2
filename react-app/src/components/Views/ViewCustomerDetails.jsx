@@ -2095,6 +2095,7 @@ import axios from 'axios';
 import { FaFilter } from "react-icons/fa6";
 import HashLoader from 'react-spinners/HashLoader';
 import '../../App.css'
+import Swal from 'sweetalert2';
 
 const ViewCustomerDetails = () => {
   const [data, setData] = useState([]);
@@ -2116,10 +2117,11 @@ const ViewCustomerDetails = () => {
   const [pageSize] = useState(10); // Number of records per page
   const [totalRecords, setTotalRecords] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [removeFilter,setRemoveFilter] = useState('')
 
   useEffect(() => {
     fetchData();
-  }, [currentPage]); // Fetch data when currentPage changes
+  }, [currentPage,removeFilter]); // Fetch data when currentPage changes
 
   const fetchData = (column = '', value = '') => {
     setLoading(true); // Show spinner while fetching data
@@ -2227,29 +2229,42 @@ const ViewCustomerDetails = () => {
   };
 
   const confirmDeleteCustomer = (customer) => {
-    const confirmDelete = window.confirm('Are you sure you want to delete this customer?');
-    if (confirmDelete) {
-      setLoading(true); // Show spinner while deleting data
-      let payload = {
-        data: {
-          ROWID: customer.ROWID
-        }
-      };
-      axios
-        .delete('/server/waterheater_1_function/deletecustomer', {
-          data: payload
-        })
-        .then((res) => {
-          console.log('Customer deleted successfully');
-          fetchData(); // Fetch updated data after delete
-        })
-        .catch((err) => {
-          console.error('Error deleting customer', err);
-        })
-        .finally(() => {
-          setLoading(false); // Hide spinner after deleting data
-        });
-    }
+    // const confirmDelete = window.confirm('Are you sure you want to delete this customer?');
+
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'You will not be able to recover this technician!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        setLoading(true); // Show spinner while deleting data
+        let payload = {
+          data: {
+            ROWID: customer.ROWID
+          }
+        };
+        axios
+          .delete('/server/waterheater_1_function/deletecustomer', {
+            data: payload
+          })
+          .then((res) => {
+            console.log('Customer deleted successfully');
+            fetchData(); // Fetch updated data after delete
+          })
+          .catch((err) => {
+            console.error('Error deleting customer', err);
+          })
+          .finally(() => {
+            setLoading(false); // Hide spinner after deleting data
+          });
+      }
+    });
+
+   
   };
 
   const handlePageChange = (page) => {
@@ -2260,10 +2275,11 @@ const ViewCustomerDetails = () => {
     <DropdownButton id="dropdown-basic-button" title={<FaFilter />}>
       <Dropdown.Item onClick={() => { setFilterColumn('Customer_Name'); setShowFilterModal(true); }}>Name</Dropdown.Item>
       <Dropdown.Item onClick={() => { setFilterColumn('Customer_Phone'); setShowFilterModal(true); }}>Phone Number</Dropdown.Item>
+      <Dropdown.Item onClick={()=>{setRemoveFilter()}}>Remove Filter</Dropdown.Item>
     </DropdownButton>
   );
 
-  return (
+  return (  
     <div className='container'>
       {loading ? (
         <div className="d-flex justify-content-center align-items-center" style={{ height: '94vh' }}>

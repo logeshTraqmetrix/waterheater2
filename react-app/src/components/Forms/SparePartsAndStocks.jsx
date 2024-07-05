@@ -104,7 +104,7 @@ const SparePartsAndStocks = () => {
         <Form.Group controlId="formAvailableQty">
           <Form.Label>Available Qty</Form.Label>
           <Form.Control
-            type="text"
+            type="number"
             placeholder="Enter available quantity"
             name="Available_Qty"
             value={formData.Available_Qty}
@@ -112,7 +112,7 @@ const SparePartsAndStocks = () => {
           />
         </Form.Group>
 
-        <Form.Group controlId="formUsedQtySoFar">
+        {/* <Form.Group controlId="formUsedQtySoFar">
           <Form.Label>Used Qty So Far</Form.Label>
           <Form.Control
             type="text"
@@ -121,12 +121,12 @@ const SparePartsAndStocks = () => {
             value={formData.Consumed_Qty}
             onChange={handleChange}
           />
-        </Form.Group>
+        </Form.Group> */}
 
         <Form.Group controlId="formInwardQty">
           <Form.Label>Inward Qty</Form.Label>
           <Form.Control
-            type="text"
+            type="number"
             placeholder="Enter inward quantity"
             name="Inward_Qty"
             value={formData.Inward_Qty}

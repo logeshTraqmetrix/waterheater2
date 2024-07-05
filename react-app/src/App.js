@@ -4592,6 +4592,7 @@ import DispatchView from './components/Views/DispatchView';
 import InhouseView from './components/Views/InhouseView';
 import Home from './components/Views/Home';
 import Dashboard from './components/Views/Dashboard';
+import ViewClosedTicket from './components/Views/ViewClosedTicket';
 
 const App = () => {
   const [userRole, setUserRole] = useState('');
@@ -4634,7 +4635,9 @@ const App = () => {
     { key: 'v6', label: 'View Spares', path: 'view-spares', component: ViewSpares },
     { key: 'v7', label: 'View Scrap', path: 'view-scrap', component: ViewScrap },
     { key: 'v8', label: 'View List of Spares', path: 'view-list-of-spares', component: ViewListOfSpares },
-    { key: 'v9', label: 'Inhouse View', path: 'inhouse-view', component: InhouseView },
+    { key: 'v9', label: 'View Closed Ticket', path: 'view-closed-ticket', component:  ViewClosedTicket},
+    { key: 'dashboard', label: 'Dashboard', path: 'dashboard', component: Dashboard },
+    // { key: 'v9', label: 'Inhouse View', path: 'inhouse-view', component: InhouseView },
     // { key: 'v10', label: 'Invoice Form', path: 'invoice-form', component: InvoiceForm },
   ];
 
@@ -4652,7 +4655,6 @@ const App = () => {
   const commonItems = [
     { key: 'home', label: 'Home', path: 'home', component: Home },
     { key: 'login', label: 'Login Details', path: 'login-details', component: () => <LoginDetails userDetails={userDetails}/> },
-    { key: 'dashboard', label: 'Dashboard', path: 'dashboard', component: Dashboard },
   ];
 
   const onClick = (key, path) => {

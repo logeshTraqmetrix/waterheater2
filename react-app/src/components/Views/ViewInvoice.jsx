@@ -465,10 +465,11 @@ const ViewInvoice = () => {
   const [pageSize] = useState(10);
   const [totalRecords, setTotalRecords] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [ removeFilter,setRemoveFilter] = useState('')
 
   useEffect(() => {
     fetchData();
-  }, [currentPage]);
+  }, [currentPage, removeFilter]);
 
   const fetchData = (column = '', value = '') => {
     setLoading(true);
@@ -543,6 +544,7 @@ const ViewInvoice = () => {
     <DropdownButton id="dropdown-basic-button" title={<FaFilter/>}>
       <Dropdown.Item onClick={() => { setFilterColumn('Ticket_Id'); setShowFilterModal(true); }}>Ticket ID</Dropdown.Item>
       <Dropdown.Item onClick={() => { setFilterColumn('Invoice_Number'); setShowFilterModal(true); }}>Invoice Number</Dropdown.Item>
+      <Dropdown.Item onClick={() => setRemoveFilter()}>Remove Filter</Dropdown.Item>
     </DropdownButton>
   );
 

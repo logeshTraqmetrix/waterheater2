@@ -342,6 +342,18 @@ const ViewTechnicianDetails = () => {
   };
 
   const handleEditSubmit = () => {
+
+    if (
+      editFormData.Technician_Name === '' ||
+      editFormData.Technician_Phone === '' ||
+      editFormData.Technician_Address === '' ||
+      editFormData.Technician_Email === '' ||
+      editFormData.Technician_Whatsapp === ''
+    ) {
+      Swal.fire('Error!', 'Please fill out all fields.', 'error');
+      return;
+    }
+    
     axios
       .put('/server/waterheater_1_function/updatetechnician', {
         data: editFormData
@@ -468,6 +480,7 @@ const ViewTechnicianDetails = () => {
                 name="Technician_Name"
                 value={editFormData.Technician_Name}
                 onChange={handleEditInputChange}
+                required
               />
             </Form.Group>
             <Form.Group controlId="formTechnicianPhone">
@@ -478,6 +491,7 @@ const ViewTechnicianDetails = () => {
                 name="Technician_Phone"
                 value={editFormData.Technician_Phone}
                 onChange={handleEditInputChange}
+                required
               />
             </Form.Group>
             <Form.Group controlId="formTechnicianAddress">
@@ -488,6 +502,7 @@ const ViewTechnicianDetails = () => {
                 name="Technician_Address"
                 value={editFormData.Technician_Address}
                 onChange={handleEditInputChange}
+                required
               />
             </Form.Group>
             <Form.Group controlId="formTechnicianEmail">
@@ -498,6 +513,7 @@ const ViewTechnicianDetails = () => {
                 name="Technician_Email"
                 value={editFormData.Technician_Email}
                 onChange={handleEditInputChange}
+                required
               />
             </Form.Group>
             <Form.Group controlId="formTechnicianWhatsapp">
@@ -508,6 +524,7 @@ const ViewTechnicianDetails = () => {
                 name="Technician_Whatsapp"
                 value={editFormData.Technician_Whatsapp}
                 onChange={handleEditInputChange}
+                
               />
             </Form.Group>
           </Form>
