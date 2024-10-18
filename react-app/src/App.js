@@ -1440,6 +1440,7 @@ import InhouseView from './components/Views/InhouseView';
 import Home from './components/Views/Home';
 import Dashboard from './components/Views/Dashboard';
 import ViewClosedTicket from './components/Views/ViewClosedTicket';
+import ProductIssue from './components/Forms/ProductIssue';
 
 const App = () => {
   const [userRole, setUserRole] = useState('');
@@ -1473,6 +1474,7 @@ const App = () => {
     { key: 'f3', label: 'Product Master', path: 'product-master', component: ProductMaster },
     { key: 'f4', label: 'Spare Parts and Stocks', path: 'spare-parts-stocks', component: SparePartsAndStocks },
     { key: 'f5', label: 'Ticket Creation', path: 'ticket-creation', component: TicketCreation },
+    { key: 'f6', label: 'Product Issue', path: 'product-issue', component:  ProductIssue},
   ];
 
   const viewsItems = [
@@ -1533,72 +1535,7 @@ const App = () => {
     setDrawerOpen(open);
   };
 
-  // const getMenuItems = () => {
-  //   let items = [];
-  //   if (userRole === 'App Administrator') {
-  //     items = [
-  //       ...commonItems.map(item => ({
-  //         key: item.key,
-  //         label: item.label,
-  //         path: item.path,
-  //       })),
-  //       {
-  //         key: 'sub1',
-  //         label: 'Forms',
-  //         icon: <MailOutlined />,
-  //         children: formsItems.map(item => ({
-  //           key: item.key,
-  //           label: item.label,
-  //           path: item.path,
-  //         })),
-  //       },
-  //       {
-  //         key: 'sub2',
-  //         label: 'Views',
-  //         icon: <AppstoreOutlined />,
-  //         children: viewsItems.map(item => ({
-  //           key: item.key,
-  //           label: item.label,
-  //           path: item.path,
-  //         })),
-  //       },
-  //     ];
-  //   } else if (userRole === 'Technician') {
-  //     items = [
-  //       ...technicianItems.map(item => ({
-  //         key: item.key,
-  //         label: item.label,
-  //         path: item.path,
-  //       })),
-  //       ...commonItems.map(item => ({
-  //         key: item.key,
-  //         label: item.label,
-  //         path: item.path,
-  //       })),
-  //     ];
-  //   } else if (userRole === 'Inhouse') {
-  //     items = [
-  //       ...inhouseItems.map(item => ({
-  //         key: item.key,
-  //         label: item.label,
-  //         path: item.path,
-  //       })),
-  //       ...commonItems.map(item => ({
-  //         key: item.key,
-  //         label: item.label,
-  //         path: item.path,
-  //       })),
-  //     ];
-  //   } else {
-  //     items = commonItems.map(item => ({
-  //       key: item.key,
-  //       label: item.label,
-  //       path: item.path,
-  //     }));
-  //   }
-  //   return items;
-  // };
-
+  
   const getMenuItems = () => {
     let items = [];
     const dashboardItem = viewsItems.find(item => item.key === 'dashboard');
