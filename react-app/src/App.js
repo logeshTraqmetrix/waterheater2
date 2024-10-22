@@ -1441,6 +1441,7 @@ import Home from './components/Views/Home';
 import Dashboard from './components/Views/Dashboard';
 import ViewClosedTicket from './components/Views/ViewClosedTicket';
 import ProductIssue from './components/Forms/ProductIssue';
+import InwardForm from './components/Forms/InwardForm';
 
 const App = () => {
   const [userRole, setUserRole] = useState('');
@@ -1474,7 +1475,9 @@ const App = () => {
     { key: 'f3', label: 'Product Master', path: 'product-master', component: ProductMaster },
     { key: 'f4', label: 'Spare Parts and Stocks', path: 'spare-parts-stocks', component: SparePartsAndStocks },
     { key: 'f5', label: 'Ticket Creation', path: 'ticket-creation', component: TicketCreation },
-    { key: 'f6', label: 'Product Issue', path: 'product-issue', component:  ProductIssue},
+    { key: 'f6', label: 'Inward Form', path: 'Inward', component:  InwardForm},
+    { key: 'f7', label: 'Product Issue', path: 'product-issue', component:  ProductIssue},
+
   ];
 
   const viewsItems = [

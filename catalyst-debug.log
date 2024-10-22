@@ -2263,3 +2263,1276 @@ Response Headers: {"server":"ZGS","date":"Tue, 22 Oct 2024 08:54:16 GMT","conten
 [debug] [2024-10-22T08:54:13.581Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
 
 [debug] [2024-10-22T08:54:13.589Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2024-10-22T09:14:24.100Z] : 
+[debug] [2024-10-22T09:14:24.101Z] : ----------------------------------------------------------------------
+[debug] [2024-10-22T09:14:24.102Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-10-22T09:14:24.102Z] : CLI Version:  1.17.6
+[debug] [2024-10-22T09:14:24.102Z] : Platform:     win32
+[debug] [2024-10-22T09:14:24.103Z] : Node Version: v20.14.0
+[debug] [2024-10-22T09:14:24.103Z] : Time:         Tue Oct 22 2024 14:44:24 GMT+0530 (India Standard Time)
+[debug] [2024-10-22T09:14:24.103Z] : ----------------------------------------------------------------------
+[debug] [2024-10-22T09:14:24.103Z] : 
+[debug] [2024-10-22T09:14:24.985Z] : > authorizing via signed-in user option
+[debug] [2024-10-22T09:14:24.985Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute","ZohoCatalyst.authentication.CREATE"]
+[debug] [2024-10-22T09:14:25.000Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-10-22T09:14:26.166Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Tue, 22 Oct 2024 09:14:28 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=b527bec0-0093-45f5-8b9f-1570a1323d95;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=b527bec0-0093-45f5-8b9f-1570a1323d95;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-22T09:14:26.169Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-10-22T09:14:26.545Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Tue, 22 Oct 2024 09:14:29 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=c3d5ec374d3dc932973a3d50f55d8d00; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=4c4410cf-8ff7-4257-90bc-83f90598edea;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=4c4410cf-8ff7-4257-90bc-83f90598edea;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-22T09:14:26.774Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-10-22T09:14:27.113Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Tue, 22 Oct 2024 09:14:29 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=b14009a6059feb83ee8aa1c715a015c5; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=d529719a-b998-4053-97d8-8eede5d3d04f;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=d529719a-b998-4053-97d8-8eede5d3d04f;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-22T09:14:27.117Z] : unknown eol undefined hence skipping check
+[debug] [2024-10-22T09:14:27.117Z] : unknown eol undefined hence skipping check
+[info] [2024-10-22T09:14:30.630Z] : [react-plugin]: Starting the development server...
+
+[info] [2024-10-22T09:14:30.632Z] : 
+[info] [2024-10-22T09:14:30.633Z] : i Client[react-app]: Plugin : "zcatalyst-cli-plugin-react" is used for client serve
+[info] [2024-10-22T09:14:30.633Z] : 
+[info] [2024-10-22T09:14:32.285Z] : 
+[info] [2024-10-22T09:14:32.286Z] :  >>>>>>>>>>>>>> BasicIO <<<<<<<<<<<<<< 
+[info] [2024-10-22T09:14:32.287Z] : i authbasicio: http://localhost:3000/server/authbasicio/execute
+[info] [2024-10-22T09:14:32.288Z] : 
+[info] [2024-10-22T09:14:32.288Z] : 
+[info] [2024-10-22T09:14:32.288Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-10-22T09:14:32.289Z] : i waterheater_1_function: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-10-22T09:14:32.289Z] : 
+[info] [2024-10-22T09:14:32.289Z] : 
+[info] [2024-10-22T09:14:32.290Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2024-10-22T09:14:32.290Z] : i client[react-app]: http://localhost:3000/app/
+[info] [2024-10-22T09:14:32.291Z] : 
+[info] [2024-10-22T09:14:36.976Z] : [react-plugin]: Compiled successfully!
+[info] [2024-10-22T09:14:36.977Z] : [react-plugin]: 
+[info] [2024-10-22T09:14:36.978Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-10-22T09:14:36.978Z] : [react-plugin]: 
+[info] [2024-10-22T09:14:36.978Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-10-22T09:14:36.978Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-10-22T09:14:36.979Z] : [react-plugin]: 
+[info] [2024-10-22T09:14:36.979Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-10-22T09:14:36.979Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-10-22T09:14:36.979Z] : [react-plugin]: 
+[info] [2024-10-22T09:42:18.844Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T09:42:22.256Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T09:42:22.258Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1444:8:  'InwardForm' is defined but never used                                                                                                                                                 no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-22T09:42:22.259Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T09:42:22.260Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T09:42:55.010Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T09:42:55.842Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T09:42:55.844Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1444:8:  'InwardForm' is defined but never used                                                                                                                                                 no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-22T09:42:55.844Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T09:42:55.845Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T09:45:09.473Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T09:45:11.416Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T09:45:11.417Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-22T09:45:11.418Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T09:45:11.419Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T09:49:10.838Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T09:49:12.437Z] : [react-plugin]: Failed to compile.
+
+[info] [2024-10-22T09:49:12.439Z] : [react-plugin]: [eslint] 
+src\components\Forms\InwardForm.jsx
+  Line 22:70:   'field' is not defined         no-undef
+  Line 22:107:  'handleChange' is not defined  no-undef
+  Line 22:120:  'index' is not defined         no-undef
+  Line 31:76:   'handleChange' is not defined  no-undef
+  Line 31:89:   'index' is not defined         no-undef
+  Line 37:62:   'field' is not defined         no-undef
+  Line 37:91:   'handleChange' is not defined  no-undef
+  Line 37:104:  'index' is not defined         no-undef
+  Line 39:77:   'field' is not defined         no-undef
+  Line 39:110:  'handleChange' is not defined  no-undef
+  Line 39:123:  'index' is not defined         no-undef
+  Line 41:65:   'field' is not defined         no-undef
+  Line 43:64:   'field' is not defined         no-undef
+
+Search for the keywords to learn more about each error.
+[info] [2024-10-22T09:53:07.632Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T09:53:09.153Z] : [react-plugin]: Failed to compile.
+
+[info] [2024-10-22T09:53:09.154Z] : [react-plugin]: [eslint] 
+src\components\Forms\InwardForm.jsx
+  Line 22:70:   'field' is not defined         no-undef
+  Line 22:107:  'handleChange' is not defined  no-undef
+  Line 22:120:  'index' is not defined         no-undef
+  Line 32:62:   'field' is not defined         no-undef
+  Line 32:91:   'handleChange' is not defined  no-undef
+  Line 32:104:  'index' is not defined         no-undef
+  Line 34:77:   'field' is not defined         no-undef
+  Line 34:110:  'handleChange' is not defined  no-undef
+  Line 34:123:  'index' is not defined         no-undef
+
+Search for the keywords to learn more about each error.
+[info] [2024-10-22T09:54:02.439Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T09:54:03.591Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T09:54:03.592Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-22T09:54:03.592Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T09:54:03.593Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T09:55:07.761Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T09:55:09.092Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T09:55:09.094Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 3:10:  'Form' is defined but never used                 no-unused-vars
+  Line 6:12:  'sparesData' is assigned a value but never used  no-unused-vars
+[info] [2024-10-22T09:55:09.143Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T09:55:09.143Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[debug] [2024-10-22T09:55:09.470Z] : > refreshing access token <
+[debug] [2024-10-22T09:55:09.472Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2024-10-22T09:55:10.770Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Tue, 22 Oct 2024 09:55:13 GMT","content-type":"application/json;charset=UTF-8","content-length":"1949","connection":"keep-alive","set-cookie":["zalb_b266a5bf57=a7f15cb1555106de5ac96d088b72e7c8; Path=/; Secure; HttpOnly","iamcsr=ed9370f3-0c32-48ec-ad13-a1b8c8252a27;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=ed9370f3-0c32-48ec-ad13-a1b8c8252a27;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","pragma":"no-cache","x-frame-options":"SAMEORIGIN","vary":"accept-encoding","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[info] [2024-10-22T09:55:16.131Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T09:55:17.156Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T09:55:17.157Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-22T09:55:17.158Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T09:55:17.159Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T09:55:59.363Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T09:56:00.665Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T09:56:00.667Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-22T09:56:00.668Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T09:56:00.668Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T09:56:27.832Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T09:56:29.026Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T09:56:29.027Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-22T09:56:29.028Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T09:56:29.028Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T10:02:22.429Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T10:02:24.014Z] : [react-plugin]: Failed to compile.
+
+[info] [2024-10-22T10:02:24.014Z] : [react-plugin]: [eslint] 
+src\components\Forms\InwardForm.jsx
+  Line 44:65:  'removeField' is not defined          no-undef
+  Line 45:30:  'CloseCircleOutlined' is not defined  react/jsx-no-undef
+  Line 50:48:  'addField' is not defined             no-undef
+  Line 51:18:  'PlusCircleOutlined' is not defined   react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+[info] [2024-10-22T10:02:47.688Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T10:02:48.925Z] : [react-plugin]: Failed to compile.
+
+[info] [2024-10-22T10:02:48.926Z] : [react-plugin]: [eslint] 
+src\components\Forms\InwardForm.jsx
+  Line 52:30:  'CloseCircleOutlined' is not defined  react/jsx-no-undef
+  Line 58:18:  'PlusCircleOutlined' is not defined   react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+[info] [2024-10-22T10:03:08.281Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T10:03:09.540Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T10:03:09.540Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-22T10:03:09.541Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T10:03:09.542Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T10:05:14.914Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T10:05:16.636Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T10:05:16.638Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-22T10:05:16.639Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T10:05:16.639Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T10:16:48.689Z] : 
+change of index.js in waterheater_1_function detected. Preparing your function, please wait...
+[info] [2024-10-22T10:16:50.479Z] : i AdvancedIO[waterheater_1_function]: ready!
+[info] [2024-10-22T10:16:50.479Z] : i AdvancedIO[waterheater_1_function]: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-10-22T10:21:35.699Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T10:21:37.521Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T10:21:37.523Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-22T10:21:37.524Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T10:21:37.525Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T10:23:56.356Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T10:23:59.258Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T10:23:59.262Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-22T10:23:59.263Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T10:23:59.265Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T10:25:53.860Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T10:25:56.350Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T10:25:56.354Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-22T10:25:56.355Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T10:25:56.356Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T10:27:31.331Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T10:27:41.389Z] : [react-plugin]: Failed to compile.
+
+[info] [2024-10-22T10:27:41.389Z] : [react-plugin]: Module not found: Error: Can't resolve '@/components/ui/form' in 'C:\catalyst projects\water heater 2\react-app\src\components\Forms'
+[info] [2024-10-22T10:29:24.053Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T10:29:28.214Z] : [react-plugin]: Failed to compile.
+
+[info] [2024-10-22T10:29:28.214Z] : [react-plugin]: Attempted import error: 'FaSearch' is not exported from 'lucide-react' (imported as 'FaSearch').
+[info] [2024-10-22T10:30:43.485Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T10:30:50.568Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T10:30:50.574Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 7:3:  'IconButton' is defined but never used  no-unused-vars
+[info] [2024-10-22T10:30:50.576Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T10:30:50.577Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T10:35:55.675Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T10:35:59.362Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T10:35:59.368Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-22T10:35:59.370Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T10:35:59.370Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T10:44:39.603Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T10:44:42.337Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T10:44:42.338Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-22T10:44:42.340Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T10:44:42.342Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T10:52:29.987Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T10:52:33.021Z] : [react-plugin]: Failed to compile.
+
+[info] [2024-10-22T10:52:33.021Z] : [react-plugin]: SyntaxError: C:\catalyst projects\water heater 2\react-app\src\components\Forms\InwardForm.jsx: Unexpected token (65:8)
+  63 |         sparesData.find((spare)=>{
+  64 |             spare.
+> 65 |         })
+     |         ^
+  66 |     })
+  67 |   }
+  68 |
+[info] [2024-10-22T10:52:51.788Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T10:52:54.937Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T10:52:54.940Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 55:9:  'inwardValue' is assigned a value but never used  no-unused-vars
+[info] [2024-10-22T10:52:54.941Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T10:52:54.943Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T11:16:25.469Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T11:16:29.576Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T11:16:29.578Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T11:16:29.580Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T11:16:29.581Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[debug] [2024-10-22T11:16:30.106Z] : > refreshing access token <
+[debug] [2024-10-22T11:16:30.114Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2024-10-22T11:16:31.265Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Tue, 22 Oct 2024 11:16:33 GMT","content-type":"application/json;charset=UTF-8","content-length":"1949","connection":"keep-alive","set-cookie":["zalb_b266a5bf57=a711b6da0e6cbadb5e254290f114a026; Path=/; Secure; HttpOnly","iamcsr=24a48d96-8910-4897-a088-02c086d40a49;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=24a48d96-8910-4897-a088-02c086d40a49;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","pragma":"no-cache","x-frame-options":"SAMEORIGIN","vary":"accept-encoding","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[info] [2024-10-22T11:19:24.193Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T11:19:27.388Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T11:19:27.391Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:   'Filter' is defined but never used                                   no-unused-vars
+  Line 58:54:  Array.prototype.filter() expects a return value from arrow function  array-callback-return
+[info] [2024-10-22T11:19:27.392Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T11:19:27.393Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T11:21:30.586Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T11:21:34.429Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T11:21:34.431Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:   'Filter' is defined but never used                                   no-unused-vars
+  Line 58:54:  Array.prototype.filter() expects a return value from arrow function  array-callback-return
+[info] [2024-10-22T11:21:34.432Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T11:21:34.433Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T11:22:08.106Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T11:22:10.242Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T11:22:10.244Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T11:22:10.245Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T11:22:10.246Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T11:22:10.797Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T11:22:11.838Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T11:22:11.839Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T11:22:11.840Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T11:22:11.840Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T11:25:55.928Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T11:25:59.608Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T11:25:59.611Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:   'Filter' is defined but never used                                   no-unused-vars
+  Line 58:54:  Array.prototype.filter() expects a return value from arrow function  array-callback-return
+[info] [2024-10-22T11:25:59.612Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T11:25:59.613Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T11:31:30.353Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T11:31:33.040Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T11:31:33.042Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:   'Filter' is defined but never used                                   no-unused-vars
+  Line 58:54:  Array.prototype.filter() expects a return value from arrow function  array-callback-return
+  Line 60:31:  Array.prototype.some() expects a return value from arrow function    array-callback-return
+[info] [2024-10-22T11:31:33.044Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T11:31:33.045Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T11:35:23.402Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T11:35:26.758Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T11:35:26.760Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:   'Filter' is defined but never used                                   no-unused-vars
+  Line 58:54:  Array.prototype.filter() expects a return value from arrow function  array-callback-return
+[info] [2024-10-22T11:35:26.761Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T11:35:26.762Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T11:35:27.174Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T11:35:28.203Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T11:35:28.205Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:   'Filter' is defined but never used                                   no-unused-vars
+  Line 58:54:  Array.prototype.filter() expects a return value from arrow function  array-callback-return
+[info] [2024-10-22T11:35:28.205Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T11:35:28.206Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T11:36:02.498Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T11:36:05.718Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T11:36:05.721Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:   'Filter' is defined but never used                                   no-unused-vars
+  Line 58:54:  Array.prototype.filter() expects a return value from arrow function  array-callback-return
+[info] [2024-10-22T11:36:05.722Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T11:36:05.723Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T11:36:06.411Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T11:36:07.666Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T11:36:07.669Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:   'Filter' is defined but never used                                   no-unused-vars
+  Line 58:54:  Array.prototype.filter() expects a return value from arrow function  array-callback-return
+[info] [2024-10-22T11:36:07.669Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T11:36:07.671Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T11:38:12.913Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T11:38:16.698Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T11:38:16.700Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T11:38:16.701Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T11:38:16.702Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T11:40:29.082Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T11:40:32.897Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T11:40:32.899Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T11:40:32.900Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T11:40:32.903Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T11:44:26.199Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T11:44:29.696Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T11:44:29.698Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T11:44:29.699Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T11:44:29.702Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T11:44:30.187Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T11:44:31.603Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T11:44:31.605Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T11:44:31.606Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T11:44:31.606Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T11:45:57.629Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T11:46:01.133Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T11:46:01.136Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T11:46:01.138Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T11:46:01.140Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T11:53:29.661Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T11:53:33.413Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T11:53:33.415Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T11:53:33.416Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T11:53:33.417Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T11:59:54.324Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T11:59:57.088Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T11:59:57.090Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T11:59:57.091Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T11:59:57.091Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T12:09:58.513Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T12:10:01.807Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T12:10:01.810Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T12:10:01.810Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T12:10:01.811Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T12:10:05.580Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T12:10:07.603Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T12:10:07.609Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T12:10:07.610Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T12:10:07.610Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T12:11:54.861Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T12:11:57.840Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T12:11:57.842Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T12:11:57.843Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T12:11:57.843Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T12:17:45.311Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T12:17:48.777Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T12:17:48.779Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T12:17:48.780Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T12:17:48.781Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[debug] [2024-10-22T12:17:49.141Z] : > refreshing access token <
+[debug] [2024-10-22T12:17:49.149Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2024-10-22T12:17:50.206Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Tue, 22 Oct 2024 12:17:52 GMT","content-type":"application/json;charset=UTF-8","content-length":"1949","connection":"keep-alive","set-cookie":["zalb_b266a5bf57=9f371135a524e2d1f51eb9f41fa26c60; Path=/; Secure; HttpOnly","iamcsr=4af0635f-a7f4-445b-a6e3-64d20374dbd8;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=4af0635f-a7f4-445b-a6e3-64d20374dbd8;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","pragma":"no-cache","x-frame-options":"SAMEORIGIN","vary":"accept-encoding","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[info] [2024-10-22T12:19:07.872Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T12:19:11.484Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T12:19:11.487Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T12:19:11.489Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T12:19:11.491Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T12:23:47.031Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T12:23:50.874Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T12:23:50.881Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T12:23:50.882Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T12:23:50.883Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T12:28:46.533Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T12:28:50.338Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T12:28:50.339Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T12:28:50.339Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T12:28:50.340Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T12:49:09.706Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T12:49:13.006Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T12:49:13.008Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T12:49:13.009Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T12:49:13.010Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T12:50:44.454Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T12:50:47.959Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T12:50:47.962Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T12:50:47.963Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T12:50:47.966Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T12:51:44.271Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T12:51:47.127Z] : [react-plugin]: Failed to compile.
+
+[info] [2024-10-22T12:51:47.128Z] : [react-plugin]: [eslint] 
+src\components\Forms\InwardForm.jsx
+  Line 63:23:  Unexpected use of 'parent'  no-restricted-globals
+
+Search for the keywords to learn more about each error.
+[info] [2024-10-22T12:52:14.094Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T12:52:17.289Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T12:52:17.291Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T12:52:17.292Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T12:52:17.293Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T12:53:10.003Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T12:53:12.373Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T12:53:12.374Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T12:53:12.375Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T12:53:12.377Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T12:53:47.221Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T12:53:49.872Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T12:53:49.875Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T12:53:49.878Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T12:53:49.882Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T12:55:52.787Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T12:55:56.240Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T12:55:56.247Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T12:55:56.248Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T12:55:56.250Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T13:00:09.956Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T13:00:13.104Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T13:00:13.105Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1419:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1420:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1421:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1430:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1431:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1518:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1532:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T13:00:13.106Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T13:00:13.107Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T13:00:54.489Z] : Shutting down server
+[debug] [2024-10-22T13:00:54.703Z] : Connection reset from target URL :  Url {
+  protocol: 'http:',
+  slashes: true,
+  auth: null,
+  host: '127.0.0.1:4000',
+  port: '4000',
+  hostname: '127.0.0.1',
+  hash: null,
+  search: null,
+  query: null,
+  pathname: '/',
+  path: '/',
+  href: 'http://127.0.0.1:4000/'
+}
+[debug] [2024-10-22T13:00:54.711Z] : Connection reset from target URL :  Url {
+  protocol: 'http:',
+  slashes: true,
+  auth: null,
+  host: '127.0.0.1:4000',
+  port: '4000',
+  hostname: '127.0.0.1',
+  hash: null,
+  search: null,
+  query: null,
+  pathname: '/',
+  path: '/',
+  href: 'http://127.0.0.1:4000/'
+}
+[debug] [2024-10-22T13:00:54.718Z] : Connection reset from target URL :  Url {
+  protocol: 'http:',
+  slashes: true,
+  auth: null,
+  host: '127.0.0.1:4000',
+  port: '4000',
+  hostname: '127.0.0.1',
+  hash: null,
+  search: null,
+  query: null,
+  pathname: '/',
+  path: '/',
+  href: 'http://127.0.0.1:4000/'
+}
+[debug] [2024-10-22T13:00:54.722Z] : Connection reset from target URL :  Url {
+  protocol: 'http:',
+  slashes: true,
+  auth: null,
+  host: '127.0.0.1:4000',
+  port: '4000',
+  hostname: '127.0.0.1',
+  hash: null,
+  search: null,
+  query: null,
+  pathname: '/',
+  path: '/',
+  href: 'http://127.0.0.1:4000/'
+}
+[debug] [2024-10-22T13:00:54.726Z] : Connection reset from target URL :  Url {
+  protocol: 'http:',
+  slashes: true,
+  auth: null,
+  host: '127.0.0.1:4000',
+  port: '4000',
+  hostname: '127.0.0.1',
+  hash: null,
+  search: null,
+  query: null,
+  pathname: '/',
+  path: '/',
+  href: 'http://127.0.0.1:4000/'
+}
+[debug] [2024-10-22T13:00:54.728Z] : Connection reset from target URL :  Url {
+  protocol: 'http:',
+  slashes: true,
+  auth: null,
+  host: '127.0.0.1:4000',
+  port: '4000',
+  hostname: '127.0.0.1',
+  hash: null,
+  search: null,
+  query: null,
+  pathname: '/',
+  path: '/',
+  href: 'http://127.0.0.1:4000/'
+}
+[info] [2024-10-22T13:00:55.078Z] : 
+[info] [2024-10-22T13:00:55.079Z] : √ Shutdown complete
+[debug] [2024-10-22T13:00:55.080Z] : NO ERRORS REGISTERED
+[debug] [2024-10-22T13:00:55.080Z] : EXEC ENDED with event: serve, message: success
+[debug] [2024-10-22T13:00:55.081Z] : TOTAL DURATION OF COMMAND EXEC : 13590111
+[debug] [2024-10-22T13:00:55.113Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-10-22T13:00:58.109Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Tue, 22 Oct 2024 13:01:00 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"keep-alive","set-cookie":["zalb_46512fd555=4ead9897700827f973c0f7dbded7f673; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=aafec093-a1a9-4872-969c-163f87291df8;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=aafec093-a1a9-4872-969c-163f87291df8;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=782B35B7168270565093C6F9A09DA1CA; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-22T13:00:58.111Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2024-10-22T13:00:58.149Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2024-10-22T13:01:27.692Z] : 
+[debug] [2024-10-22T13:01:27.695Z] : ----------------------------------------------------------------------
+[debug] [2024-10-22T13:01:27.696Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-10-22T13:01:27.696Z] : CLI Version:  1.17.6
+[debug] [2024-10-22T13:01:27.697Z] : Platform:     win32
+[debug] [2024-10-22T13:01:27.697Z] : Node Version: v20.14.0
+[debug] [2024-10-22T13:01:27.697Z] : Time:         Tue Oct 22 2024 18:31:27 GMT+0530 (India Standard Time)
+[debug] [2024-10-22T13:01:27.698Z] : ----------------------------------------------------------------------
+[debug] [2024-10-22T13:01:27.698Z] : 
+[debug] [2024-10-22T13:01:29.971Z] : > authorizing via signed-in user option
+[debug] [2024-10-22T13:01:29.972Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute","ZohoCatalyst.authentication.CREATE"]
+[debug] [2024-10-22T13:01:29.994Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-10-22T13:01:31.088Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Tue, 22 Oct 2024 13:01:33 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=b14009a6059feb83ee8aa1c715a015c5; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=27c6d167-b8ad-4191-8ceb-8097092d26ab;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=27c6d167-b8ad-4191-8ceb-8097092d26ab;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-22T13:01:31.094Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-10-22T13:01:31.457Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Tue, 22 Oct 2024 13:01:33 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=67b22c6e-9096-446d-ac0f-93b74ba6c2ed;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=67b22c6e-9096-446d-ac0f-93b74ba6c2ed;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-22T13:01:32.094Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-10-22T13:01:32.499Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Tue, 22 Oct 2024 13:01:34 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=5eab0d29-e95f-4023-9a70-c3953edadb50;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=5eab0d29-e95f-4023-9a70-c3953edadb50;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-22T13:01:32.503Z] : unknown eol undefined hence skipping check
+[debug] [2024-10-22T13:01:32.504Z] : unknown eol undefined hence skipping check
+[info] [2024-10-22T13:01:40.260Z] : [react-plugin]: Starting the development server...
+
+[info] [2024-10-22T13:01:40.263Z] : 
+[info] [2024-10-22T13:01:40.264Z] : i Client[react-app]: Plugin : "zcatalyst-cli-plugin-react" is used for client serve
+[info] [2024-10-22T13:01:40.264Z] : 
+[info] [2024-10-22T13:01:43.515Z] : 
+[info] [2024-10-22T13:01:43.516Z] :  >>>>>>>>>>>>>> BasicIO <<<<<<<<<<<<<< 
+[info] [2024-10-22T13:01:43.517Z] : i authbasicio: http://localhost:3000/server/authbasicio/execute
+[info] [2024-10-22T13:01:43.518Z] : 
+[info] [2024-10-22T13:01:43.518Z] : 
+[info] [2024-10-22T13:01:43.518Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-10-22T13:01:43.519Z] : i waterheater_1_function: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-10-22T13:01:43.520Z] : 
+[info] [2024-10-22T13:01:43.520Z] : 
+[info] [2024-10-22T13:01:43.521Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2024-10-22T13:01:43.521Z] : i client[react-app]: http://localhost:3000/app/
+[info] [2024-10-22T13:01:43.522Z] : 
+[info] [2024-10-22T13:01:55.980Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T13:01:55.980Z] : [react-plugin]: [eslint] 
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T13:01:55.980Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T13:01:55.980Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T13:04:13.996Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T13:04:18.063Z] : [react-plugin]: Compiled successfully!
+[info] [2024-10-22T13:04:18.063Z] : [react-plugin]: 
+[info] [2024-10-22T13:04:18.063Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-10-22T13:04:18.064Z] : [react-plugin]: 
+[info] [2024-10-22T13:04:18.064Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-10-22T13:04:18.064Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-10-22T13:04:18.064Z] : [react-plugin]: 
+[info] [2024-10-22T13:04:18.064Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-10-22T13:04:18.065Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-10-22T13:04:18.065Z] : [react-plugin]: 
+[info] [2024-10-22T13:09:49.210Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T13:09:52.145Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-22T13:09:52.146Z] : [react-plugin]: [eslint] 
+src\components\Forms\InwardForm.jsx
+  Line 13:5:  'Filter' is defined but never used  no-unused-vars
+[info] [2024-10-22T13:09:52.146Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-22T13:09:52.146Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-22T13:18:14.795Z] : [react-plugin]: Compiling...
+[info] [2024-10-22T13:18:18.099Z] : [react-plugin]: Compiled successfully!
+[info] [2024-10-22T13:18:18.100Z] : [react-plugin]: 
+[info] [2024-10-22T13:18:18.100Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-10-22T13:18:18.100Z] : [react-plugin]: 
+[info] [2024-10-22T13:18:18.100Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-10-22T13:18:18.100Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-10-22T13:18:18.101Z] : [react-plugin]: 
+[info] [2024-10-22T13:18:18.101Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-10-22T13:18:18.101Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-10-22T13:18:18.101Z] : [react-plugin]: 
+[debug] [2024-10-22T13:18:18.966Z] : > refreshing access token <
+[debug] [2024-10-22T13:18:18.970Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2024-10-22T13:18:20.061Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Tue, 22 Oct 2024 13:18:22 GMT","content-type":"application/json;charset=UTF-8","content-length":"1949","connection":"keep-alive","set-cookie":["zalb_b266a5bf57=a711b6da0e6cbadb5e254290f114a026; Path=/; Secure; HttpOnly","iamcsr=bf1c0d4e-60be-4406-a9c2-7c204965dca0;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=bf1c0d4e-60be-4406-a9c2-7c204965dca0;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","pragma":"no-cache","x-frame-options":"SAMEORIGIN","vary":"accept-encoding","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[info] [2024-10-22T13:25:51.358Z] : Shutting down server
+[info] [2024-10-22T13:25:51.841Z] : 
+[info] [2024-10-22T13:25:51.842Z] : √ Shutdown complete
+[debug] [2024-10-22T13:25:51.843Z] : NO ERRORS REGISTERED
+[debug] [2024-10-22T13:25:51.844Z] : EXEC ENDED with event: serve, message: success
+[debug] [2024-10-22T13:25:51.844Z] : TOTAL DURATION OF COMMAND EXEC : 1461900
+[debug] [2024-10-22T13:25:51.867Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-10-22T13:25:54.803Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Tue, 22 Oct 2024 13:25:57 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=7a3c9503-2a08-40d8-9e95-7ec31980d3ac;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=7a3c9503-2a08-40d8-9e95-7ec31980d3ac;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=40DF600F496DC917EA86A626877BF59F; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-22T13:25:54.805Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2024-10-22T13:25:54.808Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
