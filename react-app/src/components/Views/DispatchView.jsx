@@ -204,7 +204,8 @@ import { Table, Dropdown, Modal, Button } from 'react-bootstrap';
 import axios from 'axios';
 import { HashLoader } from 'react-spinners';
 import Swal from 'sweetalert2';
-import InvoiceForm from '../Forms/InvoiceForm';
+// import InvoiceForm from '../Forms/InvoiceForm';
+import DispatchSignature from '../Forms/DispatchSignature';
 
 const DispatchView = ({ roleEmail }) => {
   const [data, setData] = useState([]);
@@ -241,6 +242,7 @@ const DispatchView = ({ roleEmail }) => {
   };
 
   const toggleInvoiceForm = (ticket = null) => {
+    console.log('ticket from dispatch view',ticket)
     setSelectedTicket(ticket);
     setShowInvoiceForm(!showInvoiceForm);
   };
@@ -354,7 +356,7 @@ const DispatchView = ({ roleEmail }) => {
 
   return (
     <div className='container'>
-      <h2>Dispatch View</h2>
+      
       {loading ? (
         <div className="d-flex justify-content-center align-items-center" style={{ height: '84vh' }}>
           <HashLoader color="#2080c2" />
@@ -387,7 +389,7 @@ const DispatchView = ({ roleEmail }) => {
                        <Dropdown.Toggle variant="primary" id="dropdown-basic"></Dropdown.Toggle>
                        <Dropdown.Menu>
                          <Dropdown.Item onClick={() => handleViewTicket(ticket.ticket_table)}>View</Dropdown.Item>
-                         <Dropdown.Item onClick={() => toggleInvoiceForm(ticket.ticket_table)}>Add Invoice</Dropdown.Item>
+                         <Dropdown.Item onClick={() => toggleInvoiceForm(ticket.ticket_table)}>Add Signature</Dropdown.Item>
                        </Dropdown.Menu>
                      </Dropdown>
                    </td>
@@ -410,13 +412,7 @@ const DispatchView = ({ roleEmail }) => {
           <Button variant="secondary" onClick={() => setShowInvoiceForm(false)} className="mb-3">
             Back
           </Button>
-          <InvoiceForm
-            ticketId={selectedTicket?.Ticket_Id}
-            customerName={selectedTicket?.Customer_Name}
-            customerAddress={selectedTicket?.Customer_Address}
-            RowId={selectedTicket?.ROWID}
-            onSubmit={handleSubmitInvoice}
-          />
+         <DispatchSignature ticketData={selectedTicket}/>
         </div>
       )}
     </div>

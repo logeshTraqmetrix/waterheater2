@@ -662,7 +662,7 @@ const TechnicianView = ({ roleEmail, shouldFetchData, onDataFetched }) => {
   const email = roleEmail;
 
   useEffect(() => {
-    if (shouldFetchData) {
+    if (shouldFetchData) { 
       fetchData(email);
       onDataFetched(); // Reset the flag after fetching
     }
@@ -881,6 +881,7 @@ const TechnicianView = ({ roleEmail, shouldFetchData, onDataFetched }) => {
             customerAddress={selectedTicket?.Customer_Address}
             RowId={selectedTicket?.ROWID}
             onSubmit={handleSubmitInvoice}
+            Dynamic_Status={'Closed'}
           />
         </div>
       )}

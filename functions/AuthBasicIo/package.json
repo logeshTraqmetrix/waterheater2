@@ -4,7 +4,7 @@
 	"main": "index.js",
 	"author": "logesh.mg@traqmetrix.com",
 	"dependencies": {
-		"express": "^4.19.2",
+		"express": "^4.21.1",
 		"zcatalyst-sdk-node": "latest"
 	}
 }

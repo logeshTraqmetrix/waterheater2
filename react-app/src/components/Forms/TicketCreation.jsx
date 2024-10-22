@@ -87,7 +87,7 @@
 //                });
 //                return;
 //              }
-             
+
 //             const formData = new FormData();
 //             formData.append('warrantyImage', formValues.Warranty_Image.originFileObj);
 //             formData.append('issueImage', formValues.Issue_Image.originFileObj);
@@ -391,6 +391,14 @@ const TicketCreation = () => {
    const [customerIssueFileList, setCustomerIssueFileList] = useState([]);
    const [warrantyAvailable, setWarrantyAvailable] = useState("");
    const [isSubmitting, setIsSubmitting] = useState(false); // State to track form submission
+   const [customer, setCustomer] = useState([])
+   const [userCreated, setUserCreated] = useState(false)
+
+
+   function generateAlphanumericID(length) {
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+      return Array.from({ length }, () => characters.charAt(Math.floor(Math.random() * characters.length))).join('');
+   }
 
    const handleInputChange = (e) => {
       const { name, value } = e.target;
@@ -428,6 +436,10 @@ const TicketCreation = () => {
 
    const handleSubmit = async (e) => {
       e.preventDefault();
+      if (userCreated) {
+         addingCustomer()
+      }
+
       setIsSubmitting(true); // Set submitting state to true
 
       try {
@@ -597,11 +609,111 @@ const TicketCreation = () => {
       }
    };
 
+   function getCustomerDetails() {
+      setIsSubmitting(true)
+
+      let value = formValues.Customer_Phone
+      let params = {}
+      if (value) {
+
+         params.search = JSON.stringify({
+            table: 'customer_details', // Corrected table name
+            column: 'Customer_Phone',
+            value
+         });
+      } else {
+         Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Please Enter phone number to get customer details",
+         });
+         setFormValues({
+            ...formValues,
+            Customer_Name: '',
+            Customer_Email: '',
+            Customer_Whatsapp: '',
+            Customer_Address: '',
+         })
+         setIsSubmitting(false)
+         return
+
+      }
+
+      axios.get('/server/waterheater_1_function/getfiltercustomer', { params }).then((response) => {
+         console.log('response from customer data with mobiles', response.data)
+         if (response.data.length == 0) {
+            Swal.fire({
+               icon: "warning",
+               title: "No Customer Creater",
+               text: "Please enter customer Details",
+            });
+            setFormValues({
+               ...formValues,
+               Customer_Name: '',
+               Customer_Email: '',
+               Customer_Whatsapp: '',
+               Customer_Address: '',
+            })
+            setIsSubmitting(false)
+            setUserCreated(true)
+
+
+
+         } else {
+
+            setFormValues({
+               ...formValues,
+               Customer_Name: response.data[0].customer_details.Customer_Name,
+               Customer_Email: response.data[0].customer_details.Customer_Email,
+               Customer_Whatsapp: response.data[0].customer_details.Customer_Whatsapp,
+               Customer_Address: response.data[0].customer_details.Customer_Address,
+            })
+            setIsSubmitting(false)
+
+         }
+
+      }).catch((error) => {
+         console.log('error in getting customer with mobile number', error)
+      })
+   }
+
+
+   function addingCustomer() {
+
+      const keysToKeep = ['Customer_Name', 'Customer_Email', 'Customer_Whatsapp', 'Customer_Address', 'Customer_Phone'];
+      
+      let customerPayload = Object.keys(formValues).reduce((variable, iter) => {
+         if (keysToKeep.includes(iter)) {
+            variable[iter] = formValues[iter]
+         }
+         return variable
+      },{})
+
+
+      let customerWithId = { ...customerPayload, Customer_Id: generateAlphanumericID(8) }
+      console.log('customer details payload', customerWithId)
+      axios.post('/server/waterheater_1_function/addcustomer', { data: customerWithId })
+      .then((response) => {
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "customer saved",
+          showConfirmButton: false,
+          timer: 1500
+        });
+        console.log("customer added successfully");
+        console.log("Response : " , response);
+      })
+      .catch((error) => {
+        console.error("Error at add customer from frontend : " , error);
+      });
+   }
+
    return (
       <div className='container'>
          <h1>Ticket Creation Form</h1>
          <Form onSubmit={handleSubmit}>
-            {/* Form inputs omitted for brevity */}
+            
             <Form.Group className="mb-3" controlId="formGroupTicketId">
                <Form.Label>Ticket ID</Form.Label>
                <Form.Control type="text" name="Ticket_Id" value={formValues.Ticket_Id} readOnly required />
@@ -614,6 +726,9 @@ const TicketCreation = () => {
                <Form.Label>Phone Number</Form.Label>
                <Form.Control type="text" name="Customer_Phone" placeholder="Enter Phone Number" value={formValues.Customer_Phone} onChange={handleInputChange} required />
             </Form.Group>
+            <Button variant="primary" className='mt-3 mb-3' onClick={getCustomerDetails} disabled={isSubmitting}>
+               {isSubmitting ? 'Fetching Details...' : 'Get Customer Details'}
+            </Button>
             <Form.Group className="mb-3" controlId="formGroupCustomerName">
                <Form.Label>Customer Name</Form.Label>
                <Form.Control type="text" name="Customer_Name" placeholder="Enter Customer Name" value={formValues.Customer_Name} onChange={handleInputChange} required />

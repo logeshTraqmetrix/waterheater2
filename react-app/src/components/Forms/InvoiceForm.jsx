@@ -5,13 +5,18 @@
 // import { Upload } from "antd";
 // import axios from "axios";
 // import SignatureCanvas from "react-signature-canvas";
+// import { HashLoader } from 'react-spinners';
+// import Swal from 'sweetalert2';
+// import { useNavigate } from 'react-router-dom';
 
-// const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId }) => {
-//   // console.log('rowid',RowId)
+// const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId, Dynamic_Status }) => {
+
+//   console.log('dynamic status',Dynamic_Status)
+
 //   const [ticketRowId, setTicketRowId] = useState(RowId)
 //   const [ticketNumber, setTicketNumber] = useState(ticketId);
 //   const [customerName, setCustomerName] = useState(customerName5);
-//   const [invoiceNumber, setInvoiceNumber] = useState("");
+//   const [invoiceNumber, setInvoiceNumber] = useState(generateAlphanumericID(8));
 //   const [invoiceDate, setInvoiceDate] = useState("");
 //   const [address, setAddress] = useState(customerAddress);
 //   const [sparesData, setSparesData] = useState([]);
@@ -25,6 +30,9 @@
 //   const [grantTotal, setGrantTotal] = useState(0);
 //   const sigCanvas = useRef({});
 //   const [signature, setSignature] = useState("");
+//   const [loading, setLoading] = useState(false);
+//   const navigate = useNavigate();
+
 
 //   useEffect(() => {
 //     axios.get('/server/waterheater_1_function/getspares')
@@ -36,6 +44,11 @@
 //         console.log('error in getting spares data', err);
 //       });
 //   }, []);
+
+//   function generateAlphanumericID(length) {
+//     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+//     return Array.from({ length }, () => characters.charAt(Math.floor(Math.random() * characters.length))).join('');
+//   }
 
 //   const onChangeAfterService = (info) => {
 //     let newFileList = [...info.fileList];
@@ -147,6 +160,7 @@
 
 
 //   const handlePostData = async () => {
+
 //     const data = sigCanvas.current.getTrimmedCanvas().toDataURL('image/png');
 
 //     // Create a blank canvas for comparison
@@ -155,11 +169,24 @@
 //     blankCanvas.height = sigCanvas.current.getTrimmedCanvas().height;
 //     const blankData = blankCanvas.toDataURL('image/png');
 
+
+//     if (afterServiceFileList.length === 0) {
+//       Swal.fire({
+//         position: "top-end",
+//         icon: "warning",
+//         title: "Please add After Service Image",
+//         showConfirmButton: true,
+//       });
+//       return
+//     }
+
 //     // alert for signature
 //     if (data === blankData) {
 //       alert("Please provide a signature.");
 //       return;
 //     }
+
+
 
 //     const canvas = document.createElement('canvas');
 //     const ctx = canvas.getContext('2d');
@@ -177,12 +204,13 @@
 
 //       //posting signature,aferservoce,mainform,scrap subform with damaged images
 //       try {
-//         console.log(signatureBlob,afterServiceFileList[0].originFileObj)
+
+//         console.log(signatureBlob, afterServiceFileList[0].originFileObj)
 //         const formData = new FormData();
 //         formData.append('signature', signatureBlob, 'signature.png');
 //         formData.append('service', afterServiceFileList[0].originFileObj);
 
-       
+
 
 //         const response = await fetch('/server/waterheater_1_function/uploadfile', {
 //           method: 'POST',
@@ -193,7 +221,7 @@
 //         const data = await response.json();
 
 //         console.log(data)
-        
+
 //         if (response.status === 200) {
 
 //           console.log(data);
@@ -206,10 +234,12 @@
 //             let payload = {
 //               ROWID: ticketRowId,
 //               After_Service_Image: data[1].id,
-//               Status: 'Closed',
-//               Closed_Date:formattedDate
+//               Status: Dynamic_Status,
+//               Closed_Date: formattedDate,
+//               Technician_Email: '',
+//               Dispatch_Email:''
 //             }
-//             console.log(payload)
+//             console.log('payload from invoice', payload)
 //             axios.put('/server/waterheater_1_function/updateticket', { data: payload })
 //               .then((res) => {
 //                 console.log('response from updating ticket', res);
@@ -365,6 +395,13 @@
 //                     axios.post('/server/waterheater_1_function/addlistofspare', { data: sparesFormPayload })
 //                       .then((res) => {
 //                         console.log("responce from listof spares payload", res)
+//                         Swal.fire({
+//                           position: "top-end",
+//                           icon: "success",
+//                           title: "Your work has been saved",
+//                           showConfirmButton: false,
+//                           timer: 1500
+//                         });
 //                       })
 //                       .catch((err) => {
 //                         console.log('error from posting list of spares payload', err)
@@ -374,7 +411,8 @@
 //                   }
 
 //                 } catch (error) {
-//                   alert('Please enter the Quantity field');
+//                   // alert('Please enter the Quantity field');
+//                   Swal.fire("Please enter the Quantity field");
 //                 }
 //               }
 
@@ -394,6 +432,8 @@
 //               setAfterServiceFileList([]);
 //               setGrantTotal(0);
 
+
+
 //             }
 //           } catch (error) {
 //             console.log('Error in posting the invoice payload data:', error);
@@ -404,7 +444,9 @@
 //         } else {
 //           console.log(data);
 //         }
-        
+
+//         navigate('/app/index.html#/home')
+
 //       } catch (error) {
 //         console.log('Signature and afterservice upload failed:', error);
 //       }
@@ -417,41 +459,46 @@
 //   return (
 //     <div className="container">
 //       <h1>Invoice Form</h1>
-//       <Form>
-//         {/* Rest of the form fields */}
-//         <Form.Group className="mb-3">
-//           <Form.Label>Ticket Id</Form.Label>
-//           <Form.Control type="text" value={ticketNumber} readOnly />
-//         </Form.Group>
-//         <Form.Group className="mb-3">
-//           <Form.Label>Customer Name</Form.Label>
-//           <Form.Control type="text" value={customerName} readOnly />
-//         </Form.Group>
-//         <Form.Group className="mb-3">
-//           <Form.Label>Invoice Number</Form.Label>
-//           <Form.Control type="text" value={invoiceNumber} onChange={(e) => setInvoiceNumber(e.target.value)} placeholder="Enter Invoice Number" />
-//         </Form.Group>
-//         <Form.Group className="mb-3">
-//           <Form.Label>Date</Form.Label>
-//           <Form.Control type="date" value={invoiceDate} onChange={(e) => setInvoiceDate(e.target.value)} placeholder="Enter Date" />
-//         </Form.Group>
-//         <Form.Group className="mb-3">
-//           <Form.Label>Customer Address</Form.Label>
-//           <Form.Control type="text" value={address} readOnly />
-//         </Form.Group>
-//         <Form.Group className="mb-3">
-//           <Form.Label>After Service Image</Form.Label>
-//           <Upload
-//             action="https://660d2bd96ddfa2943b33731c.mockapi.io/api/upload"
-//             listType="picture-card"
-//             fileList={afterServiceFileList}
-//             onChange={onChangeAfterService}
-//             customRequest={({ file, onSuccess }) => setTimeout(() => onSuccess("ok"), 0)}
-//           >
-//             {afterServiceFileList.length === 0 && "+ Upload"}
-//           </Upload>
-//         </Form.Group>
-//         {/* <Form.Group className="mb-3">
+//       {loading ? (
+//         <div className="d-flex justify-content-center mt-5">
+//           <HashLoader color={'#36D7B7'} loading={loading} size={50} />
+//         </div>
+//       ) : (
+//         <Form>
+//           {/* Rest of the form fields */}
+//           <Form.Group className="mb-3">
+//             <Form.Label>Ticket Id</Form.Label>
+//             <Form.Control type="text" value={ticketNumber} readOnly />
+//           </Form.Group>
+//           <Form.Group className="mb-3">
+//             <Form.Label>Customer Name</Form.Label>
+//             <Form.Control type="text" value={customerName} readOnly />
+//           </Form.Group>
+//           <Form.Group className="mb-3">
+//             <Form.Label>Invoice Number</Form.Label>
+//             <Form.Control type="text" value={invoiceNumber} onChange={(e) => setInvoiceNumber(e.target.value)} readOnly />
+//           </Form.Group>
+//           <Form.Group className="mb-3">
+//             <Form.Label>Date</Form.Label>
+//             <Form.Control type="date" value={invoiceDate} onChange={(e) => setInvoiceDate(e.target.value)} placeholder="Enter Date" />
+//           </Form.Group>
+//           <Form.Group className="mb-3">
+//             <Form.Label>Customer Address</Form.Label>
+//             <Form.Control type="text" value={address} readOnly />
+//           </Form.Group>
+//           <Form.Group className="mb-3">
+//             <Form.Label>After Service Image</Form.Label>
+//             <Upload
+//               action="https://660d2bd96ddfa2943b33731c.mockapi.io/api/upload"
+//               listType="picture-card"
+//               fileList={afterServiceFileList}
+//               onChange={onChangeAfterService}
+//               customRequest={({ file, onSuccess }) => setTimeout(() => onSuccess("ok"), 0)}
+//             >
+//               {afterServiceFileList.length === 0 && "+ Upload"}
+//             </Upload>
+//           </Form.Group>
+//           {/* <Form.Group className="mb-3">
 //           <Form.Label>Enter Spares Subform</Form.Label>
 //           <Form.Control as="select" value={sparce} onChange={(e) => setSparce(e.target.value)}>
 //             <option value="">Select an option</option>
@@ -459,79 +506,82 @@
 //             <option value="no">No</option>
 //           </Form.Control>
 //         </Form.Group> */}
-//         <Form.Group className="mb-3">
-//           <Form.Label><h4>Enter Spares Subform</h4></Form.Label>
-//           <div>
-//             <Form.Check
-//               type="radio"
-//               label="Yes"
-//               name="sparce"
-//               id="sparceYes"
-//               value="yes"
-//               checked={sparce === "yes"}
-//               onChange={(e) => setSparce(e.target.value)}
-//             />
-//             <Form.Check
-//               type="radio"
-//               label="No"
-//               name="sparce"
-//               id="sparceNo"
-//               value="no"
-//               checked={sparce === "no"}
-//               onChange={(e) => setSparce(e.target.value)}
-//               defaultChecked
-//             />
-//           </div>
-//         </Form.Group>
+//           <Form.Group className="mb-3">
+//             <Form.Label><h4>Enter Spares Subform</h4></Form.Label>
+//             <div>
+//               <Form.Check
+//                 type="radio"
+//                 label="Yes"
+//                 name="sparce"
+//                 id="sparceYes"
+//                 value="yes"
+//                 checked={sparce === "yes"}
+//                 onChange={(e) => setSparce(e.target.value)}
+//               />
+//               <Form.Check
+//                 type="radio"
+//                 label="No"
+//                 name="sparce"
+//                 id="sparceNo"
+//                 value="no"
+//                 checked={sparce === "no"}
+//                 onChange={(e) => setSparce(e.target.value)}
+//                 defaultChecked
+//               />
+//             </div>
+//           </Form.Group>
 
-//         {sparce === "yes" && (
-//           <>
-//             <h4>Spares SubForm</h4>
-//             {fields.map((field, index) => (
-//               <div key={field.uniqueKey} style={{ marginBottom: "20px" }}>
-//                 <Form.Group className="mb-3">
-//                   <Form.Label>Material Name</Form.Label>
-//                   <Form.Control as="select" name="materialName" value={field.materialName} onChange={(e) => handleChange(index, e)}>
-//                     <option value="">Select an option</option>
-//                     {sparesData.map((data) => (
-//                       <option key={data.Material_Name} value={data.Material_Name}>
-//                         {data.Material_Name}
-//                       </option>
-//                     ))}
-//                   </Form.Control>
-//                   <Form.Label>Warranty</Form.Label>
-//                   <Form.Control as="select" name="warranty" onChange={(e) => handleChange(index, e)}>
-//                     <option value="">Select an option</option>
-//                     <option value="yes">Yes</option>
-//                     <option value="no">No</option>
-//                   </Form.Control>
-//                   <Form.Label>Date</Form.Label>
-//                   <Form.Control type="date" name="date" value={field.date} onChange={(e) => handleChange(index, e)} />
-//                   <Form.Label>Quantity</Form.Label>
-//                   <Form.Control required type="number" name="quantity" value={field.quantity} onChange={(e) => handleChange(index, e)} placeholder="Enter Quantity" />
-//                   <Form.Label>Price</Form.Label>
-//                   <Form.Control type="number" name="price" value={field.price} readOnly onChange={(e) => handleChange(index, e)} placeholder="Enter Price" />
-//                   <Form.Label>Rate</Form.Label>
-//                   <Form.Control type="number" name="rate" value={field.rate} readOnly placeholder="Rate will be calculated" />
-//                 </Form.Group>
-//                 {fields.length > 1 && (
-//                   <Button variant="danger" onClick={() => removeField(field.uniqueKey)}>
-//                     <CloseCircleOutlined /> Remove
+//           {sparce === "yes" && (
+//             <>
+//               <h4>Spares SubForm</h4>
+//               {fields.map((field, index) => (
+//                 <div key={field.uniqueKey} style={{ marginBottom: "20px" }}>
+//                   <Button>
+//                     Scan Barcode
 //                   </Button>
-//                 )}
-//               </div>
-//             ))}
-//             <Button variant="primary" onClick={addField}>
-//               <PlusCircleOutlined /> Add New
-//             </Button>
-//           </>
-//         )}
+//                   <Form.Group className="mb-3">
+//                     <Form.Label>Material Name</Form.Label>
+//                     <Form.Control as="select" name="materialName" value={field.materialName} onChange={(e) => handleChange(index, e)}>
+//                       <option value="">Select an option</option>
+//                       {sparesData.map((data) => (
+//                         <option key={data.Material_Name} value={data.Material_Name}>
+//                           {data.Material_Name}
+//                         </option>
+//                       ))}
+//                     </Form.Control>
+//                     <Form.Label>Warranty</Form.Label>
+//                     <Form.Control as="select" name="warranty" onChange={(e) => handleChange(index, e)}>
+//                       <option value="">Select an option</option>
+//                       <option value="yes">Yes</option>
+//                       <option value="no">No</option>
+//                     </Form.Control>
+//                     <Form.Label>Date</Form.Label>
+//                     <Form.Control type="date" name="date" value={field.date} onChange={(e) => handleChange(index, e)} />
+//                     <Form.Label>Quantity</Form.Label>
+//                     <Form.Control required type="number" name="quantity" value={field.quantity} onChange={(e) => handleChange(index, e)} placeholder="Enter Quantity" />
+//                     <Form.Label>Price</Form.Label>
+//                     <Form.Control type="number" name="price" value={field.price} readOnly onChange={(e) => handleChange(index, e)} placeholder="Enter Price" />
+//                     <Form.Label>Rate</Form.Label>
+//                     <Form.Control type="number" name="rate" value={field.rate} readOnly placeholder="Rate will be calculated" />
+//                   </Form.Group>
+//                   {fields.length > 1 && (
+//                     <Button variant="danger" onClick={() => removeField(field.uniqueKey)}>
+//                       <CloseCircleOutlined /> Remove
+//                     </Button>
+//                   )}
+//                 </div>
+//               ))}
+//               <Button variant="primary" onClick={addField}>
+//                 <PlusCircleOutlined /> Add New
+//               </Button>
+//             </>
+//           )}
 
-//         <Form.Group className="mb-3">
-//           <Form.Label>Grant Total</Form.Label>
-//           <Form.Control type="number" readOnly value={grantTotal} />
-//         </Form.Group>
-//         {/* 
+//           <Form.Group className="mb-3">
+//             <Form.Label>Grant Total</Form.Label>
+//             <Form.Control type="number" readOnly value={grantTotal} />
+//           </Form.Group>
+//           {/* 
 //         <Form.Group className="mb-3">
 //           <Form.Label>Enter Scrap Subform</Form.Label>
 //           <Form.Control as="select" value={scrapOption} onChange={(e) => setScrapOption(e.target.value)}>
@@ -540,122 +590,150 @@
 //             <option value="no">No</option>
 //           </Form.Control>
 //         </Form.Group> */}
-//         <Form.Group className="mb-3">
-//           <Form.Label><h4>Enter Scrap Subform</h4></Form.Label>
-//           <div>
-//             <Form.Check
-//               type="radio"
-//               label="Yes"
-//               name="scrapOption"
-//               id="scrapYes"
-//               value="yes"
-//               checked={scrapOption === "yes"}
-//               onChange={(e) => setScrapOption(e.target.value)}
-//             />
-//             <Form.Check
-//               type="radio"
-//               label="No"
-//               name="scrapOption"
-//               id="scrapNo"
-//               value="no"
-//               checked={scrapOption === "no"}
-//               onChange={(e) => setScrapOption(e.target.value)}
-//               defaultChecked
-//             />
+//           <Form.Group className="mb-3">
+//             <Form.Label><h4>Enter Scrap Subform</h4></Form.Label>
+//             <div>
+//               <Form.Check
+//                 type="radio"
+//                 label="Yes"
+//                 name="scrapOption"
+//                 id="scrapYes"
+//                 value="yes"
+//                 checked={scrapOption === "yes"}
+//                 onChange={(e) => setScrapOption(e.target.value)}
+//               />
+//               <Form.Check
+//                 type="radio"
+//                 label="No"
+//                 name="scrapOption"
+//                 id="scrapNo"
+//                 value="no"
+//                 checked={scrapOption === "no"}
+//                 onChange={(e) => setScrapOption(e.target.value)}
+//                 defaultChecked
+//               />
+//             </div>
+//           </Form.Group>
+
+//           {scrapOption === "yes" && (
+//             <>
+//               <h4>Scrap Details</h4>
+//               {scrapForms.map((scrapForm, index) => (
+//                 <div key={scrapForm.uniqueKey} style={{ marginBottom: "20px" }}>
+//                   <Form.Group className="mb-3">
+//                     <Form.Label>Material Name</Form.Label>
+//                     <Form.Control as="select" value={scrapForm.material} name="material" onChange={(e) => handleScrapChange(index, "material", e.target.value)}>
+//                       <option value="">Select an option</option>
+//                       {sparesData.map((data) => (
+//                         <option key={data.Material_Name} value={data.Material_Name}>
+//                           {data.Material_Name}
+//                         </option>
+//                       ))}
+//                     </Form.Control>
+
+//                     <Form.Label>Received Date</Form.Label>
+//                     <Form.Control type="date" name="receivedDate" value={scrapForm.receivedDate} onChange={(e) => handleScrapChange(index, "receivedDate", e.target.value)} />
+//                     <Form.Label>Quantity</Form.Label>
+//                     <Form.Control required type="number" name="qty" value={scrapForm.qty} onChange={(e) => handleScrapChange(index, "qty", e.target.value)} placeholder="Enter Quantity" />
+//                     <Form.Label>Condition</Form.Label>
+//                     <Form.Control as="select" name="condition" value={scrapForm.condition} onChange={(e) => handleScrapChange(index, "condition", e.target.value)}>
+//                       <option value="">Select Condition</option>
+//                       <option value="Bad">Bad</option>
+//                       <option value="Average">Average</option>
+//                       <option value="Good">Good</option>
+//                     </Form.Control>
+//                     <Form.Label>Ticket ID</Form.Label>
+//                     <Form.Control type="text" name="ticket" value={ticketNumber} readOnly />
+//                     <Form.Label>Damaged Image</Form.Label>
+//                     <Upload
+//                       action="https://660d2bd96ddfa2943b33731c.mockapi.io/api/upload"
+//                       listType="picture-card"
+//                       fileList={scrapForm.damagedFileList}
+//                       onChange={(info) => onChangeDamaged(index, info)}
+//                       customRequest={({ file, onSuccess }) => setTimeout(() => onSuccess("ok"), 0)}
+//                     >
+//                       {scrapForm.damagedFileList.length === 0 && "+ Upload"}
+//                     </Upload>
+//                   </Form.Group>
+//                   {scrapForms.length > 1 && (
+//                     <Button variant="danger" onClick={() => removeScrapForm(scrapForm.uniqueKey)}>
+//                       <CloseCircleOutlined /> Remove
+//                     </Button>
+//                   )}
+//                 </div>
+//               ))}
+//               <Button variant="primary" onClick={addScrapForm}>
+//                 <PlusCircleOutlined /> Add New
+//               </Button>
+//             </>
+//           )}
+
+
+
+//           {/* Signature Canvas */}
+//           <div className="mb-3">
+//             <h4>Signature</h4>
+//             <div style={{
+//               width: '90%',
+//               maxWidth: '600px',
+//               margin: 'auto',
+//               border: '1px solid #ccc',
+//               borderRadius: '8px',
+//               overflow: 'hidden',
+//               height: '200px',
+//               position: 'relative' // Ensure relative positioning for absolute children
+//             }}>
+
+//               <SignatureCanvas
+
+//                 ref={sigCanvas}
+//                 penColor="black"
+//                 canvasProps={{
+//                   width: 600,
+//                   height: 200,
+//                   className: 'sigCanvas',
+//                   style: { border: '1px solid #ccc', borderRadius: '8px' }
+//                 }}
+//               />
+//             </div>
+//             <div className="mt-2">
+//               <Button variant="secondary" onClick={clearSignature}>Clear Signature</Button>
+//             </div>
 //           </div>
-//         </Form.Group>
+//           <Button onClick={handlePostData}>Submit</Button>
+//         </Form>
+//       )}
 
-//         {scrapOption === "yes" && (
-//           <>
-//             <h4>Scrap Details</h4>
-//             {scrapForms.map((scrapForm, index) => (
-//               <div key={scrapForm.uniqueKey} style={{ marginBottom: "20px" }}>
-//                 <Form.Group className="mb-3">
-//                   <Form.Label>Material Name</Form.Label>
-//                   <Form.Control as="select" value={scrapForm.material} name="material" onChange={(e) => handleScrapChange(index, "material", e.target.value)}>
-//                     <option value="">Select an option</option>
-//                     {sparesData.map((data) => (
-//                       <option key={data.Material_Name} value={data.Material_Name}>
-//                         {data.Material_Name}
-//                       </option>
-//                     ))}
-//                   </Form.Control>
-
-//                   <Form.Label>Received Date</Form.Label>
-//                   <Form.Control type="date" name="receivedDate" value={scrapForm.receivedDate} onChange={(e) => handleScrapChange(index, "receivedDate", e.target.value)} />
-//                   <Form.Label>Quantity</Form.Label>
-//                   <Form.Control required type="number" name="qty" value={scrapForm.qty} onChange={(e) => handleScrapChange(index, "qty", e.target.value)} placeholder="Enter Quantity" />
-//                   <Form.Label>Condition</Form.Label>
-//                   <Form.Control as="select" name="condition" value={scrapForm.condition} onChange={(e) => handleScrapChange(index, "condition", e.target.value)}>
-//                     <option value="">Select Condition</option>
-//                     <option value="Bad">Bad</option>
-//                     <option value="Average">Average</option>
-//                     <option value="Good">Good</option>
-//                   </Form.Control>
-//                   <Form.Label>Ticket ID</Form.Label>
-//                   <Form.Control type="text" name="ticket" value={ticketNumber} readOnly />
-//                   <Form.Label>Damaged Image</Form.Label>
-//                   <Upload
-//                     action="https://660d2bd96ddfa2943b33731c.mockapi.io/api/upload"
-//                     listType="picture-card"
-//                     fileList={scrapForm.damagedFileList}
-//                     onChange={(info) => onChangeDamaged(index, info)}
-//                     customRequest={({ file, onSuccess }) => setTimeout(() => onSuccess("ok"), 0)}
-//                   >
-//                     {scrapForm.damagedFileList.length === 0 && "+ Upload"}
-//                   </Upload>
-//                 </Form.Group>
-//                 {scrapForms.length > 1 && (
-//                   <Button variant="danger" onClick={() => removeScrapForm(scrapForm.uniqueKey)}>
-//                     <CloseCircleOutlined /> Remove
-//                   </Button>
-//                 )}
-//               </div>
-//             ))}
-//             <Button variant="primary" onClick={addScrapForm}>
-//               <PlusCircleOutlined /> Add New
-//             </Button>
-//           </>
-//         )}
-
-
-
-//         {/* Signature Canvas */}
-//         <div className="mb-3">
-//           <h4>Signature</h4>
-//           <div style={{
-//             width: '90%',
-//             maxWidth: '600px',
-//             margin: 'auto',
-//             border: '1px solid #ccc',
-//             borderRadius: '8px',
-//             overflow: 'hidden',
-//             height: '200px',
-//             position: 'relative' // Ensure relative positioning for absolute children
-//           }}>
-
-//             <SignatureCanvas
-//               ref={sigCanvas}
-//               penColor="black"
-//               canvasProps={{
-//                 width: 600,
-//                 height: 200,
-//                 className: 'sigCanvas',
-//                 style: { border: '1px solid #ccc', borderRadius: '8px' }
-//               }}
-//             />
-//           </div>
-//           <div className="mt-2">
-//             <Button variant="secondary" onClick={clearSignature}>Clear Signature</Button>
-//           </div>
-//         </div>
-//         <Button onClick={handlePostData}>Submit</Button>
-//       </Form>
 //     </div>
 //   );
 // };
 
 // export default InvoiceForm;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -675,10 +753,12 @@ import SignatureCanvas from "react-signature-canvas";
 import { HashLoader } from 'react-spinners';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
+import BarcodeScanner from "./BarcodeScanner";
 
-const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId }) => {
-  // console.log('rowid',RowId)
- 
+const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId, Dynamic_Status }) => {
+
+  console.log('dynamic status', Dynamic_Status)
+
   const [ticketRowId, setTicketRowId] = useState(RowId)
   const [ticketNumber, setTicketNumber] = useState(ticketId);
   const [customerName, setCustomerName] = useState(customerName5);
@@ -700,6 +780,19 @@ const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId }) => {
   const navigate = useNavigate();
 
 
+
+  const [isScannerOpen, setIsScannerOpen] = useState(false);
+  const [index2, setIndex2] = useState(0)
+
+  const handleScan = (value, index) => {
+    console.log('scanned value', value)
+    console.log('index', index)
+
+    // handleChange(index,e,scannedValue)
+    handleChange(index, { target: { value, name: 'barcode' } })
+  };
+
+
   useEffect(() => {
     axios.get('/server/waterheater_1_function/getspares')
       .then((res) => {
@@ -714,7 +807,7 @@ const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId }) => {
   function generateAlphanumericID(length) {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     return Array.from({ length }, () => characters.charAt(Math.floor(Math.random() * characters.length))).join('');
- }
+  }
 
   const onChangeAfterService = (info) => {
     let newFileList = [...info.fileList];
@@ -737,6 +830,30 @@ const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId }) => {
   const handleChange = (index, event) => {
     const { name, value } = event.target;
     const updatedFields = [...fields];
+
+
+    if (name === 'barcode') {
+      console.log('barcodein handle change function', value)
+
+      const selectedMaterial = sparesData.find(data => data.BarCodeValue === value);
+      updatedFields[index].materialName = selectedMaterial ? selectedMaterial.Material_Name : "";
+      updatedFields[index].price = selectedMaterial ? selectedMaterial.Price : "";
+      if (updatedFields[index].quantity && updatedFields[index].price) {
+        updatedFields[index].rate = (updatedFields[index].quantity * updatedFields[index].price).toFixed(2);
+      } else {
+        updatedFields[index].rate = "";
+      }
+    } else {
+      updatedFields[index][name] = value;
+      if (name === "quantity" || name === "price") {
+        const quantity = updatedFields[index].quantity || 0;
+        const price = updatedFields[index].price || 0;
+        updatedFields[index].rate = (quantity * price).toFixed(2);
+      }
+    }
+
+
+
 
     if (name === "materialName") {
       updatedFields[index].materialName = value;
@@ -827,8 +944,6 @@ const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId }) => {
 
   const handlePostData = async () => {
 
- 
-
     const data = sigCanvas.current.getTrimmedCanvas().toDataURL('image/png');
 
     // Create a blank canvas for comparison
@@ -837,11 +952,24 @@ const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId }) => {
     blankCanvas.height = sigCanvas.current.getTrimmedCanvas().height;
     const blankData = blankCanvas.toDataURL('image/png');
 
+
+    if (afterServiceFileList.length === 0) {
+      Swal.fire({
+        position: "top-end",
+        icon: "warning",
+        title: "Please add After Service Image",
+        showConfirmButton: true,
+      });
+      return
+    }
+
     // alert for signature
     if (data === blankData) {
       alert("Please provide a signature.");
       return;
     }
+
+
 
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
@@ -860,12 +988,12 @@ const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId }) => {
       //posting signature,aferservoce,mainform,scrap subform with damaged images
       try {
 
-        console.log(signatureBlob,afterServiceFileList[0].originFileObj)
+        console.log(signatureBlob, afterServiceFileList[0].originFileObj)
         const formData = new FormData();
         formData.append('signature', signatureBlob, 'signature.png');
         formData.append('service', afterServiceFileList[0].originFileObj);
 
-       
+
 
         const response = await fetch('/server/waterheater_1_function/uploadfile', {
           method: 'POST',
@@ -876,7 +1004,7 @@ const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId }) => {
         const data = await response.json();
 
         console.log(data)
-        
+
         if (response.status === 200) {
 
           console.log(data);
@@ -889,11 +1017,12 @@ const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId }) => {
             let payload = {
               ROWID: ticketRowId,
               After_Service_Image: data[1].id,
-              Status: 'Closed',
-              Closed_Date:formattedDate,
-              Technician_Email:''
+              Status: Dynamic_Status,
+              Closed_Date: formattedDate,
+              Technician_Email: '',
+              Dispatch_Email: ''
             }
-            console.log(payload)
+            console.log('payload from invoice', payload)
             axios.put('/server/waterheater_1_function/updateticket', { data: payload })
               .then((res) => {
                 console.log('response from updating ticket', res);
@@ -916,8 +1045,8 @@ const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId }) => {
               Address: address,
               Grand_Total: grantTotal,
               AfterServiceImage: data[1].id,
-              Spares_SubForm: sparce,
-              Scrap_SubForm: scrapOption,
+              Spares_SubForm: sparce === '' ? 'no' : sparce,
+              Scrap_SubForm: scrapOption === '' ? 'no' : scrapOption,
               Signature: data[0].id
             };
 
@@ -1086,7 +1215,7 @@ const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId }) => {
               setAfterServiceFileList([]);
               setGrantTotal(0);
 
-              
+
 
             }
           } catch (error) {
@@ -1100,7 +1229,7 @@ const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId }) => {
         }
 
         navigate('/app/index.html#/home')
-        
+
       } catch (error) {
         console.log('Signature and afterservice upload failed:', error);
       }
@@ -1115,44 +1244,44 @@ const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId }) => {
       <h1>Invoice Form</h1>
       {loading ? (
         <div className="d-flex justify-content-center mt-5">
-        <HashLoader color={'#36D7B7'} loading={loading} size={50} />
-      </div>
-      ): (
+          <HashLoader color={'#36D7B7'} loading={loading} size={50} />
+        </div>
+      ) : (
         <Form>
-        {/* Rest of the form fields */}
-        <Form.Group className="mb-3">
-          <Form.Label>Ticket Id</Form.Label>
-          <Form.Control type="text" value={ticketNumber} readOnly />
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Label>Customer Name</Form.Label>
-          <Form.Control type="text" value={customerName} readOnly />
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Label>Invoice Number</Form.Label>
-          <Form.Control type="text" value={invoiceNumber} onChange={(e) => setInvoiceNumber(e.target.value)}  readOnly/>
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Label>Date</Form.Label>
-          <Form.Control type="date" value={invoiceDate} onChange={(e) => setInvoiceDate(e.target.value)} placeholder="Enter Date" />
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Label>Customer Address</Form.Label>
-          <Form.Control type="text" value={address} readOnly />
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Label>After Service Image</Form.Label>
-          <Upload
-            action="https://660d2bd96ddfa2943b33731c.mockapi.io/api/upload"
-            listType="picture-card"
-            fileList={afterServiceFileList}
-            onChange={onChangeAfterService}
-            customRequest={({ file, onSuccess }) => setTimeout(() => onSuccess("ok"), 0)}
-          >
-            {afterServiceFileList.length === 0 && "+ Upload"}
-          </Upload>
-        </Form.Group>
-        {/* <Form.Group className="mb-3">
+          {/* Rest of the form fields */}
+          <Form.Group className="mb-3">
+            <Form.Label>Ticket Id</Form.Label>
+            <Form.Control type="text" value={ticketNumber} readOnly />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Customer Name</Form.Label>
+            <Form.Control type="text" value={customerName} readOnly />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Invoice Number</Form.Label>
+            <Form.Control type="text" value={invoiceNumber} onChange={(e) => setInvoiceNumber(e.target.value)} readOnly />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Date</Form.Label>
+            <Form.Control type="date" value={invoiceDate} onChange={(e) => setInvoiceDate(e.target.value)} placeholder="Enter Date" />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Customer Address</Form.Label>
+            <Form.Control type="text" value={address} readOnly />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>After Service Image</Form.Label>
+            <Upload
+              action="https://660d2bd96ddfa2943b33731c.mockapi.io/api/upload"
+              listType="picture-card"
+              fileList={afterServiceFileList}
+              onChange={onChangeAfterService}
+              customRequest={({ file, onSuccess }) => setTimeout(() => onSuccess("ok"), 0)}
+            >
+              {afterServiceFileList.length === 0 && "+ Upload"}
+            </Upload>
+          </Form.Group>
+          {/* <Form.Group className="mb-3">
           <Form.Label>Enter Spares Subform</Form.Label>
           <Form.Control as="select" value={sparce} onChange={(e) => setSparce(e.target.value)}>
             <option value="">Select an option</option>
@@ -1160,79 +1289,93 @@ const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId }) => {
             <option value="no">No</option>
           </Form.Control>
         </Form.Group> */}
-        <Form.Group className="mb-3">
-          <Form.Label><h4>Enter Spares Subform</h4></Form.Label>
-          <div>
-            <Form.Check
-              type="radio"
-              label="Yes"
-              name="sparce"
-              id="sparceYes"
-              value="yes"
-              checked={sparce === "yes"}
-              onChange={(e) => setSparce(e.target.value)}
-            />
-            <Form.Check
-              type="radio"
-              label="No"
-              name="sparce"
-              id="sparceNo"
-              value="no"
-              checked={sparce === "no"}
-              onChange={(e) => setSparce(e.target.value)}
-              defaultChecked
-            />
-          </div>
-        </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label><h4>Enter Spares Subform</h4></Form.Label>
+            <div>
+              <Form.Check
+                type="radio"
+                label="Yes"
+                name="sparce"
+                id="sparceYes"
+                value="yes"
+                checked={sparce === "yes"}
+                onChange={(e) => setSparce(e.target.value)}
+              />
+              <Form.Check
+                type="radio"
+                label="No"
+                name="sparce"
+                id="sparceNo"
+                value="no"
+                checked={sparce === "no"}
+                onChange={(e) => setSparce(e.target.value)}
+                defaultChecked
+              />
+            </div>
+          </Form.Group>
 
-        {sparce === "yes" && (
-          <>
-            <h4>Spares SubForm</h4>
-            {fields.map((field, index) => (
-              <div key={field.uniqueKey} style={{ marginBottom: "20px" }}>
-                <Form.Group className="mb-3">
-                  <Form.Label>Material Name</Form.Label>
-                  <Form.Control as="select" name="materialName" value={field.materialName} onChange={(e) => handleChange(index, e)}>
-                    <option value="">Select an option</option>
-                    {sparesData.map((data) => (
-                      <option key={data.Material_Name} value={data.Material_Name}>
-                        {data.Material_Name}
-                      </option>
-                    ))}
-                  </Form.Control>
-                  <Form.Label>Warranty</Form.Label>
-                  <Form.Control as="select" name="warranty" onChange={(e) => handleChange(index, e)}>
-                    <option value="">Select an option</option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                  </Form.Control>
-                  <Form.Label>Date</Form.Label>
-                  <Form.Control type="date" name="date" value={field.date} onChange={(e) => handleChange(index, e)} />
-                  <Form.Label>Quantity</Form.Label>
-                  <Form.Control required type="number" name="quantity" value={field.quantity} onChange={(e) => handleChange(index, e)} placeholder="Enter Quantity" />
-                  <Form.Label>Price</Form.Label>
-                  <Form.Control type="number" name="price" value={field.price} readOnly onChange={(e) => handleChange(index, e)} placeholder="Enter Price" />
-                  <Form.Label>Rate</Form.Label>
-                  <Form.Control type="number" name="rate" value={field.rate} readOnly placeholder="Rate will be calculated" />
-                </Form.Group>
-                {fields.length > 1 && (
-                  <Button variant="danger" onClick={() => removeField(field.uniqueKey)}>
-                    <CloseCircleOutlined /> Remove
+          {sparce === "yes" && (
+            <>
+              <h4>Spares SubForm</h4>
+              {fields.map((field, index) => (
+                <div key={field.uniqueKey} style={{ marginBottom: "20px" }}>
+                  <Button onClick={() => {
+                    setIsScannerOpen(true);
+                    setIndex2(index);
+                  }}>
+                    Scan Barcode
                   </Button>
-                )}
-              </div>
-            ))}
-            <Button variant="primary" onClick={addField}>
-              <PlusCircleOutlined /> Add New
-            </Button>
-          </>
-        )}
 
-        <Form.Group className="mb-3">
-          <Form.Label>Grant Total</Form.Label>
-          <Form.Control type="number" readOnly value={grantTotal} />
-        </Form.Group>
-        {/* 
+                  <BarcodeScanner
+                    isOpen={isScannerOpen}
+                    onClose={() => setIsScannerOpen(false)}
+                    onScan={handleScan}
+                    index={index2} // Pass the index prop
+                    name='barcode'
+                  />
+                  <Form.Group className="mb-3">
+                    <Form.Label>Material Name</Form.Label>
+                    <Form.Control as="select" name="materialName" value={field.materialName} onChange={(e) => handleChange(index, e)}>
+                      <option value="">Select an option</option>
+                      {sparesData.map((data) => (
+                        <option key={data.Material_Name} value={data.Material_Name}>
+                          {data.Material_Name}
+                        </option>
+                      ))}
+                    </Form.Control>
+                    <Form.Label>Warranty</Form.Label>
+                    <Form.Control as="select" name="warranty" onChange={(e) => handleChange(index, e)}>
+                      <option value="">Select an option</option>
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                    </Form.Control>
+                    <Form.Label>Date</Form.Label>
+                    <Form.Control type="date" name="date" value={field.date} onChange={(e) => handleChange(index, e)} />
+                    <Form.Label>Quantity</Form.Label>
+                    <Form.Control required type="number" name="quantity" value={field.quantity} onChange={(e) => handleChange(index, e)} placeholder="Enter Quantity" />
+                    <Form.Label>Price</Form.Label>
+                    <Form.Control type="number" name="price" value={field.price} readOnly onChange={(e) => handleChange(index, e)} placeholder="Enter Price" />
+                    <Form.Label>Rate</Form.Label>
+                    <Form.Control type="number" name="rate" value={field.rate} readOnly placeholder="Rate will be calculated" />
+                  </Form.Group>
+                  {fields.length > 1 && (
+                    <Button variant="danger" onClick={() => removeField(field.uniqueKey)}>
+                      <CloseCircleOutlined /> Remove
+                    </Button>
+                  )}
+                </div>
+              ))}
+              <Button variant="primary" onClick={addField}>
+                <PlusCircleOutlined /> Add New
+              </Button>
+            </>
+          )}
+
+          <Form.Group className="mb-3">
+            <Form.Label>Grant Total</Form.Label>
+            <Form.Control type="number" readOnly value={grantTotal} />
+          </Form.Group>
+          {/* 
         <Form.Group className="mb-3">
           <Form.Label>Enter Scrap Subform</Form.Label>
           <Form.Control as="select" value={scrapOption} onChange={(e) => setScrapOption(e.target.value)}>
@@ -1241,119 +1384,120 @@ const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId }) => {
             <option value="no">No</option>
           </Form.Control>
         </Form.Group> */}
-        <Form.Group className="mb-3">
-          <Form.Label><h4>Enter Scrap Subform</h4></Form.Label>
-          <div>
-            <Form.Check
-              type="radio"
-              label="Yes"
-              name="scrapOption"
-              id="scrapYes"
-              value="yes"
-              checked={scrapOption === "yes"}
-              onChange={(e) => setScrapOption(e.target.value)}
-            />
-            <Form.Check
-              type="radio"
-              label="No"
-              name="scrapOption"
-              id="scrapNo"
-              value="no"
-              checked={scrapOption === "no"}
-              onChange={(e) => setScrapOption(e.target.value)}
-              defaultChecked
-            />
+          <Form.Group className="mb-3">
+            <Form.Label><h4>Enter Scrap Subform</h4></Form.Label>
+            <div>
+              <Form.Check
+                type="radio"
+                label="Yes"
+                name="scrapOption"
+                id="scrapYes"
+                value="yes"
+                checked={scrapOption === "yes"}
+                onChange={(e) => setScrapOption(e.target.value)}
+              />
+              <Form.Check
+                type="radio"
+                label="No"
+                name="scrapOption"
+                id="scrapNo"
+                value="no"
+                checked={scrapOption === "no"}
+                onChange={(e) => setScrapOption(e.target.value)}
+                defaultChecked
+              />
+            </div>
+          </Form.Group>
+
+          {scrapOption === "yes" && (
+            <>
+              <h4>Scrap Details</h4>
+              {scrapForms.map((scrapForm, index) => (
+                <div key={scrapForm.uniqueKey} style={{ marginBottom: "20px" }}>
+                  <Form.Group className="mb-3">
+                    <Form.Label>Material Name</Form.Label>
+                    <Form.Control as="select" value={scrapForm.material} name="material" onChange={(e) => handleScrapChange(index, "material", e.target.value)}>
+                      <option value="">Select an option</option>
+                      {sparesData.map((data) => (
+                        <option key={data.Material_Name} value={data.Material_Name}>
+                          {data.Material_Name}
+                        </option>
+                      ))}
+                    </Form.Control>
+
+                    <Form.Label>Received Date</Form.Label>
+                    <Form.Control type="date" name="receivedDate" value={scrapForm.receivedDate} onChange={(e) => handleScrapChange(index, "receivedDate", e.target.value)} />
+                    <Form.Label>Quantity</Form.Label>
+                    <Form.Control required type="number" name="qty" value={scrapForm.qty} onChange={(e) => handleScrapChange(index, "qty", e.target.value)} placeholder="Enter Quantity" />
+                    <Form.Label>Condition</Form.Label>
+                    <Form.Control as="select" name="condition" value={scrapForm.condition} onChange={(e) => handleScrapChange(index, "condition", e.target.value)}>
+                      <option value="">Select Condition</option>
+                      <option value="Bad">Bad</option>
+                      <option value="Average">Average</option>
+                      <option value="Good">Good</option>
+                    </Form.Control>
+                    <Form.Label>Ticket ID</Form.Label>
+                    <Form.Control type="text" name="ticket" value={ticketNumber} readOnly />
+                    <Form.Label>Damaged Image</Form.Label>
+                    <Upload
+                      action="https://660d2bd96ddfa2943b33731c.mockapi.io/api/upload"
+                      listType="picture-card"
+                      fileList={scrapForm.damagedFileList}
+                      onChange={(info) => onChangeDamaged(index, info)}
+                      customRequest={({ file, onSuccess }) => setTimeout(() => onSuccess("ok"), 0)}
+                    >
+                      {scrapForm.damagedFileList.length === 0 && "+ Upload"}
+                    </Upload>
+                  </Form.Group>
+                  {scrapForms.length > 1 && (
+                    <Button variant="danger" onClick={() => removeScrapForm(scrapForm.uniqueKey)}>
+                      <CloseCircleOutlined /> Remove
+                    </Button>
+                  )}
+                </div>
+              ))}
+              <Button variant="primary" onClick={addScrapForm}>
+                <PlusCircleOutlined /> Add New
+              </Button>
+            </>
+          )}
+
+
+
+          {/* Signature Canvas */}
+          <div className="mb-3">
+            <h4>Signature</h4>
+            <div style={{
+              width: '90%',
+              maxWidth: '600px',
+              margin: 'auto',
+              border: '1px solid #ccc',
+              borderRadius: '8px',
+              overflow: 'hidden',
+              height: '200px',
+              position: 'relative' // Ensure relative positioning for absolute children
+            }}>
+
+              <SignatureCanvas
+
+                ref={sigCanvas}
+                penColor="black"
+                canvasProps={{
+                  width: 600,
+                  height: 200,
+                  className: 'sigCanvas',
+                  style: { border: '1px solid #ccc', borderRadius: '8px' }
+                }}
+              />
+            </div>
+            <div className="mt-2">
+              <Button variant="secondary" onClick={clearSignature}>Clear Signature</Button>
+            </div>
           </div>
-        </Form.Group>
-
-        {scrapOption === "yes" && (
-          <>
-            <h4>Scrap Details</h4>
-            {scrapForms.map((scrapForm, index) => (
-              <div key={scrapForm.uniqueKey} style={{ marginBottom: "20px" }}>
-                <Form.Group className="mb-3">
-                  <Form.Label>Material Name</Form.Label>
-                  <Form.Control as="select" value={scrapForm.material} name="material" onChange={(e) => handleScrapChange(index, "material", e.target.value)}>
-                    <option value="">Select an option</option>
-                    {sparesData.map((data) => (
-                      <option key={data.Material_Name} value={data.Material_Name}>
-                        {data.Material_Name}
-                      </option>
-                    ))}
-                  </Form.Control>
-
-                  <Form.Label>Received Date</Form.Label>
-                  <Form.Control type="date" name="receivedDate" value={scrapForm.receivedDate} onChange={(e) => handleScrapChange(index, "receivedDate", e.target.value)} />
-                  <Form.Label>Quantity</Form.Label>
-                  <Form.Control required type="number" name="qty" value={scrapForm.qty} onChange={(e) => handleScrapChange(index, "qty", e.target.value)} placeholder="Enter Quantity" />
-                  <Form.Label>Condition</Form.Label>
-                  <Form.Control as="select" name="condition" value={scrapForm.condition} onChange={(e) => handleScrapChange(index, "condition", e.target.value)}>
-                    <option value="">Select Condition</option>
-                    <option value="Bad">Bad</option>
-                    <option value="Average">Average</option>
-                    <option value="Good">Good</option>
-                  </Form.Control>
-                  <Form.Label>Ticket ID</Form.Label>
-                  <Form.Control type="text" name="ticket" value={ticketNumber} readOnly />
-                  <Form.Label>Damaged Image</Form.Label>
-                  <Upload
-                    action="https://660d2bd96ddfa2943b33731c.mockapi.io/api/upload"
-                    listType="picture-card"
-                    fileList={scrapForm.damagedFileList}
-                    onChange={(info) => onChangeDamaged(index, info)}
-                    customRequest={({ file, onSuccess }) => setTimeout(() => onSuccess("ok"), 0)}
-                  >
-                    {scrapForm.damagedFileList.length === 0 && "+ Upload"}
-                  </Upload>
-                </Form.Group>
-                {scrapForms.length > 1 && (
-                  <Button variant="danger" onClick={() => removeScrapForm(scrapForm.uniqueKey)}>
-                    <CloseCircleOutlined /> Remove
-                  </Button>
-                )}
-              </div>
-            ))}
-            <Button variant="primary" onClick={addScrapForm}>
-              <PlusCircleOutlined /> Add New
-            </Button>
-          </>
-        )}
-
-
-
-        {/* Signature Canvas */}
-        <div className="mb-3">
-          <h4>Signature</h4>
-          <div style={{
-            width: '90%',
-            maxWidth: '600px',
-            margin: 'auto',
-            border: '1px solid #ccc',
-            borderRadius: '8px',
-            overflow: 'hidden',
-            height: '200px',
-            position: 'relative' // Ensure relative positioning for absolute children
-          }}>
-
-            <SignatureCanvas
-              ref={sigCanvas}
-              penColor="black"
-              canvasProps={{
-                width: 600,
-                height: 200,
-                className: 'sigCanvas',
-                style: { border: '1px solid #ccc', borderRadius: '8px' }
-              }}
-            />
-          </div>
-          <div className="mt-2">
-            <Button variant="secondary" onClick={clearSignature}>Clear Signature</Button>
-          </div>
-        </div>
-        <Button onClick={handlePostData}>Submit</Button>
-      </Form>
+          <Button onClick={handlePostData}>Submit</Button>
+        </Form>
       )}
-      
+
     </div>
   );
 };

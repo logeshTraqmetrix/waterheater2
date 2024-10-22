@@ -27,8 +27,6 @@ async function getMyPagedRows(dataStore, tableId, hasNext = true, nextToken = un
 		return allData;
 	}
 
-	// console.log("table Id : "+tableId);
-
 	try {
 		const response = await dataStore.table(tableId).getPagedRows({
 			nextToken,
@@ -99,12 +97,12 @@ app.post('/addcustomer', async (req, res) => {
 				res.json(rows);
 			})
 			.catch((err) => {
-				console.log("Error in inserting row : " + err);
+				console.log("Error in inserting row : " , err);
 			});
 
 
 	} catch (error) {
-		console.log("Error While posting customer : " + error);
+		console.log("Error While posting customer : " , error);
 	}
 })
 

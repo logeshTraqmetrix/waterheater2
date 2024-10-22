@@ -776,11 +776,36 @@ const ViewTicket = () => {
     setShowAssignModal(true);
   };
 
+
+  const changeInhouse = (ticket) => {
+
+    console.log('ticket for inhouse',ticket)
+    let payload = {
+      ROWID: ticket.ROWID,
+      Technician_Email: '',
+      Status: 'Moved to Inhouse',
+    };
+
+    axios
+      .put('/server/waterheater_1_function/updateticket', { data: payload })
+      .then((res) => {
+        console.log('response from updating ticket', res);
+        Swal.fire('Success', 'Status updated successfully', 'success');
+        fetchData('Created Ticket')
+      })
+      .catch((err) => {
+        console.log('error in updating ticket', err);
+        Swal.fire('Error', 'Failed to update status', 'error');
+      });
+  };
+
   const handleCloseAssignModal = () => {
     setShowAssignModal(false);
     setSelectedTechnician('');
     setScheduledDate('');
   };
+
+ 
 
   const handleAssignTicket = () => {
     let payload;
@@ -819,6 +844,7 @@ const ViewTicket = () => {
     const { Status } = ticket;
 
     const isTechnicianButtonEnabled = Status === 'Created Ticket';
+    const isInhouseButtonEnabled = Status === 'Created Ticket';
     const isDispatchButtonEnabled = Status === 'Ready for Dispatch';
 
     return (
@@ -827,6 +853,7 @@ const ViewTicket = () => {
         <Dropdown.Menu>
           <Dropdown.Item onClick={() => handleViewTicket(ticket)}>View</Dropdown.Item>
           <Dropdown.Item onClick={() => handleAssignTechnician(ticket)} disabled={!isTechnicianButtonEnabled}>Assign Technician</Dropdown.Item>
+          <Dropdown.Item onClick={() => changeInhouse(ticket)} disabled={!isInhouseButtonEnabled}>Assign Inhouse</Dropdown.Item>
           <Dropdown.Item onClick={() => handleAssignDispatch(ticket)} disabled={!isDispatchButtonEnabled}>Assign Dispatch</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>

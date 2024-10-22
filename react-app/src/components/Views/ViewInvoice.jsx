@@ -465,7 +465,7 @@ const ViewInvoice = () => {
   const [pageSize] = useState(10);
   const [totalRecords, setTotalRecords] = useState(0);
   const [loading, setLoading] = useState(false);
-  const [ removeFilter,setRemoveFilter] = useState('')
+  const [removeFilter, setRemoveFilter] = useState('')
 
   useEffect(() => {
     fetchData();
@@ -485,8 +485,7 @@ const ViewInvoice = () => {
       });
     }
 
-    axios
-      .get(endpoint, { params })
+    axios.get(endpoint, { params })
       .then((res) => {
         console.log(res.data);
         if (column && value) {
@@ -516,7 +515,7 @@ const ViewInvoice = () => {
   };
 
   const ActionDropdown = (invoice) => (
-    <Dropdown  drop={'start'}>
+    <Dropdown drop={'start'}>
       <Dropdown.Toggle variant="primary" id="dropdown-basic">
 
       </Dropdown.Toggle>
@@ -541,7 +540,7 @@ const ViewInvoice = () => {
   };
 
   const FilterDropDown = () => (
-    <DropdownButton id="dropdown-basic-button" title={<FaFilter/>}>
+    <DropdownButton id="dropdown-basic-button" title={<FaFilter />}>
       <Dropdown.Item onClick={() => { setFilterColumn('Ticket_Id'); setShowFilterModal(true); }}>Ticket ID</Dropdown.Item>
       <Dropdown.Item onClick={() => { setFilterColumn('Invoice_Number'); setShowFilterModal(true); }}>Invoice Number</Dropdown.Item>
       <Dropdown.Item onClick={() => setRemoveFilter()}>Remove Filter</Dropdown.Item>
@@ -575,7 +574,7 @@ const ViewInvoice = () => {
 
   return (
     <div className='container'>
-      
+
       {loading ? (
         <div className="d-flex justify-content-center align-items-center" style={{ height: '400px' }}>
           <HashLoader color="#36D7B7" />
@@ -588,45 +587,45 @@ const ViewInvoice = () => {
         <div>
           <h2>Invoice View</h2>
           <div className="d-flex justify-content-end mb-2">
-        <FilterDropDown />
-      </div>
-        <div className="table-responsive">
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>Invoice Number</th>
-                <th>Ticket ID</th>
-                <th>Date</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              {data.map((invoice, index) => (
-                <tr key={index}>
-                  <td>{invoice.invoice_table.Invoice_Number}</td>
-                  <td>{invoice.invoice_table.Ticket_Id}</td>
-                  <td>{invoice.invoice_table.CREATEDTIME}</td>
-                  <td>
-                    <ActionDropdown invoice={invoice.invoice_table} />
-                  </td>
+            <FilterDropDown />
+          </div>
+          <div className="table-responsive">
+            <Table striped bordered hover>
+              <thead>
+                <tr>
+                  <th>Invoice Number</th>
+                  <th>Ticket ID</th>
+                  <th>Date</th>
+                  <th>Action</th>
                 </tr>
-              ))}
-            </tbody>
-          </Table>
-        </div>
-        <div className='d-flex justify-content-center ' style={{ margin: '30px' }}>
-        <Pagination
-          current={currentPage}
-          pageSize={pageSize}
-          total={totalRecords}
-          onChange={handlePageChange}
-          showSizeChanger={false}
-        />
-      </div>
+              </thead>
+              <tbody>
+                {data.map((invoice, index) => (
+                  <tr key={index}>
+                    <td>{invoice.invoice_table.Invoice_Number}</td>
+                    <td>{invoice.invoice_table.Ticket_Id}</td>
+                    <td>{invoice.invoice_table.CREATEDTIME}</td>
+                    <td>
+                      <ActionDropdown invoice={invoice.invoice_table} />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </div>
+          <div className='d-flex justify-content-center ' style={{ margin: '30px' }}>
+            <Pagination
+              current={currentPage}
+              pageSize={pageSize}
+              total={totalRecords}
+              onChange={handlePageChange}
+              showSizeChanger={false}
+            />
+          </div>
         </div>
       )}
 
-      
+
       <InvoiceModal />
 
       {/* Filter Modal */}
