@@ -1442,6 +1442,9 @@ import Dashboard from './components/Views/Dashboard';
 import ViewClosedTicket from './components/Views/ViewClosedTicket';
 import ProductIssue from './components/Forms/ProductIssue';
 import InwardForm from './components/Forms/InwardForm';
+import TechnicianStockAdd from './components/Forms/TechnicianStockAdd';
+import TechnicianStocksUpdate from './components/Forms/TechnicianStocksUpdate';
+import TechnicianStockView from './components/Views/TechnicianStockView';
 
 const App = () => {
   const [userRole, setUserRole] = useState('');
@@ -1477,6 +1480,8 @@ const App = () => {
     { key: 'f5', label: 'Ticket Creation', path: 'ticket-creation', component: TicketCreation },
     { key: 'f6', label: 'Inward Form', path: 'Inward', component:  InwardForm},
     { key: 'f7', label: 'Product Issue', path: 'product-issue', component:  ProductIssue},
+    { key: 'f8', label: 'Technician Stock Update', path: 'stock-update', component:  TechnicianStocksUpdate},
+    { key: 'f9', label: 'Technician Stock Add', path: 'stock-add', component:  TechnicianStockAdd},
 
   ];
 
@@ -1497,6 +1502,7 @@ const App = () => {
     { key: 't1', label: 'Technician View', path: 'technician-view', component: TechnicianView },
     { key: 't2', label: 'Dispatch View', path: 'dispatch-view', component: DispatchView },
     { key: 't3', label: 'Invoice Form', path: 'invoice-form', component: InvoiceForm },
+    { key: 't4', label: 'Stock View', path: 'stock-view', component:  TechnicianStockView},
   ];
 
   const inhouseItems = [
@@ -1669,7 +1675,7 @@ const App = () => {
               element={
                 <item.component 
                   roleEmail={userEmail}
-                  shouldFetchData={item.path === 'technician-view' ? shouldFetchTechnicianData : undefined}
+                  shouldFetchData={item.path === 'technician-view' ? shouldFetchTechnicianData : item.path === 'stock-view'?setShouldFetchTechnicianData:undefined}
                   onDataFetched={() => setShouldFetchTechnicianData(false)}
                 />
               } 

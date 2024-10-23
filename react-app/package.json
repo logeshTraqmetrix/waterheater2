@@ -25,6 +25,7 @@
     "react-qr-reader": "^3.0.0-beta-1",
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
+    "react-select": "^5.8.1",
     "react-signature-canvas": "^1.0.6",
     "react-spinners": "^0.13.8",
     "react-sticky-box": "^2.0.5",

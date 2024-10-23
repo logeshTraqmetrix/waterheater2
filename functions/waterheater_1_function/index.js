@@ -21,6 +21,7 @@ const sparesTableId = "15205000000156983";
 const scrapTableId = "15205000000157707";
 const lisOfSparesTableId = "15205000000158431";
 const inwardTable = "15205000000387183";
+const technicianStockTableId = "15205000000385927"
 
 // Define the getMyPagedRows function outside the route handler
 async function getMyPagedRows(dataStore, tableId, hasNext = true, nextToken = undefined, allData = []) {
@@ -883,6 +884,82 @@ app.delete('/delete-inward', (req, res) => {
 })
 
 
+//-----------------------------------------------------------------------------//
+
+
+
+app.get('/get-technician-stock', async (req, res) => {
+	try {
+		const catalystApp = catalyst.initialize(req);
+		let dataStore = catalystApp.datastore();
+
+		// Fetch all rows using the getMyPagedRows function
+		const allRows = await getMyPagedRows(dataStore, technicianStockTableId);
+
+		res.json(allRows);
+	} catch (err) {
+		console.log('error in getting inward',err)
+		res.status(500).send(err.toString());
+	}
+})
+
+//Post spares record
+app.post('/add-technician-stock', async (req, res) => {
+	try {
+		let rowData = req.body.data;
+		const catalystApp = catalyst.initialize(req);
+		let dataStore = catalystApp.datastore();
+
+		// let rowData = [{Customer_Name:"Test Customer"}];
+		let insertedValue = await dataStore.table(technicianStockTableId).insertRows(rowData)
+			.then((rows) => {
+				console.log(rows);
+				res.json(rows);
+			})
+			.catch((err) => {
+				console.log("Error in inserting row : " + err);
+			});
+
+	} catch (error) {
+		console.log("Error While posting inward : " , error);
+	}
+})
+
+
+//Put api for update spares
+app.put('/update-technician-stock', (req, res) => {
+	try {
+		let updatedRowData = req.body.data;
+		let catalystApp = catalyst.initialize(req);
+		let datastore = catalystApp.datastore();
+		let table = datastore.table(technicianStockTableId);
+		let rowPromise = table.updateRows(updatedRowData);
+		rowPromise.then((row) => {
+			console.log(row);
+			res.json(row);
+		});
+	} catch (error) {
+		console.log("Error on Updating inward : " , error);
+	}
+})
+
+//delete api for remove spares
+app.delete('/delete-technician-stock', (req, res) => {
+	try {
+		let { ROWID } = req.body.data;
+		let catalystApp = catalyst.initialize(req);
+		let datastore = catalystApp.datastore();
+		let table = datastore.table(technicianStockTableId);
+		let rowPromise = table.deleteRow(ROWID);
+		rowPromise.then((row) => {
+			console.log(row);
+			res.json(row);
+		});
+	} catch (error) {
+		console.error("Error while deleting inward : " , error);
+	}
+})
+
 
 //-----------------------------------------------------------------------------//
 //Get single scrap record
@@ -1080,6 +1157,7 @@ app.get('/getfilterticket', (req, res) => {
 
 	let search1 = req.query.search
 	let search = JSON.parse(search1)
+	
 	var catalystApp = catalyst.initialize(req);
 	getDataFromCatalystDataStore(catalystApp, search.table, search.column, search.value).then(Detail => {
 		res.send(Detail)
