@@ -660,9 +660,7 @@ import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 import BarcodeScanner from "./BarcodeScanner";
 
-const DispatchInvoice = ({ ticketId, customerName5, customerAddress, RowId, Dynamic_Status }) => {
-
-    console.log('dynamic status', Dynamic_Status)
+const DispatchInvoice = ({ ticketId, customerName5, customerAddress, RowId, Dynamic_Status,roleEmail }) => {
 
     const [ticketRowId, setTicketRowId] = useState(RowId)
     const [ticketNumber, setTicketNumber] = useState(ticketId);
@@ -684,16 +682,34 @@ const DispatchInvoice = ({ ticketId, customerName5, customerAddress, RowId, Dyna
     const navigate = useNavigate();
 
 
+    // useEffect(() => {
+    //     axios.get('/server/waterheater_1_function/getspares')
+    //         .then((res) => {
+    //             console.log('spares data response', res.data);
+    //             setSparesData(res.data);
+    //         })
+    //         .catch((err) => {
+    //             console.log('error in getting spares data', err);
+    //         });
+    // }, []);
+
+
     useEffect(() => {
-        axios.get('/server/waterheater_1_function/getspares')
-            .then((res) => {
-                console.log('spares data response', res.data);
-                setSparesData(res.data);
-            })
-            .catch((err) => {
-                console.log('error in getting spares data', err);
-            });
-    }, []);
+        axios.get(
+            `/server/waterheater_1_function/getfilterticket?search=${encodeURIComponent(
+                JSON.stringify({
+                    table: 'technician_stocks',
+                    column: 'Technician_Email',
+                    value: roleEmail,
+                })
+            )}`
+        ).then((response) => {
+            console.log('response from stokes table', response)
+            setSparesData(response.data)
+        }).catch((error) => {
+            console.log('error in getting stokes data', error)
+        })
+    }, [])
 
     function generateAlphanumericID(length) {
         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
@@ -726,9 +742,9 @@ const DispatchInvoice = ({ ticketId, customerName5, customerAddress, RowId, Dyna
         if (name === 'barcode') {
             console.log('barcodein handle change function', value)
 
-            const selectedMaterial = sparesData.find(data => data.BarCodeValue === value);
-            updatedFields[index].materialName = selectedMaterial ? selectedMaterial.Material_Name : "";
-            updatedFields[index].price = selectedMaterial ? selectedMaterial.Price : "";
+            const selectedMaterial = sparesData.find(data => data.technician_stocks.BarCodeValue === value);
+            updatedFields[index].materialName = selectedMaterial ? selectedMaterial.technician_stocks.Spares_Name : "";
+            updatedFields[index].price = selectedMaterial ? selectedMaterial.technician_stocks.Price : "";
             if (updatedFields[index].quantity && updatedFields[index].price) {
                 updatedFields[index].rate = (updatedFields[index].quantity * updatedFields[index].price).toFixed(2);
             } else {
@@ -748,8 +764,8 @@ const DispatchInvoice = ({ ticketId, customerName5, customerAddress, RowId, Dyna
         if (name === "materialName") {
             console.log('index', index)
             updatedFields[index].materialName = value;
-            const selectedMaterial = sparesData.find(data => data.Material_Name === value);
-            updatedFields[index].price = selectedMaterial ? selectedMaterial.Price : "";
+            const selectedMaterial = sparesData.find(data => data.technician_stocks.Spares_Name === value);
+            updatedFields[index].price = selectedMaterial ? selectedMaterial.technician_stocks.Price : "";
             if (updatedFields[index].quantity && updatedFields[index].price) {
                 updatedFields[index].rate = (updatedFields[index].quantity * updatedFields[index].price).toFixed(2);
             } else {
@@ -765,18 +781,18 @@ const DispatchInvoice = ({ ticketId, customerName5, customerAddress, RowId, Dyna
         }
 
         if (name === "quantity") {
-            const selectedMaterial = sparesData.find(data => data.Material_Name === updatedFields[index].materialName);
-            const availableQuantity = selectedMaterial ? parseInt(selectedMaterial.Available_Qty, 10) : 0;
+            const selectedMaterial = sparesData.find(data => data.technician_stocks.Material_Name === updatedFields[index].materialName);
+            const availableQuantity = selectedMaterial ? parseInt(selectedMaterial.technician_stocks.Available_Qty, 10) : 0;
 
-            if (parseInt(value, 10) > availableQuantity) {
-                alert("Insufficient quantity");
-                updatedFields[index].quantity = "";
-                updatedFields[index].rate = "";
-            } else {
+            // if (parseInt(value, 10) > availableQuantity) {
+            //     alert("Insufficient quantity");
+            //     updatedFields[index].quantity = "";
+            //     updatedFields[index].rate = "";
+            // } else {
                 updatedFields[index].quantity = value;
                 const price = updatedFields[index].price || 0;
                 updatedFields[index].rate = (value * price).toFixed(2);
-            }
+            // }
         }
 
         setFields(updatedFields);
@@ -976,15 +992,15 @@ const DispatchInvoice = ({ ticketId, customerName5, customerAddress, RowId, Dyna
                         if (sparce === "yes") {
                             try {
                                 var sparesChanges = fields.map(field => {
-                                    const selectedMaterial = sparesData.find(data => data.Material_Name === field.materialName);
-                                    const availableQty = parseInt(selectedMaterial.Available_Qty, 10);
-                                    const consumedQty = parseInt(selectedMaterial.Consumed_Qty || 0, 10);
+                                    const selectedMaterial = sparesData.find(data => data.technician_stocks.Spares_Name === field.materialName);
+                                    const availableQty = parseInt(selectedMaterial.technician_stocks.Available_Qty, 10);
+                                    const consumedQty = parseInt(selectedMaterial.technician_stocks.Consumed_Qty || 0, 10);
 
                                     const newConsumedQty = consumedQty + parseInt(field.quantity, 10);
                                     const newAvailableQty = availableQty - parseInt(field.quantity, 10);
 
                                     return {
-                                        ROWID: selectedMaterial.ROWID,
+                                        ROWID: selectedMaterial.technician_stocks.ROWID,
                                         Available_Qty: newAvailableQty.toString(),
                                         Consumed_Qty: newConsumedQty.toString()
                                     };
@@ -992,7 +1008,7 @@ const DispatchInvoice = ({ ticketId, customerName5, customerAddress, RowId, Dyna
 
                                 console.log("Spares Changes:", sparesChanges);
                                 try {
-                                    axios.put('/server/waterheater_1_function/updatespares', { data: sparesChanges })
+                                    axios.put('/server/waterheater_1_function/update-technician-stock', { data: sparesChanges })
                                         .then((res) => {
                                             console.log('update spares data', res)
                                         })
@@ -1201,8 +1217,8 @@ const DispatchInvoice = ({ ticketId, customerName5, customerAddress, RowId, Dyna
                                         <Form.Control as="select" name="materialName" value={field.materialName} onChange={(e) => handleChange(index, e)}>
                                             <option value="">Select an option</option>
                                             {sparesData.map((data) => (
-                                                <option key={data.Material_Name} value={data.Material_Name}>
-                                                    {data.Material_Name}
+                                                <option key={data.technician_stocks.Spares_Name} value={data.technician_stocks.Spares_Name}>
+                                                    {data.technician_stocks.Spares_Name}
                                                 </option>
                                             ))}
                                         </Form.Control>
@@ -1274,8 +1290,8 @@ const DispatchInvoice = ({ ticketId, customerName5, customerAddress, RowId, Dyna
                                         <Form.Control as="select" value={scrapForm.material} name="material" onChange={(e) => handleScrapChange(index, "material", e.target.value)}>
                                             <option value="">Select an option</option>
                                             {sparesData.map((data) => (
-                                                <option key={data.Material_Name} value={data.Material_Name}>
-                                                    {data.Material_Name}
+                                                <option key={data.technician_stocks.Spares_Name} value={data.technician_stocks.Spares_Name}>
+                                                    {data.technician_stocks.Spares_Name}
                                                 </option>
                                             ))}
                                         </Form.Control>

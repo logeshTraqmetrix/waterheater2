@@ -256,7 +256,9 @@ import HashLoader from "react-spinners/HashLoader";
 import Swal from 'sweetalert2';
 import DispatchInvoice from '../Forms/DispatchInvoice';
 
-const InhouseView = () => {
+const InhouseView = ({roleEmail}) => {
+
+
   const [data, setData] = useState([]);
   const [selectedTicket, setSelectedTicket] = useState(null);
   const [showModal, setShowModal] = useState(false);
@@ -486,6 +488,7 @@ const InhouseView = () => {
             RowId={selectedTicket?.ROWID}
             onSubmit={handleSubmitInvoice}
             Dynamic_Status={passingStatus}
+            roleEmail={roleEmail}
           />) : (<DispatchInvoice
             ticketId={selectedTicket?.Ticket_Id}
             customerName5={selectedTicket?.Customer_Name}
@@ -493,6 +496,7 @@ const InhouseView = () => {
             RowId={selectedTicket?.ROWID}
             onSubmit={handleSubmitInvoice}
             Dynamic_Status={passingStatus}
+            roleEmail={roleEmail}
           />)}
         </div>
       )}

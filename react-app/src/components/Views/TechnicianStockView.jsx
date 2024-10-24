@@ -17,7 +17,7 @@ const TechnicianStockView = ({ roleEmail, shouldFetchData, onDataFetched }) => {
             }).catch((error)=>{
                 console.log('error in getting stokes data',error)
             })
-    })
+    },[])
     return (
         <div>TechnicianStockView</div>
     )

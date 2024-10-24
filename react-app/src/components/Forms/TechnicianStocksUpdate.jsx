@@ -29,7 +29,7 @@ const TechnicianStocksUpdate = () => {
     if (selectedTech) {
       console.log('Technician Email:', selectedTech.Technician_Email)
       axios.get(`/server/waterheater_1_function/getfilterticket?search=${encodeURIComponent(JSON.stringify({
-        table: 'techinician_stocks',
+        table: 'technician_stocks',
         column: 'Technician_Email',
         value: selectedTech.Technician_Email
       }))}`)
@@ -150,11 +150,11 @@ const TechnicianStocksUpdate = () => {
       technicianStock.map((stock) => {
 
        if (addedValue.Add_Qty>0) {
-        if (addedValue.Spares_Name === stock.techinician_stocks.Spares_Name) {
+        if (addedValue.Spares_Name === stock.technician_stocks.Spares_Name) {
           const updatedObj = {
             ...values,
-            ROWID: stock.techinician_stocks.ROWID,
-            Available_Qty: (parseInt(stock.techinician_stocks.Available_Qty) + parseInt(addedValue.Add_Qty))
+            ROWID: stock.technician_stocks.ROWID,
+            Available_Qty: (parseInt(stock.technician_stocks.Available_Qty) + parseInt(addedValue.Add_Qty))
           }
           technicianStockPayload.push(updatedObj)
         }
@@ -225,18 +225,18 @@ const TechnicianStocksUpdate = () => {
           </thead>
           <tbody>
             {technicianStock.map((stockItem) => {
-              const qtyItem = addQty.find(item => item.Spares_Name === stockItem.techinician_stocks.Spares_Name)
+              const qtyItem = addQty.find(item => item.Spares_Name === stockItem.technician_stocks.Spares_Name)
               return (
-                <tr key={stockItem.techinician_stocks.ROWID}>
-                  <td>{stockItem.techinician_stocks.Techinician_Name}</td>
-                  <td>{stockItem.techinician_stocks.Spares_Name}</td>
-                  <td>{stockItem.techinician_stocks.Consumed_Qty}</td>
-                  <td>{stockItem.techinician_stocks.Available_Qty}</td>
+                <tr key={stockItem.technician_stocks.ROWID}>
+                  <td>{stockItem.technician_stocks.Technician_Name}</td>
+                  <td>{stockItem.technician_stocks.Spares_Name}</td>
+                  <td>{stockItem.technician_stocks.Consumed_Qty}</td>
+                  <td>{stockItem.technician_stocks.Available_Qty}</td>
                   <td>
                     <Form.Control
                       type="number"
                       value={qtyItem?.Add_Qty || ''}
-                      onChange={(e) => handleQtyChange(stockItem.techinician_stocks.Spares_Name, e.target.value)}
+                      onChange={(e) => handleQtyChange(stockItem.technician_stocks.Spares_Name, e.target.value)}
                       placeholder="Add Qty"
                     />
                   </td>

@@ -653,3 +653,1863 @@ Response Headers: {"server":"ZGS","date":"Wed, 23 Oct 2024 13:46:54 GMT","conten
 [debug] [2024-10-23T13:46:51.120Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
 
 [debug] [2024-10-23T13:46:51.122Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2024-10-24T04:37:12.220Z] : 
+[debug] [2024-10-24T04:37:12.223Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T04:37:12.223Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-10-24T04:37:12.224Z] : CLI Version:  1.17.6
+[debug] [2024-10-24T04:37:12.224Z] : Platform:     win32
+[debug] [2024-10-24T04:37:12.225Z] : Node Version: v20.14.0
+[debug] [2024-10-24T04:37:12.225Z] : Time:         Thu Oct 24 2024 10:07:12 GMT+0530 (India Standard Time)
+[debug] [2024-10-24T04:37:12.225Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T04:37:12.225Z] : 
+[debug] [2024-10-24T04:37:14.371Z] : > authorizing via signed-in user option
+[debug] [2024-10-24T04:37:14.372Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute","ZohoCatalyst.authentication.CREATE"]
+[debug] [2024-10-24T04:37:14.394Z] : > refreshing access token <
+[debug] [2024-10-24T04:37:14.396Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2024-10-24T04:37:15.571Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 04:37:15 GMT","content-type":"application/json;charset=UTF-8","content-length":"1949","connection":"keep-alive","set-cookie":["zalb_b266a5bf57=9f371135a524e2d1f51eb9f41fa26c60; Path=/; Secure; HttpOnly","iamcsr=2cbd060c-d7f2-41dc-98de-93bc5d08636e;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=2cbd060c-d7f2-41dc-98de-93bc5d08636e;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","pragma":"no-cache","x-frame-options":"SAMEORIGIN","vary":"accept-encoding","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T04:37:15.622Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-10-24T04:37:16.937Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 04:37:16 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=c3d5ec374d3dc932973a3d50f55d8d00; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=70e48437-b6ba-4c58-bf0a-1a6284e3eeee;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=70e48437-b6ba-4c58-bf0a-1a6284e3eeee;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T04:37:16.940Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-10-24T04:37:17.339Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 04:37:17 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=b14009a6059feb83ee8aa1c715a015c5; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=b88f9840-48f6-4d1d-bebd-7706f8422981;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=b88f9840-48f6-4d1d-bebd-7706f8422981;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T04:37:17.950Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-10-24T04:37:18.357Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 04:37:18 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=b33bafea-8c38-47db-a046-02a93a3be15f;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=b33bafea-8c38-47db-a046-02a93a3be15f;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T04:37:18.361Z] : unknown eol undefined hence skipping check
+[debug] [2024-10-24T04:37:18.362Z] : unknown eol undefined hence skipping check
+[info] [2024-10-24T04:37:25.622Z] : [react-plugin]: Starting the development server...
+
+[info] [2024-10-24T04:37:25.625Z] : 
+[info] [2024-10-24T04:37:25.625Z] : i Client[react-app]: Plugin : "zcatalyst-cli-plugin-react" is used for client serve
+[info] [2024-10-24T04:37:25.625Z] : 
+[info] [2024-10-24T04:37:28.549Z] : 
+[info] [2024-10-24T04:37:28.550Z] :  >>>>>>>>>>>>>> BasicIO <<<<<<<<<<<<<< 
+[info] [2024-10-24T04:37:28.551Z] : i authbasicio: http://localhost:3000/server/authbasicio/execute
+[info] [2024-10-24T04:37:28.551Z] : 
+[info] [2024-10-24T04:37:28.552Z] : 
+[info] [2024-10-24T04:37:28.552Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-10-24T04:37:28.553Z] : i waterheater_1_function: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-10-24T04:37:28.554Z] : 
+[info] [2024-10-24T04:37:28.554Z] : 
+[info] [2024-10-24T04:37:28.555Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2024-10-24T04:37:28.555Z] : i client[react-app]: http://localhost:3000/app/
+[info] [2024-10-24T04:37:28.556Z] : 
+[info] [2024-10-24T04:37:39.020Z] : [react-plugin]: Compiled successfully!
+[info] [2024-10-24T04:37:39.021Z] : [react-plugin]: 
+[info] [2024-10-24T04:37:39.021Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-10-24T04:37:39.022Z] : [react-plugin]: 
+[info] [2024-10-24T04:37:39.022Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-10-24T04:37:39.022Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-10-24T04:37:39.022Z] : [react-plugin]: 
+[info] [2024-10-24T04:37:39.023Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-10-24T04:37:39.023Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-10-24T04:37:39.023Z] : [react-plugin]: 
+[info] [2024-10-24T04:41:28.691Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T04:41:35.191Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T04:41:35.193Z] : [react-plugin]: [eslint] 
+src\components\Forms\TechnicianStockAdd.jsx
+  Line 5:8:    'Swal' is defined but never used                      no-unused-vars
+  Line 11:10:  'technicianStock' is assigned a value but never used  no-unused-vars
+  Line 12:10:  'sparesData' is assigned a value but never used       no-unused-vars
+[info] [2024-10-24T04:41:35.194Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T04:41:35.195Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T04:46:31.110Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T04:46:34.796Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T04:46:34.797Z] : [react-plugin]: [eslint] 
+src\components\Forms\TechnicianStockAdd.jsx
+  Line 5:8:    'Swal' is defined but never used                      no-unused-vars
+  Line 11:10:  'technicianStock' is assigned a value but never used  no-unused-vars
+  Line 12:10:  'sparesData' is assigned a value but never used       no-unused-vars
+[info] [2024-10-24T04:46:34.798Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T04:46:34.800Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T04:48:07.172Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T04:48:10.849Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T04:48:10.850Z] : [react-plugin]: [eslint] 
+src\components\Forms\TechnicianStockAdd.jsx
+  Line 5:8:    'Swal' is defined but never used                      no-unused-vars
+  Line 11:10:  'technicianStock' is assigned a value but never used  no-unused-vars
+  Line 12:10:  'sparesData' is assigned a value but never used       no-unused-vars
+[info] [2024-10-24T04:48:10.852Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T04:48:10.853Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T04:59:20.936Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T04:59:25.079Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T04:59:25.081Z] : [react-plugin]: [eslint] 
+src\components\Forms\TechnicianStockAdd.jsx
+  Line 5:8:    'Swal' is defined but never used                      no-unused-vars
+  Line 11:10:  'technicianStock' is assigned a value but never used  no-unused-vars
+  Line 12:10:  'sparesData' is assigned a value but never used       no-unused-vars
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-10-24T04:59:25.083Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T04:59:25.083Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T05:01:35.764Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T05:01:39.467Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T05:01:39.470Z] : [react-plugin]: [eslint] 
+src\components\Forms\TechnicianStockAdd.jsx
+  Line 5:8:    'Swal' is defined but never used                      no-unused-vars
+  Line 11:10:  'technicianStock' is assigned a value but never used  no-unused-vars
+  Line 12:10:  'sparesData' is assigned a value but never used       no-unused-vars
+
+src\components\Views\TechnicianStockView.jsx
+  Line 20:7:  React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-10-24T05:01:39.471Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T05:01:39.472Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T05:01:58.853Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T05:02:02.649Z] : [react-plugin]: Failed to compile.
+
+[info] [2024-10-24T05:02:02.650Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1607:27:  'res' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+[info] [2024-10-24T05:02:28.938Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T05:02:33.087Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T05:02:33.091Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1551:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1567:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1568:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1611:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\TechnicianStockAdd.jsx
+  Line 5:8:    'Swal' is defined but never used                      no-unused-vars
+  Line 11:10:  'technicianStock' is assigned a value but never used  no-unused-vars
+  Line 12:10:  'sparesData' is assigned a value but never used       no-unused-vars
+
+src\components\Views\TechnicianStockView.jsx
+  Line 20:7:  React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-10-24T05:02:33.093Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T05:02:33.094Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T05:13:34.226Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T05:13:38.098Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T05:13:38.103Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1551:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1567:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1568:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1611:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\TechnicianStockAdd.jsx
+  Line 5:8:    'Swal' is defined but never used                      no-unused-vars
+  Line 11:10:  'technicianStock' is assigned a value but never used  no-unused-vars
+  Line 12:10:  'sparesData' is assigned a value but never used       no-unused-vars
+
+src\components\Forms\TechnicianStocksUpdate.jsx
+  Line 9:19:    'setLoading' is assigned a value but never used                   no-unused-vars
+  Line 149:29:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+  Line 150:35:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+
+src\components\Views\TechnicianStockView.jsx
+  Line 20:7:  React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-10-24T05:13:38.104Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T05:13:38.105Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T05:15:34.779Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T05:15:38.514Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T05:15:38.518Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1551:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1567:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1568:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1611:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\TechnicianStockAdd.jsx
+  Line 5:8:    'Swal' is defined but never used                      no-unused-vars
+  Line 11:10:  'technicianStock' is assigned a value but never used  no-unused-vars
+  Line 12:10:  'sparesData' is assigned a value but never used       no-unused-vars
+
+src\components\Forms\TechnicianStocksUpdate.jsx
+  Line 9:19:    'setLoading' is assigned a value but never used                   no-unused-vars
+  Line 149:29:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+  Line 150:35:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+
+src\components\Views\TechnicianStockView.jsx
+  Line 20:7:  React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-10-24T05:15:38.519Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T05:15:38.520Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T05:17:13.083Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T05:17:16.691Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T05:17:16.699Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1551:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1567:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1568:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1611:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\TechnicianStockAdd.jsx
+  Line 5:8:    'Swal' is defined but never used                      no-unused-vars
+  Line 11:10:  'technicianStock' is assigned a value but never used  no-unused-vars
+  Line 12:10:  'sparesData' is assigned a value but never used       no-unused-vars
+
+src\components\Forms\TechnicianStocksUpdate.jsx
+  Line 9:19:    'setLoading' is assigned a value but never used                   no-unused-vars
+  Line 149:29:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+  Line 150:35:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+
+src\components\Views\TechnicianStockView.jsx
+  Line 20:7:  React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-10-24T05:17:16.700Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T05:17:16.701Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T05:18:15.854Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T05:18:19.030Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T05:18:19.034Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1551:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1567:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1568:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1611:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\TechnicianStockAdd.jsx
+  Line 5:8:    'Swal' is defined but never used                      no-unused-vars
+  Line 11:10:  'technicianStock' is assigned a value but never used  no-unused-vars
+  Line 12:10:  'sparesData' is assigned a value but never used       no-unused-vars
+
+src\components\Forms\TechnicianStocksUpdate.jsx
+  Line 9:19:    'setLoading' is assigned a value but never used                   no-unused-vars
+  Line 149:29:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+  Line 150:35:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+
+src\components\Views\TechnicianStockView.jsx
+  Line 20:7:  React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-10-24T05:18:19.035Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T05:18:19.037Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T05:19:36.233Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T05:19:40.492Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T05:19:40.497Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1551:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1567:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1568:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1611:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\TechnicianStockAdd.jsx
+  Line 5:8:    'Swal' is defined but never used                      no-unused-vars
+  Line 11:10:  'technicianStock' is assigned a value but never used  no-unused-vars
+  Line 12:10:  'sparesData' is assigned a value but never used       no-unused-vars
+
+src\components\Forms\TechnicianStocksUpdate.jsx
+  Line 9:19:    'setLoading' is assigned a value but never used                   no-unused-vars
+  Line 149:29:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+  Line 150:35:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+
+src\components\Views\TechnicianStockView.jsx
+  Line 20:7:  React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-10-24T05:19:40.498Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T05:19:40.499Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T05:20:14.787Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T05:20:18.006Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T05:20:18.010Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1551:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1567:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1568:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1611:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\TechnicianStockAdd.jsx
+  Line 5:8:    'Swal' is defined but never used                      no-unused-vars
+  Line 11:10:  'technicianStock' is assigned a value but never used  no-unused-vars
+  Line 12:10:  'sparesData' is assigned a value but never used       no-unused-vars
+
+src\components\Forms\TechnicianStocksUpdate.jsx
+  Line 9:19:    'setLoading' is assigned a value but never used                   no-unused-vars
+  Line 149:29:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+  Line 150:35:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+
+src\components\Views\TechnicianStockView.jsx
+  Line 20:7:  React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-10-24T05:20:18.014Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T05:20:18.016Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T05:23:24.692Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T05:23:29.100Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T05:23:29.105Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1551:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1567:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1568:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1611:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\TechnicianStockAdd.jsx
+  Line 5:8:    'Swal' is defined but never used                      no-unused-vars
+  Line 11:10:  'technicianStock' is assigned a value but never used  no-unused-vars
+  Line 12:10:  'sparesData' is assigned a value but never used       no-unused-vars
+
+src\components\Forms\TechnicianStocksUpdate.jsx
+  Line 9:19:    'setLoading' is assigned a value but never used                   no-unused-vars
+  Line 149:29:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+  Line 150:35:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+
+src\components\Views\TechnicianStockView.jsx
+  Line 20:7:  React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-10-24T05:23:29.106Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T05:23:29.110Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T05:51:25.786Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T05:51:30.301Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T05:51:30.304Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1551:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1567:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1568:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1611:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\TechnicianStockAdd.jsx
+  Line 5:8:    'Swal' is defined but never used                      no-unused-vars
+  Line 11:10:  'technicianStock' is assigned a value but never used  no-unused-vars
+  Line 12:10:  'sparesData' is assigned a value but never used       no-unused-vars
+
+src\components\Forms\TechnicianStocksUpdate.jsx
+  Line 9:19:    'setLoading' is assigned a value but never used                   no-unused-vars
+  Line 149:29:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+  Line 150:35:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+
+src\components\Views\TechnicianStockView.jsx
+  Line 20:7:  React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-10-24T05:51:30.305Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T05:51:30.306Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[debug] [2024-10-24T05:51:30.689Z] : > refreshing access token <
+[debug] [2024-10-24T05:51:30.694Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2024-10-24T05:51:30.699Z] : > refreshing access token <
+[debug] [2024-10-24T05:51:30.700Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2024-10-24T05:51:31.800Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 05:51:31 GMT","content-type":"application/json;charset=UTF-8","content-length":"1949","connection":"keep-alive","set-cookie":["zalb_b266a5bf57=a711b6da0e6cbadb5e254290f114a026; Path=/; Secure; HttpOnly","iamcsr=2e91e5aa-ce6d-4c22-94ef-c78e9c1a67db;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=2e91e5aa-ce6d-4c22-94ef-c78e9c1a67db;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","pragma":"no-cache","x-frame-options":"SAMEORIGIN","vary":"accept-encoding","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T05:51:31.820Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 05:51:31 GMT","content-type":"application/json;charset=UTF-8","content-length":"1949","connection":"keep-alive","set-cookie":["zalb_b266a5bf57=a711b6da0e6cbadb5e254290f114a026; Path=/; Secure; HttpOnly","iamcsr=582f9a01-9910-4db8-a4b9-75b1e4ac0455;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=582f9a01-9910-4db8-a4b9-75b1e4ac0455;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","pragma":"no-cache","x-frame-options":"SAMEORIGIN","vary":"accept-encoding","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[info] [2024-10-24T05:56:32.006Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T05:56:35.691Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T05:56:35.693Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1551:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1567:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1568:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1611:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\TechnicianStockAdd.jsx
+  Line 5:8:    'Swal' is defined but never used                      no-unused-vars
+  Line 11:10:  'technicianStock' is assigned a value but never used  no-unused-vars
+  Line 12:10:  'sparesData' is assigned a value but never used       no-unused-vars
+
+src\components\Forms\TechnicianStocksUpdate.jsx
+  Line 9:19:    'setLoading' is assigned a value but never used                   no-unused-vars
+  Line 149:29:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+  Line 150:35:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+
+src\components\Views\TechnicianStockView.jsx
+  Line 20:7:  React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-10-24T05:56:35.700Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T05:56:35.701Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T06:04:57.963Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T06:05:02.236Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T06:05:02.240Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1551:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1567:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1568:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1611:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\TechnicianStockAdd.jsx
+  Line 5:8:    'Swal' is defined but never used                      no-unused-vars
+  Line 11:10:  'technicianStock' is assigned a value but never used  no-unused-vars
+  Line 12:10:  'sparesData' is assigned a value but never used       no-unused-vars
+
+src\components\Forms\TechnicianStocksUpdate.jsx
+  Line 9:19:    'setLoading' is assigned a value but never used                   no-unused-vars
+  Line 149:29:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+  Line 150:35:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+
+src\components\Views\TechnicianStockView.jsx
+  Line 20:7:  React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-10-24T06:05:02.241Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T06:05:02.242Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T06:06:31.653Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T06:06:36.060Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T06:06:36.063Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1551:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1567:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1568:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1611:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\TechnicianStockAdd.jsx
+  Line 5:8:    'Swal' is defined but never used                      no-unused-vars
+  Line 11:10:  'technicianStock' is assigned a value but never used  no-unused-vars
+  Line 12:10:  'sparesData' is assigned a value but never used       no-unused-vars
+
+src\components\Forms\TechnicianStocksUpdate.jsx
+  Line 9:19:    'setLoading' is assigned a value but never used                   no-unused-vars
+  Line 149:29:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+  Line 150:35:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+
+src\components\Views\TechnicianStockView.jsx
+  Line 20:7:  React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-10-24T06:06:36.064Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T06:06:36.065Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T06:11:12.742Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T06:11:17.243Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T06:11:17.246Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1550:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1566:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1567:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1610:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\TechnicianStockAdd.jsx
+  Line 5:8:    'Swal' is defined but never used                      no-unused-vars
+  Line 11:10:  'technicianStock' is assigned a value but never used  no-unused-vars
+  Line 12:10:  'sparesData' is assigned a value but never used       no-unused-vars
+
+src\components\Forms\TechnicianStocksUpdate.jsx
+  Line 9:19:    'setLoading' is assigned a value but never used                   no-unused-vars
+  Line 149:29:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+  Line 150:35:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+
+src\components\Views\TechnicianStockView.jsx
+  Line 20:7:  React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-10-24T06:11:17.247Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T06:11:17.248Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T06:29:00.809Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T06:29:05.053Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T06:29:05.062Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1550:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1566:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1567:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1610:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\TechnicianStockAdd.jsx
+  Line 5:8:    'Swal' is defined but never used                      no-unused-vars
+  Line 11:10:  'technicianStock' is assigned a value but never used  no-unused-vars
+  Line 12:10:  'sparesData' is assigned a value but never used       no-unused-vars
+
+src\components\Forms\TechnicianStocksUpdate.jsx
+  Line 9:19:    'setLoading' is assigned a value but never used                   no-unused-vars
+  Line 149:29:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+  Line 150:35:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+
+src\components\Views\TechnicianStockView.jsx
+  Line 20:7:  React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-10-24T06:29:05.064Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T06:29:05.065Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T06:35:12.657Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T06:35:17.148Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T06:35:17.151Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1550:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1566:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1567:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1610:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\TechnicianStockAdd.jsx
+  Line 5:8:    'Swal' is defined but never used                      no-unused-vars
+  Line 11:10:  'technicianStock' is assigned a value but never used  no-unused-vars
+  Line 12:10:  'sparesData' is assigned a value but never used       no-unused-vars
+
+src\components\Forms\TechnicianStocksUpdate.jsx
+  Line 9:19:    'setLoading' is assigned a value but never used                   no-unused-vars
+  Line 149:29:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+  Line 150:35:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+
+src\components\Views\TechnicianStockView.jsx
+  Line 20:7:  React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-10-24T06:35:17.152Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T06:35:17.153Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[debug] [2024-10-24T06:37:14.184Z] : Connection reset from target URL :  Url {
+  protocol: 'http:',
+  slashes: true,
+  auth: null,
+  host: '127.0.0.1:4000',
+  port: '4000',
+  hostname: '127.0.0.1',
+  hash: null,
+  search: null,
+  query: null,
+  pathname: '/',
+  path: '/',
+  href: 'http://127.0.0.1:4000/'
+}
+[debug] [2024-10-24T06:37:14.190Z] : Connection reset from target URL :  Url {
+  protocol: 'http:',
+  slashes: true,
+  auth: null,
+  host: '127.0.0.1:4000',
+  port: '4000',
+  hostname: '127.0.0.1',
+  hash: null,
+  search: null,
+  query: null,
+  pathname: '/',
+  path: '/',
+  href: 'http://127.0.0.1:4000/'
+}
+[debug] [2024-10-24T06:37:14.196Z] : Connection reset from target URL :  Url {
+  protocol: 'http:',
+  slashes: true,
+  auth: null,
+  host: '127.0.0.1:4000',
+  port: '4000',
+  hostname: '127.0.0.1',
+  hash: null,
+  search: null,
+  query: null,
+  pathname: '/',
+  path: '/',
+  href: 'http://127.0.0.1:4000/'
+}
+[info] [2024-10-24T06:38:51.498Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T06:38:55.901Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T06:38:55.905Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1550:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1566:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1567:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1610:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\TechnicianStockAdd.jsx
+  Line 5:8:    'Swal' is defined but never used                      no-unused-vars
+  Line 11:10:  'technicianStock' is assigned a value but never used  no-unused-vars
+  Line 12:10:  'sparesData' is assigned a value but never used       no-unused-vars
+
+src\components\Forms\TechnicianStocksUpdate.jsx
+  Line 9:19:    'setLoading' is assigned a value but never used                   no-unused-vars
+  Line 149:29:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+  Line 150:35:  Array.prototype.map() expects a return value from arrow function  array-callback-return
+
+src\components\Views\TechnicianStockView.jsx
+  Line 20:7:  React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\TechnicianView.jsx
+  Line 817:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-10-24T06:38:55.906Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T06:38:55.908Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T06:39:06.654Z] : Shutting down server
+[info] [2024-10-24T06:39:07.091Z] : 
+[info] [2024-10-24T06:39:07.092Z] : √ Shutdown complete
+[debug] [2024-10-24T06:39:07.093Z] : NO ERRORS REGISTERED
+[debug] [2024-10-24T06:39:07.094Z] : EXEC ENDED with event: serve, message: success
+[debug] [2024-10-24T06:39:07.094Z] : TOTAL DURATION OF COMMAND EXEC : 7312751
+[debug] [2024-10-24T06:39:07.124Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-10-24T06:39:10.975Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 06:39:10 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"keep-alive","set-cookie":["zalb_46512fd555=c3d5ec374d3dc932973a3d50f55d8d00; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=c4d62fc8-deff-44f6-9170-f1238e530d0f;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=c4d62fc8-deff-44f6-9170-f1238e530d0f;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=E56081903374003EFCBAFC9ECA8D5C83; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T06:39:10.976Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2024-10-24T06:39:10.979Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2024-10-24T06:43:12.729Z] : 
+[debug] [2024-10-24T06:43:12.733Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T06:43:12.733Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-10-24T06:43:12.733Z] : CLI Version:  1.17.6
+[debug] [2024-10-24T06:43:12.734Z] : Platform:     win32
+[debug] [2024-10-24T06:43:12.734Z] : Node Version: v20.14.0
+[debug] [2024-10-24T06:43:12.735Z] : Time:         Thu Oct 24 2024 12:13:12 GMT+0530 (India Standard Time)
+[debug] [2024-10-24T06:43:12.735Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T06:43:12.735Z] : 
+[debug] [2024-10-24T06:43:14.377Z] : > authorizing via signed-in user option
+[debug] [2024-10-24T06:43:14.378Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute","ZohoCatalyst.authentication.CREATE"]
+[debug] [2024-10-24T06:43:14.399Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-10-24T06:43:16.253Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 06:43:15 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=4ead9897700827f973c0f7dbded7f673; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=2a9a550a-4a46-4937-b0ef-1466ced634e7;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=2a9a550a-4a46-4937-b0ef-1466ced634e7;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T06:43:16.258Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-10-24T06:43:16.785Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 06:43:16 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=c3d5ec374d3dc932973a3d50f55d8d00; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=1a03bd79-cb99-43d3-befd-c545d390d029;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=1a03bd79-cb99-43d3-befd-c545d390d029;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T06:43:17.189Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-10-24T06:43:17.690Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 06:43:17 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=c3d5ec374d3dc932973a3d50f55d8d00; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=56703128-f2cf-4218-9967-f5832224c570;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=56703128-f2cf-4218-9967-f5832224c570;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T06:43:17.695Z] : unknown eol undefined hence skipping check
+[debug] [2024-10-24T06:43:17.696Z] : unknown eol undefined hence skipping check
+[info] [2024-10-24T06:43:23.848Z] : [react-plugin]: Starting the development server...
+
+[info] [2024-10-24T06:43:23.852Z] : 
+[info] [2024-10-24T06:43:23.853Z] : i Client[react-app]: Plugin : "zcatalyst-cli-plugin-react" is used for client serve
+[info] [2024-10-24T06:43:23.854Z] : 
+[info] [2024-10-24T06:43:26.326Z] : 
+[info] [2024-10-24T06:43:26.327Z] :  >>>>>>>>>>>>>> BasicIO <<<<<<<<<<<<<< 
+[info] [2024-10-24T06:43:26.328Z] : i authbasicio: http://localhost:3000/server/authbasicio/execute
+[info] [2024-10-24T06:43:26.328Z] : 
+[info] [2024-10-24T06:43:26.328Z] : 
+[info] [2024-10-24T06:43:26.329Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-10-24T06:43:26.330Z] : i waterheater_1_function: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-10-24T06:43:26.330Z] : 
+[info] [2024-10-24T06:43:26.331Z] : 
+[info] [2024-10-24T06:43:26.331Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2024-10-24T06:43:26.331Z] : i client[react-app]: http://localhost:3000/app/
+[info] [2024-10-24T06:43:26.332Z] : 
+[info] [2024-10-24T06:43:37.483Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T06:43:37.484Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1550:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1566:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1567:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1610:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-24T06:43:37.484Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T06:43:37.485Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T06:53:56.175Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T06:54:01.584Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T06:54:01.585Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1550:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1566:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1567:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1610:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-24T06:54:01.586Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T06:54:01.586Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[debug] [2024-10-24T06:54:02.069Z] : > refreshing access token <
+[debug] [2024-10-24T06:54:02.073Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2024-10-24T06:54:03.481Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 06:54:03 GMT","content-type":"application/json;charset=UTF-8","content-length":"1949","connection":"keep-alive","set-cookie":["zalb_b266a5bf57=a711b6da0e6cbadb5e254290f114a026; Path=/; Secure; HttpOnly","iamcsr=643a405e-f3b5-4ca6-8b9a-c89ec7343acf;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=643a405e-f3b5-4ca6-8b9a-c89ec7343acf;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","pragma":"no-cache","x-frame-options":"SAMEORIGIN","vary":"accept-encoding","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[info] [2024-10-24T06:54:36.730Z] : Shutting down server
+[info] [2024-10-24T06:54:37.144Z] : 
+[info] [2024-10-24T06:54:37.145Z] : √ Shutdown complete
+[debug] [2024-10-24T06:54:37.146Z] : NO ERRORS REGISTERED
+[debug] [2024-10-24T06:54:37.147Z] : EXEC ENDED with event: serve, message: success
+[debug] [2024-10-24T06:54:37.147Z] : TOTAL DURATION OF COMMAND EXEC : 682793
+[debug] [2024-10-24T06:54:37.180Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-10-24T06:54:41.110Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 06:54:40 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"keep-alive","set-cookie":["zalb_46512fd555=4ead9897700827f973c0f7dbded7f673; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=af7934d0-c378-45c8-9f85-8a7c57cd8235;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=af7934d0-c378-45c8-9f85-8a7c57cd8235;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=0B57B5BABF2EEB860C284BD871BFA413; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T06:54:41.111Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2024-10-24T06:54:41.113Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2024-10-24T06:54:52.730Z] : 
+[debug] [2024-10-24T06:54:52.735Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T06:54:52.736Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-10-24T06:54:52.736Z] : CLI Version:  1.17.6
+[debug] [2024-10-24T06:54:52.738Z] : Platform:     win32
+[debug] [2024-10-24T06:54:52.738Z] : Node Version: v20.14.0
+[debug] [2024-10-24T06:54:52.738Z] : Time:         Thu Oct 24 2024 12:24:52 GMT+0530 (India Standard Time)
+[debug] [2024-10-24T06:54:52.739Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T06:54:52.740Z] : 
+[debug] [2024-10-24T06:54:54.245Z] : > authorizing via signed-in user option
+[debug] [2024-10-24T06:54:54.246Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute","ZohoCatalyst.authentication.CREATE"]
+[debug] [2024-10-24T06:54:54.275Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-10-24T06:54:55.575Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 06:54:55 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=6ee01703-aa39-4ab1-9aa5-eb76d34178e0;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=6ee01703-aa39-4ab1-9aa5-eb76d34178e0;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T06:54:55.582Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-10-24T06:54:55.955Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 06:54:55 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=c3d5ec374d3dc932973a3d50f55d8d00; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=8929071f-22b1-4532-912c-aec2a4db8d32;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=8929071f-22b1-4532-912c-aec2a4db8d32;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T06:54:56.332Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-10-24T06:54:56.811Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 06:54:56 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=be470614-beb5-407f-83a6-7d41e2ef46ef;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=be470614-beb5-407f-83a6-7d41e2ef46ef;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T06:54:56.815Z] : unknown eol undefined hence skipping check
+[debug] [2024-10-24T06:54:56.816Z] : unknown eol undefined hence skipping check
+[info] [2024-10-24T06:55:02.559Z] : [react-plugin]: Starting the development server...
+
+[info] [2024-10-24T06:55:02.564Z] : 
+[info] [2024-10-24T06:55:02.564Z] : i Client[react-app]: Plugin : "zcatalyst-cli-plugin-react" is used for client serve
+[info] [2024-10-24T06:55:02.564Z] : 
+[info] [2024-10-24T06:55:05.004Z] : 
+[info] [2024-10-24T06:55:05.004Z] :  >>>>>>>>>>>>>> BasicIO <<<<<<<<<<<<<< 
+[info] [2024-10-24T06:55:05.005Z] : i authbasicio: http://localhost:3000/server/authbasicio/execute
+[info] [2024-10-24T06:55:05.006Z] : 
+[info] [2024-10-24T06:55:05.006Z] : 
+[info] [2024-10-24T06:55:05.006Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-10-24T06:55:05.007Z] : i waterheater_1_function: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-10-24T06:55:05.007Z] : 
+[info] [2024-10-24T06:55:05.007Z] : 
+[info] [2024-10-24T06:55:05.007Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2024-10-24T06:55:05.008Z] : i client[react-app]: http://localhost:3000/app/
+[info] [2024-10-24T06:55:05.008Z] : 
+[info] [2024-10-24T06:55:16.765Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T06:55:16.766Z] : [react-plugin]: [eslint] 
+src\components\Forms\DispatchInvoice.jsx
+  Line 652:38:  'useRef' is defined but never used                   no-unused-vars
+  Line 652:46:  'useCallback' is defined but never used              no-unused-vars
+  Line 665:25:  'setTicketRowId' is assigned a value but never used  no-unused-vars
+  Line 681:21:  'setLoading' is assigned a value but never used      no-unused-vars
+  Line 817:11:  'dataURLtoBlob' is assigned a value but never used   no-unused-vars
+  Line 905:48:  Expected '===' and instead saw '=='                  eqeqeq
+  Line 906:52:  Expected '===' and instead saw '=='                  eqeqeq
+
+src\components\Forms\InvoiceForm.jsx
+  Line 1550:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1566:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1567:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1610:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-24T06:55:16.767Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T06:55:16.768Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T07:12:28.796Z] : Shutting down server
+[info] [2024-10-24T07:12:29.214Z] : 
+[info] [2024-10-24T07:12:29.215Z] : √ Shutdown complete
+[debug] [2024-10-24T07:12:29.216Z] : NO ERRORS REGISTERED
+[debug] [2024-10-24T07:12:29.217Z] : EXEC ENDED with event: serve, message: success
+[debug] [2024-10-24T07:12:29.217Z] : TOTAL DURATION OF COMMAND EXEC : 1055005
+[debug] [2024-10-24T07:12:29.253Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-10-24T07:12:33.252Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:12:32 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"keep-alive","set-cookie":["zalb_46512fd555=b14009a6059feb83ee8aa1c715a015c5; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=2fa58704-a24a-4f4f-b205-8bba4b470fd4;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=2fa58704-a24a-4f4f-b205-8bba4b470fd4;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=1905BDF78F3A4FA9BC94C3D2860F3176; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:12:33.254Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2024-10-24T07:12:33.256Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2024-10-24T07:12:38.030Z] : 
+[debug] [2024-10-24T07:12:38.033Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T07:12:38.034Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-10-24T07:12:38.034Z] : CLI Version:  1.17.6
+[debug] [2024-10-24T07:12:38.034Z] : Platform:     win32
+[debug] [2024-10-24T07:12:38.035Z] : Node Version: v20.14.0
+[debug] [2024-10-24T07:12:38.035Z] : Time:         Thu Oct 24 2024 12:42:38 GMT+0530 (India Standard Time)
+[debug] [2024-10-24T07:12:38.035Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T07:12:38.036Z] : 
+[debug] [2024-10-24T07:12:39.638Z] : > authorizing via signed-in user option
+[debug] [2024-10-24T07:12:39.639Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute","ZohoCatalyst.authentication.CREATE"]
+[debug] [2024-10-24T07:12:39.660Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-10-24T07:12:41.015Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:12:40 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=4ead9897700827f973c0f7dbded7f673; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=1ceb7029-94e8-4913-aa67-3bfd681fc41b;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=1ceb7029-94e8-4913-aa67-3bfd681fc41b;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:12:41.023Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-10-24T07:12:41.487Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:12:41 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=c3d5ec374d3dc932973a3d50f55d8d00; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=198dd6e2-6b4f-4c3e-94eb-b893b5d3f794;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=198dd6e2-6b4f-4c3e-94eb-b893b5d3f794;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:12:41.951Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-10-24T07:12:42.414Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:12:41 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=c3d5ec374d3dc932973a3d50f55d8d00; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=97b5b53e-eccf-4309-a7d0-40c6ee6d84ad;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=97b5b53e-eccf-4309-a7d0-40c6ee6d84ad;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:12:42.418Z] : unknown eol undefined hence skipping check
+[debug] [2024-10-24T07:12:42.419Z] : unknown eol undefined hence skipping check
+[info] [2024-10-24T07:12:48.146Z] : [react-plugin]: Starting the development server...
+
+[info] [2024-10-24T07:12:48.149Z] : 
+[info] [2024-10-24T07:12:48.150Z] : i Client[react-app]: Plugin : "zcatalyst-cli-plugin-react" is used for client serve
+[info] [2024-10-24T07:12:48.150Z] : 
+[info] [2024-10-24T07:12:50.497Z] : 
+[info] [2024-10-24T07:12:50.498Z] :  >>>>>>>>>>>>>> BasicIO <<<<<<<<<<<<<< 
+[info] [2024-10-24T07:12:50.498Z] : i authbasicio: http://localhost:3000/server/authbasicio/execute
+[info] [2024-10-24T07:12:50.499Z] : 
+[info] [2024-10-24T07:12:50.499Z] : 
+[info] [2024-10-24T07:12:50.500Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-10-24T07:12:50.500Z] : i waterheater_1_function: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-10-24T07:12:50.501Z] : 
+[info] [2024-10-24T07:12:50.501Z] : 
+[info] [2024-10-24T07:12:50.501Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2024-10-24T07:12:50.502Z] : i client[react-app]: http://localhost:3000/app/
+[info] [2024-10-24T07:12:50.502Z] : 
+[info] [2024-10-24T07:13:02.487Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T07:13:02.488Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1550:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1551:26:  'setTicketNumber' is assigned a value but never used                                                          no-unused-vars
+  Line 1552:26:  'setCustomerName' is assigned a value but never used                                                          no-unused-vars
+  Line 1555:21:  'setAddress' is assigned a value but never used                                                               no-unused-vars
+  Line 1566:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1567:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1568:11:  'navigate' is assigned a value but never used                                                                 no-unused-vars
+  Line 1610:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-24T07:13:02.488Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T07:13:02.489Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T07:20:53.951Z] : Shutting down server
+[info] [2024-10-24T07:20:54.346Z] : 
+[info] [2024-10-24T07:20:54.347Z] : √ Shutdown complete
+[debug] [2024-10-24T07:20:54.348Z] : NO ERRORS REGISTERED
+[debug] [2024-10-24T07:20:54.349Z] : EXEC ENDED with event: serve, message: success
+[debug] [2024-10-24T07:20:54.349Z] : TOTAL DURATION OF COMMAND EXEC : 494739
+[debug] [2024-10-24T07:20:54.380Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-10-24T07:20:57.997Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:20:57 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"keep-alive","set-cookie":["zalb_46512fd555=b14009a6059feb83ee8aa1c715a015c5; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=6473d1bd-1a47-43db-8ec5-b935ecabc518;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=6473d1bd-1a47-43db-8ec5-b935ecabc518;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=3372DFD0C2ECDEEC38BE1E7A7FCA379F; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:20:57.999Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2024-10-24T07:20:58.002Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2024-10-24T07:22:02.567Z] : 
+[debug] [2024-10-24T07:22:02.571Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T07:22:02.571Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-10-24T07:22:02.571Z] : CLI Version:  1.17.6
+[debug] [2024-10-24T07:22:02.572Z] : Platform:     win32
+[debug] [2024-10-24T07:22:02.572Z] : Node Version: v20.14.0
+[debug] [2024-10-24T07:22:02.573Z] : Time:         Thu Oct 24 2024 12:52:02 GMT+0530 (India Standard Time)
+[debug] [2024-10-24T07:22:02.574Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T07:22:02.574Z] : 
+[debug] [2024-10-24T07:22:04.055Z] : > authorizing via signed-in user option
+[debug] [2024-10-24T07:22:04.056Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute","ZohoCatalyst.authentication.CREATE"]
+[debug] [2024-10-24T07:22:04.080Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-10-24T07:22:05.427Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:22:05 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=4ead9897700827f973c0f7dbded7f673; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=1d8d55ca-79d4-4937-9cbb-ebcf2ea224e1;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=1d8d55ca-79d4-4937-9cbb-ebcf2ea224e1;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:22:05.434Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-10-24T07:22:05.791Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:22:05 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=c3d5ec374d3dc932973a3d50f55d8d00; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=56844b73-6b7a-4409-8fdb-9624a3ebe0f6;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=56844b73-6b7a-4409-8fdb-9624a3ebe0f6;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:22:06.167Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-10-24T07:22:06.651Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:22:06 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=b14009a6059feb83ee8aa1c715a015c5; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=ea26b17d-b720-44f6-8cc8-35a50335c0f5;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=ea26b17d-b720-44f6-8cc8-35a50335c0f5;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:22:06.654Z] : unknown eol undefined hence skipping check
+[debug] [2024-10-24T07:22:06.655Z] : unknown eol undefined hence skipping check
+[info] [2024-10-24T07:22:12.459Z] : [react-plugin]: Starting the development server...
+
+[info] [2024-10-24T07:22:12.462Z] : 
+[info] [2024-10-24T07:22:12.463Z] : i Client[react-app]: Plugin : "zcatalyst-cli-plugin-react" is used for client serve
+[info] [2024-10-24T07:22:12.463Z] : 
+[info] [2024-10-24T07:22:14.824Z] : 
+[info] [2024-10-24T07:22:14.825Z] :  >>>>>>>>>>>>>> BasicIO <<<<<<<<<<<<<< 
+[info] [2024-10-24T07:22:14.826Z] : i authbasicio: http://localhost:3000/server/authbasicio/execute
+[info] [2024-10-24T07:22:14.826Z] : 
+[info] [2024-10-24T07:22:14.827Z] : 
+[info] [2024-10-24T07:22:14.827Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-10-24T07:22:14.828Z] : i waterheater_1_function: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-10-24T07:22:14.828Z] : 
+[info] [2024-10-24T07:22:14.828Z] : 
+[info] [2024-10-24T07:22:14.829Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2024-10-24T07:22:14.829Z] : i client[react-app]: http://localhost:3000/app/
+[info] [2024-10-24T07:22:14.830Z] : 
+[info] [2024-10-24T07:22:26.618Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T07:22:26.620Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1550:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1551:26:  'setTicketNumber' is assigned a value but never used                                                          no-unused-vars
+  Line 1552:26:  'setCustomerName' is assigned a value but never used                                                          no-unused-vars
+  Line 1555:21:  'setAddress' is assigned a value but never used                                                               no-unused-vars
+  Line 1566:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1567:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1568:11:  'navigate' is assigned a value but never used                                                                 no-unused-vars
+  Line 1610:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-24T07:22:26.620Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T07:22:26.621Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T07:24:44.970Z] : Shutting down server
+[info] [2024-10-24T07:24:45.364Z] : 
+[info] [2024-10-24T07:24:45.366Z] : √ Shutdown complete
+[debug] [2024-10-24T07:24:45.367Z] : NO ERRORS REGISTERED
+[debug] [2024-10-24T07:24:45.367Z] : EXEC ENDED with event: serve, message: success
+[debug] [2024-10-24T07:24:45.367Z] : TOTAL DURATION OF COMMAND EXEC : 161338
+[debug] [2024-10-24T07:24:45.397Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-10-24T07:24:48.764Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:24:48 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"keep-alive","set-cookie":["zalb_46512fd555=4ead9897700827f973c0f7dbded7f673; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=66895539-6a11-460d-8744-8b08353707c6;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=66895539-6a11-460d-8744-8b08353707c6;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=F98CC27629D0CDB8FCE1D54CE2A310E7; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:24:48.766Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2024-10-24T07:24:48.769Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2024-10-24T07:25:06.738Z] : 
+[debug] [2024-10-24T07:25:06.742Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T07:25:06.742Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-10-24T07:25:06.742Z] : CLI Version:  1.17.6
+[debug] [2024-10-24T07:25:06.743Z] : Platform:     win32
+[debug] [2024-10-24T07:25:06.743Z] : Node Version: v20.14.0
+[debug] [2024-10-24T07:25:06.744Z] : Time:         Thu Oct 24 2024 12:55:06 GMT+0530 (India Standard Time)
+[debug] [2024-10-24T07:25:06.744Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T07:25:06.744Z] : 
+[debug] [2024-10-24T07:25:08.228Z] : > authorizing via signed-in user option
+[debug] [2024-10-24T07:25:08.229Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute","ZohoCatalyst.authentication.CREATE"]
+[debug] [2024-10-24T07:25:08.254Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-10-24T07:25:09.433Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:25:09 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=c7eed28e-3b5f-4990-b556-6c465837da06;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=c7eed28e-3b5f-4990-b556-6c465837da06;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:25:09.439Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-10-24T07:25:09.786Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:25:09 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=4ead9897700827f973c0f7dbded7f673; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=5382e54c-cf14-4bc0-990b-b8dce6846ee7;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=5382e54c-cf14-4bc0-990b-b8dce6846ee7;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:25:10.163Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-10-24T07:25:10.529Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:25:10 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=c3d5ec374d3dc932973a3d50f55d8d00; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=6240e373-8c0c-453a-8bd2-be797fd084b5;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=6240e373-8c0c-453a-8bd2-be797fd084b5;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:25:10.533Z] : unknown eol undefined hence skipping check
+[debug] [2024-10-24T07:25:10.534Z] : unknown eol undefined hence skipping check
+[info] [2024-10-24T07:25:16.499Z] : [react-plugin]: Starting the development server...
+
+[info] [2024-10-24T07:25:16.502Z] : 
+[info] [2024-10-24T07:25:16.502Z] : i Client[react-app]: Plugin : "zcatalyst-cli-plugin-react" is used for client serve
+[info] [2024-10-24T07:25:16.503Z] : 
+[info] [2024-10-24T07:25:19.019Z] : 
+[info] [2024-10-24T07:25:19.020Z] :  >>>>>>>>>>>>>> BasicIO <<<<<<<<<<<<<< 
+[info] [2024-10-24T07:25:19.021Z] : i authbasicio: http://localhost:3000/server/authbasicio/execute
+[info] [2024-10-24T07:25:19.021Z] : 
+[info] [2024-10-24T07:25:19.022Z] : 
+[info] [2024-10-24T07:25:19.022Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-10-24T07:25:19.023Z] : i waterheater_1_function: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-10-24T07:25:19.023Z] : 
+[info] [2024-10-24T07:25:19.023Z] : 
+[info] [2024-10-24T07:25:19.024Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2024-10-24T07:25:19.024Z] : i client[react-app]: http://localhost:3000/app/
+[info] [2024-10-24T07:25:19.024Z] : 
+[info] [2024-10-24T07:25:29.435Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T07:25:29.437Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1550:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1551:26:  'setTicketNumber' is assigned a value but never used                                                          no-unused-vars
+  Line 1552:26:  'setCustomerName' is assigned a value but never used                                                          no-unused-vars
+  Line 1555:21:  'setAddress' is assigned a value but never used                                                               no-unused-vars
+  Line 1566:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1567:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1568:11:  'navigate' is assigned a value but never used                                                                 no-unused-vars
+  Line 1610:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-24T07:25:29.438Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T07:25:29.446Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T07:31:05.130Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T07:31:10.228Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T07:31:10.229Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1550:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1566:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1567:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1610:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-24T07:31:10.230Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T07:31:10.231Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T07:33:59.375Z] : Shutting down server
+[info] [2024-10-24T07:33:59.768Z] : 
+[info] [2024-10-24T07:33:59.769Z] : √ Shutdown complete
+[debug] [2024-10-24T07:33:59.770Z] : NO ERRORS REGISTERED
+[debug] [2024-10-24T07:33:59.770Z] : EXEC ENDED with event: serve, message: success
+[debug] [2024-10-24T07:33:59.771Z] : TOTAL DURATION OF COMMAND EXEC : 531569
+[debug] [2024-10-24T07:33:59.803Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-10-24T07:34:03.026Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:34:02 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"keep-alive","set-cookie":["zalb_46512fd555=4ead9897700827f973c0f7dbded7f673; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=9efcf35a-8ce1-4ea0-8ea2-baeba1964108;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=9efcf35a-8ce1-4ea0-8ea2-baeba1964108;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=647C4A1FBBF645913697397C5A973021; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:34:03.028Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2024-10-24T07:34:03.030Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2024-10-24T07:34:09.187Z] : 
+[debug] [2024-10-24T07:34:09.190Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T07:34:09.191Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-10-24T07:34:09.191Z] : CLI Version:  1.17.6
+[debug] [2024-10-24T07:34:09.191Z] : Platform:     win32
+[debug] [2024-10-24T07:34:09.192Z] : Node Version: v20.14.0
+[debug] [2024-10-24T07:34:09.192Z] : Time:         Thu Oct 24 2024 13:04:09 GMT+0530 (India Standard Time)
+[debug] [2024-10-24T07:34:09.192Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T07:34:09.193Z] : 
+[debug] [2024-10-24T07:34:10.819Z] : > authorizing via signed-in user option
+[debug] [2024-10-24T07:34:10.820Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute","ZohoCatalyst.authentication.CREATE"]
+[debug] [2024-10-24T07:34:10.841Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-10-24T07:34:12.077Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:34:11 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=4ead9897700827f973c0f7dbded7f673; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=4992f0e0-ca6b-415e-bc8d-b4f3b56642a4;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=4992f0e0-ca6b-415e-bc8d-b4f3b56642a4;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:34:12.083Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-10-24T07:34:12.450Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:34:12 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=c3d5ec374d3dc932973a3d50f55d8d00; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=a6855e82-c0a2-4ab0-b744-1b03bb7f463e;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=a6855e82-c0a2-4ab0-b744-1b03bb7f463e;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:34:12.831Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-10-24T07:34:13.301Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:34:12 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=43178b3b-1557-4990-9516-90273ed8c34f;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=43178b3b-1557-4990-9516-90273ed8c34f;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:34:13.305Z] : unknown eol undefined hence skipping check
+[debug] [2024-10-24T07:34:13.305Z] : unknown eol undefined hence skipping check
+[info] [2024-10-24T07:34:19.108Z] : [react-plugin]: Starting the development server...
+
+[info] [2024-10-24T07:34:19.110Z] : 
+[info] [2024-10-24T07:34:19.111Z] : i Client[react-app]: Plugin : "zcatalyst-cli-plugin-react" is used for client serve
+[info] [2024-10-24T07:34:19.111Z] : 
+[info] [2024-10-24T07:34:21.470Z] : 
+[info] [2024-10-24T07:34:21.471Z] :  >>>>>>>>>>>>>> BasicIO <<<<<<<<<<<<<< 
+[info] [2024-10-24T07:34:21.471Z] : i authbasicio: http://localhost:3000/server/authbasicio/execute
+[info] [2024-10-24T07:34:21.472Z] : 
+[info] [2024-10-24T07:34:21.472Z] : 
+[info] [2024-10-24T07:34:21.472Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-10-24T07:34:21.473Z] : i waterheater_1_function: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-10-24T07:34:21.473Z] : 
+[info] [2024-10-24T07:34:21.474Z] : 
+[info] [2024-10-24T07:34:21.474Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2024-10-24T07:34:21.474Z] : i client[react-app]: http://localhost:3000/app/
+[info] [2024-10-24T07:34:21.475Z] : 
+[info] [2024-10-24T07:34:30.618Z] : [react-plugin]: Compiled successfully!
+[info] [2024-10-24T07:34:30.619Z] : [react-plugin]: 
+[info] [2024-10-24T07:34:30.619Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-10-24T07:34:30.619Z] : [react-plugin]: 
+[info] [2024-10-24T07:34:30.619Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-10-24T07:34:30.620Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-10-24T07:34:30.620Z] : [react-plugin]: 
+[info] [2024-10-24T07:34:30.620Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-10-24T07:34:30.620Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-10-24T07:34:30.620Z] : [react-plugin]: 
+[info] [2024-10-24T07:36:56.329Z] : Shutting down server
+[info] [2024-10-24T07:36:56.739Z] : 
+[info] [2024-10-24T07:36:56.740Z] : √ Shutdown complete
+[debug] [2024-10-24T07:36:56.741Z] : NO ERRORS REGISTERED
+[debug] [2024-10-24T07:36:56.742Z] : EXEC ENDED with event: serve, message: success
+[debug] [2024-10-24T07:36:56.742Z] : TOTAL DURATION OF COMMAND EXEC : 165986
+[debug] [2024-10-24T07:36:56.780Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-10-24T07:37:00.098Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:36:59 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"keep-alive","set-cookie":["zalb_46512fd555=4ead9897700827f973c0f7dbded7f673; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=a8f9cea3-04d4-475b-9529-598d1599028b;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=a8f9cea3-04d4-475b-9529-598d1599028b;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=E8C6319449D0E859A4F54BDB8B911C0D; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:37:00.100Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2024-10-24T07:37:00.102Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2024-10-24T07:37:35.137Z] : 
+[debug] [2024-10-24T07:37:35.141Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T07:37:35.141Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-10-24T07:37:35.141Z] : CLI Version:  1.17.6
+[debug] [2024-10-24T07:37:35.142Z] : Platform:     win32
+[debug] [2024-10-24T07:37:35.142Z] : Node Version: v20.14.0
+[debug] [2024-10-24T07:37:35.143Z] : Time:         Thu Oct 24 2024 13:07:35 GMT+0530 (India Standard Time)
+[debug] [2024-10-24T07:37:35.143Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T07:37:35.143Z] : 
+[debug] [2024-10-24T07:37:36.759Z] : > authorizing via signed-in user option
+[debug] [2024-10-24T07:37:36.760Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute","ZohoCatalyst.authentication.CREATE"]
+[debug] [2024-10-24T07:37:36.788Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-10-24T07:37:38.010Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:37:37 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=b14009a6059feb83ee8aa1c715a015c5; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=f2867eea-3d1d-4874-87d9-3cc09aad4464;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=f2867eea-3d1d-4874-87d9-3cc09aad4464;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:37:38.016Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-10-24T07:37:38.384Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:37:37 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=4ead9897700827f973c0f7dbded7f673; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=08a962d3-07fd-41cb-b03c-bd3321d9940e;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=08a962d3-07fd-41cb-b03c-bd3321d9940e;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:37:38.808Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-10-24T07:37:39.244Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:37:38 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=c3d5ec374d3dc932973a3d50f55d8d00; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=df2d555a-afba-4220-8aea-d04c2b934961;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=df2d555a-afba-4220-8aea-d04c2b934961;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:37:39.248Z] : unknown eol undefined hence skipping check
+[debug] [2024-10-24T07:37:39.248Z] : unknown eol undefined hence skipping check
+[info] [2024-10-24T07:37:44.998Z] : [react-plugin]: Starting the development server...
+
+[info] [2024-10-24T07:37:45.001Z] : 
+[info] [2024-10-24T07:37:45.002Z] : i Client[react-app]: Plugin : "zcatalyst-cli-plugin-react" is used for client serve
+[info] [2024-10-24T07:37:45.002Z] : 
+[info] [2024-10-24T07:37:47.539Z] : 
+[info] [2024-10-24T07:37:47.539Z] :  >>>>>>>>>>>>>> BasicIO <<<<<<<<<<<<<< 
+[info] [2024-10-24T07:37:47.540Z] : i authbasicio: http://localhost:3000/server/authbasicio/execute
+[info] [2024-10-24T07:37:47.541Z] : 
+[info] [2024-10-24T07:37:47.541Z] : 
+[info] [2024-10-24T07:37:47.542Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-10-24T07:37:47.543Z] : i waterheater_1_function: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-10-24T07:37:47.544Z] : 
+[info] [2024-10-24T07:37:47.545Z] : 
+[info] [2024-10-24T07:37:47.545Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2024-10-24T07:37:47.546Z] : i client[react-app]: http://localhost:3000/app/
+[info] [2024-10-24T07:37:47.547Z] : 
+[info] [2024-10-24T07:37:58.864Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T07:37:58.864Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1550:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1566:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1567:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1610:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-24T07:37:58.865Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T07:37:58.865Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T07:47:56.609Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T07:48:01.668Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T07:48:01.669Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1550:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1566:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1567:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1610:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-24T07:48:01.670Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T07:48:01.671Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T07:48:08.859Z] : Shutting down server
+[info] [2024-10-24T07:48:09.214Z] : 
+[info] [2024-10-24T07:48:09.215Z] : √ Shutdown complete
+[debug] [2024-10-24T07:48:09.215Z] : NO ERRORS REGISTERED
+[debug] [2024-10-24T07:48:09.216Z] : EXEC ENDED with event: serve, message: success
+[debug] [2024-10-24T07:48:09.216Z] : TOTAL DURATION OF COMMAND EXEC : 632487
+[debug] [2024-10-24T07:48:09.240Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-10-24T07:48:12.829Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:48:12 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=7b11e368-d058-45f9-90d2-5bcb27416e3d;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=7b11e368-d058-45f9-90d2-5bcb27416e3d;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=3467ACF06747A4FFC21CCE7B19C27E40; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:48:12.831Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2024-10-24T07:48:12.833Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2024-10-24T07:48:25.014Z] : 
+[debug] [2024-10-24T07:48:25.018Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T07:48:25.018Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-10-24T07:48:25.018Z] : CLI Version:  1.17.6
+[debug] [2024-10-24T07:48:25.019Z] : Platform:     win32
+[debug] [2024-10-24T07:48:25.019Z] : Node Version: v20.14.0
+[debug] [2024-10-24T07:48:25.020Z] : Time:         Thu Oct 24 2024 13:18:25 GMT+0530 (India Standard Time)
+[debug] [2024-10-24T07:48:25.020Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T07:48:25.020Z] : 
+[debug] [2024-10-24T07:48:26.604Z] : > authorizing via signed-in user option
+[debug] [2024-10-24T07:48:26.605Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute","ZohoCatalyst.authentication.CREATE"]
+[debug] [2024-10-24T07:48:26.629Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-10-24T07:48:27.866Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:48:27 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=b14009a6059feb83ee8aa1c715a015c5; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=a26ac530-6bd5-4a86-bf29-c15837cd9222;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=a26ac530-6bd5-4a86-bf29-c15837cd9222;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:48:27.872Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-10-24T07:48:28.335Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:48:27 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=7535f0fa-5949-4db6-a301-8182e238c60e;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=7535f0fa-5949-4db6-a301-8182e238c60e;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:48:28.716Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-10-24T07:48:29.197Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:48:28 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=f123ef3a-a2b8-4b12-81a9-ab1d6b90e034;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=f123ef3a-a2b8-4b12-81a9-ab1d6b90e034;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:48:29.201Z] : unknown eol undefined hence skipping check
+[debug] [2024-10-24T07:48:29.202Z] : unknown eol undefined hence skipping check
+[info] [2024-10-24T07:48:35.269Z] : [react-plugin]: Starting the development server...
+
+[info] [2024-10-24T07:48:35.271Z] : 
+[info] [2024-10-24T07:48:35.272Z] : i Client[react-app]: Plugin : "zcatalyst-cli-plugin-react" is used for client serve
+[info] [2024-10-24T07:48:35.272Z] : 
+[info] [2024-10-24T07:48:37.828Z] : 
+[info] [2024-10-24T07:48:37.829Z] :  >>>>>>>>>>>>>> BasicIO <<<<<<<<<<<<<< 
+[info] [2024-10-24T07:48:37.830Z] : i authbasicio: http://localhost:3000/server/authbasicio/execute
+[info] [2024-10-24T07:48:37.831Z] : 
+[info] [2024-10-24T07:48:37.831Z] : 
+[info] [2024-10-24T07:48:37.831Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-10-24T07:48:37.832Z] : i waterheater_1_function: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-10-24T07:48:37.832Z] : 
+[info] [2024-10-24T07:48:37.833Z] : 
+[info] [2024-10-24T07:48:37.833Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2024-10-24T07:48:37.833Z] : i client[react-app]: http://localhost:3000/app/
+[info] [2024-10-24T07:48:37.834Z] : 
+[info] [2024-10-24T07:48:48.848Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T07:48:48.849Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1550:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1566:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1567:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1610:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-24T07:48:48.850Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T07:48:48.851Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T07:57:03.988Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T07:57:09.134Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T07:57:09.135Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1550:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1566:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1567:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1610:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-24T07:57:09.136Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T07:57:09.136Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[debug] [2024-10-24T07:57:09.575Z] : > refreshing access token <
+[debug] [2024-10-24T07:57:09.579Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2024-10-24T07:57:10.725Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:57:10 GMT","content-type":"application/json;charset=UTF-8","content-length":"1949","connection":"keep-alive","set-cookie":["zalb_b266a5bf57=9f371135a524e2d1f51eb9f41fa26c60; Path=/; Secure; HttpOnly","iamcsr=d5241599-1a42-44dd-992c-1a2f2005e372;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=d5241599-1a42-44dd-992c-1a2f2005e372;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","pragma":"no-cache","x-frame-options":"SAMEORIGIN","vary":"accept-encoding","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[info] [2024-10-24T07:57:11.449Z] : Shutting down server
+[info] [2024-10-24T07:57:11.809Z] : 
+[info] [2024-10-24T07:57:11.811Z] : √ Shutdown complete
+[debug] [2024-10-24T07:57:11.812Z] : NO ERRORS REGISTERED
+[debug] [2024-10-24T07:57:11.812Z] : EXEC ENDED with event: serve, message: success
+[debug] [2024-10-24T07:57:11.813Z] : TOTAL DURATION OF COMMAND EXEC : 525235
+[debug] [2024-10-24T07:57:11.835Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-10-24T07:57:15.109Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:57:14 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=9fa97794-f416-4843-9c16-6b79e9713e36;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=9fa97794-f416-4843-9c16-6b79e9713e36;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=1B5CBAB6B46E0FBCC89319846FC03A6B; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:57:15.110Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2024-10-24T07:57:15.112Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2024-10-24T07:57:21.073Z] : 
+[debug] [2024-10-24T07:57:21.076Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T07:57:21.077Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-10-24T07:57:21.077Z] : CLI Version:  1.17.6
+[debug] [2024-10-24T07:57:21.078Z] : Platform:     win32
+[debug] [2024-10-24T07:57:21.078Z] : Node Version: v20.14.0
+[debug] [2024-10-24T07:57:21.078Z] : Time:         Thu Oct 24 2024 13:27:21 GMT+0530 (India Standard Time)
+[debug] [2024-10-24T07:57:21.079Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T07:57:21.079Z] : 
+[debug] [2024-10-24T07:57:22.527Z] : > authorizing via signed-in user option
+[debug] [2024-10-24T07:57:22.528Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute","ZohoCatalyst.authentication.CREATE"]
+[debug] [2024-10-24T07:57:22.551Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-10-24T07:57:23.750Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:57:23 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=4ead9897700827f973c0f7dbded7f673; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=ee0a077a-6e2b-48a6-b6f7-af98b3225acf;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=ee0a077a-6e2b-48a6-b6f7-af98b3225acf;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:57:23.755Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-10-24T07:57:24.121Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:57:23 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=c3d5ec374d3dc932973a3d50f55d8d00; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=d3d2ee89-5b48-49f8-9393-1c803db659e1;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=d3d2ee89-5b48-49f8-9393-1c803db659e1;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:57:24.495Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-10-24T07:57:24.868Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 07:57:24 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=b14009a6059feb83ee8aa1c715a015c5; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=a1f11428-b152-4c60-8e17-c1ae4daf8eb4;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=a1f11428-b152-4c60-8e17-c1ae4daf8eb4;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T07:57:24.872Z] : unknown eol undefined hence skipping check
+[debug] [2024-10-24T07:57:24.872Z] : unknown eol undefined hence skipping check
+[info] [2024-10-24T07:57:30.656Z] : [react-plugin]: Starting the development server...
+
+[info] [2024-10-24T07:57:30.659Z] : 
+[info] [2024-10-24T07:57:30.659Z] : i Client[react-app]: Plugin : "zcatalyst-cli-plugin-react" is used for client serve
+[info] [2024-10-24T07:57:30.659Z] : 
+[info] [2024-10-24T07:57:32.990Z] : 
+[info] [2024-10-24T07:57:32.990Z] :  >>>>>>>>>>>>>> BasicIO <<<<<<<<<<<<<< 
+[info] [2024-10-24T07:57:32.991Z] : i authbasicio: http://localhost:3000/server/authbasicio/execute
+[info] [2024-10-24T07:57:32.992Z] : 
+[info] [2024-10-24T07:57:32.992Z] : 
+[info] [2024-10-24T07:57:32.992Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-10-24T07:57:32.993Z] : i waterheater_1_function: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-10-24T07:57:32.993Z] : 
+[info] [2024-10-24T07:57:32.994Z] : 
+[info] [2024-10-24T07:57:32.994Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2024-10-24T07:57:32.996Z] : i client[react-app]: http://localhost:3000/app/
+[info] [2024-10-24T07:57:32.997Z] : 
+[info] [2024-10-24T07:57:43.599Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T07:57:43.606Z] : [react-plugin]: [eslint] 
+src\components\Forms\InvoiceForm.jsx
+  Line 1550:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1566:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1567:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1610:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-24T07:57:43.606Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T07:57:43.607Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T08:12:11.725Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T08:12:16.615Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T08:12:16.655Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1784:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1785:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1786:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1795:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1796:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1889:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1903:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InvoiceForm.jsx
+  Line 1550:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1566:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1567:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1610:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+[info] [2024-10-24T08:12:16.657Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T08:12:16.658Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T08:13:41.126Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T08:13:45.110Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T08:13:45.122Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1784:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1785:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1786:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1795:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1796:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1889:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1903:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InvoiceForm.jsx
+  Line 1550:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1566:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1567:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1610:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\InhouseView.jsx
+  Line 417:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-10-24T08:13:45.123Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T08:13:45.124Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T08:15:51.679Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T08:15:55.490Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T08:15:55.494Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1784:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1785:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1786:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1795:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1796:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1889:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1903:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\InvoiceForm.jsx
+  Line 1550:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1566:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1567:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1610:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\InhouseView.jsx
+  Line 417:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-10-24T08:15:55.494Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T08:15:55.495Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T08:17:42.577Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T08:17:46.884Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T08:17:46.889Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1784:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1785:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1786:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1795:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1796:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1889:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1903:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\DispatchInvoice.jsx
+  Line 652:38:  'useRef' is defined but never used                                                                            no-unused-vars
+  Line 652:46:  'useCallback' is defined but never used                                                                       no-unused-vars
+  Line 665:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 681:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 712:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 835:11:  'dataURLtoBlob' is assigned a value but never used                                                            no-unused-vars
+  Line 923:48:  Expected '===' and instead saw '=='                                                                           eqeqeq
+  Line 924:52:  Expected '===' and instead saw '=='                                                                           eqeqeq
+
+src\components\Forms\InvoiceForm.jsx
+  Line 1550:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1566:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1567:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1610:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\InhouseView.jsx
+  Line 417:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-10-24T08:17:46.890Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T08:17:46.891Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T09:01:30.071Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T09:01:32.812Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T09:01:32.815Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1784:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1785:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1786:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1795:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1796:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1889:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1903:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\DispatchInvoice.jsx
+  Line 652:38:  'useRef' is defined but never used                                                                            no-unused-vars
+  Line 652:46:  'useCallback' is defined but never used                                                                       no-unused-vars
+  Line 665:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 681:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 712:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 835:11:  'dataURLtoBlob' is assigned a value but never used                                                            no-unused-vars
+  Line 923:48:  Expected '===' and instead saw '=='                                                                           eqeqeq
+  Line 924:52:  Expected '===' and instead saw '=='                                                                           eqeqeq
+
+src\components\Forms\InvoiceForm.jsx
+  Line 1550:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1566:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1567:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1610:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\InhouseView.jsx
+  Line 417:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-10-24T09:01:32.816Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T09:01:32.817Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[debug] [2024-10-24T09:01:33.142Z] : > refreshing access token <
+[debug] [2024-10-24T09:01:33.151Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2024-10-24T09:01:33.155Z] : > refreshing access token <
+[debug] [2024-10-24T09:01:33.156Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2024-10-24T09:01:34.157Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 09:01:33 GMT","content-type":"application/json;charset=UTF-8","content-length":"1949","connection":"keep-alive","set-cookie":["zalb_b266a5bf57=9f371135a524e2d1f51eb9f41fa26c60; Path=/; Secure; HttpOnly","iamcsr=e84ff87a-2204-49c0-b272-f8e7faac1ce6;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=e84ff87a-2204-49c0-b272-f8e7faac1ce6;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","pragma":"no-cache","x-frame-options":"SAMEORIGIN","vary":"accept-encoding","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T09:01:34.173Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 09:01:33 GMT","content-type":"application/json;charset=UTF-8","content-length":"1949","connection":"keep-alive","set-cookie":["zalb_b266a5bf57=a711b6da0e6cbadb5e254290f114a026; Path=/; Secure; HttpOnly","iamcsr=2f79b1ab-f16f-45cd-9bd4-f61053b69812;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=2f79b1ab-f16f-45cd-9bd4-f61053b69812;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","pragma":"no-cache","x-frame-options":"SAMEORIGIN","vary":"accept-encoding","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[info] [2024-10-24T09:05:59.850Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T09:06:02.434Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T09:06:02.438Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1784:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1785:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1786:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1795:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1796:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1889:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1903:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\DispatchInvoice.jsx
+  Line 652:38:  'useRef' is defined but never used                                                                            no-unused-vars
+  Line 652:46:  'useCallback' is defined but never used                                                                       no-unused-vars
+  Line 665:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 681:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 712:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 785:19:  'availableQuantity' is assigned a value but never used                                                        no-unused-vars
+  Line 835:11:  'dataURLtoBlob' is assigned a value but never used                                                            no-unused-vars
+  Line 923:48:  Expected '===' and instead saw '=='                                                                           eqeqeq
+  Line 924:52:  Expected '===' and instead saw '=='                                                                           eqeqeq
+
+src\components\Forms\InvoiceForm.jsx
+  Line 1550:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1566:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1567:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1610:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\InhouseView.jsx
+  Line 417:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-10-24T09:06:02.439Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T09:06:02.439Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T09:10:16.581Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T09:10:19.103Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T09:10:19.107Z] : [react-plugin]: [eslint] 
+src\App.js
+  Line 1784:8:  'ViewLogs' is defined but never used                                                                                                                                                   no-unused-vars
+  Line 1785:8:  'ViewFeedback' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1786:8:  'ViewProblem' is defined but never used                                                                                                                                                no-unused-vars
+  Line 1795:8:  'FeedbackForm' is defined but never used                                                                                                                                               no-unused-vars
+  Line 1796:8:  'ProblemStatement' is defined but never used                                                                                                                                           no-unused-vars
+  Line 1889:6:  React Hook useEffect has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array    react-hooks/exhaustive-deps
+  Line 1903:6:  React Hook useCallback has missing dependencies: 'commonItems', 'formsItems', 'inhouseItems', 'technicianItems', and 'viewsItems'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Forms\DispatchInvoice.jsx
+  Line 652:38:  'useRef' is defined but never used                                                                            no-unused-vars
+  Line 652:46:  'useCallback' is defined but never used                                                                       no-unused-vars
+  Line 665:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 681:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 712:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 785:19:  'availableQuantity' is assigned a value but never used                                                        no-unused-vars
+  Line 835:11:  'dataURLtoBlob' is assigned a value but never used                                                            no-unused-vars
+  Line 923:48:  Expected '===' and instead saw '=='                                                                           eqeqeq
+  Line 924:52:  Expected '===' and instead saw '=='                                                                           eqeqeq
+
+src\components\Forms\InvoiceForm.jsx
+  Line 1550:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1566:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1567:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1610:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\Views\InhouseView.jsx
+  Line 417:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-10-24T09:10:19.108Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T09:10:19.108Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T09:13:20.078Z] : Shutting down server
+[info] [2024-10-24T09:13:20.480Z] : 
+[info] [2024-10-24T09:13:20.481Z] : √ Shutdown complete
+[debug] [2024-10-24T09:13:20.482Z] : NO ERRORS REGISTERED
+[debug] [2024-10-24T09:13:20.483Z] : EXEC ENDED with event: serve, message: success
+[debug] [2024-10-24T09:13:20.483Z] : TOTAL DURATION OF COMMAND EXEC : 4557981
+[debug] [2024-10-24T09:13:20.502Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-10-24T09:13:23.572Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 09:13:23 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=d872298a-9582-4312-8cc1-af49e09992c3;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=d872298a-9582-4312-8cc1-af49e09992c3;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=BA91B328A39B63BF9B2B956FAAD19D36; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T09:13:23.573Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2024-10-24T09:13:23.582Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2024-10-24T09:15:31.014Z] : 
+[debug] [2024-10-24T09:15:31.017Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T09:15:31.017Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-10-24T09:15:31.017Z] : CLI Version:  1.17.6
+[debug] [2024-10-24T09:15:31.018Z] : Platform:     win32
+[debug] [2024-10-24T09:15:31.018Z] : Node Version: v20.14.0
+[debug] [2024-10-24T09:15:31.018Z] : Time:         Thu Oct 24 2024 14:45:31 GMT+0530 (India Standard Time)
+[debug] [2024-10-24T09:15:31.018Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T09:15:31.018Z] : 
+[debug] [2024-10-24T09:15:32.529Z] : > authorizing via signed-in user option
+[debug] [2024-10-24T09:15:32.529Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute","ZohoCatalyst.authentication.CREATE"]
+[debug] [2024-10-24T09:15:32.546Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-10-24T09:15:33.783Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 09:15:33 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=b14009a6059feb83ee8aa1c715a015c5; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=dd5283e0-441d-4d3d-80ad-aa6ca62d2f2f;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=dd5283e0-441d-4d3d-80ad-aa6ca62d2f2f;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T09:15:33.787Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-10-24T09:15:34.165Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 09:15:33 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=c3d5ec374d3dc932973a3d50f55d8d00; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=5ff4c306-b3aa-485a-9d8c-c527a8334620;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=5ff4c306-b3aa-485a-9d8c-c527a8334620;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T09:15:34.583Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-10-24T09:15:34.964Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 09:15:34 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=4ead9897700827f973c0f7dbded7f673; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=bf85c1b0-f48e-43aa-827a-4d648b04c486;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=bf85c1b0-f48e-43aa-827a-4d648b04c486;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T09:15:34.967Z] : unknown eol undefined hence skipping check
+[debug] [2024-10-24T09:15:34.967Z] : unknown eol undefined hence skipping check
+[info] [2024-10-24T09:15:39.926Z] : [react-plugin]: Starting the development server...
+
+[info] [2024-10-24T09:15:39.928Z] : 
+[info] [2024-10-24T09:15:39.928Z] : i Client[react-app]: Plugin : "zcatalyst-cli-plugin-react" is used for client serve
+[info] [2024-10-24T09:15:39.929Z] : 
+[info] [2024-10-24T09:15:42.224Z] : 
+[info] [2024-10-24T09:15:42.225Z] :  >>>>>>>>>>>>>> BasicIO <<<<<<<<<<<<<< 
+[info] [2024-10-24T09:15:42.226Z] : i authbasicio: http://localhost:3000/server/authbasicio/execute
+[info] [2024-10-24T09:15:42.226Z] : 
+[info] [2024-10-24T09:15:42.226Z] : 
+[info] [2024-10-24T09:15:42.226Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-10-24T09:15:42.227Z] : i waterheater_1_function: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-10-24T09:15:42.227Z] : 
+[info] [2024-10-24T09:15:42.227Z] : 
+[info] [2024-10-24T09:15:42.227Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2024-10-24T09:15:42.227Z] : i client[react-app]: http://localhost:3000/app/
+[info] [2024-10-24T09:15:42.228Z] : 
+[info] [2024-10-24T09:15:49.883Z] : [react-plugin]: Compiled successfully!
+[info] [2024-10-24T09:15:49.883Z] : [react-plugin]: 
+[info] [2024-10-24T09:15:49.884Z] : [react-plugin]: You can now view react-app in the browser.
+[info] [2024-10-24T09:15:49.884Z] : [react-plugin]: 
+[info] [2024-10-24T09:15:49.884Z] : [react-plugin]:   Local:            http://localhost:3000/app/
+[info] [2024-10-24T09:15:49.885Z] : [react-plugin]:   On Your Network:  http://192.168.31.148:3000/app/
+[info] [2024-10-24T09:15:49.885Z] : [react-plugin]: 
+[info] [2024-10-24T09:15:49.885Z] : [react-plugin]: Note that the development build is not optimized.
+[info] [2024-10-24T09:15:49.885Z] : [react-plugin]: To create a production build, use npm run build.
+[info] [2024-10-24T09:15:49.885Z] : [react-plugin]: 
+[info] [2024-10-24T09:18:49.430Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T09:18:54.339Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T09:18:54.340Z] : [react-plugin]: [eslint] 
+src\components\Forms\DispatchInvoice.jsx
+  Line 652:38:  'useRef' is defined but never used                                                                            no-unused-vars
+  Line 652:46:  'useCallback' is defined but never used                                                                       no-unused-vars
+  Line 665:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 681:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 712:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 785:19:  'availableQuantity' is assigned a value but never used                                                        no-unused-vars
+  Line 835:11:  'dataURLtoBlob' is assigned a value but never used                                                            no-unused-vars
+  Line 923:48:  Expected '===' and instead saw '=='                                                                           eqeqeq
+  Line 924:52:  Expected '===' and instead saw '=='                                                                           eqeqeq
+[info] [2024-10-24T09:18:54.341Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T09:18:54.341Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T09:18:57.301Z] : Shutting down server
+[info] [2024-10-24T09:18:57.498Z] : 
+[info] [2024-10-24T09:18:57.499Z] : √ Shutdown complete
+[debug] [2024-10-24T09:18:57.499Z] : NO ERRORS REGISTERED
+[debug] [2024-10-24T09:18:57.500Z] : EXEC ENDED with event: serve, message: success
+[debug] [2024-10-24T09:18:57.500Z] : TOTAL DURATION OF COMMAND EXEC : 204990
+[debug] [2024-10-24T09:18:57.514Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-10-24T09:19:00.392Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 09:18:59 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"keep-alive","set-cookie":["zalb_46512fd555=b14009a6059feb83ee8aa1c715a015c5; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=2bafc737-57b9-4a68-8e79-a912f767536d;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=2bafc737-57b9-4a68-8e79-a912f767536d;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=473C1A9FFD4773EA87249CB667D2E2D3; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T09:19:00.393Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2024-10-24T09:19:00.395Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2024-10-24T09:20:06.621Z] : 
+[debug] [2024-10-24T09:20:06.623Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T09:20:06.624Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-10-24T09:20:06.624Z] : CLI Version:  1.17.6
+[debug] [2024-10-24T09:20:06.624Z] : Platform:     win32
+[debug] [2024-10-24T09:20:06.625Z] : Node Version: v20.14.0
+[debug] [2024-10-24T09:20:06.626Z] : Time:         Thu Oct 24 2024 14:50:06 GMT+0530 (India Standard Time)
+[debug] [2024-10-24T09:20:06.626Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T09:20:06.626Z] : 
+[debug] [2024-10-24T09:20:07.444Z] : > authorizing via signed-in user option
+[debug] [2024-10-24T09:20:07.445Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute","ZohoCatalyst.authentication.CREATE"]
+[debug] [2024-10-24T09:20:07.458Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-10-24T09:20:08.484Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 09:20:08 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=b14009a6059feb83ee8aa1c715a015c5; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=6df40a03-8a5f-49a1-9cd8-c6a33ae53104;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=6df40a03-8a5f-49a1-9cd8-c6a33ae53104;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T09:20:08.488Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-10-24T09:20:08.806Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 09:20:08 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=b14009a6059feb83ee8aa1c715a015c5; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=8c8e66e0-6888-4645-860d-1a114958fbe5;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=8c8e66e0-6888-4645-860d-1a114958fbe5;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T09:20:09.022Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-10-24T09:20:09.384Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 09:20:08 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=4ead9897700827f973c0f7dbded7f673; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=19cc7aa8-0387-472d-a0a0-4d57fa3289e8;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=19cc7aa8-0387-472d-a0a0-4d57fa3289e8;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T09:20:09.387Z] : unknown eol undefined hence skipping check
+[debug] [2024-10-24T09:20:09.388Z] : unknown eol undefined hence skipping check
+[info] [2024-10-24T09:20:12.823Z] : [react-plugin]: Starting the development server...
+
+[info] [2024-10-24T09:20:12.825Z] : 
+[info] [2024-10-24T09:20:12.825Z] : i Client[react-app]: Plugin : "zcatalyst-cli-plugin-react" is used for client serve
+[info] [2024-10-24T09:20:12.826Z] : 
+[info] [2024-10-24T09:20:14.413Z] : 
+[info] [2024-10-24T09:20:14.414Z] :  >>>>>>>>>>>>>> BasicIO <<<<<<<<<<<<<< 
+[info] [2024-10-24T09:20:14.415Z] : i authbasicio: http://localhost:3000/server/authbasicio/execute
+[info] [2024-10-24T09:20:14.415Z] : 
+[info] [2024-10-24T09:20:14.415Z] : 
+[info] [2024-10-24T09:20:14.416Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-10-24T09:20:14.416Z] : i waterheater_1_function: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-10-24T09:20:14.417Z] : 
+[info] [2024-10-24T09:20:14.417Z] : 
+[info] [2024-10-24T09:20:14.417Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2024-10-24T09:20:14.417Z] : i client[react-app]: http://localhost:3000/app/
+[info] [2024-10-24T09:20:14.418Z] : 
+[info] [2024-10-24T09:20:23.136Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T09:20:23.137Z] : [react-plugin]: [eslint] 
+src\components\Forms\DispatchInvoice.jsx
+  Line 652:38:  'useRef' is defined but never used                                                                            no-unused-vars
+  Line 652:46:  'useCallback' is defined but never used                                                                       no-unused-vars
+  Line 665:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 681:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 712:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 785:19:  'availableQuantity' is assigned a value but never used                                                        no-unused-vars
+  Line 835:11:  'dataURLtoBlob' is assigned a value but never used                                                            no-unused-vars
+  Line 923:48:  Expected '===' and instead saw '=='                                                                           eqeqeq
+  Line 924:52:  Expected '===' and instead saw '=='                                                                           eqeqeq
+[info] [2024-10-24T09:20:23.138Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T09:20:23.139Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T09:29:27.474Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T09:29:30.648Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T09:29:30.651Z] : [react-plugin]: [eslint] 
+src\components\Forms\DispatchInvoice.jsx
+  Line 652:38:  'useRef' is defined but never used                                                                            no-unused-vars
+  Line 652:46:  'useCallback' is defined but never used                                                                       no-unused-vars
+  Line 665:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 681:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 712:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 785:19:  'availableQuantity' is assigned a value but never used                                                        no-unused-vars
+  Line 835:11:  'dataURLtoBlob' is assigned a value but never used                                                            no-unused-vars
+  Line 923:48:  Expected '===' and instead saw '=='                                                                           eqeqeq
+  Line 924:52:  Expected '===' and instead saw '=='                                                                           eqeqeq
+
+src\components\Forms\InvoiceForm.jsx
+  Line 1550:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1566:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1567:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1610:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 1684:19:  'availableQuantity' is assigned a value but never used                                                        no-unused-vars
+[info] [2024-10-24T09:29:30.651Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T09:29:30.652Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T09:34:34.096Z] : [react-plugin]: Compiling...
+[info] [2024-10-24T09:34:38.291Z] : [react-plugin]: Compiled with warnings.
+
+[info] [2024-10-24T09:34:38.294Z] : [react-plugin]: [eslint] 
+src\components\Forms\DispatchInvoice.jsx
+  Line 652:38:  'useRef' is defined but never used                                                                            no-unused-vars
+  Line 652:46:  'useCallback' is defined but never used                                                                       no-unused-vars
+  Line 665:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 681:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 712:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 785:19:  'availableQuantity' is assigned a value but never used                                                        no-unused-vars
+  Line 835:11:  'dataURLtoBlob' is assigned a value but never used                                                            no-unused-vars
+  Line 923:48:  Expected '===' and instead saw '=='                                                                           eqeqeq
+  Line 924:52:  Expected '===' and instead saw '=='                                                                           eqeqeq
+
+src\components\Forms\InvoiceForm.jsx
+  Line 1550:25:  'setTicketRowId' is assigned a value but never used                                                           no-unused-vars
+  Line 1566:12:  'signature' is assigned a value but never used                                                                no-unused-vars
+  Line 1567:21:  'setLoading' is assigned a value but never used                                                               no-unused-vars
+  Line 1610:8:   React Hook useEffect has a missing dependency: 'roleEmail'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 1684:19:  'availableQuantity' is assigned a value but never used                                                        no-unused-vars
+
+src\components\Views\InhouseView.jsx
+  Line 417:11:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+[info] [2024-10-24T09:34:38.296Z] : [react-plugin]: 
+Search for the keywords to learn more about each warning.
+[info] [2024-10-24T09:34:38.297Z] : [react-plugin]: To ignore, add // eslint-disable-next-line to the line before.
+
+[info] [2024-10-24T09:51:16.277Z] : Shutting down server
+[info] [2024-10-24T09:51:16.787Z] : 
+[info] [2024-10-24T09:51:16.788Z] : √ Shutdown complete
+[debug] [2024-10-24T09:51:16.789Z] : NO ERRORS REGISTERED
+[debug] [2024-10-24T09:51:16.789Z] : EXEC ENDED with event: serve, message: success
+[debug] [2024-10-24T09:51:16.789Z] : TOTAL DURATION OF COMMAND EXEC : 1869360
+[debug] [2024-10-24T09:51:16.828Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-10-24T09:51:21.079Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 09:51:19 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=69a793a9-e7f6-4631-aad6-1c8521c22c89;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=69a793a9-e7f6-4631-aad6-1c8521c22c89;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=02FFDA0E7F31D0CE92066C67F48EDF0E; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T09:51:21.081Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2024-10-24T09:51:21.083Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range

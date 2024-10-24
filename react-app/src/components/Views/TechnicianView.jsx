@@ -882,6 +882,7 @@ const TechnicianView = ({ roleEmail, shouldFetchData, onDataFetched }) => {
             RowId={selectedTicket?.ROWID}
             onSubmit={handleSubmitInvoice}
             Dynamic_Status={'Closed'}
+            roleEmail={roleEmail}
           />
         </div>
       )}

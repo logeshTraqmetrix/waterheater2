@@ -32,7 +32,7 @@ const TechnicianStockAdd = () => {
     if (selectedTech) {
       setLoading(true);
       axios.get(`/server/waterheater_1_function/getfilterticket?search=${encodeURIComponent(JSON.stringify({
-        table: 'techinician_stocks',
+        table: 'technician_stocks',
         column: 'Technician_Email',
         value: selectedTech.Technician_Email
       }))}`)
@@ -47,12 +47,14 @@ const TechnicianStockAdd = () => {
 
               // Filter out duplicate materials where Spares_Name matches Material_Name
               const uniqueMaterialsArr = res.data.records.filter(spare => {
-                return !resp.data.some(stock => stock.techinician_stocks.Spares_Name === spare.spares_table.Material_Name);
+                return !resp.data.some(stock => stock.technician_stocks.Spares_Name === spare.spares_table.Material_Name);
               });
 
               const materialsDropdownOptions = uniqueMaterialsArr.map(spare => ({
                 value: spare.spares_table.Material_Name,
                 label: spare.spares_table.Material_Name,
+                barcode: spare.spares_table.BarCodeValue,
+                Price:spare.spares_table.Price,
               }));
 
               setUniqueMaterials(materialsDropdownOptions);
@@ -69,10 +71,14 @@ const TechnicianStockAdd = () => {
   };
 
   const handleSubmit = () => {
+
+    console.log('selected materials',selectedMaterials)
     const submitData = selectedMaterials.map(material => ({
+      Price:material.Price,
+      BarCodeValue:material.barcode,
       Spares_Name: material.value,
       Consumed_Qty: 0,
-      Techinician_Name: selectedTechnician,
+      Technician_Name: selectedTechnician,
       Available_Qty: 0,
       Technician_Email: technicianData.find(tech => tech.Technician_Name === selectedTechnician)?.Technician_Email || ''
     }));
