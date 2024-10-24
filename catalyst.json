@@ -2,7 +2,8 @@
   "functions": {
     "targets": [
       "waterheater_1_function",
-      "authbasicio"
+      "authbasicio",
+      "cron"
     ],
     "ignore": [],
     "source": "functions"

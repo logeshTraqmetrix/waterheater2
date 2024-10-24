@@ -523,6 +523,25 @@ app.put('/updateticket', (req, res) => {
 	}
 })
 
+
+
+//Put api for update ticket
+app.put('/updateticket-cron', (req, res) => {
+	try {
+		let updatedRowData = req.body.data;
+		let catalystApp = catalyst.initialize(req);
+		let datastore = catalystApp.datastore();
+		let table = datastore.table(ticketTableId);
+		let rowPromise = table.updateRows(updatedRowData);
+		rowPromise.then((row) => {
+			console.log(row);
+			res.json(row);
+		});
+	} catch (error) {
+		console.log("Error on Updating ticket details : " + error);
+	}
+})
+
 //delete api for remove ticket
 app.delete('/deleteticket', (req, res) => {
 	try {

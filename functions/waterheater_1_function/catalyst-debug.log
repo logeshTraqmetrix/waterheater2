@@ -1,0 +1,39 @@
+[debug] [2024-10-24T10:42:50.933Z] : 
+[debug] [2024-10-24T10:42:50.936Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T10:42:50.936Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-10-24T10:42:50.937Z] : CLI Version:  1.17.6
+[debug] [2024-10-24T10:42:50.937Z] : Platform:     win32
+[debug] [2024-10-24T10:42:50.938Z] : Node Version: v20.14.0
+[debug] [2024-10-24T10:42:50.938Z] : Time:         Thu Oct 24 2024 16:12:50 GMT+0530 (India Standard Time)
+[debug] [2024-10-24T10:42:50.939Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T10:42:50.939Z] : 
+[debug] [2024-10-24T10:42:52.416Z] : > authorizing via signed-in user option
+[debug] [2024-10-24T10:42:52.417Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute","ZohoCatalyst.authentication.CREATE"]
+[debug] [2024-10-24T10:42:52.440Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-10-24T10:42:53.561Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 10:42:52 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=28f36c46-da44-40d9-a582-af1715dbeecd;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=28f36c46-da44-40d9-a582-af1715dbeecd;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T10:42:53.567Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-10-24T10:42:53.902Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 10:42:53 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=4ead9897700827f973c0f7dbded7f673; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=e201ab75-6a82-4b02-9421-5fa9cc431ca9;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=e201ab75-6a82-4b02-9421-5fa9cc431ca9;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T10:42:54.303Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-10-24T10:42:54.668Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 10:42:54 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=c3d5ec374d3dc932973a3d50f55d8d00; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=c9f76c7c-2372-49c6-92cb-321ee558b7a4;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=c9f76c7c-2372-49c6-92cb-321ee558b7a4;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T10:42:54.673Z] : unknown eol undefined hence skipping check
+[debug] [2024-10-24T10:42:54.673Z] : unknown eol undefined hence skipping check
+[debug] [2024-10-24T10:42:54.674Z] : unknown eol undefined hence skipping check
+[warn] [2024-10-24T10:42:57.079Z] : ‼ skipping serve of function [cron] since invalid function type. Only basicio,advancedio,browser_logic are supported.
+[info] [2024-10-24T10:42:57.259Z] : 
+[info] [2024-10-24T10:42:57.260Z] :  >>>>>>>>>>>>>> BasicIO <<<<<<<<<<<<<< 
+[info] [2024-10-24T10:42:57.260Z] : i authbasicio: http://localhost:3000/server/authbasicio/execute
+[info] [2024-10-24T10:42:57.261Z] : 
+[info] [2024-10-24T10:42:57.261Z] : 
+[info] [2024-10-24T10:42:57.261Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-10-24T10:42:57.262Z] : i waterheater_1_function: http://localhost:3000/server/waterheater_1_function/
+[info] [2024-10-24T10:42:57.262Z] : 

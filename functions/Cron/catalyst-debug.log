@@ -1,0 +1,246 @@
+[debug] [2024-10-24T10:43:04.043Z] : 
+[debug] [2024-10-24T10:43:04.047Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T10:43:04.048Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js functions:shell
+[debug] [2024-10-24T10:43:04.048Z] : CLI Version:  1.17.6
+[debug] [2024-10-24T10:43:04.049Z] : Platform:     win32
+[debug] [2024-10-24T10:43:04.049Z] : Node Version: v20.14.0
+[debug] [2024-10-24T10:43:04.050Z] : Time:         Thu Oct 24 2024 16:13:04 GMT+0530 (India Standard Time)
+[debug] [2024-10-24T10:43:04.050Z] : ----------------------------------------------------------------------
+[debug] [2024-10-24T10:43:04.051Z] : 
+[debug] [2024-10-24T10:43:05.541Z] : > authorizing via signed-in user option
+[debug] [2024-10-24T10:43:05.542Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.authentication.CREATE"]
+[debug] [2024-10-24T10:43:05.565Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040 
+
+[debug] [2024-10-24T10:43:06.792Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 10:43:06 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=b14009a6059feb83ee8aa1c715a015c5; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=c3e17eb2-de8a-46fb-b8c1-ded9dc9a6415;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=c3e17eb2-de8a-46fb-b8c1-ded9dc9a6415;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T10:43:06.801Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/environment 
+
+[debug] [2024-10-24T10:43:07.153Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 10:43:06 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=4ead9897700827f973c0f7dbded7f673; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=18bf7b9f-62ff-4a34-9d22-a4e77e877e99;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=18bf7b9f-62ff-4a34-9d22-a4e77e877e99;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T10:43:07.509Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/15205000000147040/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-10-24T10:43:07.875Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 24 Oct 2024 10:43:07 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_46512fd555=c3d5ec374d3dc932973a3d50f55d8d00; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=b9fbdb3a-f77b-4a20-a530-a131ce1b6610;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=b9fbdb3a-f77b-4a20-a530-a131ce1b6610;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-10-24T10:43:07.879Z] : unknown eol undefined hence skipping check
+[debug] [2024-10-24T10:43:07.880Z] : unknown eol undefined hence skipping check
+[debug] [2024-10-24T10:43:07.881Z] : unknown eol undefined hence skipping check
+[warn] [2024-10-24T10:43:10.128Z] : ‼ target [waterheater_1_function] is not a valid one reason : invalid function type. Only basicio,cron,event,integration are supported.
+[info] [2024-10-24T10:43:28.030Z] : Hello from index.js
+
+[info] [2024-10-24T10:43:29.927Z] : updated value for payload [
+  {
+    ROWID: '15205000000189176',
+    Status: 'Created Ticket',
+    Technician_Name: '',
+    Technician_Email: '',
+    Scheduled_Date: ''
+  },
+  {
+    ROWID: '15205000000394103',
+    Status: 'Created Ticket',
+    Technician_Name: '',
+    Technician_Email: '',
+    Scheduled_Date: ''
+  },
+  {
+    ROWID: '15205000000394111',
+    Status: 'Created Ticket',
+    Technician_Name: '',
+    Technician_Email: '',
+    Scheduled_Date: ''
+  },
+  {
+    ROWID: '15205000000394119',
+    Status: 'Created Ticket',
+    Technician_Name: '',
+    Technician_Email: '',
+    Scheduled_Date: ''
+  }
+]
+
+[info] [2024-10-24T10:43:30.510Z] : response from updated ticket [
+  {
+    Invoice_File: null,
+    Customer_Name: 'asdfewfwe',
+    Scheduled_Date: '',
+    Spares_Details: null,
+    Dispatch_Email: null,
+    Dispatch_Date: null,
+    Date_of_Purchase: null,
+    Update_History: null,
+    Year_of_Purchase: '2024-06-21',
+    Dispatch_Person: null,
+    Serial_Number: '654651321',
+    Signature_Id: null,
+    Ticket_Id: '9B8N3OT3',
+    Technician_Name: '',
+    Closed_Date: null,
+    CREATORID: null,
+    Status: 'Created Ticket',
+    Ticket_Date: '2024-06-17',
+    Customer_Feedback: null,
+    Technician_Email: '',
+    Customer_Phone: '7854856498',
+    Warranty_Year: null,
+    Product_Issue: 'test Issue',
+    Comments: null,
+    Product_Name: 'kjsdfisglksdg',
+    Customer_Email: '498498@gmail.com',
+    Issue_Image: '15205000000189170',
+    Customer_Whatsapp: '4549545465',
+    MODIFIEDTIME: '2024-10-24 16:13:29:776',
+    After_Service_Image: null,
+    Warranty_Image: null,
+    Attended_Date_Time: null,
+    CREATEDTIME: '2024-06-29 13:31:46:816',
+    Warranty_Available: 'No',
+    ROWID: '15205000000189176',
+    Customer_Address: 'testeasfdalkdfjkgjas',
+    Area_In_Address: 'karur',
+    Location: null,
+    Scrap_Details: null
+  },
+  {
+    Invoice_File: null,
+    Customer_Name: 'Logesh',
+    Scheduled_Date: '',
+    Spares_Details: null,
+    Dispatch_Email: null,
+    Dispatch_Date: null,
+    Date_of_Purchase: null,
+    Update_History: null,
+    Year_of_Purchase: '2024-10-24',
+    Dispatch_Person: null,
+    Serial_Number: 'number',
+    Signature_Id: null,
+    Ticket_Id: '7BM4LX3K',
+    Technician_Name: '',
+    Closed_Date: null,
+    CREATORID: '15205000000388184',
+    Status: 'Created Ticket',
+    Ticket_Date: '2024-10-24',
+    Customer_Feedback: null,
+    Technician_Email: '',
+    Customer_Phone: '9876543210',
+    Warranty_Year: null,
+    Product_Issue: 'not working',
+    Comments: null,
+    Product_Name: 'Testing',
+    Customer_Email: 'logesh@gmail.com',
+    Issue_Image: '15205000000394098',
+    Customer_Whatsapp: '9876543210',
+    MODIFIEDTIME: '2024-10-24 16:13:29:777',
+    After_Service_Image: null,
+    Warranty_Image: null,
+    Attended_Date_Time: null,
+    CREATEDTIME: '2024-10-24 13:20:49:978',
+    Warranty_Available: 'No',
+    ROWID: '15205000000394103',
+    Customer_Address: 'test address',
+    Area_In_Address: 'salem',
+    Location: null,
+    Scrap_Details: null
+  },
+  {
+    Invoice_File: null,
+    Customer_Name: 'Logesh',
+    Scheduled_Date: '',
+    Spares_Details: null,
+    Dispatch_Email: null,
+    Dispatch_Date: null,
+    Date_of_Purchase: null,
+    Update_History: null,
+    Year_of_Purchase: '2024-10-24',
+    Dispatch_Person: null,
+    Serial_Number: 'WQRE123',
+    Signature_Id: null,
+    Ticket_Id: 'VMKA848U',
+    Technician_Name: '',
+    Closed_Date: null,
+    CREATORID: '15205000000388184',
+    Status: 'Created Ticket',
+    Ticket_Date: '2024-10-25',
+    Customer_Feedback: null,
+    Technician_Email: '',
+    Customer_Phone: '9876543210',
+    Warranty_Year: null,
+    Product_Issue: 'not working',
+    Comments: null,
+    Product_Name: 'product1',
+    Customer_Email: 'logesh@gmail.com',
+    Issue_Image: '15205000000394106',
+    Customer_Whatsapp: '9876543210',
+    MODIFIEDTIME: '2024-10-24 16:13:29:778',
+    After_Service_Image: null,
+    Warranty_Image: null,
+    Attended_Date_Time: null,
+    CREATEDTIME: '2024-10-24 13:21:29:737',
+    Warranty_Available: 'No',
+    ROWID: '15205000000394111',
+    Customer_Address: 'test address',
+    Area_In_Address: 'salem',
+    Location: null,
+    Scrap_Details: null
+  },
+  {
+    Invoice_File: null,
+    Customer_Name: 'Logesh',
+    Scheduled_Date: '',
+    Spares_Details: null,
+    Dispatch_Email: null,
+    Dispatch_Date: null,
+    Date_of_Purchase: null,
+    Update_History: null,
+    Year_of_Purchase: '2024-10-24',
+    Dispatch_Person: null,
+    Serial_Number: 'WQRE123',
+    Signature_Id: null,
+    Ticket_Id: 'FSOSC9OI',
+    Technician_Name: '',
+    Closed_Date: null,
+    CREATORID: '15205000000388184',
+    Status: 'Created Ticket',
+    Ticket_Date: '2024-10-26',
+    Customer_Feedback: null,
+    Technician_Email: '',
+    Customer_Phone: '9876543210',
+    Warranty_Year: null,
+    Product_Issue: 'not working',
+    Comments: null,
+    Product_Name: 'test product',
+    Customer_Email: 'logesh@gmail.com',
+    Issue_Image: '15205000000394114',
+    Customer_Whatsapp: '9876543210',
+    MODIFIEDTIME: '2024-10-24 16:13:29:779',
+    After_Service_Image: null,
+    Warranty_Image: null,
+    Attended_Date_Time: null,
+    CREATEDTIME: '2024-10-24 13:21:56:758',
+    Warranty_Available: 'No',
+    ROWID: '15205000000394119',
+    Customer_Address: 'test address',
+    Area_In_Address: 'salem',
+    Location: null,
+    Scrap_Details: null
+  }
+]
+
+[info] [2024-10-24T10:43:30.516Z] : [cli] Function execution complete
+[info] [2024-10-24T10:43:30.517Z] : 
+[info] [2024-10-24T10:43:30.523Z] : [status]
+[info] [2024-10-24T10:43:30.524Z] : SUCCESS
+[error] [2024-10-24T10:44:25.078Z] : × An unexpected error has occurred.
+[debug] [2024-10-24T10:44:25.078Z] : Error Stack: CatalystError: An unexpected error has occurred.
+    at exports.default (C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\errorOut.js:19:17)
+    at Command.<anonymous> (C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\internal\command.js:161:40)
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\91950\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\internal\command.js:29:65)
+[debug] [2024-10-24T10:44:25.078Z] : Original Error: Error: EBUSY: resource busy or locked, rmdir 'C:\catalyst projects\water heater 2\.build\functions\waterheater_1_function'
+[debug] [2024-10-24T10:44:25.078Z] : Error Status: 500
+[info] [2024-10-24T10:44:25.079Z] : Kindly contact Catalyst support [support@zohocatalyst.com] if you need any further assistance
+[debug] [2024-10-24T10:44:25.080Z] : EXEC ENDED with event: Error (Unexpected), message: EBUSY: resource busy or locked, rmdir 'C:\catalyst projects\water heater 2\.build\functions\waterheater_1_function'
+[debug] [2024-10-24T10:44:25.080Z] : TOTAL DURATION OF COMMAND EXEC : 79556

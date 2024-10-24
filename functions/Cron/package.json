@@ -1,0 +1,10 @@
+{
+	"name": "cron",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "logesh.mg@traqmetrix.com",
+	"dependencies": {
+		"axios": "^1.7.7",
+		"zcatalyst-sdk-node": "latest"
+	}
+}
