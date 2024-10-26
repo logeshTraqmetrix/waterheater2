@@ -453,211 +453,200 @@ import { Pagination } from 'antd';
 import axios from 'axios';
 import { FaFilter } from "react-icons/fa6";
 import HashLoader from "react-spinners/HashLoader";
+import InvoiceEdit from '../Edit/InvoiceEdit';
 
 const ViewInvoice = () => {
-  const [data, setData] = useState([]);
-  const [selectedInvoice, setSelectedInvoice] = useState(null);
-  const [showModal, setShowModal] = useState(false);
-  const [showFilterModal, setShowFilterModal] = useState(false);
-  const [filterColumn, setFilterColumn] = useState('');
-  const [filterValue, setFilterValue] = useState('');
-  const [currentPage, setCurrentPage] = useState(1);
-  const [pageSize] = useState(10);
-  const [totalRecords, setTotalRecords] = useState(0);
-  const [loading, setLoading] = useState(false);
-  const [removeFilter, setRemoveFilter] = useState('')
+    const [data, setData] = useState([]);
+    const [selectedInvoice, setSelectedInvoice] = useState(null);
+    const [showModal, setShowModal] = useState(false);
+    const [showFilterModal, setShowFilterModal] = useState(false);
+    const [filterColumn, setFilterColumn] = useState('');
+    const [filterValue, setFilterValue] = useState('');
+    const [currentPage, setCurrentPage] = useState(1);
+    const [pageSize] = useState(10);
+    const [totalRecords, setTotalRecords] = useState(0);
+    const [loading, setLoading] = useState(false);
+    const [removeFilter, setRemoveFilter] = useState('')
 
-  useEffect(() => {
-    fetchData();
-  }, [currentPage, removeFilter]);
+    useEffect(() => {
+        fetchData();
+    }, [currentPage, removeFilter]);
 
-  const fetchData = (column = '', value = '') => {
-    setLoading(true);
-    const params = { limit: pageSize, offset: (currentPage - 1) * pageSize };
-    let endpoint = '/server/waterheater_1_function/allgetinvoices';
+    const fetchData = (column = '', value = '') => {
+        setLoading(true);
+        const params = { limit: pageSize, offset: (currentPage - 1) * pageSize };
+        let endpoint = '/server/waterheater_1_function/allgetinvoices';
 
-    if (column && value) {
-      endpoint = '/server/waterheater_1_function/getfilterinvoice';
-      params.search = JSON.stringify({
-        table: 'invoice_table',
-        column,
-        value
-      });
-    }
-
-    axios.get(endpoint, { params })
-      .then((res) => {
-        console.log(res.data);
         if (column && value) {
-          setData(res.data);
-          setTotalRecords(res.data.length);
-        } else {
-          setData(res.data.records);
-          setTotalRecords(res.data.total);
+            endpoint = '/server/waterheater_1_function/getfilterinvoice';
+            params.search = JSON.stringify({
+                table: 'invoice_table',
+                column,
+                value
+            });
         }
-        setFilterColumn('');
-        setFilterValue('');
-      })
-      .catch((err) => {
-        console.log(err);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  };
 
-  // ... (rest of the code remains the same)
-  const handleFilterSubmit = () => {
-    if (filterColumn && filterValue) {
-      fetchData(filterColumn, filterValue);
-      setShowFilterModal(false);
+        axios.get(endpoint, { params })
+            .then((res) => {
+                console.log(res.data);
+                if (column && value) {
+                    setData(res.data);
+                    setTotalRecords(res.data.length);
+                } else {
+                    setData(res.data.records);
+                    setTotalRecords(res.data.total);
+                }
+                setFilterColumn('');
+                setFilterValue('');
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+            .finally(() => {
+                setLoading(false);
+            });
+    };
+
+    const handleFilterSubmit = () => {
+        if (filterColumn && filterValue) {
+            fetchData(filterColumn, filterValue);
+            setShowFilterModal(false);
+        }
+    };
+
+    const ActionDropdown = (invoice) => (
+        <Dropdown drop={'start'}>
+            <Dropdown.Toggle variant="primary" id="dropdown-basic">
+
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+                <Dropdown.Item onClick={() => handleViewInvoiceDetail(invoice)}>View In Detail</Dropdown.Item>
+            </Dropdown.Menu>
+        </Dropdown>
+    );
+
+    const handleViewInvoiceDetail = (invoice) => {
+        setSelectedInvoice(invoice.invoice);
+        setShowModal(true);
     }
-  };
 
-  const ActionDropdown = (invoice) => (
-    <Dropdown drop={'start'}>
-      <Dropdown.Toggle variant="primary" id="dropdown-basic">
 
-      </Dropdown.Toggle>
-      <Dropdown.Menu>
-        <Dropdown.Item onClick={() => handleViewInvoice(invoice)}>View</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
-  );
 
-  const handleViewInvoice = (invoice) => {
-    setSelectedInvoice(invoice.invoice);
-    setShowModal(true);
-  };
+    const handleCloseModal = () => {
+        setSelectedInvoice(null);
+        setShowModal(false);
+    };
 
-  const handleCloseModal = () => {
-    setSelectedInvoice(null);
-    setShowModal(false);
-  };
+    const handlePageChange = (page) => {
+        setCurrentPage(page);
+    };
 
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
+    const FilterDropDown = () => (
+        <DropdownButton id="dropdown-basic-button" title={<FaFilter />}>
+            <Dropdown.Item onClick={() => { setFilterColumn('Ticket_Id'); setShowFilterModal(true); }}>Ticket ID</Dropdown.Item>
+            <Dropdown.Item onClick={() => { setFilterColumn('Invoice_Number'); setShowFilterModal(true); }}>Invoice Number</Dropdown.Item>
+            <Dropdown.Item onClick={() => setRemoveFilter()}>Remove Filter</Dropdown.Item>
+        </DropdownButton>
+    );
 
-  const FilterDropDown = () => (
-    <DropdownButton id="dropdown-basic-button" title={<FaFilter />}>
-      <Dropdown.Item onClick={() => { setFilterColumn('Ticket_Id'); setShowFilterModal(true); }}>Ticket ID</Dropdown.Item>
-      <Dropdown.Item onClick={() => { setFilterColumn('Invoice_Number'); setShowFilterModal(true); }}>Invoice Number</Dropdown.Item>
-      <Dropdown.Item onClick={() => setRemoveFilter()}>Remove Filter</Dropdown.Item>
-    </DropdownButton>
-  );
 
-  const InvoiceModal = () => (
-    <Modal show={showModal} onHide={handleCloseModal}>
-      <Modal.Header closeButton>
-        <Modal.Title>Invoice Details</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        {selectedInvoice && (
-          <>
-            <p>Invoice Number: {selectedInvoice.Invoice_Number}</p>
-            <p>Customer Name: {selectedInvoice.Customer_Name}</p>
-            <p>Ticket ID: {selectedInvoice.Ticket_Id}</p>
-            <p>Address: {selectedInvoice.Address}</p>
-            <p>Grand Total: {selectedInvoice.Grand_Total}</p>
-            <p>Date: {selectedInvoice.CREATEDTIME}</p>
-          </>
-        )}
-      </Modal.Body>
-      <Modal.Footer>
-        <Button variant="secondary" onClick={handleCloseModal}>
-          Close
-        </Button>
-      </Modal.Footer>
-    </Modal>
-  );
+    const toggleInvoiceEdit = ()=>{
+        setShowModal(false)
+    }
 
-  return (
-    <div className='container'>
+    return (
+        <div className='container'>
+            {!showModal ? (
+                <div>
+                    {loading ? (
+                        <div className="d-flex justify-content-center align-items-center" style={{ height: '400px' }}>
+                            <HashLoader color="#36D7B7" />
+                        </div>
+                    ) : data.length === 0 ? (
+                        <div className="d-flex justify-content-center align-items-center" style={{ height: '400px' }}>
+                            <h3>No Data Added</h3>
+                        </div>
+                    ) : (
+                        <div>
+                            <h2>Invoice View</h2>
+                            <div className="d-flex justify-content-end mb-2">
+                                <FilterDropDown />
+                            </div>
+                            <div className="table-responsive">
+                                <Table striped bordered hover>
+                                    <thead>
+                                        <tr>
+                                            <th>Invoice Number</th>
+                                            <th>Ticket ID</th>
+                                            <th>Date</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {data.map((invoice, index) => (
+                                            <tr key={index}>
+                                                <td>{invoice.invoice_table.Invoice_Number}</td>
+                                                <td>{invoice.invoice_table.Ticket_Id}</td>
+                                                <td>{invoice.invoice_table.CREATEDTIME}</td>
+                                                <td>
+                                                    <ActionDropdown invoice={invoice.invoice_table} />
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </Table>
+                            </div>
+                            <div className='d-flex justify-content-center ' style={{ margin: '30px' }}>
+                                <Pagination
+                                    current={currentPage}
+                                    pageSize={pageSize}
+                                    total={totalRecords}
+                                    onChange={handlePageChange}
+                                    showSizeChanger={false}
+                                />
+                            </div>
+                        </div>
+                    )}
 
-      {loading ? (
-        <div className="d-flex justify-content-center align-items-center" style={{ height: '400px' }}>
-          <HashLoader color="#36D7B7" />
+                    {/* Filter Modal */}
+                    <Modal show={showFilterModal} onHide={() => setShowFilterModal(false)}>
+                        {/* ... (Modal content remains the same) */}
+                        <Modal.Header closeButton>
+                            <Modal.Title>Filter Invoices by {filterColumn === 'Ticket_Id' ? 'Ticket ID' : 'Invoice Number'}</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <Form>
+                                <Form.Group controlId="formFilterValue">
+                                    <Form.Label>{filterColumn === 'Ticket_Id' ? 'Ticket ID' : 'Invoice Number'}</Form.Label>
+                                    <Form.Control
+                                        type="text"
+                                        placeholder={`Enter ${filterColumn === 'Ticket_Id' ? 'Ticket ID' : 'Invoice Number'}`}
+                                        value={filterValue}
+                                        onChange={(e) => setFilterValue(e.target.value)}
+                                    />
+                                </Form.Group>
+                            </Form>
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button variant="secondary" onClick={() => setShowFilterModal(false)}>
+                                Cancel
+                            </Button>
+                            <Button variant="primary" onClick={handleFilterSubmit}>
+                                Search
+                            </Button>
+                        </Modal.Footer>
+                    </Modal>
+                </div>
+            ) : (
+                <div>
+          <button onClick={() => toggleInvoiceEdit()}>Back</button>
+          <InvoiceEdit
+          invoiceData={selectedInvoice}
+          />
         </div>
-      ) : data.length === 0 ? (
-        <div className="d-flex justify-content-center align-items-center" style={{ height: '400px' }}>
-          <h3>No Data Added</h3>
+            )}
         </div>
-      ) : (
-        <div>
-          <h2>Invoice View</h2>
-          <div className="d-flex justify-content-end mb-2">
-            <FilterDropDown />
-          </div>
-          <div className="table-responsive">
-            <Table striped bordered hover>
-              <thead>
-                <tr>
-                  <th>Invoice Number</th>
-                  <th>Ticket ID</th>
-                  <th>Date</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                {data.map((invoice, index) => (
-                  <tr key={index}>
-                    <td>{invoice.invoice_table.Invoice_Number}</td>
-                    <td>{invoice.invoice_table.Ticket_Id}</td>
-                    <td>{invoice.invoice_table.CREATEDTIME}</td>
-                    <td>
-                      <ActionDropdown invoice={invoice.invoice_table} />
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </Table>
-          </div>
-          <div className='d-flex justify-content-center ' style={{ margin: '30px' }}>
-            <Pagination
-              current={currentPage}
-              pageSize={pageSize}
-              total={totalRecords}
-              onChange={handlePageChange}
-              showSizeChanger={false}
-            />
-          </div>
-        </div>
-      )}
-
-
-      <InvoiceModal />
-
-      {/* Filter Modal */}
-      <Modal show={showFilterModal} onHide={() => setShowFilterModal(false)}>
-        {/* ... (Modal content remains the same) */}
-        <Modal.Header closeButton>
-          <Modal.Title>Filter Invoices by {filterColumn === 'Ticket_Id' ? 'Ticket ID' : 'Invoice Number'}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form>
-            <Form.Group controlId="formFilterValue">
-              <Form.Label>{filterColumn === 'Ticket_Id' ? 'Ticket ID' : 'Invoice Number'}</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder={`Enter ${filterColumn === 'Ticket_Id' ? 'Ticket ID' : 'Invoice Number'}`}
-                value={filterValue}
-                onChange={(e) => setFilterValue(e.target.value)}
-              />
-            </Form.Group>
-          </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShowFilterModal(false)}>
-            Cancel
-          </Button>
-          <Button variant="primary" onClick={handleFilterSubmit}>
-            Search
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </div>
-  );
+    );
 };
 
 export default ViewInvoice;

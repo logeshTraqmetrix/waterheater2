@@ -697,6 +697,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import { FaFilter } from "react-icons/fa";
 import HashLoader from 'react-spinners/HashLoader';
 import Swal from 'sweetalert2'
+import TicketEdit from '../Edit/TicketEdit';
 
 const ViewTicket = () => {
   const [data, setData] = useState([]);
@@ -865,6 +866,11 @@ const ViewTicket = () => {
     setShowModal(true);
   };
 
+  const handleCloseTicket = ()=>{
+    setShowModal(false)
+    setSelectedTicket(null)
+  }
+
   const handleViewImage = (id, fileName) => {
     // setImageLoading(true); // Start image loading
     if (id === null) {
@@ -974,7 +980,7 @@ const ViewTicket = () => {
 
   return (
     <div className='container'>
-      <div className="d-flex justify-content-end mb-2">
+      {!showModal ? (<div><div className="d-flex justify-content-end mb-2">
         <FilterDropDown />
       </div>
       
@@ -1075,9 +1081,16 @@ const ViewTicket = () => {
       </Modal>
 
       {/* Modal for ticket details */}
-      <TicketModal />
+      {/* <TicketModal /> */}
       {/* Modal for viewing images */}
-      <ImageModal />
+      {/* <ImageModal /> */}</div>):(
+        <div>
+        <button onClick={() => handleCloseTicket()}>Back</button>
+        <TicketEdit
+        ticketData={selectedTicket}
+        />
+      </div>
+      )}
     </div>
   );
 };

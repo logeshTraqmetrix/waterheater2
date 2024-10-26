@@ -1663,7 +1663,7 @@ const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId, Dynamic_
         if (name === "materialName") {
             updatedFields[index].materialName = value;
             const selectedMaterial = sparesData.find(data => data.technician_stocks.Spares_Name === value);
-            console.log('selected material',selectedMaterial,'updatedFields',updatedFields)
+            console.log('selected material', selectedMaterial, 'updatedFields', updatedFields)
             updatedFields[index].price = selectedMaterial ? selectedMaterial.technician_stocks.Price : "";
             if (updatedFields[index].quantity && updatedFields[index].price) {
                 updatedFields[index].rate = (updatedFields[index].quantity * updatedFields[index].price).toFixed(2);
@@ -1688,9 +1688,9 @@ const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId, Dynamic_
             //     updatedFields[index].quantity = "";
             //     updatedFields[index].rate = "";
             // } else {
-                updatedFields[index].quantity = value;
-                const price = updatedFields[index].price || 0;
-                updatedFields[index].rate = (value * price).toFixed(2);
+            updatedFields[index].quantity = value;
+            const price = updatedFields[index].price || 0;
+            updatedFields[index].rate = (value * price).toFixed(2);
             // }
         }
 
@@ -1749,6 +1749,18 @@ const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId, Dynamic_
 
 
     const handlePostData = async () => {
+
+
+        if (sparce === "yes") {
+            for (let field of fields) {
+                if (field.quantity !== '' && field.date !== '' && field.warranty !== '' && field.materialName) {
+                    continue;
+                } else {
+                    alert('Enter the value for quantity, date, or warranty');
+                    return; // Exit the function if the alert is triggered
+                }
+            }
+        }
 
         const data = sigCanvas.current.getTrimmedCanvas().toDataURL('image/png');
 
@@ -1898,7 +1910,7 @@ const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId, Dynamic_
                                         const payload = ScrapFormPayload(scrapForms, scrapData, invoiceRowId);
                                         console.log("ScrapFormPayload", payload);
 
-                                       // Post ScrapFormPayload to the server
+                                        // Post ScrapFormPayload to the server
                                         try {
                                             await axios.post('/server/waterheater_1_function/addscrap', { data: payload })
                                                 .then((res) => {
@@ -1925,11 +1937,11 @@ const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId, Dynamic_
                                 try {
                                     var sparesChanges = fields.map(field => {
                                         const selectedMaterial = sparesData.find(data => data.technician_stocks.Spares_Name === field.materialName);
-                                        const availableQty = parseInt(selectedMaterial.technician_stocks.Available_Qty, 10);
-                                        const consumedQty = parseInt(selectedMaterial.technician_stocks.Consumed_Qty || 0, 10);
+                                        const availableQty = parseInt(selectedMaterial.technician_stocks.Available_Qty);
+                                        const consumedQty = parseInt(selectedMaterial.technician_stocks.Consumed_Qty);
 
-                                        const newConsumedQty = consumedQty + parseInt(field.quantity, 10);
-                                        const newAvailableQty = availableQty - parseInt(field.quantity, 10);
+                                        const newConsumedQty = consumedQty + parseInt(field.quantity);
+                                        const newAvailableQty = availableQty - parseInt(field.quantity);
 
                                         return {
                                             ROWID: selectedMaterial.technician_stocks.ROWID,
@@ -1979,7 +1991,7 @@ const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId, Dynamic_
                                         return payload;
                                     });
 
-                                     console.log("Payloads:", sparesFormPayload);
+                                    console.log("Payloads:", sparesFormPayload);
                                     try {
                                         axios.post('/server/waterheater_1_function/addlistofspare', { data: sparesFormPayload })
                                             .then((res) => {
@@ -2143,7 +2155,7 @@ const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId, Dynamic_
                                             ))}
                                         </Form.Control>
                                         <Form.Label>Warranty</Form.Label>
-                                        <Form.Control as="select" name="warranty" onChange={(e) => handleChange(index, e)}>
+                                        <Form.Control required as="select" name="warranty" onChange={(e) => handleChange(index, e)}>
                                             <option value="">Select an option</option>
                                             <option value="yes">Yes</option>
                                             <option value="no">No</option>
@@ -2206,15 +2218,15 @@ const InvoiceForm = ({ ticketId, customerName5, customerAddress, RowId, Dynamic_
                             {scrapForms.map((scrapForm, index) => (
                                 <div key={scrapForm.uniqueKey} style={{ marginBottom: "20px" }}>
                                     <Form.Group className="mb-3">
-                                            <Form.Label>Material Name</Form.Label>
-                                            <Form.Control as="select" value={scrapForm.material} name="material" onChange={(e) => handleScrapChange(index, "material", e.target.value)}>
-                                                <option value="">Select an option</option>
-                                                {sparesData.map((data) => (
-                                                    <option key={data.technician_stocks.Spares_Name} value={data.technician_stocks.Spares_Name}>
-                                                        {data.technician_stocks.Spares_Name}
-                                                    </option>
-                                                ))}
-                                            </Form.Control>
+                                        <Form.Label>Material Name</Form.Label>
+                                        <Form.Control as="select" value={scrapForm.material} name="material" onChange={(e) => handleScrapChange(index, "material", e.target.value)}>
+                                            <option value="">Select an option</option>
+                                            {sparesData.map((data) => (
+                                                <option key={data.technician_stocks.Spares_Name} value={data.technician_stocks.Spares_Name}>
+                                                    {data.technician_stocks.Spares_Name}
+                                                </option>
+                                            ))}
+                                        </Form.Control>
 
                                         <Form.Label>Received Date</Form.Label>
                                         <Form.Control type="date" name="receivedDate" value={scrapForm.receivedDate} onChange={(e) => handleScrapChange(index, "receivedDate", e.target.value)} />

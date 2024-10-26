@@ -55,6 +55,7 @@ const TechnicianStockAdd = () => {
                 label: spare.spares_table.Material_Name,
                 barcode: spare.spares_table.BarCodeValue,
                 Price:spare.spares_table.Price,
+                ROWID:spare.spares_table.ROWID,
               }));
 
               setUniqueMaterials(materialsDropdownOptions);
@@ -74,6 +75,7 @@ const TechnicianStockAdd = () => {
 
     console.log('selected materials',selectedMaterials)
     const submitData = selectedMaterials.map(material => ({
+      Spares_Id:material.ROWID,
       Price:material.Price,
       BarCodeValue:material.barcode,
       Spares_Name: material.value,
